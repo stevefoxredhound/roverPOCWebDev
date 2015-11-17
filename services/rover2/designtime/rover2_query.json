@@ -1,0 +1,1 @@
+{"name":"rover2","description":"Queries for rover2","queries":[{"name":"qryNumberOfSystems","query":"SELECT COUNT(*)  FROM core_systems","comment":"","description":null,"nativeSql":true,"returnsSingleResult":false,"update":false,"queryParams":[],"outputType":null}]}

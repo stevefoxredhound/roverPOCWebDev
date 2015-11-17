@@ -1,0 +1,192 @@
+<style id="CoreSystems.css">
+
+</style>
+<script id="CoreSystems.js">
+Application.$controller("CoreSystemsPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Application.$controller("CoreSystemsGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("CoreSystemsLiveform2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="CoreSystems.variables.json">
+var _CoreSystemsPage_Variables_ ={}
+</script>
+<script id="CoreSystems.html" type="text/ng-template">
+<wm-page data-ng-controller="CoreSystemsPageController" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" backgroundcolor="#ffffff">
+            <wm-livegrid name="CoreSystemsLivegrid1" service="rover2@CoreSystems"></wm-livegrid>
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow18_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn29_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn30_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn31"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow17_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn26_1" horizontalalign="right">
+                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_Main" width="50" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" backgroundcolor="#ffefbf" name="button1"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn27_1">
+                        <wm-label caption="Core Systems" fontsize="30" textalign="left" name="label1"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn28_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn23_1" height="30"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn24_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn25_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn22"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn23"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow17">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn25"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn26">
+                        <wm-gridcolumn columnwidth="10" name="gridcolumn7">
+                            <wm-livegrid name="CoreSystemsLivegrid3" service="rover2@CoreSystems">
+                                <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="CoreSystemsGrid2" dataset="bind:Variables.Rover2CoreSystemsData.dataSet" width="1500">
+                                    <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="false" mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="dateTime" caption="Date Time" type="datetime" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" datepattern="dd-MMM-yyyy HH:mm:ss" formatpattern="toDate"
+                                    is-related-pk="false" pcdisplay="false" mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreSystem" caption="Core System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreSystemRoverName" caption="Core System Rover Name" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="false"
+                                    mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreProdTable" caption="Core Prod Table" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreProdConnectivity" caption="Core Prod Connectivity" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="false"
+                                    mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreUatTable" caption="Core Uat Table" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreUatConnectivity" caption="Core Uat Connectivity" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="false"
+                                    mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreSystemStatus" caption="Core System Status" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                    mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-column binding="coreSystemLogging" caption="Core System Logging" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="false"
+                                    mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                                </wm-grid>
+                                <wm-liveform novalidate="false" title="Details" name="CoreSystemsLiveform2" dataset="bind:Variables.Rover2CoreSystemsData.dataSet" formtype="inline">
+                                    <wm-layoutgrid name="layoutgrid1">
+                                        <wm-gridrow show="hide" name="gridrow1">
+                                            <wm-gridcolumn show="show" name="gridcolumn1" columnwidth="12">
+                                                <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true" placeholder="Enter value" multiple="false" regexp=".*"
+                                                step="1"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow2">
+                                            <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                                <wm-form-field display-name="Date Time" show="true" primary-key="false" generator="null" key="dateTime" type="datetime" is-related="false" readonly="false" required="false" placeholder="Select date time" outputformat="yyyy-MM-ddTHH:mm:ss"
+                                                multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow3">
+                                            <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                                <wm-form-field display-name="Core System" show="true" primary-key="false" generator="null" key="coreSystem" type="string" maxvalue="250" is-related="false" readonly="false" required="false" placeholder="Enter value"
+                                                multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow4">
+                                            <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
+                                                <wm-form-field display-name="Core System Rover Name" show="true" primary-key="false" generator="null" key="coreSystemRoverName" type="string" maxvalue="250" is-related="false" readonly="false" required="false"
+                                                placeholder="Enter value" multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow5">
+                                            <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
+                                                <wm-form-field display-name="Core Prod Table" show="true" primary-key="false" generator="null" key="coreProdTable" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
+                                                multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow6">
+                                            <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
+                                                <wm-form-field display-name="Core Prod Connectivity" show="true" primary-key="false" generator="null" key="coreProdConnectivity" type="string" maxvalue="255" is-related="false" readonly="false" required="false"
+                                                placeholder="Enter value" multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow7">
+                                            <wm-gridcolumn show="show" name="gridcolumn7" columnwidth="12">
+                                                <wm-form-field display-name="Core Uat Table" show="true" primary-key="false" generator="null" key="coreUatTable" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
+                                                multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow8">
+                                            <wm-gridcolumn show="show" name="gridcolumn8" columnwidth="12">
+                                                <wm-form-field display-name="Core Uat Connectivity" show="true" primary-key="false" generator="null" key="coreUatConnectivity" type="string" maxvalue="255" is-related="false" readonly="false" required="false"
+                                                placeholder="Enter value" multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow9">
+                                            <wm-gridcolumn show="show" name="gridcolumn9" columnwidth="12">
+                                                <wm-form-field display-name="Core System Status" show="true" primary-key="false" generator="null" key="coreSystemStatus" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
+                                                multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow show="show" name="gridrow10">
+                                            <wm-gridcolumn show="show" name="gridcolumn10" columnwidth="12">
+                                                <wm-form-field display-name="Core System Logging" show="true" primary-key="false" generator="null" key="coreSystemLogging" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
+                                                multiple="false" regexp=".*"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" type="button" update-mode="true"></wm-form-action>
+                                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="glyphicon glyphicon-save" type="Submit" update-mode="true"></wm-form-action>
+                                </wm-liveform>
+                            </wm-livegrid>
+                        </wm-gridcolumn>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow18">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn28"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn29"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

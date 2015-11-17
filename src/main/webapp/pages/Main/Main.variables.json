@@ -1,0 +1,244 @@
+{
+  "Rover2GraphAUncatGroupsViaSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/GraphAUncatGroupsViaSystem",
+      "httpMethod" : "get",
+      "name" : "executeGraphAUncatGroupsViaSystem",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2GraphAUncatGroupsViaSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeGraphAUncatGroupsViaSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2GraphAUncatGroupsViaSystem-wm.ServiceVariable-1445866195818",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2GraphAUncatGroupsViaSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcNumberOfRecordsInProd" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procNumberOfRecordsInProd",
+      "httpMethod" : "get",
+      "name" : "executeProcNumberOfRecordsInProd",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procNumberOfRecordsInProdrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcNumberOfRecordsInProd",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcNumberOfRecordsInProd-wm.ServiceVariable-1444042865054",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcNumberOfRecordsInProd",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "timerVennMain" : {
+    "category" : "wm.TimerVariable",
+    "onTimerFire" : "Rover2ProcVenMain;Rover2ProcANumberOfSystems;Rover2ProcNumberOfRecordsInProd;Rover2ProcNumberOfRecordsInUAT;Rover2ProcFUncategorisedGroups;Rover2GraphAUncatGroupsViaSystem",
+    "_id" : "wm-timerVennMain-wm.TimerVariable-1445864232969",
+    "dataBinding" : [ {
+      "name" : "dataSet",
+      "fields" : [ ]
+    } ],
+    "autoStart" : true,
+    "name" : "timerVennMain",
+    "owner" : "Page",
+    "delay" : 30000,
+    "repeating" : true
+  },
+  "Rover2ProcFUncategorisedGroups" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procFUncategorisedGroups",
+      "httpMethod" : "get",
+      "name" : "executeProcFUncategorisedGroups",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procFUncategorisedGroupsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcFUncategorisedGroups",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcFUncategorisedGroups-wm.ServiceVariable-1445863188443",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcFUncategorisedGroups",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2QryNumberOfSystems" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "query",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/queryExecutor/queries/qryNumberOfSystems",
+      "httpMethod" : "get",
+      "name" : "executeQryNumberOfSystems",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2qryNumberOfSystemsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeQryNumberOfSystems",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2QryNumberOfSystems-wm.ServiceVariable-1444037981587",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2QryNumberOfSystems",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcNumberOfRecordsInUAT" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procNumberOfRecordsInUAT",
+      "httpMethod" : "get",
+      "name" : "executeProcNumberOfRecordsInUAT",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procNumberOfRecordsInUATrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcNumberOfRecordsInUAT",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcNumberOfRecordsInUAT-wm.ServiceVariable-1444043182974",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcNumberOfRecordsInUAT",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcANumberOfSystems" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procANumberOfSystems",
+      "httpMethod" : "get",
+      "name" : "executeProcANumberOfSystems",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procANumberOfSystemsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcANumberOfSystems",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcANumberOfSystems-wm.ServiceVariable-1445863747486",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcANumberOfSystems",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  }
+}

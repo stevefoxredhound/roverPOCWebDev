@@ -1,0 +1,397 @@
+{
+  "Rover2ProcBuildMeARuleClassAndCat" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Rover2ProcDClassAndCatClassificationsWithCatRulessListForThisSystem",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procBuildMeARuleClassAndCat",
+      "httpMethod" : "get",
+      "name" : "executeProcBuildMeARuleClassAndCat",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rover2procBuildMeARuleClassAndCatrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcBuildMeARuleClassAndCat",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rover2ProcBuildMeARuleClassAndCat-wm.ServiceVariable-1444998661841",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Widgets.GridClassificationsList.selecteditem.Classification"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcBuildMeARuleClassAndCat",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2CategorisationRulesData" : {
+    "firstRow" : 0,
+    "isList" : true,
+    "bindCount" : 1,
+    "package" : "com.roverpoc.rover2.CategorisationRules",
+    "startUpdate" : true,
+    "type" : "CategorisationRules",
+    "ignoreCase" : false,
+    "propertiesMap" : {
+      "primaryKeys" : [ "id" ],
+      "columns" : [ {
+        "precision" : 19,
+        "hibernateType" : "integer",
+        "isRelated" : false,
+        "isPrimaryKey" : true,
+        "length" : 255,
+        "generator" : "identity",
+        "columnName" : "ID",
+        "defaultValue" : null,
+        "notNull" : true,
+        "type" : "integer",
+        "fieldName" : "id",
+        "fullyQualifiedType" : "integer"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "datetime",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 23,
+        "generator" : null,
+        "columnName" : "date_time",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "datetime",
+        "fieldName" : "dateTime",
+        "fullyQualifiedType" : "datetime"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "string",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 255,
+        "generator" : null,
+        "columnName" : "core_system",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "string",
+        "fieldName" : "coreSystem",
+        "fullyQualifiedType" : "string"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "string",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 255,
+        "generator" : null,
+        "columnName" : "classification_name",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "string",
+        "fieldName" : "classificationName",
+        "fullyQualifiedType" : "string"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "string",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 255,
+        "generator" : null,
+        "columnName" : "category",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "string",
+        "fieldName" : "category",
+        "fullyQualifiedType" : "string"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "string",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 255,
+        "generator" : null,
+        "columnName" : "comment",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "string",
+        "fieldName" : "comment",
+        "fullyQualifiedType" : "string"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "string",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 255,
+        "generator" : null,
+        "columnName" : "who",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "string",
+        "fieldName" : "who",
+        "fullyQualifiedType" : "string"
+      }, {
+        "precision" : 19,
+        "hibernateType" : "datetime",
+        "isRelated" : false,
+        "isPrimaryKey" : false,
+        "length" : 23,
+        "generator" : null,
+        "columnName" : "updated_timestamp",
+        "defaultValue" : null,
+        "notNull" : false,
+        "type" : "datetime",
+        "fieldName" : "updatedTimestamp",
+        "fullyQualifiedType" : "datetime"
+      } ],
+      "tableType" : "TABLE",
+      "fullyQualifiedName" : "com.roverpoc.rover2.CategorisationRules",
+      "entityName" : "CategorisationRules"
+    },
+    "transformationRequired" : false,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "read",
+    "saveInPhonegap" : false,
+    "_id" : "wm-Rover2CategorisationRulesData-wm.LiveVariable-1444313769328",
+    "isDefault" : true,
+    "tableName" : "categorisation_rules",
+    "designMaxResults" : 10,
+    "name" : "Rover2CategorisationRulesData",
+    "liveSource" : "rover2",
+    "dbSystem" : "SQLServer",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Rover2QueryAClassificationsListForThisSystem",
+    "maxResults" : 20,
+    "matchMode" : "start",
+    "category" : "wm.LiveVariable",
+    "autoUpdate" : true,
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "categorisation_rules",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "number"
+      }, {
+        "name" : "dateTime",
+        "type" : "datetime"
+      }, {
+        "name" : "coreSystem",
+        "type" : "string"
+      }, {
+        "name" : "classificationName",
+        "type" : "string"
+      }, {
+        "name" : "category",
+        "type" : "string"
+      }, {
+        "name" : "comment",
+        "type" : "string"
+      }, {
+        "name" : "who",
+        "type" : "string"
+      }, {
+        "name" : "updatedTimestamp",
+        "type" : "datetime"
+      } ]
+    } ],
+    "filterFields" : { },
+    "owner" : "Page",
+    "tableType" : "TABLE"
+  },
+  "Rover2ProcDClassAndCatClassificationsWithCatRulessListForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Rover2QueryAClassificationsListForThisSystem",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procDClassAndCatClassificationsWithCatRulessListForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcDClassAndCatClassificationsWithCatRulessListForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procDClassAndCatClassificationsWithCatRulessListForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcDClassAndCatClassificationsWithCatRulessListForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcDClassAndCatClassificationsWithCatRulessListForThisSystem-wm.ServiceVariable-1445334774901",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcDClassAndCatClassificationsWithCatRulessListForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcEClassCAtDeleteRule" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Rover2ProcDClassAndCatClassificationsWithCatRulessListForThisSystem",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procEClassCAtDeleteRule",
+      "httpMethod" : "get",
+      "name" : "executeProcEClassCAtDeleteRule",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rover2procEClassCAtDeleteRulertnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcEClassCAtDeleteRule",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rover2ProcEClassCAtDeleteRule-wm.ServiceVariable-1445345220012",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Widgets.gridCatQueryD.selecteditem.Classification"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcEClassCAtDeleteRule",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcBClassificationColumnListForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procBClassificationColumnListForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcBClassificationColumnListForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procBClassificationColumnListForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcBClassificationColumnListForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcBClassificationColumnListForThisSystem-wm.ServiceVariable-1444749955959",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Widgets.GridClassificationsList.selecteditem.Classification"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcBClassificationColumnListForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2QueryAClassificationsListForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Rover2ProcBClassificationColumnListForThisSystem",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/QueryAClassificationsListForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeQueryAClassificationsListForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2QueryAClassificationsListForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeQueryAClassificationsListForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2QueryAClassificationsListForThisSystem-wm.ServiceVariable-1444721978190",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2QueryAClassificationsListForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  }
+}

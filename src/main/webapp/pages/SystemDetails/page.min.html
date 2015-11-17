@@ -1,0 +1,1014 @@
+<style id="SystemDetails.css">
+
+</style>
+<script id="SystemDetails.js">
+Application.$controller("SystemDetailsPageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+
+    };
+
+}]);
+
+
+
+
+Application.$controller("grid2Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridCountProdSingleSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridCountUATSingleSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridCounBothSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Application.$controller("gridHUnclassifiedSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+Application.$controller("gridGMessagesWithDiffSysDController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridIClassifiedSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridKUncategorisedController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridLCategorisedController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+
+
+Application.$controller("gridNoDifferencesController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridJClassificationsController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridMMessageCoverageSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("gridNCategoryCoverageSysDetController", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+
+
+
+
+Application.$controller("grid14Controller", ["$scope",
+    function($scope) {
+        "use strict";
+        $scope.ctrlScope = $scope;
+    }
+]);
+
+Application.$controller("grid15Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="SystemDetails.variables.json">
+var _SystemDetailsPage_Variables_ ={
+  "Rover2ProcVennANumberOfMessagesPRODForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procVennANumberOfMessagesPRODForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcVennANumberOfMessagesPRODForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procVennANumberOfMessagesPRODForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcVennANumberOfMessagesPRODForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcVennANumberOfMessagesPRODForThisSystem-wm.ServiceVariable-1445252220009",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcVennANumberOfMessagesPRODForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcDNumberOfMessagesBOTHForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procDNumberOfMessagesBOTHForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcDNumberOfMessagesBOTHForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procDNumberOfMessagesBOTHForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcDNumberOfMessagesBOTHForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcDNumberOfMessagesBOTHForThisSystem-wm.ServiceVariable-1444752204365",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcDNumberOfMessagesBOTHForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcINumCatDiffSysDetails" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procINumCatDiffSysDetails",
+      "httpMethod" : "get",
+      "name" : "executeProcINumCatDiffSysDetails",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procINumCatDiffSysDetailsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcINumCatDiffSysDetails",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcINumCatDiffSysDetails-wm.ServiceVariable-1444388795685",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcINumCatDiffSysDetails",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcNumberOfMessagesPRODONLYForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procNumberOfMessagesPRODONLYForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcNumberOfMessagesPRODONLYForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procNumberOfMessagesPRODONLYForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcNumberOfMessagesPRODONLYForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcNumberOfMessagesPRODONLYForThisSystem-wm.ServiceVariable-1444751895894",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcNumberOfMessagesPRODONLYForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcGraphACatByNumDifferences" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procGraphACatByNumDifferences",
+      "httpMethod" : "get",
+      "name" : "executeProcGraphACatByNumDifferences",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procGraphACatByNumDifferencesrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcGraphACatByNumDifferences",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcGraphACatByNumDifferences-wm.ServiceVariable-1444382836269",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcGraphACatByNumDifferences",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcNCatCovPerSysDet" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procNCatCovPerSysDet",
+      "httpMethod" : "get",
+      "name" : "executeProcNCatCovPerSysDet",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procNCatCovPerSysDetrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcNCatCovPerSysDet",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcNCatCovPerSysDet-wm.ServiceVariable-1444389924676",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcNCatCovPerSysDet",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcLNumCatClassSysDet" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procLNumCatClassSysDet",
+      "httpMethod" : "get",
+      "name" : "executeProcLNumCatClassSysDet",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procLNumCatClassSysDetrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcLNumCatClassSysDet",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcLNumCatClassSysDet-wm.ServiceVariable-1444389348859",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcLNumCatClassSysDet",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcENumberOfMessagesUATONLYForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procENumberOfMessagesUATONLYForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcENumberOfMessagesUATONLYForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procENumberOfMessagesUATONLYForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcENumberOfMessagesUATONLYForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcENumberOfMessagesUATONLYForThisSystem-wm.ServiceVariable-1444752009189",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcENumberOfMessagesUATONLYForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcHNumUnclassDiffThisSysSysDet" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procHNumUnclassDiffThisSysSysDet",
+      "httpMethod" : "get",
+      "name" : "executeProcHNumUnclassDiffThisSysSysDet",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procHNumUnclassDiffThisSysSysDetrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcHNumUnclassDiffThisSysSysDet",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcHNumUnclassDiffThisSysSysDet-wm.ServiceVariable-1444639193684",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcHNumUnclassDiffThisSysSysDet",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcKNumUncatClassSysDet" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procKNumUncatClassSysDet",
+      "httpMethod" : "get",
+      "name" : "executeProcKNumUncatClassSysDet",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procKNumUncatClassSysDetrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcKNumUncatClassSysDet",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcKNumUncatClassSysDet-wm.ServiceVariable-1444389174813",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcKNumUncatClassSysDet",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcVennBNumberOfMessagesUATForThisSystem" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procVennBNumberOfMessagesUATForThisSystem",
+      "httpMethod" : "get",
+      "name" : "executeProcVennBNumberOfMessagesUATForThisSystem",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procVennBNumberOfMessagesUATForThisSystemrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcVennBNumberOfMessagesUATForThisSystem",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcVennBNumberOfMessagesUATForThisSystem-wm.ServiceVariable-1445252313260",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcVennBNumberOfMessagesUATForThisSystem",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcJNumOfClassificationSysDet" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procJNumOfClassificationSysDet",
+      "httpMethod" : "get",
+      "name" : "executeProcJNumOfClassificationSysDet",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procJNumOfClassificationSysDetrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcJNumOfClassificationSysDet",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcJNumOfClassificationSysDet-wm.ServiceVariable-1444388990067",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcJNumOfClassificationSysDet",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcGraphBCatByNumClassifications" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procGraphBCatByNumClassifications",
+      "httpMethod" : "get",
+      "name" : "executeProcGraphBCatByNumClassifications",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procGraphBCatByNumClassificationsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcGraphBCatByNumClassifications",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcGraphBCatByNumClassifications-wm.ServiceVariable-1444383862404",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcGraphBCatByNumClassifications",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcMMessCovSysDet" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procMMessCovSysDet",
+      "httpMethod" : "get",
+      "name" : "executeProcMMessCovSysDet",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procMMessCovSysDetrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcMMessCovSysDet",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcMMessCovSysDet-wm.ServiceVariable-1444389692584",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcMMessCovSysDet",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcGNumDiffThisSysSysDetails" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procGNumDiffThisSysSysDetails",
+      "httpMethod" : "get",
+      "name" : "executeProcGNumDiffThisSysSysDetails",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procGNumDiffThisSysSysDetailsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcGNumDiffThisSysSysDetails",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcGNumDiffThisSysSysDetails-wm.ServiceVariable-1444387418021",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcGNumDiffThisSysSysDetails",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcFNoDifferencesSysDetails" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeAll",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procFNoDifferencesSysDetails",
+      "httpMethod" : "get",
+      "name" : "executeProcFNoDifferencesSysDetails",
+      "parameters" : [ {
+        "name" : "P1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2procFNoDifferencesSysDetailsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcFNoDifferencesSysDetails",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcFNoDifferencesSysDetails-wm.ServiceVariable-1444388217960",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "P1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcFNoDifferencesSysDetails",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  }
+}
+</script>
+<script id="SystemDetails.html" type="text/ng-template">
+<wm-page name="page1" data-ng-controller="SystemDetailsPageController">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" horizontalalign="center" columnwidth="12" overflow="hidden" backgroundsize="100%,100%" backgroundcolor="#ffffff">
+            <wm-layoutgrid name="layoutgrid4" width="100%">
+                <wm-gridrow name="gridrow48_1">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn143_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn144_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn145_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn35"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn36" horizontalalign="left"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn37"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow51">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn153" horizontalalign="right">
+                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_Main" width="50" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" name="button3" backgroundcolor="#ffefbf"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn154" horizontalalign="left">
+                        <wm-label name="label46" caption="System:" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" textalign="center" fontweight="bold" fontsize="30" name="label47"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn156"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn155"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow41">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn120"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn121"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn122"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow42">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn123" height="157"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn124" height="147" backgroundrepeat="no-repeat">
+                        <wm-container name="container1" backgroundimage="resources/images/imagelists/Venn_7_1.png" width="1360" height="157" horizontalalign="left" backgroundrepeat="no-repeat">
+                            <wm-label margintop="95" marginleft="65" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcVennANumberOfMessagesPRODForThisSystem.dataSet[$i].NumberProdForThisSystem" name="label_prod" color="#000000"
+                            borderstyle="none"></wm-label>
+                            <wm-label margintop="80" marginleft="255" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcVennBNumberOfMessagesUATForThisSystem.dataSet[$i].NumberOfUATMessagesForThisSystem"
+                            name="label_uat" color="#000000" borderstyle="none"></wm-label>
+                            <wm-label margintop="80" marginleft="505" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcFNoDifferencesSysDetails.dataSet[$i]['No Differences']" name="label_noDiffs" color="#000000"
+                            borderstyle="none"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn125"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow46">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn138" height="86"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn139_1">
+                        <wm-container name="container6" backgroundimage="resources/images/imagelists/Venn_7_2.png" width="1360" height="86" horizontalalign="left">
+                            <wm-label margintop="40" marginleft="895" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcGNumDiffThisSysSysDetails.dataSet[$i]['Number of Differences']" name="label_diffs" color="#000000"
+                            borderstyle="none"></wm-label>
+                            <wm-label margintop="30" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcHNumUnclassDiffThisSysSysDet.dataSet[$i]['Number of Unctegorised Differences']"
+                            name="label_diffsUncat" color="#000000" borderstyle="none"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn140_2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow47_2">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn141_2" height="78"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn142_2">
+                        <wm-container backgroundimage="resources/images/imagelists/Venn_7_3.png" width="1360" height="78" name="container7" horizontalalign="left">
+                            <wm-label margintop="20" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcNumberOfMessagesPRODONLYForThisSystem.dataSet[$i]['PROD ONLY']" name="label_prodOnly" color="#000000"
+                            borderstyle="none"></wm-label>
+                            <wm-label margintop="25" marginleft="35" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcDNumberOfMessagesBOTHForThisSystem.dataSet[$i].Both" name="label_both" color="#000000"
+                            borderstyle="none"></wm-label>
+                            <wm-label margintop="25" marginleft="35" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcENumberOfMessagesUATONLYForThisSystem.dataSet[$i]['UAT Only']" name="label_uatOnly"
+                            color="#000000" borderstyle="none"></wm-label>
+                            <wm-label margintop="25" marginleft="525" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcINumCatDiffSysDetails.dataSet[$i]['Number of Categorised Differences']" color="#000000"
+                            name="label_diffsCat" borderstyle="none"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn143_2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow48_2">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn144_2" height="91"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn145_2">
+                        <wm-container backgroundimage="resources/images/imagelists/Venn_7_4.png" width="1360" height="91" name="container8" horizontalalign="left">
+                            <wm-label margintop="40" marginleft="895" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcJNumOfClassificationSysDet.dataSet[$i]['Total Number of Classification']" name="label_group" color="#000000"
+                            borderstyle="none"></wm-label>
+                            <wm-button class="btn-default" caption="" type="button" on-click="goToPage_ClassAndCat" width="50" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-forward fa-lg" name="button_classCat"></wm-button>
+                            <wm-label margintop="30" marginleft="30" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcKNumUncatClassSysDet.dataSet[$i]['Total Number of Uncategorised Classifications']"
+                            name="label_groupUncat" color="#000000" borderstyle="none"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn146_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow49_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn147_1" height="80"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn149">
+                        <wm-container name="container7_1" height="80" backgroundrepeat="no-repeat" width="1360" backgroundimage="resources/images/imagelists/Venn_7_5.png">
+                            <wm-label margintop="25" marginleft="1040" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcLNumCatClassSysDet.dataSet[$i]['Total Number of categorised Classifications']" name="label_groupCat"
+                            color="#000000" borderstyle="none"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow50">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn150" height="148"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn152">
+                        <wm-container name="container6_1" height="148" backgroundimage="resources/images/imagelists/Venn_7_6.png" width="1360">
+                            <wm-label margintop="40" marginleft="810" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcMMessCovSysDet.dataSet[$i]['Number as Percentange of Dif']" color="#000000" borderstyle="none"
+                            name="label_coverageMessages"></wm-label>
+                            <wm-label margintop="40" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcNCatCovPerSysDet.dataSet[$i]['Number of Categorised as a Percentage']" color="#000000"
+                            borderstyle="none" name="label_coverageGroups"></wm-label>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow34">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn104"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn105"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow35">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn106"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn107"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow22">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn64"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn65"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn66"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

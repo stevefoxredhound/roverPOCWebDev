@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.roverpoc.rover2">
+    <class entity-name="com.roverpoc.rover2.NclUatMessages" table="ncl_uat_messages" name="com.roverpoc.rover2.NclUatMessages" schema="dbo">
+        <composite-id name="id" class="NclUatMessagesId">
+            <key-property name="marketId" type="java.lang.Double">
+                <column name="MARKET_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="batchId" type="java.lang.Double">
+                <column name="BATCH_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="marketAction" type="string">
+                <column name="MARKET_ACTION" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcTradeId" type="string">
+                <column name="SRC_TRADE_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcOrderId" type="string">
+                <column name="SRC_ORDER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeId" type="java.lang.Double">
+                <column name="TRADE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="orderId" type="java.lang.Double">
+                <column name="ORDER_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="tradeType" type="string">
+                <column name="TRADE_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeStatus" type="string">
+                <column name="TRADE_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="environmentId" type="java.lang.Double">
+                <column name="ENVIRONMENT_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="environmentCode" type="string">
+                <column name="ENVIRONMENT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="sourceId" type="java.lang.Double">
+                <column name="SOURCE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="sourceCode" type="string">
+                <column name="SOURCE_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcMarket" type="java.lang.Double">
+                <column name="SRC_MARKET" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcContract" type="string">
+                <column name="SRC_CONTRACT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcContractType" type="string">
+                <column name="SRC_CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketCode" type="java.lang.Double">
+                <column name="MARKET_CODE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="contractCode" type="string">
+                <column name="CONTRACT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="contractType" type="string">
+                <column name="CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="expiry" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="EXPIRY" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="subType" type="string">
+                <column name="SUB_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="strike" type="java.lang.Double">
+                <column name="STRIKE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="price" type="java.lang.Double">
+                <column name="PRICE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="buySell" type="java.lang.Double">
+                <column name="BUY_SELL" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="quantity" type="java.lang.Double">
+                <column name="QUANTITY" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcExecutingBroker" type="string">
+                <column name="SRC_EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="executingBroker" type="string">
+                <column name="EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="trader" type="string">
+                <column name="TRADER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="giveInMsg" type="java.lang.Double">
+                <column name="GIVE_IN_MSG" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="openClose" type="string">
+                <column name="OPEN_CLOSE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="businessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="BUSINESS_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="TRADE_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="login" type="string">
+                <column name="LOGIN" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="comment" type="string">
+                <column name="COMMENT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc1" type="string">
+                <column name="MISC1" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc2" type="string">
+                <column name="MISC2" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc3" type="string">
+                <column name="MISC3" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcCurrency" type="string">
+                <column name="SRC_CURRENCY" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="currencyCode" type="string">
+                <column name="CURRENCY_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcFirm" type="java.lang.Double">
+                <column name="SRC_FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcOffice" type="string">
+                <column name="SRC_OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccount" type="string">
+                <column name="SRC_ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccountType" type="string">
+                <column name="SRC_ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="firm" type="java.lang.Double">
+                <column name="FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="office" type="string">
+                <column name="OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="accountType" type="string">
+                <column name="ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="MARKET_STAMP" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatus" type="string">
+                <column name="MARKET_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatusDesc" type="string">
+                <column name="MARKET_STATUS_DESC" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="date_time" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreSystem" type="string">
+                <column name="core_system" length="250" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreKey" type="string">
+                <column name="core_key" length="250" not-null="false" precision="19"/>
+            </key-property>
+        </composite-id>
+    </class>
+    <class entity-name="com.roverpoc.rover2.Operators" table="operators" name="com.roverpoc.rover2.Operators" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="operator" type="string">
+            <column name="operator" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="command" type="string">
+            <column name="command" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.NcUatMessages" table="NC_uat_messages" name="com.roverpoc.rover2.NcUatMessages" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreKey" type="string">
+            <column name="core_key" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="marketOrder" type="string">
+            <column name="Market_Order" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="marketTrade" type="string">
+            <column name="Market_trade" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="lots" type="string">
+            <column name="lots" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="product" type="string">
+            <column name="product" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="price" type="string">
+            <column name="price" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.ComparisonRules" table="comparison_rules" name="com.roverpoc.rover2.ComparisonRules" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="dataOrder" type="big_decimal">
+            <column name="data_order" length="255" not-null="false" precision="20"/>
+        </property>
+        <property name="dataItem" type="string">
+            <column name="data_item" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="operator" type="string">
+            <column name="operator" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.CoreSystems" table="core_systems" name="com.roverpoc.rover2.CoreSystems" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="Date_Time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystemRoverName" type="string">
+            <column name="core_system_rover_name" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreProdTable" type="string">
+            <column name="core_prod_table" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreProdConnectivity" type="string">
+            <column name="core_prod_connectivity" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreUatTable" type="string">
+            <column name="core_uat_table" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreUatConnectivity" type="string">
+            <column name="core_uat_connectivity" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystemStatus" type="string">
+            <column name="core_system_status" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystemLogging" type="string">
+            <column name="core_system_logging" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystemAlert" type="string">
+            <column name="core_system_alert" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystemAlertTarget" type="string">
+            <column name="core_system_alert_target" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.UatMessages" table="uat_messages" name="com.roverpoc.rover2.UatMessages" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="coreKey" type="string">
+            <column name="Core_Key" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="Core_System" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="Date_Time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="fexbkr" type="string">
+            <column name="FEXBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fopbkr" type="string">
+            <column name="FOPBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="forder" type="string">
+            <column name="FORDER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="frecno" type="string">
+            <column name="FRECNO" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsdsc1" type="string">
+            <column name="FSDSC1" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsqty" type="string">
+            <column name="FSQTY" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftand" type="string">
+            <column name="FTAND" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftdate" type="string">
+            <column name="FTDATE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftpric" type="string">
+            <column name="FTPRIC" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftrace" type="string">
+            <column name="FTRACE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftslap" type="string">
+            <column name="FTSLAP" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fttickle" type="string">
+            <column name="FTTICKLE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fuser" type="string">
+            <column name="FUSER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fwstim" type="string">
+            <column name="FWSTIM" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.UserLogin" table="user_login" name="com.roverpoc.rover2.UserLogin" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="userid" type="integer">
+            <column name="userid" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="tenantid" type="integer">
+            <column name="tenantid" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.GmiProdMessages" table="GMI_prod_messages" name="com.roverpoc.rover2.GmiProdMessages" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreKey" type="string">
+            <column name="core_key" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="forder" type="string">
+            <column name="FORDER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftdate" type="string">
+            <column name="FTDATE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fwstim" type="string">
+            <column name="FWSTIM" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftrace" type="string">
+            <column name="FTRACE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="frecno" type="string">
+            <column name="FRECNO" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fuser" type="string">
+            <column name="FUSER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsdsc1" type="string">
+            <column name="FSDSC1" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsqty" type="string">
+            <column name="FSQTY" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fexbkr" type="string">
+            <column name="FEXBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fopbkr" type="string">
+            <column name="FOPBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftpric" type="string">
+            <column name="FTPRIC" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftslap" type="string">
+            <column name="FTSLAP" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftand" type="string">
+            <column name="FTAND" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fttickle" type="string">
+            <column name="FTTICKLE" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.CategorisationRules" table="categorisation_rules" name="com.roverpoc.rover2.CategorisationRules" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="classificationName" type="string">
+            <column name="classification_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="who" type="string">
+            <column name="who" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="updatedTimestamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="updated_timestamp" length="23" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.Results" table="results" name="com.roverpoc.rover2.Results" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="compid" type="string">
+            <column name="compid" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="coreKey" type="string">
+            <column name="core_key" length="100" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.NclUatMessages1m" table="ncl_uat_messages_1m" name="com.roverpoc.rover2.NclUatMessages1m" schema="dbo">
+        <composite-id name="id" class="NclUatMessages1mId">
+            <key-property name="marketId" type="java.lang.Double">
+                <column name="MARKET_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="batchId" type="java.lang.Double">
+                <column name="BATCH_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="marketAction" type="string">
+                <column name="MARKET_ACTION" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcTradeId" type="string">
+                <column name="SRC_TRADE_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcOrderId" type="string">
+                <column name="SRC_ORDER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeId" type="java.lang.Double">
+                <column name="TRADE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="orderId" type="java.lang.Double">
+                <column name="ORDER_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="tradeType" type="string">
+                <column name="TRADE_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeStatus" type="string">
+                <column name="TRADE_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="environmentId" type="java.lang.Double">
+                <column name="ENVIRONMENT_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="environmentCode" type="string">
+                <column name="ENVIRONMENT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="sourceId" type="java.lang.Double">
+                <column name="SOURCE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="sourceCode" type="string">
+                <column name="SOURCE_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcMarket" type="java.lang.Double">
+                <column name="SRC_MARKET" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcContract" type="string">
+                <column name="SRC_CONTRACT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcContractType" type="string">
+                <column name="SRC_CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketCode" type="java.lang.Double">
+                <column name="MARKET_CODE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="contractCode" type="string">
+                <column name="CONTRACT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="contractType" type="string">
+                <column name="CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="expiry" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="EXPIRY" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="subType" type="string">
+                <column name="SUB_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="strike" type="java.lang.Double">
+                <column name="STRIKE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="price" type="java.lang.Double">
+                <column name="PRICE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="buySell" type="java.lang.Double">
+                <column name="BUY_SELL" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="quantity" type="java.lang.Double">
+                <column name="QUANTITY" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcExecutingBroker" type="string">
+                <column name="SRC_EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="executingBroker" type="string">
+                <column name="EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="trader" type="string">
+                <column name="TRADER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="giveInMsg" type="java.lang.Double">
+                <column name="GIVE_IN_MSG" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="openClose" type="string">
+                <column name="OPEN_CLOSE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="businessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="BUSINESS_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="TRADE_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="login" type="string">
+                <column name="LOGIN" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="comment" type="string">
+                <column name="COMMENT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc1" type="string">
+                <column name="MISC1" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc2" type="string">
+                <column name="MISC2" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc3" type="string">
+                <column name="MISC3" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcCurrency" type="string">
+                <column name="SRC_CURRENCY" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="currencyCode" type="string">
+                <column name="CURRENCY_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcFirm" type="java.lang.Double">
+                <column name="SRC_FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcOffice" type="string">
+                <column name="SRC_OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccount" type="string">
+                <column name="SRC_ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccountType" type="string">
+                <column name="SRC_ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="firm" type="java.lang.Double">
+                <column name="FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="office" type="string">
+                <column name="OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="accountType" type="string">
+                <column name="ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="MARKET_STAMP" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatus" type="string">
+                <column name="MARKET_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatusDesc" type="string">
+                <column name="MARKET_STATUS_DESC" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="date_time" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreSystem" type="string">
+                <column name="core_system" length="250" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreKey" type="string">
+                <column name="core_key" length="250" not-null="false" precision="19"/>
+            </key-property>
+        </composite-id>
+    </class>
+    <class entity-name="com.roverpoc.rover2.Logging" table="logging" name="com.roverpoc.rover2.Logging" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="process" type="string">
+            <column name="process" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="logDetails" type="string">
+            <column name="log_details" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.NclProdMessages1m" table="ncl_prod_messages_1m" name="com.roverpoc.rover2.NclProdMessages1m" schema="dbo">
+        <composite-id name="id" class="NclProdMessages1mId">
+            <key-property name="marketId" type="java.lang.Double">
+                <column name="MARKET_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="batchId" type="java.lang.Double">
+                <column name="BATCH_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="marketAction" type="string">
+                <column name="MARKET_ACTION" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcTradeId" type="string">
+                <column name="SRC_TRADE_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcOrderId" type="string">
+                <column name="SRC_ORDER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeId" type="java.lang.Double">
+                <column name="TRADE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="orderId" type="java.lang.Double">
+                <column name="ORDER_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="tradeType" type="string">
+                <column name="TRADE_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeStatus" type="string">
+                <column name="TRADE_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="environmentId" type="java.lang.Double">
+                <column name="ENVIRONMENT_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="environmentCode" type="string">
+                <column name="ENVIRONMENT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="sourceId" type="java.lang.Double">
+                <column name="SOURCE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="sourceCode" type="string">
+                <column name="SOURCE_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcMarket" type="java.lang.Double">
+                <column name="SRC_MARKET" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcContract" type="string">
+                <column name="SRC_CONTRACT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcContractType" type="string">
+                <column name="SRC_CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketCode" type="java.lang.Double">
+                <column name="MARKET_CODE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="contractCode" type="string">
+                <column name="CONTRACT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="contractType" type="string">
+                <column name="CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="expiry" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="EXPIRY" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="subType" type="string">
+                <column name="SUB_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="strike" type="java.lang.Double">
+                <column name="STRIKE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="price" type="java.lang.Double">
+                <column name="PRICE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="buySell" type="java.lang.Double">
+                <column name="BUY_SELL" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="quantity" type="java.lang.Double">
+                <column name="QUANTITY" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcExecutingBroker" type="string">
+                <column name="SRC_EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="executingBroker" type="string">
+                <column name="EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="trader" type="string">
+                <column name="TRADER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="giveInMsg" type="java.lang.Double">
+                <column name="GIVE_IN_MSG" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="openClose" type="string">
+                <column name="OPEN_CLOSE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="businessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="BUSINESS_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="TRADE_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="login" type="string">
+                <column name="LOGIN" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="comment" type="string">
+                <column name="COMMENT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc1" type="string">
+                <column name="MISC1" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc2" type="string">
+                <column name="MISC2" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc3" type="string">
+                <column name="MISC3" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcCurrency" type="string">
+                <column name="SRC_CURRENCY" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="currencyCode" type="string">
+                <column name="CURRENCY_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcFirm" type="java.lang.Double">
+                <column name="SRC_FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcOffice" type="string">
+                <column name="SRC_OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccount" type="string">
+                <column name="SRC_ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccountType" type="string">
+                <column name="SRC_ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="firm" type="java.lang.Double">
+                <column name="FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="office" type="string">
+                <column name="OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="accountType" type="string">
+                <column name="ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="MARKET_STAMP" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatus" type="string">
+                <column name="MARKET_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatusDesc" type="string">
+                <column name="MARKET_STATUS_DESC" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="date_time" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreSystem" type="string">
+                <column name="core_system" length="250" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreKey" type="string">
+                <column name="core_key" length="250" not-null="false" precision="19"/>
+            </key-property>
+        </composite-id>
+    </class>
+    <class entity-name="com.roverpoc.rover2.NclProdMessages" table="ncl_prod_messages" name="com.roverpoc.rover2.NclProdMessages" schema="dbo">
+        <composite-id name="id" class="NclProdMessagesId">
+            <key-property name="marketId" type="java.lang.Double">
+                <column name="MARKET_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="batchId" type="java.lang.Double">
+                <column name="BATCH_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="marketAction" type="string">
+                <column name="MARKET_ACTION" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcTradeId" type="string">
+                <column name="SRC_TRADE_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcOrderId" type="string">
+                <column name="SRC_ORDER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeId" type="java.lang.Double">
+                <column name="TRADE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="orderId" type="java.lang.Double">
+                <column name="ORDER_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="tradeType" type="string">
+                <column name="TRADE_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeStatus" type="string">
+                <column name="TRADE_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="environmentId" type="java.lang.Double">
+                <column name="ENVIRONMENT_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="environmentCode" type="string">
+                <column name="ENVIRONMENT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="sourceId" type="java.lang.Double">
+                <column name="SOURCE_ID" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="sourceCode" type="string">
+                <column name="SOURCE_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcMarket" type="java.lang.Double">
+                <column name="SRC_MARKET" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcContract" type="string">
+                <column name="SRC_CONTRACT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcContractType" type="string">
+                <column name="SRC_CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketCode" type="java.lang.Double">
+                <column name="MARKET_CODE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="contractCode" type="string">
+                <column name="CONTRACT_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="contractType" type="string">
+                <column name="CONTRACT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="expiry" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="EXPIRY" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="subType" type="string">
+                <column name="SUB_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="strike" type="java.lang.Double">
+                <column name="STRIKE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="price" type="java.lang.Double">
+                <column name="PRICE" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="buySell" type="java.lang.Double">
+                <column name="BUY_SELL" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="quantity" type="java.lang.Double">
+                <column name="QUANTITY" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcExecutingBroker" type="string">
+                <column name="SRC_EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="executingBroker" type="string">
+                <column name="EXECUTING_BROKER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="trader" type="string">
+                <column name="TRADER" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="giveInMsg" type="java.lang.Double">
+                <column name="GIVE_IN_MSG" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="openClose" type="string">
+                <column name="OPEN_CLOSE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="businessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="BUSINESS_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="tradeDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="TRADE_DATE" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="login" type="string">
+                <column name="LOGIN" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="comment" type="string">
+                <column name="COMMENT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc1" type="string">
+                <column name="MISC1" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc2" type="string">
+                <column name="MISC2" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="misc3" type="string">
+                <column name="MISC3" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcCurrency" type="string">
+                <column name="SRC_CURRENCY" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="currencyCode" type="string">
+                <column name="CURRENCY_CODE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcFirm" type="java.lang.Double">
+                <column name="SRC_FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="srcOffice" type="string">
+                <column name="SRC_OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccount" type="string">
+                <column name="SRC_ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="srcAccountType" type="string">
+                <column name="SRC_ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="firm" type="java.lang.Double">
+                <column name="FIRM" length="255" not-null="false" precision="53"/>
+            </key-property>
+            <key-property name="office" type="string">
+                <column name="OFFICE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="accountType" type="string">
+                <column name="ACCOUNT_TYPE" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="MARKET_STAMP" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatus" type="string">
+                <column name="MARKET_STATUS" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="marketStatusDesc" type="string">
+                <column name="MARKET_STATUS_DESC" length="255" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+                <column name="date_time" length="23" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreSystem" type="string">
+                <column name="core_system" length="250" not-null="false" precision="19"/>
+            </key-property>
+            <key-property name="coreKey" type="string">
+                <column name="core_key" length="250" not-null="false" precision="19"/>
+            </key-property>
+        </composite-id>
+    </class>
+    <class entity-name="com.roverpoc.rover2.Categories" table="categories" name="com.roverpoc.rover2.Categories" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.ProdMessages" table="prod_messages" name="com.roverpoc.rover2.ProdMessages" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="coreKey" type="string">
+            <column name="Core_Key" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="Core_System" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="Date_Time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="fexbkr" type="string">
+            <column name="FEXBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fopbkr" type="string">
+            <column name="FOPBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="forder" type="string">
+            <column name="FORDER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="frecno" type="string">
+            <column name="FRECNO" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsdsc1" type="string">
+            <column name="FSDSC1" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsqty" type="string">
+            <column name="FSQTY" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftand" type="string">
+            <column name="FTAND" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftdate" type="string">
+            <column name="FTDATE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftpric" type="string">
+            <column name="FTPRIC" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftrace" type="string">
+            <column name="FTRACE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftslap" type="string">
+            <column name="FTSLAP" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fttickle" type="string">
+            <column name="FTTICKLE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fuser" type="string">
+            <column name="FUSER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fwstim" type="string">
+            <column name="FWSTIM" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.GmiUatMessages" table="GMI_uat_messages" name="com.roverpoc.rover2.GmiUatMessages" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreKey" type="string">
+            <column name="core_key" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="forder" type="string">
+            <column name="FORDER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftdate" type="string">
+            <column name="FTDATE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fwstim" type="string">
+            <column name="FWSTIM" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftrace" type="string">
+            <column name="FTRACE" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="frecno" type="string">
+            <column name="FRECNO" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fuser" type="string">
+            <column name="FUSER" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsdsc1" type="string">
+            <column name="FSDSC1" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fsqty" type="string">
+            <column name="FSQTY" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fexbkr" type="string">
+            <column name="FEXBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fopbkr" type="string">
+            <column name="FOPBKR" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftpric" type="string">
+            <column name="FTPRIC" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftslap" type="string">
+            <column name="FTSLAP" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="ftand" type="string">
+            <column name="FTAND" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="fttickle" type="string">
+            <column name="FTTICKLE" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.NcProdMessages" table="NC_prod_messages" name="com.roverpoc.rover2.NcProdMessages" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="coreKey" type="string">
+            <column name="core_key" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="marketOrder" type="string">
+            <column name="Market_Order" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="marketTrade" type="string">
+            <column name="Market_trade" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="lots" type="string">
+            <column name="lots" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="product" type="string">
+            <column name="product" length="250" not-null="false" precision="19"/>
+        </property>
+        <property name="price" type="string">
+            <column name="price" length="250" not-null="false" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.roverpoc.rover2.Classifications" table="classifications" name="com.roverpoc.rover2.Classifications" schema="dbo">
+        <id name="id" type="integer">
+            <column name="ID" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+            <column name="date_time" length="23" not-null="false" precision="19"/>
+        </property>
+        <property name="coreSystem" type="string">
+            <column name="core_system" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="compid" type="string">
+            <column name="compid" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="255" not-null="false" precision="19"/>
+        </property>
+    </class>
+</hibernate-mapping>

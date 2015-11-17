@@ -1,0 +1,70 @@
+<wm-partial data-ng-controller="headerPageController" name="header" type="header">
+    <wm-layoutgrid name="headerlayout" backgroundcolor="#ffffff">
+        <wm-gridrow name="headerlayoutgridrow1">
+            <wm-gridcolumn columnwidth="4" name="headerlayoutgridcolumn11">
+                <wm-picture picturesource="resources/images/imagelists/logo1.png" name="picture4" textalign="center"></wm-picture>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="4" name="headerlayoutgridcolumn12"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="4" horizontalalign="right" name="headerlayoutgridcolumn13"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow8" backgroundcolor="#000000">
+            <wm-gridcolumn columnwidth="1" name="gridcolumn24" height="45px"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="10" name="gridcolumn25">
+                <wm-gridrow backgroundcolor="#000000" name="gridrow10">
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn30">
+                        <wm-gridrow name="gridrow11">
+                            <wm-gridcolumn columnwidth="1" name="gridcolumn31"></wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="10" paddingtop="2.5" paddingbottom="2.5" name="gridcolumn32">
+                                <wm-button class="btn-default" type="button" caption="Home" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_Main" iconclass="glyphicon glyphicon-home fa-lg"
+                                name="button8"></wm-button>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="1" name="gridcolumn33"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn34">
+                        <wm-gridrow name="gridrow12">
+                            <wm-gridcolumn columnwidth="1" name="gridcolumn35"></wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="10" paddingtop="2.5" paddingbottom="2.5" name="gridcolumn36">
+                                <wm-button class="btn-default" type="button" caption="Systems" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_CoreSystems" iconclass="glyphicon glyphicon-globe fa-lg"
+                                name="button8_1"></wm-button>
+                                <wm-button class="btn-default" type="button" caption="Users" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_UserMaintenance"
+                                iconclass="glyphicon glyphicon-user fa-lg" name="button10"></wm-button>
+                                <wm-button class="btn-default" type="button" caption="Rules" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-th-list fa-lg"
+                                name="button9" on-click="goToPage_ComparisonRules" accessroles="admin"></wm-button>
+                                <wm-button class="btn-default" type="button" caption="Operators" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_OperatorMaintenance"
+                                iconclass="glyphicon glyphicon-barcode fa-lg" name="button11" accessroles="rulesexpert"></wm-button>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn columnwidth="1" name="gridcolumn37"></wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" horizontalalign="right" name="gridcolumn38">
+                        <wm-layoutgrid height="45px" name="layoutgrid3">
+                            <wm-gridrow name="gridrow13">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn39"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" paddingtop="2.5" paddingbottom="2.5" horizontalalign="left" name="gridcolumn40">
+                                    <wm-button class="btn-default" type="button" caption="About" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-eye-open fa-lg" name="button12"></wm-button>
+                                    <wm-button class="btn-default" type="button" caption="Demo Run" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="Rover2ProcCategorisatonEngine"
+                                    iconclass="glyphicon glyphicon-play fa-lg" name="button13"></wm-button>
+                                    <wm-button class="btn-default" type="button" caption="Logout" on-click="logout" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-log-out fa-lg"
+                                    name="button14"></wm-button>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn41"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn26"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow9">
+            <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="10" name="gridcolumn28"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn29"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="headerlayoutgridrow4" height="30px">
+            <wm-gridcolumn columnwidth="1" name="headerlayoutgridcolumn41"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="10" name="headerlayoutgridcolumn42"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="headerlayoutgridcolumn43"></wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

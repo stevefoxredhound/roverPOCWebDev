@@ -1,0 +1,55 @@
+<wm-page data-ng-controller="UserMaintenancePageController" name="page1">
+    <wm-header content="header" name="header1" readonlygrid="true"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" backgroundcolor="#ffffff">
+            <wm-layoutgrid name="layoutgrid5">
+                <wm-gridrow name="gridrow25">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn38"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn39"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn40"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow26">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn41" horizontalalign="right">
+                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_Main" width="50" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" backgroundcolor="#ffe5bf" name="button1"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn42">
+                        <wm-label caption="User Maintanance" fontsize="30" textalign="left" name="label1"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn43"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn44"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn45"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn46"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn16"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn17">
+                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="UserLoginGrid1" dataset="bind:Variables.Rover2UserLoginData.dataSet" height="400px">
+                            <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="userid" caption="Userid" type="integer" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="username" caption="Username" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="password" caption="Password" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="role" caption="Role" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column binding="tenantid" caption="Tenantid" type="integer" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                        </wm-grid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn18"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn19"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn20"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn21"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn22"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn23"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-livegrid name="UserLoginLivegrid1" service="rover2@UserLogin"></wm-livegrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

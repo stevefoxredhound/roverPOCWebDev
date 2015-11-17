@@ -1,0 +1,46 @@
+{
+  "Rover2QueryAAMessagesforthisClassificationsWithDifferences" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/QueryAAMessagesforthisClassificationsWithDifferences",
+      "httpMethod" : "get",
+      "name" : "executeQueryAAMessagesforthisClassificationsWithDifferences",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rover2QueryAAMessagesforthisClassificationsWithDifferencesrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeQueryAAMessagesforthisClassificationsWithDifferences",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2QueryAAMessagesforthisClassificationsWithDifferences-wm.ServiceVariable-1445499949399",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.StaticGridClassifiListSelect.dataSet.dataValue"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2QueryAAMessagesforthisClassificationsWithDifferences",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  }
+}

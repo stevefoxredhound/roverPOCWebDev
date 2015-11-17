@@ -1,0 +1,346 @@
+<style id="EditRule.css">
+
+</style>
+<script id="EditRule.js">
+Application.$controller("EditRulePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+
+
+
+
+
+Application.$controller("grid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("confirmUpdateRecordController", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="EditRule.variables.json">
+var _EditRulePage_Variables_ ={
+  "Rover2ProcBGroupReport" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/ProcBGroupReport",
+      "httpMethod" : "get",
+      "name" : "executeProcBGroupReport",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rover2ProcBGroupReportrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcBGroupReport",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcBGroupReport-wm.ServiceVariable-1445871065444",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridCatQueryDValues.dataSet.Classification"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcBGroupReport",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcDEditRuleVersionDisplayOnly" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procDEditRuleVersionDisplayOnly",
+      "httpMethod" : "get",
+      "name" : "executeProcDEditRuleVersionDisplayOnly",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rover2procDEditRuleVersionDisplayOnlyrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcDEditRuleVersionDisplayOnly",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rover2ProcDEditRuleVersionDisplayOnly-wm.ServiceVariable-1445351376267",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcDEditRuleVersionDisplayOnly",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  },
+  "Rover2ProcAEditRuleUpdate" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "goToPage_ClassAndCat",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procAEditRuleUpdate",
+      "httpMethod" : "get",
+      "name" : "executeProcAEditRuleUpdate",
+      "parameters" : [ {
+        "name" : "pCategory",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "Pcomment",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "pClassificationName",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rover2procAEditRuleUpdatertnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeProcAEditRuleUpdate",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rover2ProcAEditRuleUpdate-wm.ServiceVariable-1445349636273",
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "isList" : false,
+        "name" : "pCategory",
+        "value" : "bind:Widgets.textCategory.datavalue"
+      }, {
+        "isList" : false,
+        "name" : "Pcomment",
+        "value" : "bind:Widgets.textComment.datavalue"
+      }, {
+        "isList" : false,
+        "name" : "pClassificationName",
+        "value" : "bind:Widgets.textClassification.datavalue"
+      } ]
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rover2ProcAEditRuleUpdate",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rover2"
+  }
+}
+</script>
+<script id="EditRule.html" type="text/ng-template">
+<wm-page data-ng-controller="EditRulePageController" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" backgroundcolor="#ffffff">
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn42"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn43"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn44"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn45" horizontalalign="right">
+                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_ClassAndCat" width="50" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" backgroundcolor="#ffefbf" name="button3"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn46">
+                        <wm-label caption="System:" fontsize="30" textalign="left" name="label9"></wm-label>
+                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" textalign="center" fontweight="bold" fontsize="30" name="label10"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn47"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn48"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn49">
+                        <wm-label caption="Group:" fontsize="30" textalign="left" name="label11"></wm-label>
+                        <wm-label fontsize="30" caption="bind:Widgets.textClassification.datavalue" name="label12" fontweight="bold"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn50"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow15">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn51" height="30"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn52"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn53"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn87_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn88_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn89_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn54"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn55">
+                        <wm-label caption="Edit Category or Comment below then confirm changes via the UPDATE RECORD button" name="label13"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn56"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow28_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn90_1" height="30"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn91_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn92_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow17">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn57"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn58"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn59"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow18_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn53_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn54_1">
+                        <wm-label caption="Group Details" fontweight="bold" name="label12_1" fontsize="20"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn57_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn55_1">
+                        <wm-label caption="Group Report" name="label11_1" fontweight="bold" fontsize="20"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow18">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn60"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn61">
+                        <wm-layoutgrid name="layoutgrid3">
+                            <wm-gridrow name="gridrow19">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn63" horizontalalign="right">
+                                    <wm-label caption="Group" name="label14"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn89"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn64">
+                                    <wm-text name="textClassification" datavalue="bind:Variables.staticGridCatQueryDValues.dataSet.Classification" readonly="true" backgroundcolor="#F3F3F4"></wm-text>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow22">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn72" horizontalalign="right">
+                                    <wm-label caption="Messages" name="label15"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn90"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn73">
+                                    <wm-text name="textMessages" type="number" datavalue="bind:Variables.staticGridCatQueryDValues.dataSet.Messages" readonly="true" backgroundcolor="#F3F3F4"></wm-text>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow23">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn74" horizontalalign="right">
+                                    <wm-label caption="Category" name="label16"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn91"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn75">
+                                    <wm-text name="textCategory" datavalue="bind:Variables.staticGridCatQueryDValues.dataSet.Category" autofocus="true"></wm-text>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow24">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn76" horizontalalign="right">
+                                    <wm-label caption="Comment" name="label17"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn92"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn77">
+                                    <wm-text name="textComment" datavalue="bind:Variables.staticGridCatQueryDValues.dataSet.Comment"></wm-text>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow25">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn78" horizontalalign="right">
+                                    <wm-label caption="Who" name="label18"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn93"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn79">
+                                    <wm-text name="textWho" datavalue="bind:Variables.staticGridCatQueryDValues.dataSet.Who" readonly="true" backgroundcolor="#F3F3F4"></wm-text>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn56_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn52_1" height="350">
+                        <wm-label caption="bind:Variables.Rover2ProcBGroupReport.dataSet[$i]['']" name="label13_1" height="350" width="100%" fontsize="14"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow26">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn80" height="30"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn81"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn82"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn83"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn84">
+                        <wm-button class="btn-default" caption="Update Record" type="button" name="buttonUpdateRecord" on-click="confirmUpdateRecord.show" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-save fa-lg" color="#000000" borderstyle="none"></wm-button>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn85"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow28">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn86"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn87"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn88"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-livegrid name="ComparisonRulesLivegrid1" service="rover2@ComparisonRules"></wm-livegrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-view class="dialog-view" name="view2" show="false">
+        <wm-confirmdialog name="confirmUpdateRecord" title="Confirm Update Record" message="Update record?" on-ok="Rover2ProcAEditRuleUpdate"></wm-confirmdialog>
+    </wm-view>
+</wm-page>
+</script>

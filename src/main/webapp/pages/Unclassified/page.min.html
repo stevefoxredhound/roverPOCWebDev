@@ -1,0 +1,69 @@
+<style id="Unclassified.css">
+
+</style>
+<script id="Unclassified.js">
+Application.$controller("UnclassifiedPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+</script>
+<script id="Unclassified.variables.json">
+var _UnclassifiedPage_Variables_ ={};
+</script>
+<script id="Unclassified.html" type="text/ng-template">
+<wm-page data-ng-controller="UnclassifiedPageController" name="page1">
+    <wm-header content="header" name="Rover"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1">
+                    <wm-accordionheader name="accordionheader1" heading="Unclassified"></wm-accordionheader>
+                    <wm-accordioncontent name="accordioncontent1">
+                        <wm-layoutgrid name="layoutgrid1">
+                            <wm-gridrow name="gridrow1">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                                    <wm-picture picturesource="resources/images/imagelists/Red Hound Logo.png" name="picture1"></wm-picture>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn2"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn3"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow2">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                                    <wm-gridcolumn columnwidth="4" name="gridcolumn10">
+                                        <wm-button class="btn-default" caption="Back to System Details" type="button" on-click="goToPage_SystemDetails" name="button1"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn5"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn7"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn8"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn9"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-accordioncontent>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>
