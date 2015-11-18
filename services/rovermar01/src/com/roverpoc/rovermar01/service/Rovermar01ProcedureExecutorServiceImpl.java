@@ -40,16 +40,6 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
 
-	public List<Object> executeFunctionCallRoverNumberOfRecordInUat()
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInUat", params);
-
-	}
-	@Transactional(value = "rovermar01TransactionManager")
-	@Override
-
 	public List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups()
 
 	throws QueryParameterMismatchException{
@@ -86,6 +76,50 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("p1", p1);
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProd", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInUat(java.lang.String P1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("P1", P1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInUat", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInProdOnly(java.lang.String P1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("P1", P1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProdOnly", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInBoth(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInBoth", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInUatOnly(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInUatOnly", params);
 
 	}
 

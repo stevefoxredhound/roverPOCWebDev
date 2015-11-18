@@ -7372,7 +7372,13 @@
 			{
 				"name": "dataBinding",
 				"type": "object",
-				"fields": []
+				"fields": [
+					{
+						"name": "P1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
 			}
 		],
 		"saveInPhonegap": false,
@@ -7381,7 +7387,7 @@
 		"designMaxResults": 10,
 		"service": "rovermar01",
 		"operation": "executeFunctionCallRoverNumberOfRecordInUat",
-		"operationType": "procedure",
+		"operationType": "get",
 		"startUpdate": false,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
@@ -7389,7 +7395,67 @@
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
-		"wmServiceOperationInfo": {},
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordInUat",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInUat",
+			"parameters": [
+				{
+					"name": "P1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat-wm.ServiceVariable-1447846298432"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
+		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "P1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordInProdOnly",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordInProdOnly",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProdOnly",
+			"parameters": [
+				{
+					"name": "P1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447855721205",
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly"
 	}
 }

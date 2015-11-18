@@ -1028,6 +1028,104 @@ var _SystemDetailsPage_Variables_ ={
 			]
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd-wm.ServiceVariable-1447846221496"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInBoth": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInBoth",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordInBothrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordInBoth",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordInBoth",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInBoth",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInBoth-wm.ServiceVariable-1447855981319"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly": {
+		"type": "rovermar01FunctionCallRoverNumberOfRecordInUatOnlyrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordInUatOnly",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordInUatOnly",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInUatOnly",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly-wm.ServiceVariable-1447856277766",
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly"
 	}
 }
 </script>
@@ -1069,8 +1167,8 @@ var _SystemDetailsPage_Variables_ ={
                         <wm-container name="container1" backgroundimage="resources/images/imagelists/Venn_7_1.png" width="1360" height="157" horizontalalign="left" backgroundrepeat="no-repeat">
                             <wm-label margintop="95" marginleft="65" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd.dataSet[0].NumberOfRecordsInProd" name="label_prod"
                             color="#000000" borderstyle="none"></wm-label>
-                            <wm-label margintop="80" marginleft="255" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcVennBNumberOfMessagesUATForThisSystem.dataSet[$i].NumberOfUATMessagesForThisSystem"
-                            name="label_uat" color="#000000" borderstyle="none"></wm-label>
+                            <wm-label margintop="80" marginleft="255" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat.dataSet[0].NumberOfRecordsInUat" name="label_uat"
+                            color="#000000" borderstyle="none"></wm-label>
                             <wm-label margintop="80" marginleft="505" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcFNoDifferencesSysDetails.dataSet[$i]['No Differences']" name="label_noDiffs" color="#000000"
                             borderstyle="none"></wm-label>
                         </wm-container>
@@ -1093,12 +1191,12 @@ var _SystemDetailsPage_Variables_ ={
                     <wm-gridcolumn columnwidth="1" name="gridcolumn141_2" height="78"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn142_2">
                         <wm-container backgroundimage="resources/images/imagelists/Venn_7_3.png" width="1360" height="78" name="container7" horizontalalign="left">
-                            <wm-label margintop="20" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcNumberOfMessagesPRODONLYForThisSystem.dataSet[$i]['PROD ONLY']" name="label_prodOnly" color="#000000"
-                            borderstyle="none"></wm-label>
-                            <wm-label margintop="25" marginleft="35" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcDNumberOfMessagesBOTHForThisSystem.dataSet[$i].Both" name="label_both" color="#000000"
-                            borderstyle="none"></wm-label>
-                            <wm-label margintop="25" marginleft="35" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcENumberOfMessagesUATONLYForThisSystem.dataSet[$i]['UAT Only']" name="label_uatOnly"
+                            <wm-label margintop="20" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly.dataSet[0].NumberOfRecordsInProdOnly" name="label_prodOnly"
                             color="#000000" borderstyle="none"></wm-label>
+                            <wm-label margintop="25" marginleft="35" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverNumberOfRecordInBoth.dataSet[0].NumberOfRecordsInBoth" name="label_both"
+                            color="#000000" borderstyle="none"></wm-label>
+                            <wm-label margintop="25" marginleft="35" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly.dataSet[0].NumberOfRecordsInUatOnly"
+                            name="label_uatOnly" color="#000000" borderstyle="none"></wm-label>
                             <wm-label margintop="25" marginleft="525" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcINumCatDiffSysDetails.dataSet[$i]['Number of Categorised Differences']" color="#000000"
                             name="label_diffsCat" borderstyle="none"></wm-label>
                         </wm-container>
