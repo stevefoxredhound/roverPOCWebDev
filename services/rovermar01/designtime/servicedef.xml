@@ -60,6 +60,14 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverNumberOfGroupsCatrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverMessageCoverage">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverMessageCoveragertnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverGroupCoverage">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverGroupCoveragertnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -290,6 +298,12 @@
         </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverNumberOfGroupsCatrtnType">
             <element name="NumberOfGroupsCat" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverMessageCoveragertnType">
+            <element name="NumberOfDiffPercentages" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverGroupCoveragertnType">
+            <element name="NumberOfGroupPercentages" typeRef="java.lang.String"/>
         </dataobject>
     </dataobjects>
 </service>

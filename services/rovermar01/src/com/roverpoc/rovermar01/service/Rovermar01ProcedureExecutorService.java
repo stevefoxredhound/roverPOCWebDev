@@ -58,6 +58,12 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverNumberOfGroupsCat( java.lang.String p1) throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionCallRoverMessageCoverage( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverGroupCoverage( java.lang.String p1) throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

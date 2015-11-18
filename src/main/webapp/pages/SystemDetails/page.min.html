@@ -1422,6 +1422,7 @@ var _SystemDetailsPage_Variables_ ={
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfGroupsUncat-wm.ServiceVariable-1447858304885"
 	},
 	"Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat",
 		"type": "rovermar01FunctionCallRoverNumberOfGroupsCatrtnType",
 		"isList": false,
 		"owner": "Page",
@@ -1467,8 +1468,105 @@ var _SystemDetailsPage_Variables_ ={
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat-wm.ServiceVariable-1447858438774",
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat-wm.ServiceVariable-1447858438774"
+	},
+	"Rovermar01ExecuteFunctionCallRoverMessageCoverage": {
+		"name": "Rovermar01ExecuteFunctionCallRoverMessageCoverage",
+		"type": "rovermar01FunctionCallRoverMessageCoveragertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverMessageCoverage",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverMessageCoverage",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverMessageCoverage",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverMessageCoverage-wm.ServiceVariable-1447859568453"
+	},
+	"Rovermar01ExecuteFunctionCallRoverGroupCoverage": {
+		"type": "rovermar01FunctionCallRoverGroupCoveragertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverGroupCoverage",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverGroupCoverage",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverGroupCoverage",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverGroupCoverage-wm.ServiceVariable-1447859711024",
+		"name": "Rovermar01ExecuteFunctionCallRoverGroupCoverage"
 	}
 }
 </script>
@@ -1571,9 +1669,9 @@ var _SystemDetailsPage_Variables_ ={
                     <wm-gridcolumn columnwidth="1" name="gridcolumn150" height="148"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn152">
                         <wm-container name="container6_1" height="148" backgroundimage="resources/images/imagelists/Venn_7_6.png" width="1360">
-                            <wm-label margintop="40" marginleft="810" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcMMessCovSysDet.dataSet[$i]['Number as Percentange of Dif']" color="#000000" borderstyle="none"
+                            <wm-label margintop="40" marginleft="810" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverMessageCoverage.dataSet[0].NumberOfDiffPercentages" color="#000000" borderstyle="none"
                             name="label_coverageMessages"></wm-label>
-                            <wm-label margintop="40" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rover2ProcNCatCovPerSysDet.dataSet[$i]['Number of Categorised as a Percentage']" color="#000000"
+                            <wm-label margintop="40" marginleft="80" fontsize="20" textalign="center" width="150" height="40" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverGroupCoverage.dataSet[0].NumberOfGroupPercentages" color="#000000"
                             borderstyle="none" name="label_coverageGroups"></wm-label>
                         </wm-container>
                     </wm-gridcolumn>
