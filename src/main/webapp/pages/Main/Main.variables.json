@@ -65,9 +65,9 @@
 		"transformationRequired": false,
 		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
-			"relativePath": "/rover2/procedureExecutor/procedure/execute/procNumberOfRecordsInProd",
 			"httpMethod": "get",
 			"name": "executeProcNumberOfRecordsInProd",
+			"relativePath": "/rover2/procedureExecutor/procedure/execute/procNumberOfRecordsInProd",
 			"parameters": []
 		},
 		"serviceType": "DataService",
@@ -81,7 +81,7 @@
 		"autoStart": true,
 		"repeating": true,
 		"delay": 30000,
-		"onTimerFire": "Rover2ProcVenMain;Rover2ProcANumberOfSystems;Rover2ProcNumberOfRecordsInProd;Rover2ProcNumberOfRecordsInUAT;Rover2ProcFUncategorisedGroups;Rover2GraphAUncatGroupsViaSystem",
+		"onTimerFire": "Rover2ProcVenMain;Rovermar01ExecuteFunctionCallRoverSystemCount;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat;Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups;Rover2GraphAUncatGroupsViaSystem",
 		"category": "wm.TimerVariable",
 		"_id": "wm-timerVennMain-wm.TimerVariable-1445864232969",
 		"dataBinding": [
@@ -211,9 +211,9 @@
 		"transformationRequired": false,
 		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
-			"relativePath": "/rover2/procedureExecutor/procedure/execute/procNumberOfRecordsInUAT",
 			"httpMethod": "get",
 			"name": "executeProcNumberOfRecordsInUAT",
+			"relativePath": "/rover2/procedureExecutor/procedure/execute/procNumberOfRecordsInUAT",
 			"parameters": []
 		},
 		"serviceType": "DataService",
@@ -249,14 +249,88 @@
 		"transformationRequired": false,
 		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
-			"relativePath": "/rover2/procedureExecutor/procedure/execute/procANumberOfSystems",
 			"httpMethod": "get",
 			"name": "executeProcANumberOfSystems",
+			"relativePath": "/rover2/procedureExecutor/procedure/execute/procANumberOfSystems",
 			"parameters": []
 		},
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rover2ProcANumberOfSystems-wm.ServiceVariable-1445863747486",
 		"isDefault": true
+	},
+	"Rovermar01ExecuteFunctionCallRoverSystemCount": {
+		"name": "Rovermar01ExecuteFunctionCallRoverSystemCount",
+		"type": "rovermar01FunctionCallRoverSystemCountrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverSystemCount",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverSystemCount",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverSystemCount",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverSystemCount-wm.ServiceVariable-1447842832596"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups": {
+		"type": "rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfUncategorisedGroups",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfUncategorisedGroups",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfUncategorisedGroups",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups-wm.ServiceVariable-1447846461583",
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups"
 	}
 }

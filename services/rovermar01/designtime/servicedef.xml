@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="rovermar01" type="DataService" springFile="rovermar01.spring.xml">
+    <operation operationType="procedure" name="FunctionCallRoverSystemCount">
+        <return typeRef="rovermar01FunctionCallRoverSystemCountrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInProd">
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInProdrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInUat">
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInUatrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfUncategorisedGroups">
+        <return typeRef="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lsValue" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lsSide" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lsField" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lsString" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lsStart" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lsLength" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="operator" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rsValue" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rsSide" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rsField" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rsString" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rsStart" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="rsLength" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="who" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="updatedTimestamp" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ComparisonRules">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="dataOrder" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
+            <element name="dataItem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="operator" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.GmiProdMessages">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftand" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Results">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="compid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.GmiUatMessages">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="ftand" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Operators">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="operator" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="command" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysaUatMessages">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colA" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colB" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colC" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colD" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colE" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.CategorisationRules">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="classificationName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="category" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="who" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="updatedTimestamp" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.NcUatMessages">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="marketOrder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="marketTrade" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lots" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="product" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Classifications">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="compid" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.NcProdMessages">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="marketOrder" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="marketTrade" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lots" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="product" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysaProdMessages">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colA" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colB" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colC" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colD" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colE" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Categories">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="category" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Logging">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="process" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="logDetails" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.UserLogin">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="userid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="role" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="tenantid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.CoreSystems">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreSystemRoverName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreProdTable" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreProdConnectivity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreUatTable" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreUatConnectivity" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreSystemStatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreSystemLogging" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreSystemAlert" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreSystemAlertTarget" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverSystemCountrtnType">
+            <element name="SystemCount" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInProdrtnType">
+            <element name="NumberOfRecordsInProd" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInUatrtnType">
+            <element name="NumberOfRecordsInUat" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType">
+            <element name="NumberOfUncategorisedGroups" typeRef="java.lang.Long"/>
+        </dataobject>
+    </dataobjects>
+</service>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.roverpoc.rovermar01">
+  <class table="filter_rules" name="com.roverpoc.rovermar01.FilterRules" entity-name="com.roverpoc.rovermar01.FilterRules">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsValue" type="text">
+      <column name="ls_value" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsSide" type="text">
+      <column name="ls_side" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsField" type="text">
+      <column name="ls_field" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsString" type="text">
+      <column name="ls_string" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsStart" type="text">
+      <column name="ls_start" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsLength" type="text">
+      <column name="ls_length" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="operator" type="text">
+      <column name="operator" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsValue" type="text">
+      <column name="rs_value" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsSide" type="text">
+      <column name="rs_side" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsField" type="text">
+      <column name="rs_field" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsString" type="text">
+      <column name="rs_string" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsStart" type="text">
+      <column name="rs_start" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsLength" type="text">
+      <column name="rs_length" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="comment" type="text">
+      <column name="comment" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="who" type="text">
+      <column name="who" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="updatedTimestamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="updated_timestamp" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="comparison_rules" name="com.roverpoc.rovermar01.ComparisonRules" entity-name="com.roverpoc.rovermar01.ComparisonRules">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="dataOrder" type="big_decimal">
+      <column name="data_order" length="255" not-null="false" precision="20"/>
+    </property>
+    <property name="dataItem" type="text">
+      <column name="data_item" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="operator" type="text">
+      <column name="operator" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="GMI_prod_messages" name="com.roverpoc.rovermar01.GmiProdMessages" entity-name="com.roverpoc.rovermar01.GmiProdMessages">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="forder" type="text">
+      <column name="FORDER" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdate" type="text">
+      <column name="FTDATE" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwstim" type="text">
+      <column name="FWSTIM" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrace" type="text">
+      <column name="FTRACE" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="text">
+      <column name="FRECNO" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="text">
+      <column name="FUSER" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="text">
+      <column name="FSDSC1" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="text">
+      <column name="FSQTY" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="text">
+      <column name="FEXBKR" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="text">
+      <column name="FOPBKR" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="text">
+      <column name="FTPRIC" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftslap" type="text">
+      <column name="FTSLAP" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftand" type="text">
+      <column name="FTAND" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttickle" type="text">
+      <column name="FTTICKLE" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="results" name="com.roverpoc.rovermar01.Results" entity-name="com.roverpoc.rovermar01.Results">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="compid" type="text">
+      <column name="compid" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="GMI_uat_messages" name="com.roverpoc.rovermar01.GmiUatMessages" entity-name="com.roverpoc.rovermar01.GmiUatMessages">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="forder" type="text">
+      <column name="FORDER" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdate" type="text">
+      <column name="FTDATE" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwstim" type="text">
+      <column name="FWSTIM" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrace" type="text">
+      <column name="FTRACE" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="text">
+      <column name="FRECNO" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="text">
+      <column name="FUSER" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="text">
+      <column name="FSDSC1" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="text">
+      <column name="FSQTY" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="text">
+      <column name="FEXBKR" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="text">
+      <column name="FOPBKR" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="text">
+      <column name="FTPRIC" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftslap" type="text">
+      <column name="FTSLAP" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftand" type="text">
+      <column name="FTAND" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttickle" type="text">
+      <column name="FTTICKLE" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="operators" name="com.roverpoc.rovermar01.Operators" entity-name="com.roverpoc.rovermar01.Operators">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="operator" type="text">
+      <column name="operator" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="command" type="text">
+      <column name="command" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="sysa_uat_messages" name="com.roverpoc.rovermar01.SysaUatMessages" entity-name="com.roverpoc.rovermar01.SysaUatMessages">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colA" type="text">
+      <column name="ColA" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colB" type="text">
+      <column name="ColB" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colC" type="text">
+      <column name="ColC" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colD" type="text">
+      <column name="ColD" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colE" type="text">
+      <column name="ColE" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="categorisation_rules" name="com.roverpoc.rovermar01.CategorisationRules" entity-name="com.roverpoc.rovermar01.CategorisationRules">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="classificationName" type="text">
+      <column name="classification_name" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="category" type="text">
+      <column name="category" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="comment" type="text">
+      <column name="COMMENT" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="who" type="text">
+      <column name="who" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="updatedTimestamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="updated_timestamp" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="NC_uat_messages" name="com.roverpoc.rovermar01.NcUatMessages" entity-name="com.roverpoc.rovermar01.NcUatMessages">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketOrder" type="text">
+      <column name="Market_Order" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketTrade" type="text">
+      <column name="Market_trade" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lots" type="text">
+      <column name="lots" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="product" type="text">
+      <column name="product" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="price" type="text">
+      <column name="price" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="classifications" name="com.roverpoc.rovermar01.Classifications" entity-name="com.roverpoc.rovermar01.Classifications">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="compid" type="text">
+      <column name="compid" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="name" type="text">
+      <column name="NAME" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="NC_prod_messages" name="com.roverpoc.rovermar01.NcProdMessages" entity-name="com.roverpoc.rovermar01.NcProdMessages">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketOrder" type="text">
+      <column name="Market_Order" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketTrade" type="text">
+      <column name="Market_trade" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lots" type="text">
+      <column name="lots" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="product" type="text">
+      <column name="product" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="price" type="text">
+      <column name="price" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="sysa_prod_messages" name="com.roverpoc.rovermar01.SysaProdMessages" entity-name="com.roverpoc.rovermar01.SysaProdMessages">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="text">
+      <column name="core_key" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colA" type="text">
+      <column name="ColA" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colB" type="text">
+      <column name="ColB" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colC" type="text">
+      <column name="ColC" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colD" type="text">
+      <column name="ColD" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="colE" type="text">
+      <column name="ColE" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="categories" name="com.roverpoc.rovermar01.Categories" entity-name="com.roverpoc.rovermar01.Categories">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="category" type="text">
+      <column name="category" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="logging" name="com.roverpoc.rovermar01.Logging" entity-name="com.roverpoc.rovermar01.Logging">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="process" type="text">
+      <column name="PROCESS" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="logDetails" type="text">
+      <column name="log_details" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="user_login" name="com.roverpoc.rovermar01.UserLogin" entity-name="com.roverpoc.rovermar01.UserLogin">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="userid" type="integer">
+      <column name="userid" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="username" type="text">
+      <column name="username" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="password" type="text">
+      <column name="PASSWORD" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="role" type="text">
+      <column name="role" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="tenantid" type="integer">
+      <column name="tenantid" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="core_systems" name="com.roverpoc.rovermar01.CoreSystems" entity-name="com.roverpoc.rovermar01.CoreSystems">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="text">
+      <column name="core_system" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemRoverName" type="text">
+      <column name="core_system_rover_name" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProdTable" type="text">
+      <column name="core_prod_table" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProdConnectivity" type="text">
+      <column name="core_prod_connectivity" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreUatTable" type="text">
+      <column name="core_uat_table" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreUatConnectivity" type="text">
+      <column name="core_uat_connectivity" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemStatus" type="text">
+      <column name="core_system_status" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemLogging" type="text">
+      <column name="core_system_logging" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemAlert" type="text">
+      <column name="core_system_alert" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemAlertTarget" type="text">
+      <column name="core_system_alert_target" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+</hibernate-mapping>
