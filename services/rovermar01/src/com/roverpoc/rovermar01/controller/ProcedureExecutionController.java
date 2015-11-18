@@ -144,6 +144,97 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordNoDiff", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfRecordNoDiff(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordNoDiff");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordNoDiff( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordDiff", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfRecordDiff(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordDiff");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordDiff( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordDiffUncat", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfRecordDiffUncat(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordDiffUncat");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordDiffUncat( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordDiffCat", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfRecordDiffCat(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordDiffCat");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordDiffCat( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/callRoverNumberOfGroups", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeCallRoverNumberOfGroups(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure callRoverNumberOfGroups");
+
+		List<Object> result = procedureService.executeCallRoverNumberOfGroups( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfGroupsUncat", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfGroupsUncat(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfGroupsUncat");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfGroupsUncat( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfGroupsCat", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfGroupsCat(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfGroupsCat");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfGroupsCat( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
 	
 
 	@RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)

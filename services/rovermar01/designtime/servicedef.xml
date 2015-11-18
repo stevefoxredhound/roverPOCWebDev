@@ -32,6 +32,34 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInUatOnlyrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordNoDiff">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordNoDiffrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordDiff">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordDiffrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordDiffUncat">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordDiffUncatrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordDiffCat">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordDiffCatrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="callRoverNumberOfGroups">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01callRoverNumberOfGroupsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfGroupsUncat">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfGroupsUncatrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfGroupsCat">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfGroupsCatrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -241,6 +269,27 @@
         </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInUatOnlyrtnType">
             <element name="NumberOfRecordsInUatOnly" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordNoDiffrtnType">
+            <element name="NumberOfRecordsNoDiff" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordDiffrtnType">
+            <element name="NumberOfRecordsDiff" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordDiffUncatrtnType">
+            <element name="NumberOfRecordDiffUncat" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordDiffCatrtnType">
+            <element name="NumberOfRecordDiffCat" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01callRoverNumberOfGroupsrtnType">
+            <element name="NumberOfGroups" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfGroupsUncatrtnType">
+            <element name="NumberOfGroupsUncat" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfGroupsCatrtnType">
+            <element name="NumberOfGroupsCat" typeRef="java.lang.Long"/>
         </dataobject>
     </dataobjects>
 </service>

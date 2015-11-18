@@ -898,6 +898,7 @@
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInBoth-wm.ServiceVariable-1447855981319"
 	},
 	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly",
 		"type": "rovermar01FunctionCallRoverNumberOfRecordInUatOnlyrtnType",
 		"isList": false,
 		"owner": "Page",
@@ -943,7 +944,349 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly-wm.ServiceVariable-1447856277766",
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUatOnly-wm.ServiceVariable-1447856277766"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordNoDiff": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordNoDiff",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordNoDiffrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordNoDiff",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordNoDiff",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordNoDiff",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordNoDiff-wm.ServiceVariable-1447856715357"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiff": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiff",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordDiffrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordDiff",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordDiff",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordDiff",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiff-wm.ServiceVariable-1447856972971"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiffUncat": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiffUncat",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordDiffUncatrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordDiffUncat",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordDiffUncat",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordDiffUncat",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiffUncat-wm.ServiceVariable-1447857246467"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiffCat": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiffCat",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordDiffCatrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordDiffCat",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordDiffCat",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordDiffCat",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordDiffCat-wm.ServiceVariable-1447857613935"
+	},
+	"Rovermar01ExecuteCallRoverNumberOfGroups": {
+		"name": "Rovermar01ExecuteCallRoverNumberOfGroups",
+		"type": "rovermar01callRoverNumberOfGroupsrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeCallRoverNumberOfGroups",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeCallRoverNumberOfGroups",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/callRoverNumberOfGroups",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteCallRoverNumberOfGroups-wm.ServiceVariable-1447857920824"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfGroupsUncat": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfGroupsUncat",
+		"type": "rovermar01FunctionCallRoverNumberOfGroupsUncatrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfGroupsUncat",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfGroupsUncat",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfGroupsUncat",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfGroupsUncat-wm.ServiceVariable-1447858304885"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat": {
+		"type": "rovermar01FunctionCallRoverNumberOfGroupsCatrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfGroupsCat",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfGroupsCat",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfGroupsCat",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat-wm.ServiceVariable-1447858438774",
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfGroupsCat"
 	}
 }

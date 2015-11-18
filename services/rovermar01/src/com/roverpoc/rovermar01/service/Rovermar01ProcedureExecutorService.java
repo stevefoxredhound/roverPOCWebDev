@@ -37,6 +37,27 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverNumberOfRecordInUatOnly( java.lang.String p1) throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionCallRoverNumberOfRecordNoDiff( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordDiff( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordDiffUncat( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordDiffCat( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeCallRoverNumberOfGroups( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfGroupsUncat( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfGroupsCat( java.lang.String p1) throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

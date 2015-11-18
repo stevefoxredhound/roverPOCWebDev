@@ -122,6 +122,83 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInUatOnly", params);
 
 	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordNoDiff(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordNoDiff", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordDiff(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordDiff", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordDiffUncat(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordDiffUncat", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordDiffCat(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordDiffCat", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeCallRoverNumberOfGroups(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("callRoverNumberOfGroups", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfGroupsUncat(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfGroupsUncat", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfGroupsCat(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfGroupsCat", params);
+
+	}
 
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
