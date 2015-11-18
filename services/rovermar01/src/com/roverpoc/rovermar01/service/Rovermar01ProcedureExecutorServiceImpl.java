@@ -40,16 +40,6 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
 
-	public List<Object> executeFunctionCallRoverNumberOfRecordInProd()
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProd", params);
-
-	}
-	@Transactional(value = "rovermar01TransactionManager")
-	@Override
-
 	public List<Object> executeFunctionCallRoverNumberOfRecordInUat()
 
 	throws QueryParameterMismatchException{
@@ -65,6 +55,37 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	throws QueryParameterMismatchException{
         Map<String, Object> params = new HashMap<String, Object>();
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfUncategorisedGroups", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverVennSetCountsForAllSystems()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverVennSetCountsForAllSystems", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverUncategorisedGroupsBySystem()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverUncategorisedGroupsBySystem", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInProd(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProd", params);
 
 	}
 

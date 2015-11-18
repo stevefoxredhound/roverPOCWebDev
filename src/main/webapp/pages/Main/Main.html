@@ -123,25 +123,20 @@
                         <wm-layoutgrid name="layoutgrid8">
                             <wm-gridrow name="gridrow32">
                                 <wm-gridcolumn columnwidth="5" name="gridcolumn125" readonlygrid="true" overflow="hidden">
-                                    <wm-grid name="gridVenMain" readonlygrid="true" dataset="bind:Variables.Rover2ProcVenMain.dataSet" shownavigation="false" gridcaption="Select a system below to drill down" on-select="goToPage_SystemDetails" enablesort="false"
-                                    pagesize="null" fontsize="14" height="250">
-                                        <wm-grid-column binding="System" caption="System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="PROD" caption="PROD" type="string" textalignment="center" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="PROD_ONLY" caption="PROD ONLY" type="string" textalignment="center" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="BOTH" caption="BOTH" type="string" textalignment="center" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="UAT_ONLY" caption="UAT ONLY" type="string" textalignment="center" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="UAT" caption="UAT" type="string" textalignment="center" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid name="gridVenMain" readonlygrid="true" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems.dataSet" shownavigation="false" gridcaption="Select a system below to drill down" on-select="goToPage_SystemDetails"
+                                    enablesort="false" pagesize="null" fontsize="14" height="250">
+                                        <wm-grid-column binding="BOTH" caption="BOTH" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="PROD ONLY" caption="PROD ONLY" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="UAT ONLY" caption="UAT ONLY" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="UAT" caption="UAT" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="System" caption="System" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="PROD" caption="PROD" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn126"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="5" name="gridcolumn127">
-                                    <wm-chart type="Bar" name="chart1" theme="Orient" dataset="bind:Variables.Rover2GraphAUncatGroupsViaSystem.dataSet" readonlygrid="true" yaxisdatakey="Uncategorised Groups" xaxisdatakey="core_system" xaxislabel="Core System"
-                                    showlegend="false" legendposition="Top" legendtype="classic" xaxislabeldistance="12" fontweight="bold" height="250" labeltype="value" showlabelsoutside="true"></wm-chart>
+                                    <wm-chart type="Bar" name="chart1" theme="Orient" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem.dataSet" readonlygrid="true" xaxislabel="Core System" showlegend="false" legendposition="Top"
+                                    legendtype="classic" xaxislabeldistance="12" fontweight="bold" height="250" labeltype="value" showlabelsoutside="true" xaxisdatakey="core_system" yaxisdatakey="Uncategorised Groups"></wm-chart>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>

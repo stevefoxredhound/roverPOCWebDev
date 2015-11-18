@@ -13,13 +13,19 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverSystemCount() throws QueryParameterMismatchException;
 
 
-    List<Object> executeFunctionCallRoverNumberOfRecordInProd() throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionCallRoverNumberOfRecordInUat() throws QueryParameterMismatchException;
 
 
     List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverVennSetCountsForAllSystems() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverUncategorisedGroupsBySystem() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordInProd( java.lang.String p1) throws QueryParameterMismatchException;
 
 
 	
