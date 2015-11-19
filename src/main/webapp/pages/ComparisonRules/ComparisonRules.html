@@ -17,14 +17,14 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow12">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn22"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn23">
-                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="ComparisonRulesGrid1" dataset="bind:Variables.Rover2ComparisonRulesData.dataSet" height="800px" gridsearch="true">
-                            <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column binding="coreSystem" caption="Core System" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column binding="dataOrder" caption="Data Order" type="big_decimal" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column binding="dataItem" caption="Data Item" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column binding="operator" caption="Operator" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn23" overflow="scroll">
+                        <wm-grid readonlygrid="false" name="grid3" dataset="bind:Variables.Rover4ComparisonRulesData.dataSet" insertrow="true" updaterow="true" deleterow="true" gridsearch="true">
+                            <wm-grid-column caption="Column1" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column caption="Column2" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column caption="Column3" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column caption="Column4" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-column caption="Column5" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                            <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
                         </wm-grid>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>

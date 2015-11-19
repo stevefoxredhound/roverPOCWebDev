@@ -15,17 +15,24 @@
     <security:http pattern="/wmProperties.js" security="none"/>
     <security:http auto-config="false" use-expressions="true" entry-point-ref="WMSecAuthEntryPoint" disable-url-rewriting="true" name="interceptUrlsBean" authentication-manager-ref="authenticationManager">
         <security:intercept-url pattern="/pages/UserMaintenance/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/Unclassified/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/Uncategorised/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/UATRecords/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/SystemDetails/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/ShowMeDataDifference/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/RulesMaintenance/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/ProductionRecords/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/OperatorMaintenance/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/NoDifferences/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/Login/**" access="permitAll"/>
+        <security:intercept-url pattern="/pages/EditRule/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/CoreSystems/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/ComparisonRules/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/Common/**" access="permitAll"/>
         <security:intercept-url pattern="/pages/CombinedRecords/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/Classified/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/ClassificactionDiffe/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/ClassAndCat/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/pages/Categories/**" access="isAuthenticated()"/>
         <security:intercept-url pattern="/j_spring_security_check" access="permitAll"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
@@ -91,7 +98,7 @@
     </security:authentication-manager>
     <bean class="com.wavemaker.runtime.security.EnhancedJdbcDaoImpl" id="jdbcDaoImpl">
         <property name="dataSource">
-            <ref bean="rover2DataSource"/>
+            <ref bean="rovermar01DataSource"/>
         </property>
         <property name="rolePrefix">
             <value>ROLE_</value>
