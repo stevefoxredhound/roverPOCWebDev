@@ -1,151 +1,51 @@
 {
-  "Rover2ProcBGroupReport" : {
-    "isList" : false,
-    "firstRow" : 0,
-    "serviceSubType" : "procedure",
-    "inFlightBehavior" : "executeLast",
-    "wmServiceOperationInfo" : {
-      "relativePath" : "/rover2/procedureExecutor/procedure/execute/ProcBGroupReport",
-      "httpMethod" : "get",
-      "name" : "executeProcBGroupReport",
-      "parameters" : [ {
-        "name" : "p1",
-        "parameterType" : "query",
-        "type" : "string"
-      } ]
-    },
-    "serviceType" : "DataService",
-    "startUpdate" : true,
-    "type" : "rover2ProcBGroupReportrtnType",
-    "transformationRequired" : false,
-    "maxResults" : 20,
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "operation" : "executeProcBGroupReport",
-    "category" : "wm.ServiceVariable",
-    "autoUpdate" : true,
-    "_id" : "wm-Rover2ProcBGroupReport-wm.ServiceVariable-1445871065444",
-    "dataBinding" : [ {
-      "name" : "dataBinding",
-      "type" : "object",
-      "fields" : [ {
-        "isList" : false,
-        "name" : "p1",
-        "value" : "bind:Variables.staticGridCatQueryDValues.dataSet.Classification"
-      } ]
-    } ],
-    "saveInPhonegap" : false,
-    "isDefault" : true,
-    "operationType" : "get",
-    "name" : "Rover2ProcBGroupReport",
-    "designMaxResults" : 10,
-    "owner" : "Page",
-    "service" : "rover2"
-  },
-  "Rover2ProcDEditRuleVersionDisplayOnly" : {
-    "isList" : false,
-    "firstRow" : 0,
-    "serviceSubType" : "procedure",
-    "inFlightBehavior" : "executeLast",
-    "wmServiceOperationInfo" : {
-      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procDEditRuleVersionDisplayOnly",
-      "httpMethod" : "get",
-      "name" : "executeProcDEditRuleVersionDisplayOnly",
-      "parameters" : [ {
-        "name" : "p1",
-        "parameterType" : "query",
-        "type" : "string"
-      } ]
-    },
-    "serviceType" : "DataService",
-    "startUpdate" : false,
-    "type" : "rover2procDEditRuleVersionDisplayOnlyrtnType",
-    "transformationRequired" : false,
-    "maxResults" : 20,
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "operation" : "executeProcDEditRuleVersionDisplayOnly",
-    "category" : "wm.ServiceVariable",
-    "autoUpdate" : true,
-    "_id" : "wm-Rover2ProcDEditRuleVersionDisplayOnly-wm.ServiceVariable-1445351376267",
-    "dataBinding" : [ {
-      "name" : "dataBinding",
-      "type" : "object",
-      "fields" : [ {
-        "isList" : false,
-        "name" : "p1",
-        "value" : "bind:Variables.staticGridVenMain.dataSet.System"
-      } ]
-    } ],
-    "saveInPhonegap" : false,
-    "isDefault" : true,
-    "operationType" : "get",
-    "name" : "Rover2ProcDEditRuleVersionDisplayOnly",
-    "designMaxResults" : 10,
-    "owner" : "Page",
-    "service" : "rover2"
-  },
-  "Rover2ProcAEditRuleUpdate" : {
-    "isList" : false,
-    "firstRow" : 0,
-    "serviceSubType" : "procedure",
-    "inFlightBehavior" : "executeLast",
-    "onSuccess" : "goToPage_ClassAndCat",
-    "wmServiceOperationInfo" : {
-      "relativePath" : "/rover2/procedureExecutor/procedure/execute/procAEditRuleUpdate",
-      "httpMethod" : "get",
-      "name" : "executeProcAEditRuleUpdate",
-      "parameters" : [ {
-        "name" : "pCategory",
-        "parameterType" : "query",
-        "type" : "string"
-      }, {
-        "name" : "Pcomment",
-        "parameterType" : "query",
-        "type" : "string"
-      }, {
-        "name" : "pClassificationName",
-        "parameterType" : "query",
-        "type" : "string"
-      } ]
-    },
-    "serviceType" : "DataService",
-    "startUpdate" : false,
-    "type" : "rover2procAEditRuleUpdatertnType",
-    "transformationRequired" : false,
-    "maxResults" : 20,
-    "dataSet" : {
-      "dataValue" : ""
-    },
-    "operation" : "executeProcAEditRuleUpdate",
-    "category" : "wm.ServiceVariable",
-    "autoUpdate" : false,
-    "_id" : "wm-Rover2ProcAEditRuleUpdate-wm.ServiceVariable-1445349636273",
-    "dataBinding" : [ {
-      "name" : "dataBinding",
-      "type" : "object",
-      "fields" : [ {
-        "isList" : false,
-        "name" : "pCategory",
-        "value" : "bind:Widgets.textCategory.datavalue"
-      }, {
-        "isList" : false,
-        "name" : "Pcomment",
-        "value" : "bind:Widgets.textComment.datavalue"
-      }, {
-        "isList" : false,
-        "name" : "pClassificationName",
-        "value" : "bind:Widgets.textClassification.datavalue"
-      } ]
-    } ],
-    "saveInPhonegap" : false,
-    "isDefault" : true,
-    "operationType" : "get",
-    "name" : "Rover2ProcAEditRuleUpdate",
-    "designMaxResults" : 10,
-    "owner" : "Page",
-    "service" : "rover2"
-  }
+	"Rovermar01ExecuteFunctionRoverroverGroupReport": {
+		"type": "rovermar01FunctionRoverroverGroupReportrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Variables.staticGridCatQueryDValues.dataSet.Category"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionRoverroverGroupReport",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionRoverroverGroupReport",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverroverGroupReport",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionRoverroverGroupReport-wm.ServiceVariable-1447954293776",
+		"name": "Rovermar01ExecuteFunctionRoverroverGroupReport"
+	}
 }

@@ -94,6 +94,10 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionRoverRemoveCategorisationRulertnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionRoverroverGroupReport">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionRoverroverGroupReportrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -360,5 +364,8 @@
             <element name="who" typeRef="java.lang.String"/>
         </dataobject>
         <dataobject javaType="rovermar01FunctionRoverRemoveCategorisationRulertnType"/>
+        <dataobject javaType="rovermar01FunctionRoverroverGroupReportrtnType">
+            <element name="v_group_report" typeRef="java.lang.String"/>
+        </dataobject>
     </dataobjects>
 </service>

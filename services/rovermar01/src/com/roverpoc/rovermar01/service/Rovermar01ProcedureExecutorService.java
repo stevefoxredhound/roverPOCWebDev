@@ -85,6 +85,9 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionRoverRemoveCategorisationRule( java.lang.String p1) throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionRoverroverGroupReport( java.lang.String p1) throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 
