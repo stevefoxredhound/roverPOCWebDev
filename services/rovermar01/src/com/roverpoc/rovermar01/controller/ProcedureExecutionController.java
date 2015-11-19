@@ -363,6 +363,19 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
+	@RequestMapping(value = "/procedure/execute/FunctionRoverGroupReport", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionRoverGroupReport(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionRoverGroupReport");
+
+		List<Object> result = procedureService.executeFunctionRoverGroupReport( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
 	
 
 	@RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)

@@ -1,6 +1,7 @@
 {
-	"Rovermar01ExecuteFunctionRoverroverGroupReport": {
-		"type": "rovermar01FunctionRoverroverGroupReportrtnType",
+	"Rovermar01ExecuteFunctionRoverGroupReport": {
+		"name": "Rovermar01ExecuteFunctionRoverGroupReport",
+		"type": "rovermar01FunctionRoverGroupReportrtnType",
 		"isList": false,
 		"owner": "Page",
 		"dataSet": {
@@ -14,7 +15,7 @@
 					{
 						"name": "p1",
 						"type": "string",
-						"value": "bind:Variables.staticGridCatQueryDValues.dataSet.Category"
+						"value": "bind:Variables.staticGridCatQueryDValues.dataSet.Classification"
 					}
 				]
 			}
@@ -24,7 +25,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"service": "rovermar01",
-		"operation": "executeFunctionRoverroverGroupReport",
+		"operation": "executeFunctionRoverGroupReport",
 		"operationType": "get",
 		"startUpdate": true,
 		"autoUpdate": true,
@@ -35,8 +36,8 @@
 		"isDefault": true,
 		"wmServiceOperationInfo": {
 			"httpMethod": "get",
-			"name": "executeFunctionRoverroverGroupReport",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverroverGroupReport",
+			"name": "executeFunctionRoverGroupReport",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverGroupReport",
 			"parameters": [
 				{
 					"name": "p1",
@@ -45,7 +46,6 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionRoverroverGroupReport-wm.ServiceVariable-1447954293776",
-		"name": "Rovermar01ExecuteFunctionRoverroverGroupReport"
+		"_id": "wm-Rovermar01ExecuteFunctionRoverGroupReport-wm.ServiceVariable-1447956312978"
 	}
 }

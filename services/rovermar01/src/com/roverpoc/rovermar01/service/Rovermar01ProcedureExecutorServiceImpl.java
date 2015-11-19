@@ -307,6 +307,17 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         return procedureExecutor.executeNamedProcedure("FunctionRoverroverGroupReport", params);
 
 	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionRoverGroupReport(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionRoverGroupReport", params);
+
+	}
 
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
