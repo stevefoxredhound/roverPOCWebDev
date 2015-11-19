@@ -393,25 +393,25 @@
 					{
 						"isList": false,
 						"name": "Category",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.Category",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.category",
 						"type": "java.lang.String"
 					},
 					{
 						"isList": false,
 						"name": "Classification",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.Classification",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.NAME",
 						"type": "java.lang.String"
 					},
 					{
 						"isList": false,
 						"name": "Who",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.Who",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.who",
 						"type": "java.lang.String"
 					},
 					{
 						"isList": false,
 						"name": "Comment",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.Comment",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.COMMENT",
 						"type": "java.lang.String"
 					}
 				]
