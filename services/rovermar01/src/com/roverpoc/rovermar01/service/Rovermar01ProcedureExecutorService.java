@@ -22,9 +22,6 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverUncategorisedGroupsBySystem() throws QueryParameterMismatchException;
 
 
-    List<Object> executeFunctionCallRoverNumberOfRecordInProdOnly( java.lang.String P1) throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionCallRoverNumberOfRecordInBoth( java.lang.String p1) throws QueryParameterMismatchException;
 
 
@@ -62,6 +59,15 @@ public interface Rovermar01ProcedureExecutorService {
 
 
     List<Object> executeFunctionCallRoverNumberOfRecordInUat() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordsInProdBySystem( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordsInUatBySystem( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfRecordInProdOnly( java.lang.String p1) throws QueryParameterMismatchException;
 
 
 	
