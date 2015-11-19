@@ -82,9 +82,17 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverShowDataDifferencesrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionroverBuildCategorisationRule">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionroverBuildCategorisationRulertnType" isList="false"/>
+    </operation>
     <operation operationType="procedure" name="FunctionCallRoverCategorisedGroups">
-        <parameter name="p1" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverCategorisedGroupsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionRoverRemoveCategorisationRule">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionRoverRemoveCategorisationRulertnType" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
@@ -341,6 +349,16 @@
             <element name="core_key" typeRef="java.lang.String"/>
             <element name="FRECNO" typeRef="java.lang.String"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverCategorisedGroupsrtnType"/>
+        <dataobject javaType="rovermar01functionroverBuildCategorisationRulertnType"/>
+        <dataobject javaType="rovermar01functionRoverBuildCategorisationRulertnType"/>
+        <dataobject javaType="rovermar01FunctionroverBuildCategorisationRulertnType"/>
+        <dataobject javaType="rovermar01FunctionCallRoverCategorisedGroupsrtnType">
+            <element name="Messages" typeRef="java.lang.Long"/>
+            <element name="category" typeRef="java.lang.String"/>
+            <element name="NAME" typeRef="java.lang.String"/>
+            <element name="COMMENT" typeRef="java.lang.String"/>
+            <element name="who" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionRoverRemoveCategorisationRulertnType"/>
     </dataobjects>
 </service>

@@ -101,7 +101,7 @@
                                         <wm-gridrow name="gridrow31_1">
                                             <wm-gridcolumn columnwidth="12" name="gridcolumn75_1" horizontalalign="center">
                                                 <wm-button class="btn-default" caption="Build The Rule" type="button" on-click="confirmBuildRule.show" name="button8" width="150" iconclass="glyphicon glyphicon-folder-open fa-lg" backgroundcolor="#ffefbf" borderstyle="none"
-                                                color="#000000"></wm-button>
+                                                color="#000000" accessroles="Everyone"></wm-button>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow35_1">
@@ -119,7 +119,13 @@
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="5" name="gridcolumn112" readonlygrid="true">
-                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25"></wm-grid>
+                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25">
+                                        <wm-grid-column binding="Messages" caption="Messages" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="category" caption="Category" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="NAME" caption="NAME" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="COMMENT" caption="COMMENT" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="who" caption="Who" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="2" name="gridcolumn103" readonlygrid="true">
                                     <wm-layoutgrid name="layoutgrid5" width="175" horizontalalign="center" marginleft="25">
@@ -212,9 +218,9 @@
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
     <wm-view class="dialog-view" name="view1" show="false">
-        <wm-confirmdialog name="confirmBuildRule" title="Confirm Build Rule" message="Confirm build a rule using default values?" on-ok="Rover2ProcBuildMeARuleClassAndCat" readonlygrid="true"></wm-confirmdialog>
+        <wm-confirmdialog name="confirmBuildRule" title="Confirm Build Rule" message="Confirm build a rule using default values?" readonlygrid="true" accessroles="Everyone" on-ok="Rovermar01ExecuteFunctionroverBuildCategorisationRule"></wm-confirmdialog>
     </wm-view>
     <wm-view class="dialog-view" name="view2" show="false">
-        <wm-confirmdialog name="confirmDeleteRule" title="Confirm Delete Rule" on-ok="Rover2ProcEClassCAtDeleteRule" readonlygrid="true" message="Confirm Delete Rule?"></wm-confirmdialog>
+        <wm-confirmdialog name="confirmDeleteRule" title="Confirm Delete Rule" on-ok="Rovermar01ExecuteFunctionRoverRemoveCategorisationRule" readonlygrid="true" message="Confirm Delete Rule?"></wm-confirmdialog>
     </wm-view>
 </wm-page>

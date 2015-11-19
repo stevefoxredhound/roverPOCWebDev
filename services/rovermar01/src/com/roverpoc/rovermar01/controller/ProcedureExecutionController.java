@@ -311,15 +311,41 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
+	@RequestMapping(value = "/procedure/execute/FunctionroverBuildCategorisationRule", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionroverBuildCategorisationRule(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionroverBuildCategorisationRule");
+
+		List<Object> result = procedureService.executeFunctionroverBuildCategorisationRule( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
 	@RequestMapping(value = "/procedure/execute/FunctionCallRoverCategorisedGroups", method = RequestMethod.GET)
 	@ApiOperation(value = "Process request to execute Procedure")
 	public List<Object> executeFunctionCallRoverCategorisedGroups(
-			@RequestParam(value="p1", required=false) java.lang.Integer p1
+			@RequestParam(value="p1", required=false) java.lang.String p1
 		 )
 	     throws QueryParameterMismatchException{
 			LOGGER.debug("Executing named procedure FunctionCallRoverCategorisedGroups");
 
 		List<Object> result = procedureService.executeFunctionCallRoverCategorisedGroups( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionRoverRemoveCategorisationRule", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionRoverRemoveCategorisationRule(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionRoverRemoveCategorisationRule");
+
+		List<Object> result = procedureService.executeFunctionRoverRemoveCategorisationRule( p1);
 
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;

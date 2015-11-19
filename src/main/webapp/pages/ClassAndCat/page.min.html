@@ -113,6 +113,7 @@ var _ClassAndCatPage_Variables_ ={
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
+		"onSuccess": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
@@ -131,6 +132,7 @@ var _ClassAndCatPage_Variables_ ={
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverUncategorisedGroups-wm.ServiceVariable-1447933642653"
 	},
 	"Rovermar01ExecuteFunctionCallRoverCategorisedGroups": {
+		"name": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
 		"type": "rovermar01FunctionCallRoverCategorisedGroupsrtnType",
 		"isList": false,
 		"owner": "Page",
@@ -161,6 +163,7 @@ var _ClassAndCatPage_Variables_ ={
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
+		"onSuccess": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
@@ -176,8 +179,107 @@ var _ClassAndCatPage_Variables_ ={
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCategorisedGroups-wm.ServiceVariable-1447934573914",
-		"name": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCategorisedGroups-wm.ServiceVariable-1447934573914"
+	},
+	"Rovermar01ExecuteFunctionroverBuildCategorisationRule": {
+		"name": "Rovermar01ExecuteFunctionroverBuildCategorisationRule",
+		"type": "rovermar01FunctionroverBuildCategorisationRulertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionroverBuildCategorisationRule",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onSuccess": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionroverBuildCategorisationRule",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionroverBuildCategorisationRule",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionroverBuildCategorisationRule-wm.ServiceVariable-1447945163814"
+	},
+	"Rovermar01ExecuteFunctionRoverRemoveCategorisationRule": {
+		"type": "rovermar01FunctionRoverRemoveCategorisationRulertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.NAME"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionRoverRemoveCategorisationRule",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onResult": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionRoverRemoveCategorisationRule",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverRemoveCategorisationRule",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionRoverRemoveCategorisationRule-wm.ServiceVariable-1447951620417",
+		"name": "Rovermar01ExecuteFunctionRoverRemoveCategorisationRule"
 	}
 }
 </script>
@@ -285,7 +387,7 @@ var _ClassAndCatPage_Variables_ ={
                                         <wm-gridrow name="gridrow31_1">
                                             <wm-gridcolumn columnwidth="12" name="gridcolumn75_1" horizontalalign="center">
                                                 <wm-button class="btn-default" caption="Build The Rule" type="button" on-click="confirmBuildRule.show" name="button8" width="150" iconclass="glyphicon glyphicon-folder-open fa-lg" backgroundcolor="#ffefbf" borderstyle="none"
-                                                color="#000000"></wm-button>
+                                                color="#000000" accessroles="Everyone"></wm-button>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow35_1">
@@ -303,7 +405,13 @@ var _ClassAndCatPage_Variables_ ={
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="5" name="gridcolumn112" readonlygrid="true">
-                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25"></wm-grid>
+                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25">
+                                        <wm-grid-column binding="Messages" caption="Messages" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="category" caption="Category" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="NAME" caption="NAME" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="COMMENT" caption="COMMENT" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="who" caption="Who" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="2" name="gridcolumn103" readonlygrid="true">
                                     <wm-layoutgrid name="layoutgrid5" width="175" horizontalalign="center" marginleft="25">
@@ -396,10 +504,10 @@ var _ClassAndCatPage_Variables_ ={
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
     <wm-view class="dialog-view" name="view1" show="false">
-        <wm-confirmdialog name="confirmBuildRule" title="Confirm Build Rule" message="Confirm build a rule using default values?" on-ok="Rover2ProcBuildMeARuleClassAndCat" readonlygrid="true"></wm-confirmdialog>
+        <wm-confirmdialog name="confirmBuildRule" title="Confirm Build Rule" message="Confirm build a rule using default values?" readonlygrid="true" accessroles="Everyone" on-ok="Rovermar01ExecuteFunctionroverBuildCategorisationRule"></wm-confirmdialog>
     </wm-view>
     <wm-view class="dialog-view" name="view2" show="false">
-        <wm-confirmdialog name="confirmDeleteRule" title="Confirm Delete Rule" on-ok="Rover2ProcEClassCAtDeleteRule" readonlygrid="true" message="Confirm Delete Rule?"></wm-confirmdialog>
+        <wm-confirmdialog name="confirmDeleteRule" title="Confirm Delete Rule" on-ok="Rovermar01ExecuteFunctionRoverRemoveCategorisationRule" readonlygrid="true" message="Confirm Delete Rule?"></wm-confirmdialog>
     </wm-view>
 </wm-page>
 </script>

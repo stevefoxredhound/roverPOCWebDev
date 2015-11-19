@@ -266,12 +266,34 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
 
-	public List<Object> executeFunctionCallRoverCategorisedGroups(java.lang.Integer p1)
+	public List<Object> executeFunctionroverBuildCategorisationRule(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionroverBuildCategorisationRule", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverCategorisedGroups(java.lang.String p1)
 
 	throws QueryParameterMismatchException{
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("p1", p1);
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverCategorisedGroups", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionRoverRemoveCategorisationRule(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionRoverRemoveCategorisationRule", params);
 
 	}
 

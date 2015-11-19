@@ -76,7 +76,13 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverShowDataDifferences( java.lang.String p1) throws QueryParameterMismatchException;
 
 
-    List<Object> executeFunctionCallRoverCategorisedGroups( java.lang.Integer p1) throws QueryParameterMismatchException;
+    List<Object> executeFunctionroverBuildCategorisationRule( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverCategorisedGroups( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionRoverRemoveCategorisationRule( java.lang.String p1) throws QueryParameterMismatchException;
 
 
 	

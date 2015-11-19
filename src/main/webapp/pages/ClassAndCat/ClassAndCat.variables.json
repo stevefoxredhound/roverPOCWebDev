@@ -31,6 +31,7 @@
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
+		"onSuccess": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
@@ -49,6 +50,7 @@
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverUncategorisedGroups-wm.ServiceVariable-1447933642653"
 	},
 	"Rovermar01ExecuteFunctionCallRoverCategorisedGroups": {
+		"name": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
 		"type": "rovermar01FunctionCallRoverCategorisedGroupsrtnType",
 		"isList": false,
 		"owner": "Page",
@@ -79,6 +81,7 @@
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
+		"onSuccess": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
@@ -94,7 +97,106 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCategorisedGroups-wm.ServiceVariable-1447934573914",
-		"name": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCategorisedGroups-wm.ServiceVariable-1447934573914"
+	},
+	"Rovermar01ExecuteFunctionroverBuildCategorisationRule": {
+		"name": "Rovermar01ExecuteFunctionroverBuildCategorisationRule",
+		"type": "rovermar01FunctionroverBuildCategorisationRulertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionroverBuildCategorisationRule",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onSuccess": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionroverBuildCategorisationRule",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionroverBuildCategorisationRule",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionroverBuildCategorisationRule-wm.ServiceVariable-1447945163814"
+	},
+	"Rovermar01ExecuteFunctionRoverRemoveCategorisationRule": {
+		"type": "rovermar01FunctionRoverRemoveCategorisationRulertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.NAME"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionRoverRemoveCategorisationRule",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onResult": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionRoverRemoveCategorisationRule",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverRemoveCategorisationRule",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionRoverRemoveCategorisationRule-wm.ServiceVariable-1447951620417",
+		"name": "Rovermar01ExecuteFunctionRoverRemoveCategorisationRule"
 	}
 }

@@ -537,7 +537,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -602,7 +602,8 @@
 			"entityName": "Categories",
 			"fullyQualifiedName": "com.roverpoc.rovermar01.Categories",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 1
 	},
 	"Rovermar01CategorisationRulesData": {
 		"name": "Rovermar01CategorisationRulesData",
@@ -3304,6 +3305,7 @@
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165"
 	},
 	"Rovermar01ExecuteFunctionCallRoverShowDataDifferences": {
+		"name": "Rovermar01ExecuteFunctionCallRoverShowDataDifferences",
 		"type": "rovermar01FunctionCallRoverShowDataDifferencesrtnType",
 		"isList": false,
 		"owner": "App",
@@ -3332,7 +3334,30 @@
 		"category": "wm.ServiceVariable",
 		"isDefault": true,
 		"wmServiceOperationInfo": {},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverShowDataDifferences-wm.ServiceVariable-1447934146407",
-		"name": "Rovermar01ExecuteFunctionCallRoverShowDataDifferences"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverShowDataDifferences-wm.ServiceVariable-1447934146407"
+	},
+	"staticVariable1": {
+		"name": "staticVariable1",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-staticVariable1-wm.Variable-1447946397350"
 	}
 }
