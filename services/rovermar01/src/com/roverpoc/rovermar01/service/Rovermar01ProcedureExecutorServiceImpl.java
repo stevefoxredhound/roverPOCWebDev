@@ -70,28 +70,6 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
 
-	public List<Object> executeFunctionCallRoverNumberOfRecordInProd(java.lang.String p1)
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("p1", p1);
-        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProd", params);
-
-	}
-	@Transactional(value = "rovermar01TransactionManager")
-	@Override
-
-	public List<Object> executeFunctionCallRoverNumberOfRecordInUat(java.lang.String P1)
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("P1", P1);
-        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInUat", params);
-
-	}
-	@Transactional(value = "rovermar01TransactionManager")
-	@Override
-
 	public List<Object> executeFunctionCallRoverNumberOfRecordInProdOnly(java.lang.String P1)
 
 	throws QueryParameterMismatchException{
@@ -219,6 +197,26 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("p1", p1);
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverGroupCoverage", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInProd()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProd", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverNumberOfRecordInUat()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInUat", params);
 
 	}
 

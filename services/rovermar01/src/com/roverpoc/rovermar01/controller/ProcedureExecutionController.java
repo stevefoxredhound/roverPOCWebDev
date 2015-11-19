@@ -79,32 +79,6 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
-	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordInProd", method = RequestMethod.GET)
-	@ApiOperation(value = "Process request to execute Procedure")
-	public List<Object> executeFunctionCallRoverNumberOfRecordInProd(
-			@RequestParam(value="p1", required=false) java.lang.String p1
-		 )
-	     throws QueryParameterMismatchException{
-			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordInProd");
-
-		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordInProd( p1);
-
-		LOGGER.debug("got the result of named procedure {}", result);
-		return result;
-	}
-	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordInUat", method = RequestMethod.GET)
-	@ApiOperation(value = "Process request to execute Procedure")
-	public List<Object> executeFunctionCallRoverNumberOfRecordInUat(
-			@RequestParam(value="P1", required=false) java.lang.String P1
-		 )
-	     throws QueryParameterMismatchException{
-			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordInUat");
-
-		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordInUat( P1);
-
-		LOGGER.debug("got the result of named procedure {}", result);
-		return result;
-	}
 	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordInProdOnly", method = RequestMethod.GET)
 	@ApiOperation(value = "Process request to execute Procedure")
 	public List<Object> executeFunctionCallRoverNumberOfRecordInProdOnly(
@@ -257,6 +231,30 @@ public class ProcedureExecutionController {
 			LOGGER.debug("Executing named procedure FunctionCallRoverGroupCoverage");
 
 		List<Object> result = procedureService.executeFunctionCallRoverGroupCoverage( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordInProd", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfRecordInProd(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordInProd");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordInProd();
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfRecordInUat", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverNumberOfRecordInUat(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FunctionCallRoverNumberOfRecordInUat");
+
+		List<Object> result = procedureService.executeFunctionCallRoverNumberOfRecordInUat();
 
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;

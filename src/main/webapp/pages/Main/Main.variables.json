@@ -260,5 +260,42 @@
 			]
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat-wm.ServiceVariable-1447846298432"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordInProd",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordInProd",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProd",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd-wm.ServiceVariable-1447925522321"
 	}
 }

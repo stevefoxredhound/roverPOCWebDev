@@ -12,14 +12,6 @@
     <operation operationType="procedure" name="FunctionCallRoverUncategorisedGroupsBySystem">
         <return typeRef="rovermar01FunctionCallRoverUncategorisedGroupsBySystemrtnType" isList="false"/>
     </operation>
-    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInProd">
-        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
-        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInProdrtnType" isList="false"/>
-    </operation>
-    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInUat">
-        <parameter name="P1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
-        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInUatrtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInProdOnly">
         <parameter name="P1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType" isList="false"/>
@@ -67,6 +59,12 @@
     <operation operationType="procedure" name="FunctionCallRoverGroupCoverage">
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverGroupCoveragertnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInProd">
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInProdrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfRecordInUat">
+        <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInUatrtnType" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
@@ -263,12 +261,6 @@
             <element name="core_system" typeRef="java.lang.String"/>
             <element name="Uncategorised Groups" typeRef="java.lang.Long"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInProdrtnType">
-            <element name="NumberOfRecordsInProd" typeRef="java.lang.Long"/>
-        </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInUatrtnType">
-            <element name="NumberOfRecordsInUat" typeRef="java.lang.Long"/>
-        </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType">
             <element name="NumberOfRecordsInProdOnly" typeRef="java.lang.Long"/>
         </dataobject>
@@ -304,6 +296,12 @@
         </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverGroupCoveragertnType">
             <element name="NumberOfGroupPercentages" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInProdrtnType">
+            <element name="NumberOfRecordsInProd" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInUatrtnType">
+            <element name="NumberOfRecordsInUat" typeRef="java.lang.Long"/>
         </dataobject>
     </dataobjects>
 </service>

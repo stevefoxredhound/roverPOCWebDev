@@ -1339,6 +1339,7 @@
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverMessageCoverage-wm.ServiceVariable-1447859568453"
 	},
 	"Rovermar01ExecuteFunctionCallRoverGroupCoverage": {
+		"name": "Rovermar01ExecuteFunctionCallRoverGroupCoverage",
 		"type": "rovermar01FunctionCallRoverGroupCoveragertnType",
 		"isList": false,
 		"owner": "Page",
@@ -1384,7 +1385,6 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverGroupCoverage-wm.ServiceVariable-1447859711024",
-		"name": "Rovermar01ExecuteFunctionCallRoverGroupCoverage"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverGroupCoverage-wm.ServiceVariable-1447859711024"
 	}
 }
