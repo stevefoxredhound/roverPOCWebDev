@@ -241,6 +241,39 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverNumberOfRecordInProdOnly", params);
 
 	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverUncategorisedGroups(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverUncategorisedGroups", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverShowDataDifferences(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverShowDataDifferences", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverCategorisedGroups(java.lang.Integer p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverCategorisedGroups", params);
+
+	}
 
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override

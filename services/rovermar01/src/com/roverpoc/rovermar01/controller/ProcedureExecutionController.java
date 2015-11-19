@@ -285,6 +285,45 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverUncategorisedGroups", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverUncategorisedGroups(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverUncategorisedGroups");
+
+		List<Object> result = procedureService.executeFunctionCallRoverUncategorisedGroups( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverShowDataDifferences", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverShowDataDifferences(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverShowDataDifferences");
+
+		List<Object> result = procedureService.executeFunctionCallRoverShowDataDifferences( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverCategorisedGroups", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverCategorisedGroups(
+			@RequestParam(value="p1", required=false) java.lang.Integer p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverCategorisedGroups");
+
+		List<Object> result = procedureService.executeFunctionCallRoverCategorisedGroups( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
 	
 
 	@RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)

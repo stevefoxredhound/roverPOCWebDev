@@ -65,11 +65,10 @@
                             </wm-gridrow>
                             <wm-gridrow name="gridrow25">
                                 <wm-gridcolumn columnwidth="3" name="gridcolumn81" readonlygrid="true">
-                                    <wm-grid readonlygrid="true" name="GridClassificationsList" dataset="bind:Variables.Rover2QueryAClassificationsListForThisSystem.dataSet" gridfirstrowselect="true" showrecordcount="true" height="500" fontsize="14" width="100%"
-                                    pagesize="8">
-                                        <wm-grid-column binding="Classification" caption="Group" type="string" width="150px" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="Messages" caption="Messages" type="string" width="50px" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
-                                        mobiledisplay="true"></wm-grid-column>
+                                    <wm-grid readonlygrid="true" name="GridClassificationsList" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroups.dataSet" gridfirstrowselect="true" showrecordcount="true" height="500" fontsize="14"
+                                    width="100%" pagesize="8">
+                                        <wm-grid-column binding="Messages" caption="Messages" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="NAME" caption="NAME" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="2" name="gridcolumn98" readonlygrid="true">
@@ -120,13 +119,7 @@
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="5" name="gridcolumn112" readonlygrid="true">
-                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rover2ProcDClassAndCatClassificationsWithCatRulessListForThisSystem.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25">
-                                        <wm-grid-column binding="Classification" caption="Group" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="Category" caption="Category" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="Messages" caption="Messages" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="Comment" caption="Comment" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="Who" caption="Who" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                    </wm-grid>
+                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25"></wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="2" name="gridcolumn103" readonlygrid="true">
                                     <wm-layoutgrid name="layoutgrid5" width="175" horizontalalign="center" marginleft="25">

@@ -74,6 +74,18 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverUncategorisedGroups">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverUncategorisedGroupsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverShowDataDifferences">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverShowDataDifferencesrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverCategorisedGroups">
+        <parameter name="p1" typeRef="java.lang.Integer" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverCategorisedGroupsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -317,5 +329,18 @@
         <dataobject javaType="rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType">
             <element name="NumberOfRecordsInProdOnly" typeRef="java.lang.Long"/>
         </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverUncategorisedGroupsrtnType">
+            <element name="Messages" typeRef="java.lang.Long"/>
+            <element name="NAME" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverShowDataDifferencesrtnType">
+            <element name="FTDATE" typeRef="java.lang.String"/>
+            <element name="FUSER" typeRef="java.lang.String"/>
+            <element name="core_source" typeRef="java.lang.String"/>
+            <element name="core_system" typeRef="java.lang.String"/>
+            <element name="core_key" typeRef="java.lang.String"/>
+            <element name="FRECNO" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverCategorisedGroupsrtnType"/>
     </dataobjects>
 </service>

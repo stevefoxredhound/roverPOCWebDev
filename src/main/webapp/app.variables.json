@@ -3255,6 +3255,7 @@
 		}
 	},
 	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly",
 		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType",
 		"isList": false,
 		"owner": "App",
@@ -3300,7 +3301,38 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165",
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165"
+	},
+	"Rovermar01ExecuteFunctionCallRoverShowDataDifferences": {
+		"type": "rovermar01FunctionCallRoverShowDataDifferencesrtnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverShowDataDifferences",
+		"operationType": "procedure",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverShowDataDifferences-wm.ServiceVariable-1447934146407",
+		"name": "Rovermar01ExecuteFunctionCallRoverShowDataDifferences"
 	}
 }

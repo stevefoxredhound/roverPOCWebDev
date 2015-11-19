@@ -70,6 +70,15 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverNumberOfRecordInProdOnly( java.lang.String p1) throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionCallRoverUncategorisedGroups( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverShowDataDifferences( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverCategorisedGroups( java.lang.Integer p1) throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 
