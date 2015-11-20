@@ -18,3 +18,18 @@ Application.$controller("OperatorMaintenancePageController", ["$scope", function
     };
 
 }]);
+
+
+Application.$controller("OperatorsGrid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("OperatorsLiveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);

@@ -23,67 +23,79 @@ Application.$controller("OperatorMaintenancePageController", ["$scope", function
 
 }]);
 
+
+Application.$controller("OperatorsGrid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("OperatorsLiveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="OperatorMaintenance.variables.json">
-var _OperatorMaintenancePage_Variables_ ={};
+var _OperatorMaintenancePage_Variables_ ={}
 </script>
 <script id="OperatorMaintenance.html" type="text/ng-template">
 <wm-page data-ng-controller="OperatorMaintenancePageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1">
+        <wm-page-content name="page_content1" columnwidth="12">
             <wm-accordion name="accordion1">
                 <wm-accordionpane name="accordionpane1">
                     <wm-accordionheader name="accordionheader1" heading="Operators"></wm-accordionheader>
                     <wm-accordioncontent name="accordioncontent1">
                         <wm-layoutgrid name="layoutgrid1">
                             <wm-gridrow name="gridrow1">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn1">
-                                    <wm-picture picturesource="resources/images/imagelists/Red Hound Logo.png" name="picture1"></wm-picture>
+                                <wm-gridcolumn name="gridcolumn1" columnwidth="4">
+                                    <wm-picture name="picture1" picturesource="resources/images/imagelists/Red Hound Logo.png"></wm-picture>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn2"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn3"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn2" columnwidth="4"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn3" columnwidth="4"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow2">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn4">
-                                    <wm-button class="btn-default" caption="Home" type="button" on-click="goToPage_Main" name="button1"></wm-button>
+                                <wm-gridcolumn name="gridcolumn4" columnwidth="10">
+                                    <wm-livegrid name="OperatorsLivegrid1" service="rovermar01@Operators">
+                                        <wm-grid name="OperatorsGrid1" readonlygrid="false" dataset="bind:Variables.Rovermar01OperatorsData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true">
+                                            <wm-grid-column type="integer" generator="identity" readonly="true" caption="Id" mobiledisplay="true" pcdisplay="true" binding="id" primary-key="true"></wm-grid-column>
+                                            <wm-grid-column type="datetime" generator="assigned" readonly="false" caption="Date Time" mobiledisplay="true" pcdisplay="true" binding="dateTime" datepattern="dd-MMM-yyyy HH:mm:ss" formatpattern="toDate"></wm-grid-column>
+                                            <wm-grid-column type="text" generator="assigned" readonly="false" caption="Operator" mobiledisplay="true" pcdisplay="true" binding="operator"></wm-grid-column>
+                                            <wm-grid-column type="text" generator="assigned" readonly="false" caption="Command" mobiledisplay="true" pcdisplay="true" binding="command"></wm-grid-column>
+                                            <wm-grid-action class="btn-primary" show="true" key="addNewRow" action="addNewRow()" icon="new" value="new" label="New"></wm-grid-action>
+                                        </wm-grid>
+                                        <wm-liveform title="Details" name="OperatorsLiveform1" dataset="bind:Variables.Rovermar01OperatorsData.dataSet" novalidate="false" formtype="inline">
+                                            <wm-layoutgrid name="layoutgrid1">
+                                                <wm-gridrow name="gridrow1">
+                                                    <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
+                                                        <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                                        <wm-form-field type="datetime" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dateTime" display-name="Date Time"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow2">
+                                                    <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                                        <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="operator" display-name="Operator" maxvalue="65535"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow3">
+                                                    <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
+                                                        <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="command" display-name="Command" maxvalue="65535"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                            <wm-form-action class="form-cancel btn-secondary" type="button" show="true" iconclass="glyphicon glyphicon-remove-circle" key="cancel" display-name="Cancel" update-mode="true" action="cancel()"></wm-form-action>
+                                            <wm-form-action class="form-save btn-success" type="submit" show="true" iconclass="glyphicon glyphicon-save" key="save" display-name="Save" update-mode="true"></wm-form-action>
+                                        </wm-liveform>
+                                    </wm-livegrid>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn5"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow3">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn7"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn8"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn9"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow4">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn10"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn11"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn12"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow5">
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn13"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn15"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow6">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn16"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn17"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn18"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow7">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn19"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn20"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn21"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow8">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn22"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn23"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn24"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow9">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn25"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn26"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn27"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn5" columnwidth="4"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn6" columnwidth="4"></wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-accordioncontent>

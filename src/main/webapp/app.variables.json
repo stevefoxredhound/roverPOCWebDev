@@ -898,7 +898,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -991,7 +991,8 @@
 			"entityName": "ComparisonRules",
 			"fullyQualifiedName": "com.roverpoc.rovermar01.ComparisonRules",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"Rovermar01CoreSystemsData": {
 		"name": "Rovermar01CoreSystemsData",
@@ -1013,7 +1014,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -1204,7 +1205,8 @@
 			"entityName": "CoreSystems",
 			"fullyQualifiedName": "com.roverpoc.rovermar01.CoreSystems",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"Rovermar01FilterRulesData": {
 		"name": "Rovermar01FilterRulesData",
@@ -2588,7 +2590,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -2667,7 +2669,8 @@
 			"entityName": "Operators",
 			"fullyQualifiedName": "com.roverpoc.rovermar01.Operators",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"Rovermar01ResultsData": {
 		"name": "Rovermar01ResultsData",
@@ -3146,7 +3149,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -3253,7 +3256,8 @@
 			"entityName": "UserLogin",
 			"fullyQualifiedName": "com.roverpoc.rovermar01.UserLogin",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
 		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly",

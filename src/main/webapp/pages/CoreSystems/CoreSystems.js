@@ -18,30 +18,3 @@ Application.$controller("CoreSystemsPageController", ["$scope", function ($scope
     };
 
 }]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Application.$controller("CoreSystemsGrid2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("CoreSystemsLiveform2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

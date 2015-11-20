@@ -1,82 +1,8 @@
 <wm-page data-ng-controller="RulesMaintenancePageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1">
-            <wm-accordion name="accordion1">
-                <wm-accordionpane name="accordionpane1">
-                    <wm-accordionheader name="accordionheader1" heading="Rules Maintenance"></wm-accordionheader>
-                    <wm-accordioncontent name="accordioncontent1">
-                        <wm-layoutgrid name="layoutgrid1">
-                            <wm-gridrow name="gridrow1">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn1">
-                                    <wm-picture picturesource="resources/images/imagelists/Red Hound Logo.png" name="picture1"></wm-picture>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn2"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn3"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow2">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn4">
-                                    <wm-button class="btn-default" caption="Home" type="button" on-click="goToPage_Main" name="button1"></wm-button>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn5"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
-                            </wm-gridrow>
-                            <wm-gridrow name="gridrow3">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn7"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn8"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn9"></wm-gridcolumn>
-                            </wm-gridrow>
-                        </wm-layoutgrid>
-                    </wm-accordioncontent>
-                </wm-accordionpane>
-            </wm-accordion>
-            <wm-livegrid name="ComparisonRulesLivegrid1" service="rover2@ComparisonRules">
-                <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="ComparisonRulesGrid1" dataset="bind:Variables.Rover2ComparisonRulesData.dataSet" width="2000">
-                    <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="coreSystem" caption="Core System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="dataOrder" caption="Data Order" type="big_decimal" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="dataItem" caption="Data Item" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="operator" caption="Operator" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-column binding="command" caption="Command" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                    <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
-                </wm-grid>
-                <wm-liveform novalidate="false" title="Details" name="ComparisonRulesLiveform1" dataset="bind:Variables.Rover2ComparisonRulesData.dataSet" formtype="inline">
-                    <wm-layoutgrid name="layoutgrid1">
-                        <wm-gridrow show="hide" name="gridrow1">
-                            <wm-gridcolumn show="show" name="gridcolumn1" columnwidth="12">
-                                <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow show="show" name="gridrow2">
-                            <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
-                                <wm-form-field display-name="Core System" show="true" primary-key="false" generator="null" key="coreSystem" type="string" maxvalue="250" is-related="false" readonly="false" required="false"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow show="show" name="gridrow3">
-                            <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
-                                <wm-form-field display-name="Data Order" show="true" primary-key="false" generator="null" key="dataOrder" type="big_decimal" is-related="false" readonly="false" required="false"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow show="show" name="gridrow4">
-                            <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
-                                <wm-form-field display-name="Data Item" show="true" primary-key="false" generator="null" key="dataItem" type="string" maxvalue="250" is-related="false" readonly="false" required="false"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow show="show" name="gridrow5">
-                            <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
-                                <wm-form-field display-name="Operator" show="true" primary-key="false" generator="null" key="operator" type="string" maxvalue="250" is-related="false" readonly="false" required="false"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                        <wm-gridrow show="show" name="gridrow6">
-                            <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
-                                <wm-form-field display-name="Command" show="true" primary-key="false" generator="null" key="command" type="string" maxvalue="250" is-related="false" readonly="false" required="false"></wm-form-field>
-                            </wm-gridcolumn>
-                        </wm-gridrow>
-                    </wm-layoutgrid>
-                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
-                    <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="Submit" update-mode="true"></wm-form-action>
-                </wm-liveform>
-            </wm-livegrid>
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-accordion name="accordion1"></wm-accordion>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
