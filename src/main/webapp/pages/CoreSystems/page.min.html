@@ -22,6 +22,20 @@ Application.$controller("CoreSystemsPageController", ["$scope", function ($scope
     };
 
 }]);
+
+Application.$controller("CoreSystemsGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("CoreSystemsLiveform2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="CoreSystems.variables.json">
 var _CoreSystemsPage_Variables_ ={}
@@ -43,7 +57,7 @@ var _CoreSystemsPage_Variables_ ={}
                         <wm-button class="btn-default" type="button" caption="" name="button1" color="#00000" borderstyle="none" width="50" on-click="goToPage_Main" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-backward fa-lg"></wm-button>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn27_1" columnwidth="10">
-                        <wm-label caption="Core Systems" name="label1" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="Core Systems Maintenance" name="label1" fontsize="30" textalign="left"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn28_1" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
@@ -67,66 +81,71 @@ var _CoreSystemsPage_Variables_ ={}
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core Uat Connectivity" mobiledisplay="true" pcdisplay="true" binding="coreUatConnectivity"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System Status" mobiledisplay="true" pcdisplay="true" binding="coreSystemStatus"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System Logging" mobiledisplay="true" pcdisplay="true" binding="coreSystemLogging"></wm-grid-column>
-                                <wm-grid-action class="btn-primary" show="true" key="addNewRow" action="addNewRow()" icon="new" value="new" label="New"></wm-grid-action>
+                                <wm-grid-action class="btn-primary" type="button" show="true" key="addNewRow" action="addNewRow()" icon="new" label="New"></wm-grid-action>
                             </wm-grid>
                             <wm-liveform title="Details" name="CoreSystemsLiveform2" dataset="bind:Variables.Rovermar01CoreSystemsData.dataSet" novalidate="false" formtype="inline">
                                 <wm-layoutgrid name="layoutgrid1">
                                     <wm-gridrow name="gridrow1">
                                         <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
-                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id"></wm-form-field>
+                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" name="form_field1" primary-key="true" required="true" is-related="false" key="id" display-name="Id"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
-                                            <wm-form-field type="datetime" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dateTime" display-name="Date Time"></wm-form-field>
+                                            <wm-form-field type="datetime" generator="assigned" readonly="false" show="true" name="form_field2" primary-key="false" required="false" is-related="false" key="dateTime" display-name="Date Time"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow2">
                                         <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystem" display-name="Core System" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field3" primary-key="false" required="false" is-related="false" key="coreSystem" display-name="Core System" maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystemRoverName" display-name="Core System Rover Name" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field4" primary-key="false" required="false" is-related="false" key="coreSystemRoverName" display-name="Core System Rover Name"
+                                            maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow4">
                                         <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreProdTable" display-name="Core Prod Table" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field5" primary-key="false" required="false" is-related="false" key="coreProdTable" display-name="Core Prod Table" maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow5">
                                         <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreProdConnectivity" display-name="Core Prod Connectivity" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field6" primary-key="false" required="false" is-related="false" key="coreProdConnectivity" display-name="Core Prod Connectivity"
+                                            maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow6">
                                         <wm-gridcolumn show="show" name="gridcolumn7" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreUatTable" display-name="Core Uat Table" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field7" primary-key="false" required="false" is-related="false" key="coreUatTable" display-name="Core Uat Table" maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow7">
                                         <wm-gridcolumn show="show" name="gridcolumn8" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreUatConnectivity" display-name="Core Uat Connectivity" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field8" primary-key="false" required="false" is-related="false" key="coreUatConnectivity" display-name="Core Uat Connectivity"
+                                            maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow8">
                                         <wm-gridcolumn show="show" name="gridcolumn9" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystemStatus" display-name="Core System Status" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field9" primary-key="false" required="false" is-related="false" key="coreSystemStatus" display-name="Core System Status" maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow9">
                                         <wm-gridcolumn show="show" name="gridcolumn10" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystemLogging" display-name="Core System Logging" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field10" primary-key="false" required="false" is-related="false" key="coreSystemLogging" display-name="Core System Logging"
+                                            maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow10">
                                         <wm-gridcolumn show="show" name="gridcolumn11" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystemAlert" display-name="Core System Alert" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field11" primary-key="false" required="false" is-related="false" key="coreSystemAlert" display-name="Core System Alert" maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow11">
                                         <wm-gridcolumn show="show" name="gridcolumn12" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystemAlertTarget" display-name="Core System Alert Target" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" name="form_field12" primary-key="false" required="false" is-related="false" key="coreSystemAlertTarget" display-name="Core System Alert Target"
+                                            maxvalue="65535"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>

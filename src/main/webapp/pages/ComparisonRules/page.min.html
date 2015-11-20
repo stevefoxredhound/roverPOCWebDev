@@ -34,7 +34,16 @@ Application.$controller("ComparisonRulesPageController", ["$scope", function ($s
 
 
 
-Application.$controller("grid3Controller", ["$scope",
+
+
+Application.$controller("ComparisonRulesGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("ComparisonRulesLiveform1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
@@ -48,58 +57,90 @@ var _ComparisonRulesPage_Variables_ ={}
 <wm-page data-ng-controller="ComparisonRulesPageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1">
+        <wm-page-content name="page_content1" columnwidth="12">
             <wm-layoutgrid name="layoutgrid3">
                 <wm-gridrow name="gridrow10">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn16"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn17"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn18"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn16" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn17" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn18" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow11">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn19" horizontalalign="right">
-                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_Main" width="50" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" backgroundcolor="#ffefbf" name="button2"></wm-button>
+                    <wm-gridcolumn name="gridcolumn19" horizontalalign="right" columnwidth="1">
+                        <wm-button class="btn-default" type="button" caption="" name="button2" color="#00000" borderstyle="none" width="50" on-click="goToPage_Main" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-backward fa-lg"></wm-button>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn20"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn21"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn20" columnwidth="10">
+                        <wm-label caption="Comparison Rules Maintenance" name="label1" fontsize="30" textalign="left"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn21" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow12">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn22"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn23" overflow="scroll">
-                        <wm-grid readonlygrid="false" name="grid3" dataset="bind:Variables.Rover4ComparisonRulesData.dataSet" insertrow="true" updaterow="true" deleterow="true" gridsearch="true">
-                            <wm-grid-column caption="Column1" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column caption="Column2" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column caption="Column3" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column caption="Column4" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-column caption="Column5" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                            <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
-                        </wm-grid>
+                    <wm-gridcolumn name="gridcolumn22" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn24" columnwidth="10">
+                        <wm-livegrid name="ComparisonRulesLivegrid2" service="rovermar01@ComparisonRules">
+                            <wm-grid name="ComparisonRulesGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01ComparisonRulesData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true">
+                                <wm-grid-column type="integer" generator="identity" readonly="true" caption="Id" mobiledisplay="true" pcdisplay="true" binding="id" primary-key="true"></wm-grid-column>
+                                <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System" mobiledisplay="true" pcdisplay="true" binding="coreSystem"></wm-grid-column>
+                                <wm-grid-column type="big_decimal" generator="assigned" readonly="false" caption="Data Order" mobiledisplay="true" pcdisplay="true" binding="dataOrder"></wm-grid-column>
+                                <wm-grid-column type="text" generator="assigned" readonly="false" caption="Data Item" mobiledisplay="true" pcdisplay="true" binding="dataItem"></wm-grid-column>
+                                <wm-grid-column type="text" generator="assigned" readonly="false" caption="Operator" mobiledisplay="true" pcdisplay="true" binding="operator"></wm-grid-column>
+                                <wm-grid-action class="btn-primary" show="true" key="addNewRow" action="addNewRow()" icon="new" value="new" label="New"></wm-grid-action>
+                            </wm-grid>
+                            <wm-liveform title="Details" name="ComparisonRulesLiveform1" dataset="bind:Variables.Rovermar01ComparisonRulesData.dataSet" novalidate="false" formtype="inline">
+                                <wm-layoutgrid name="layoutgrid1">
+                                    <wm-gridrow name="gridrow1">
+                                        <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
+                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystem" display-name="Core System" maxvalue="65535"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                            <wm-form-field type="big_decimal" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dataOrder" display-name="Data Order"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dataItem" display-name="Data Item" maxvalue="65535"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="operator" display-name="Operator" maxvalue="65535"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-form-action class="form-cancel btn-secondary" type="button" show="true" iconclass="glyphicon glyphicon-remove-circle" key="cancel" display-name="Cancel" update-mode="true" action="cancel()"></wm-form-action>
+                                <wm-form-action class="form-save btn-success" type="submit" show="true" iconclass="glyphicon glyphicon-save" key="save" display-name="Save" update-mode="true"></wm-form-action>
+                            </wm-liveform>
+                        </wm-livegrid>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow13">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn25"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn26"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn25" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn26" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn27" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn28"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn29"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn28" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn29" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn30" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow15">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn31"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn32"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn33"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn31" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn32" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn33" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow16">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn34"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn35"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn36"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn34" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn35" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn36" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow17">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn37"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn38"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn39"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn37" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn38" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn39" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
             <wm-livegrid name="ComparisonRulesLivegrid1" service="rover2@ComparisonRules"></wm-livegrid>

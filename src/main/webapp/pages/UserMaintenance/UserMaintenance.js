@@ -26,14 +26,18 @@ Application.$controller("UserMaintenancePageController", ["$scope", function ($s
 
 
 
-Application.$controller("UserLoginGrid2Controller", ["$scope",
+
+
+
+
+Application.$controller("UserLoginLiveform2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("UserLoginLiveform1Controller", ["$scope",
+Application.$controller("UserLoginGrid2Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;

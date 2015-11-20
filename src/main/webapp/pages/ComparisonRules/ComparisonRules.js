@@ -30,7 +30,16 @@ Application.$controller("ComparisonRulesPageController", ["$scope", function ($s
 
 
 
-Application.$controller("grid3Controller", ["$scope",
+
+
+Application.$controller("ComparisonRulesGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("ComparisonRulesLiveform1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
