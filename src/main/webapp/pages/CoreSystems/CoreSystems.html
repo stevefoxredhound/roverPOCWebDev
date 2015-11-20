@@ -27,7 +27,7 @@
                     <wm-gridcolumn name="gridcolumn22" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn23" columnwidth="10">
                         <wm-livegrid name="CoreSystemsLivegrid3" service="rovermar01@CoreSystems">
-                            <wm-grid name="CoreSystemsGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01CoreSystemsData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true">
+                            <wm-grid name="CoreSystemsGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01CoreSystemsData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true" gridsearch="true">
                                 <wm-grid-column type="integer" generator="identity" readonly="true" caption="Id" mobiledisplay="true" pcdisplay="true" binding="id" primary-key="true"></wm-grid-column>
                                 <wm-grid-column type="datetime" generator="assigned" readonly="false" caption="Date Time" mobiledisplay="true" pcdisplay="true" binding="dateTime" datepattern="dd-MMM-yyyy HH:mm:ss" formatpattern="toDate"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System" mobiledisplay="true" pcdisplay="true" binding="coreSystem"></wm-grid-column>
@@ -38,7 +38,7 @@
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core Uat Connectivity" mobiledisplay="true" pcdisplay="true" binding="coreUatConnectivity"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System Status" mobiledisplay="true" pcdisplay="true" binding="coreSystemStatus"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System Logging" mobiledisplay="true" pcdisplay="true" binding="coreSystemLogging"></wm-grid-column>
-                                <wm-grid-action class="btn-primary" type="button" show="true" key="addNewRow" action="addNewRow()" icon="new" label="New"></wm-grid-action>
+                                <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                             </wm-grid>
                             <wm-liveform title="Details" name="CoreSystemsLiveform2" dataset="bind:Variables.Rovermar01CoreSystemsData.dataSet" novalidate="false" formtype="inline">
                                 <wm-layoutgrid name="layoutgrid1">

@@ -16,43 +16,43 @@
                     <wm-gridcolumn name="gridcolumn22" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn23" columnwidth="10">
                         <wm-livegrid name="UserLoginLivegrid3" service="rovermar01@UserLogin">
-                            <wm-grid name="UserLoginGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01UserLoginData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true">
+                            <wm-grid name="UserLoginGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01UserLoginData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true" gridsearch="true">
                                 <wm-grid-column type="integer" generator="identity" readonly="true" caption="Id" mobiledisplay="true" pcdisplay="true" binding="id" primary-key="true"></wm-grid-column>
                                 <wm-grid-column type="integer" generator="assigned" readonly="false" caption="Userid" mobiledisplay="true" pcdisplay="true" binding="userid"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Username" mobiledisplay="true" pcdisplay="true" binding="username"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Password" mobiledisplay="true" pcdisplay="true" binding="password"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Role" mobiledisplay="true" pcdisplay="true" binding="role"></wm-grid-column>
                                 <wm-grid-column type="integer" generator="assigned" readonly="false" caption="Tenantid" mobiledisplay="true" pcdisplay="true" binding="tenantid"></wm-grid-column>
-                                <wm-grid-action class="btn-primary" show="true" key="addNewRow" action="addNewRow()" icon="new" value="new" label="New"></wm-grid-action>
+                                <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                             </wm-grid>
                             <wm-liveform title="Details" name="UserLoginLiveform2" dataset="bind:Variables.Rovermar01UserLoginData.dataSet" novalidate="false" formtype="inline">
                                 <wm-layoutgrid name="layoutgrid1">
                                     <wm-gridrow name="gridrow1">
                                         <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
-                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id"></wm-form-field>
+                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id" name="form_field1"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
-                                            <wm-form-field type="integer" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="userid" display-name="Userid"></wm-form-field>
+                                            <wm-form-field type="integer" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="userid" display-name="Userid" name="form_field2"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow2">
                                         <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="username" display-name="Username" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="username" display-name="Username" maxvalue="65535" name="form_field3"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="password" display-name="Password" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="password" display-name="Password" maxvalue="65535" name="form_field4"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow4">
                                         <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="role" display-name="Role" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="role" display-name="Role" maxvalue="65535" name="form_field5"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow5">
                                         <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
-                                            <wm-form-field type="integer" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="tenantid" display-name="Tenantid"></wm-form-field>
+                                            <wm-form-field type="integer" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="tenantid" display-name="Tenantid" name="form_field6"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>

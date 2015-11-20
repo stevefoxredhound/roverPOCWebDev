@@ -66,9 +66,9 @@
                             <wm-gridrow name="gridrow25">
                                 <wm-gridcolumn name="gridcolumn81" readonlygrid="true" columnwidth="3">
                                     <wm-grid name="GridClassificationsList" height="500" width="100%" readonlygrid="true" fontsize="14" pagesize="8" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroups.dataSet" showrecordcount="true"
-                                    gridfirstrowselect="true" on-Click="Rovermar01ExecuteFunctionCallRoverCcolumnList">
-                                        <wm-grid-column caption="Messages" mobiledisplay="true" pcdisplay="true" binding="Messages"></wm-grid-column>
-                                        <wm-grid-column caption="NAME" mobiledisplay="true" pcdisplay="true" binding="NAME"></wm-grid-column>
+                                    gridfirstrowselect="true" on-click="Rovermar01ExecuteFunctionCallRoverCcolumnList">
+                                        <wm-grid-column binding="NAME" caption="NAME" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="Messages" caption="Messages" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn98" readonlygrid="true" columnwidth="2">
@@ -83,7 +83,7 @@
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow30_1">
                                             <wm-gridcolumn name="gridcolumn73_1" horizontalalign="center" columnwidth="12">
-                                                <wm-label caption="bind:Widgets.GridClassificationsList.selecteditem.NAME" name="labelGroupName" width="100%" fontsize="14" textalign="center"></wm-label>
+                                                <wm-label caption="bind:Widgets.GridClassificationsList.selecteditem.NAME" name="labelGroupName" width="100%" fontsize="14" textalign="center" fontweight="bold"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow34_1">
@@ -118,11 +118,11 @@
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn112" readonlygrid="true" columnwidth="5">
                                     <wm-grid name="gridCatQueryD" height="500" readonlygrid="true" fontsize="14" pagesize="8" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" showrecordcount="true" marginleft="25">
-                                        <wm-grid-column caption="Messages" mobiledisplay="true" pcdisplay="true" binding="Messages"></wm-grid-column>
-                                        <wm-grid-column caption="Category" mobiledisplay="true" pcdisplay="true" binding="category"></wm-grid-column>
-                                        <wm-grid-column caption="NAME" mobiledisplay="true" pcdisplay="true" binding="NAME"></wm-grid-column>
-                                        <wm-grid-column caption="COMMENT" mobiledisplay="true" pcdisplay="true" binding="COMMENT"></wm-grid-column>
-                                        <wm-grid-column caption="Who" mobiledisplay="true" pcdisplay="true" binding="who"></wm-grid-column>
+                                        <wm-grid-column binding="NAME" caption="NAME" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="Messages" caption="Messages" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="category" caption="Category" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="COMMENT" caption="COMMENT" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="who" caption="Who" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn103" readonlygrid="true" columnwidth="2">

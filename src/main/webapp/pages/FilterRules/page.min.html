@@ -78,7 +78,7 @@ var _FilterRulesPage_Variables_ ={}
                     <wm-gridcolumn columnwidth="1" name="gridcolumn16"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn17">
                         <wm-livegrid name="FilterRulesLivegrid1" service="rovermar01@FilterRules">
-                            <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="FilterRulesGrid1" dataset="bind:Variables.Rovermar01FilterRulesData.dataSet">
+                            <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="FilterRulesGrid1" dataset="bind:Variables.Rovermar01FilterRulesData.dataSet" gridsearch="true">
                                 <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                 <wm-grid-column binding="coreSystem" caption="Core System" type="text" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
                                 mobiledisplay="true"></wm-grid-column>
@@ -105,95 +105,95 @@ var _FilterRulesPage_Variables_ ={}
                                 <wm-layoutgrid name="layoutgrid1">
                                     <wm-gridrow name="gridrow1">
                                         <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
-                                            <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
+                                            <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true" name="form_field1"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
-                                            <wm-form-field display-name="Date Time" show="true" primary-key="false" generator="assigned" key="dateTime" type="datetime" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Date Time" show="true" primary-key="false" generator="assigned" key="dateTime" type="datetime" is-related="false" readonly="false" required="false" name="form_field2"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow2">
                                         <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
-                                            <wm-form-field display-name="Core System" show="true" primary-key="false" generator="assigned" key="coreSystem" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Core System" show="true" primary-key="false" generator="assigned" key="coreSystem" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field3"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
-                                            <wm-form-field display-name="Ls Value" show="true" primary-key="false" generator="assigned" key="lsValue" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Ls Value" show="true" primary-key="false" generator="assigned" key="lsValue" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field4"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow4">
                                         <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
-                                            <wm-form-field display-name="Ls Side" show="true" primary-key="false" generator="assigned" key="lsSide" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Ls Side" show="true" primary-key="false" generator="assigned" key="lsSide" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field5"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow5">
                                         <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
-                                            <wm-form-field display-name="Ls Field" show="true" primary-key="false" generator="assigned" key="lsField" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Ls Field" show="true" primary-key="false" generator="assigned" key="lsField" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field6"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow6">
                                         <wm-gridcolumn show="show" name="gridcolumn7" columnwidth="12">
-                                            <wm-form-field display-name="Ls String" show="true" primary-key="false" generator="assigned" key="lsString" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Ls String" show="true" primary-key="false" generator="assigned" key="lsString" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field7"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow7">
                                         <wm-gridcolumn show="show" name="gridcolumn8" columnwidth="12">
-                                            <wm-form-field display-name="Ls Start" show="true" primary-key="false" generator="assigned" key="lsStart" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Ls Start" show="true" primary-key="false" generator="assigned" key="lsStart" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field8"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow8">
                                         <wm-gridcolumn show="show" name="gridcolumn9" columnwidth="12">
-                                            <wm-form-field display-name="Ls Length" show="true" primary-key="false" generator="assigned" key="lsLength" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Ls Length" show="true" primary-key="false" generator="assigned" key="lsLength" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field9"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow9">
                                         <wm-gridcolumn show="show" name="gridcolumn10" columnwidth="12">
-                                            <wm-form-field display-name="Operator" show="true" primary-key="false" generator="assigned" key="operator" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Operator" show="true" primary-key="false" generator="assigned" key="operator" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field10"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow10">
                                         <wm-gridcolumn show="show" name="gridcolumn11" columnwidth="12">
-                                            <wm-form-field display-name="Rs Value" show="true" primary-key="false" generator="assigned" key="rsValue" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Rs Value" show="true" primary-key="false" generator="assigned" key="rsValue" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field11"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow11">
                                         <wm-gridcolumn show="show" name="gridcolumn12" columnwidth="12">
-                                            <wm-form-field display-name="Rs Side" show="true" primary-key="false" generator="assigned" key="rsSide" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Rs Side" show="true" primary-key="false" generator="assigned" key="rsSide" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field12"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow12">
                                         <wm-gridcolumn show="show" name="gridcolumn13" columnwidth="12">
-                                            <wm-form-field display-name="Rs Field" show="true" primary-key="false" generator="assigned" key="rsField" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Rs Field" show="true" primary-key="false" generator="assigned" key="rsField" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field13"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow13">
                                         <wm-gridcolumn show="show" name="gridcolumn14" columnwidth="12">
-                                            <wm-form-field display-name="Rs String" show="true" primary-key="false" generator="assigned" key="rsString" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Rs String" show="true" primary-key="false" generator="assigned" key="rsString" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field14"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow14">
                                         <wm-gridcolumn show="show" name="gridcolumn15" columnwidth="12">
-                                            <wm-form-field display-name="Rs Start" show="true" primary-key="false" generator="assigned" key="rsStart" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Rs Start" show="true" primary-key="false" generator="assigned" key="rsStart" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field15"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow15">
                                         <wm-gridcolumn show="show" name="gridcolumn16" columnwidth="12">
-                                            <wm-form-field display-name="Rs Length" show="true" primary-key="false" generator="assigned" key="rsLength" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Rs Length" show="true" primary-key="false" generator="assigned" key="rsLength" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field16"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow16">
                                         <wm-gridcolumn show="show" name="gridcolumn17" columnwidth="12">
-                                            <wm-form-field display-name="Comment" show="true" primary-key="false" generator="assigned" key="comment" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Comment" show="true" primary-key="false" generator="assigned" key="comment" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field17"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow17">
                                         <wm-gridcolumn show="show" name="gridcolumn18" columnwidth="12">
-                                            <wm-form-field display-name="Who" show="true" primary-key="false" generator="assigned" key="who" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Who" show="true" primary-key="false" generator="assigned" key="who" type="text" maxvalue="65535" is-related="false" readonly="false" required="false" name="form_field18"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow18">
                                         <wm-gridcolumn show="show" name="gridcolumn19" columnwidth="12">
-                                            <wm-form-field display-name="Updated Timestamp" show="true" primary-key="false" generator="assigned" key="updatedTimestamp" type="datetime" is-related="false" readonly="false" required="false"></wm-form-field>
+                                            <wm-form-field display-name="Updated Timestamp" show="true" primary-key="false" generator="assigned" key="updatedTimestamp" type="datetime" is-related="false" readonly="false" required="false" name="form_field19"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>

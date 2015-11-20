@@ -21,37 +21,37 @@
                     <wm-gridcolumn name="gridcolumn22" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn24" columnwidth="10">
                         <wm-livegrid name="ComparisonRulesLivegrid2" service="rovermar01@ComparisonRules">
-                            <wm-grid name="ComparisonRulesGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01ComparisonRulesData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true">
+                            <wm-grid name="ComparisonRulesGrid2" readonlygrid="false" dataset="bind:Variables.Rovermar01ComparisonRulesData.dataSet" gridfirstrowselect="true" insertrow="true" updaterow="true" deleterow="true" gridsearch="true" height="400px">
                                 <wm-grid-column type="integer" generator="identity" readonly="true" caption="Id" mobiledisplay="true" pcdisplay="true" binding="id" primary-key="true"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Core System" mobiledisplay="true" pcdisplay="true" binding="coreSystem"></wm-grid-column>
                                 <wm-grid-column type="big_decimal" generator="assigned" readonly="false" caption="Data Order" mobiledisplay="true" pcdisplay="true" binding="dataOrder"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Data Item" mobiledisplay="true" pcdisplay="true" binding="dataItem"></wm-grid-column>
                                 <wm-grid-column type="text" generator="assigned" readonly="false" caption="Operator" mobiledisplay="true" pcdisplay="true" binding="operator"></wm-grid-column>
-                                <wm-grid-action class="btn-primary" show="true" key="addNewRow" action="addNewRow()" icon="new" value="new" label="New"></wm-grid-action>
+                                <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                             </wm-grid>
                             <wm-liveform title="Details" name="ComparisonRulesLiveform1" dataset="bind:Variables.Rovermar01ComparisonRulesData.dataSet" novalidate="false" formtype="inline">
                                 <wm-layoutgrid name="layoutgrid1">
                                     <wm-gridrow name="gridrow1">
                                         <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
-                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id"></wm-form-field>
+                                            <wm-form-field type="integer" generator="identity" readonly="true" show="false" primary-key="true" required="true" is-related="false" key="id" display-name="Id" name="form_field1"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystem" display-name="Core System" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="coreSystem" display-name="Core System" maxvalue="65535" name="form_field2"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow2">
                                         <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
-                                            <wm-form-field type="big_decimal" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dataOrder" display-name="Data Order"></wm-form-field>
+                                            <wm-form-field type="big_decimal" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dataOrder" display-name="Data Order" name="form_field3"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow3">
                                         <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dataItem" display-name="Data Item" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="dataItem" display-name="Data Item" maxvalue="65535" name="form_field4"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow4">
                                         <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
-                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="operator" display-name="Operator" maxvalue="65535"></wm-form-field>
+                                            <wm-form-field type="text" generator="assigned" readonly="false" show="true" primary-key="false" required="false" is-related="false" key="operator" display-name="Operator" maxvalue="65535" name="form_field5"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
