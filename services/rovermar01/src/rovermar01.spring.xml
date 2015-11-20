@@ -18,7 +18,7 @@
                       p:user="${rovermar01.username}"
                       p:password="${rovermar01.password}"
                       p:maxPoolSize="39"
-                      p:minPoolSize="10"
+                      p:minPoolSize="6"
                       p:maxIdleTime="600"
                       p:maxStatements="50"
                       p:maxStatementsPerConnection="20"
