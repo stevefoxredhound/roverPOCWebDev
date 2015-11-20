@@ -112,6 +112,9 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverShowDataDifferencesrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FuntionCallRoverComparisonEngine">
+        <return typeRef="rovermar01FuntionCallRoverComparisonEnginertnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -388,5 +391,6 @@
             <element name="core_key" typeRef="java.lang.String"/>
             <element name="FRECNO" typeRef="java.lang.String"/>
         </dataobject>
+        <dataobject javaType="rovermar01FuntionCallRoverComparisonEnginertnType"/>
     </dataobjects>
 </service>

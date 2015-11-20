@@ -24,15 +24,17 @@
                     <wm-gridcolumn columnwidth="4" name="gridcolumn34">
                         <wm-gridrow name="gridrow12">
                             <wm-gridcolumn columnwidth="1" name="gridcolumn35"></wm-gridcolumn>
-                            <wm-gridcolumn columnwidth="10" paddingtop="2.5" paddingbottom="2.5" name="gridcolumn36">
+                            <wm-gridcolumn columnwidth="12" paddingtop="2.5" paddingbottom="2.5" name="gridcolumn36">
                                 <wm-button class="btn-default" type="button" caption="Systems" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_CoreSystems" iconclass="glyphicon glyphicon-globe fa-lg"
-                                name="button8_1"></wm-button>
+                                name="button8_1" accessroles="admin"></wm-button>
                                 <wm-button class="btn-default" type="button" caption="Users" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_UserMaintenance"
-                                iconclass="glyphicon glyphicon-user fa-lg" name="button10"></wm-button>
+                                iconclass="glyphicon glyphicon-user fa-lg" name="button10" accessroles="admin"></wm-button>
                                 <wm-button class="btn-default" type="button" caption="Rules" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-th-list fa-lg"
                                 name="button9" on-click="goToPage_ComparisonRules" accessroles="admin"></wm-button>
                                 <wm-button class="btn-default" type="button" caption="Operators" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_OperatorMaintenance"
-                                iconclass="glyphicon glyphicon-barcode fa-lg" name="button11" accessroles="rulesexpert"></wm-button>
+                                iconclass="glyphicon glyphicon-barcode fa-lg" name="button11" accessroles="admin"></wm-button>
+                                <wm-button class="btn-default" type="button" caption="Filters" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="goToPage_FilterRules" iconclass="glyphicon glyphicon-filter fa-lg"
+                                accessroles="admin" name="button9_1"></wm-button>
                             </wm-gridcolumn>
                             <wm-gridcolumn columnwidth="1" name="gridcolumn37"></wm-gridcolumn>
                         </wm-gridrow>
@@ -42,8 +44,9 @@
                             <wm-gridrow name="gridrow13">
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn39"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="10" paddingtop="2.5" paddingbottom="2.5" horizontalalign="left" name="gridcolumn40">
-                                    <wm-button class="btn-default" type="button" caption="About" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-eye-open fa-lg" name="button12"></wm-button>
-                                    <wm-button class="btn-default" type="button" caption="Demo Run" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="Rover2ProcCategorisatonEngine"
+                                    <wm-button class="btn-default" type="button" caption="About" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-eye-open fa-lg" name="button12"
+                                    on-click="goToPage_AboutUs"></wm-button>
+                                    <wm-button class="btn-default" type="button" caption="Demo Run" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" on-click="Rovermar01ExecuteFuntionCallRoverComparisonEngine"
                                     iconclass="glyphicon glyphicon-play fa-lg" name="button13"></wm-button>
                                     <wm-button class="btn-default" type="button" caption="Logout" on-click="logout" backgroundcolor="#000000" color="#ffffff" width="100px" textalign="center" borderstyle="none" paddingtop="15" iconclass="glyphicon glyphicon-log-out fa-lg"
                                     name="button14"></wm-button>

@@ -404,6 +404,18 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
+	@RequestMapping(value = "/procedure/execute/FuntionCallRoverComparisonEngine", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFuntionCallRoverComparisonEngine(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FuntionCallRoverComparisonEngine");
+
+		List<Object> result = procedureService.executeFuntionCallRoverComparisonEngine();
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
 	
 
 	@RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)

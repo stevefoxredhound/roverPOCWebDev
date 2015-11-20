@@ -97,6 +97,9 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverShowDataDifferences( java.lang.String p1) throws QueryParameterMismatchException;
 
 
+    List<Object> executeFuntionCallRoverComparisonEngine() throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

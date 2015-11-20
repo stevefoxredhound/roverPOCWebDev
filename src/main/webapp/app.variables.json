@@ -1228,7 +1228,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -1517,7 +1517,8 @@
 			"entityName": "FilterRules",
 			"fullyQualifiedName": "com.roverpoc.rovermar01.FilterRules",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"Rovermar01GmiProdMessagesData": {
 		"name": "Rovermar01GmiProdMessagesData",
@@ -3331,5 +3332,54 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-staticVariable1-wm.Variable-1447946397350"
+	},
+	"goToPage_FilterRules": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "FilterRules",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_FilterRules-wm.NavigationVariable-1448030332188"
+	},
+	"goToPage_AboutUs": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "AboutUs",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_AboutUs-wm.NavigationVariable-1448031193503"
+	},
+	"Rovermar01ExecuteFuntionCallRoverComparisonEngine": {
+		"type": "rovermar01FuntionCallRoverComparisonEnginertnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFuntionCallRoverComparisonEngine",
+		"operationType": "procedure",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {},
+		"_id": "wm-Rovermar01ExecuteFuntionCallRoverComparisonEngine-wm.ServiceVariable-1448042465672"
 	}
 }

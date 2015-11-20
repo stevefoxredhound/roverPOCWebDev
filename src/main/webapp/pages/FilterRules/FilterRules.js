@@ -1,4 +1,4 @@
-Application.$controller("OperatorMaintenancePageController", ["$scope", function ($scope) {
+Application.$controller("FilterRulesPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action with the variables inside this block(on-page-load) */
@@ -20,28 +20,14 @@ Application.$controller("OperatorMaintenancePageController", ["$scope", function
 }]);
 
 
-Application.$controller("OperatorsGrid1Controller", ["$scope",
+Application.$controller("FilterRulesGrid1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
 	}
 ]);
 
-Application.$controller("OperatorsLiveform1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("OperatorsGrid2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("OperatorsLiveform2Controller", ["$scope",
+Application.$controller("FilterRulesLiveform1Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
