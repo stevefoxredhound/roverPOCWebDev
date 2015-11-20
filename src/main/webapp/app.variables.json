@@ -507,7 +507,7 @@
 				"fields": [
 					{
 						"name": "dataValue",
-						"value": "bind:Widgets.GridClassificationsList.selecteditem.Classification",
+						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME",
 						"type": "string"
 					}
 				]
@@ -3303,38 +3303,6 @@
 			]
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165"
-	},
-	"Rovermar01ExecuteFunctionCallRoverShowDataDifferences": {
-		"name": "Rovermar01ExecuteFunctionCallRoverShowDataDifferences",
-		"type": "rovermar01FunctionCallRoverShowDataDifferencesrtnType",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverShowDataDifferences",
-		"operationType": "procedure",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverShowDataDifferences-wm.ServiceVariable-1447934146407"
 	},
 	"staticVariable1": {
 		"name": "staticVariable1",

@@ -78,10 +78,6 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverUncategorisedGroupsrtnType" isList="false"/>
     </operation>
-    <operation operationType="procedure" name="FunctionCallRoverShowDataDifferences">
-        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
-        <return typeRef="rovermar01FunctionCallRoverShowDataDifferencesrtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="FunctionroverBuildCategorisationRule">
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionroverBuildCategorisationRulertnType" isList="false"/>
@@ -101,6 +97,20 @@
     <operation operationType="procedure" name="FunctionRoverGroupReport">
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionRoverGroupReportrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallroverUpdateCategorisationRule">
+        <parameter name="name" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <parameter name="category" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <parameter name="comment" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallroverUpdateCategorisationRulertnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverCcolumnList">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverCcolumnListrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverShowDataDifferences">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverShowDataDifferencesrtnType" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
@@ -349,14 +359,6 @@
             <element name="Messages" typeRef="java.lang.Long"/>
             <element name="NAME" typeRef="java.lang.String"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverShowDataDifferencesrtnType">
-            <element name="FTDATE" typeRef="java.lang.String"/>
-            <element name="FUSER" typeRef="java.lang.String"/>
-            <element name="core_source" typeRef="java.lang.String"/>
-            <element name="core_system" typeRef="java.lang.String"/>
-            <element name="core_key" typeRef="java.lang.String"/>
-            <element name="FRECNO" typeRef="java.lang.String"/>
-        </dataobject>
         <dataobject javaType="rovermar01functionroverBuildCategorisationRulertnType"/>
         <dataobject javaType="rovermar01functionRoverBuildCategorisationRulertnType"/>
         <dataobject javaType="rovermar01FunctionroverBuildCategorisationRulertnType"/>
@@ -373,6 +375,18 @@
         </dataobject>
         <dataobject javaType="rovermar01FunctionRoverGroupReportrtnType">
             <element name="v_group_report" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallroverUpdateCategorisationRulertnType"/>
+        <dataobject javaType="rovermar01FunctionCallRoverCcolumnListrtnType">
+            <element name="data_item" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverShowDataDifferencesrtnType">
+            <element name="FTDATE" typeRef="java.lang.String"/>
+            <element name="FUSER" typeRef="java.lang.String"/>
+            <element name="core_source" typeRef="java.lang.String"/>
+            <element name="core_system" typeRef="java.lang.String"/>
+            <element name="core_key" typeRef="java.lang.String"/>
+            <element name="FRECNO" typeRef="java.lang.String"/>
         </dataobject>
     </dataobjects>
 </service>

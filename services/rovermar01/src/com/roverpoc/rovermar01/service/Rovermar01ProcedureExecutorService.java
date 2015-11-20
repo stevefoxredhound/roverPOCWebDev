@@ -73,9 +73,6 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverUncategorisedGroups( java.lang.String p1) throws QueryParameterMismatchException;
 
 
-    List<Object> executeFunctionCallRoverShowDataDifferences( java.lang.String p1) throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionroverBuildCategorisationRule( java.lang.String p1) throws QueryParameterMismatchException;
 
 
@@ -89,6 +86,15 @@ public interface Rovermar01ProcedureExecutorService {
 
 
     List<Object> executeFunctionRoverGroupReport( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallroverUpdateCategorisationRule( java.lang.String name, java.lang.String category, java.lang.String comment) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverCcolumnList( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverShowDataDifferences( java.lang.String p1) throws QueryParameterMismatchException;
 
 
 	

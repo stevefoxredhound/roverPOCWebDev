@@ -280,6 +280,55 @@ var _ClassAndCatPage_Variables_ ={
 			]
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionRoverRemoveCategorisationRule-wm.ServiceVariable-1447951620417"
+	},
+	"Rovermar01ExecuteFunctionCallRoverCcolumnList": {
+		"name": "Rovermar01ExecuteFunctionCallRoverCcolumnList",
+		"type": "rovermar01FunctionCallRoverCcolumnListrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"type": "string",
+						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverCcolumnList",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverCcolumnList",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCcolumnList",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCcolumnList-wm.ServiceVariable-1448017520424"
 	}
 }
 </script>
@@ -287,227 +336,224 @@ var _ClassAndCatPage_Variables_ ={
 <wm-page data-ng-controller="ClassAndCatPageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1" backgroundcolor="#ffffff">
+        <wm-page-content name="page_content1" backgroundcolor="#ffffff" columnwidth="12">
             <wm-layoutgrid name="layoutgrid2">
                 <wm-gridrow name="gridrow11_1">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn39_1"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn40_1"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn41_1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn39_1" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn40_1" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn41_1" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow12_1">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn42_1"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn43"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn44"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn42_1" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn43" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn44" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow13">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn45"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn46"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn47"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn45" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn46" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn47" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn48_1" horizontalalign="right">
-                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_SystemDetails" width="50" backgroundcolor="#ffefbf" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" name="button9"></wm-button>
+                    <wm-gridcolumn name="gridcolumn48_1" horizontalalign="right" columnwidth="1">
+                        <wm-button class="btn-default" type="button" caption="" name="button9" color="#00000" borderstyle="none" width="50" on-click="goToPage_SystemDetails" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-backward fa-lg"></wm-button>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn49_1">
-                        <wm-label caption="System:" fontsize="30" textalign="left" name="label7"></wm-label>
-                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" textalign="center" fontweight="bold" fontsize="30" name="label8"></wm-label>
+                    <wm-gridcolumn name="gridcolumn49_1" columnwidth="10">
+                        <wm-label caption="System:" name="label7" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" name="label8" fontsize="30" fontweight="bold" textalign="center"></wm-label>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn50_1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn50_1" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow15">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn51" height="30"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn52"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn53"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn51" height="30" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn52" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn53" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow16">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn54"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn55">
+                    <wm-gridcolumn name="gridcolumn54" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn55" columnwidth="10">
                         <wm-layoutgrid name="layoutgrid3">
                             <wm-gridrow name="gridrow29">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn93"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn94"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn95"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="2" name="gridcolumn96"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn93" columnwidth="4"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn94" columnwidth="1"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn95" columnwidth="4"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn96" columnwidth="2"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow28">
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn90">
-                                    <wm-label caption="Uncategorised Groups" fontsize="20" textalign="left" name="label7_1" fontweight="bold"></wm-label>
+                                <wm-gridcolumn name="gridcolumn90" columnwidth="3">
+                                    <wm-label caption="Uncategorised Groups" name="label7_1" fontsize="20" fontweight="bold" textalign="left"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="2" name="gridcolumn111" horizontalalign="center"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn107">
-                                    <wm-label caption="Categorised Groups" fontsize="20" textalign="left" name="label10" fontweight="bold"></wm-label>
+                                <wm-gridcolumn name="gridcolumn111" horizontalalign="center" columnwidth="2"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn107" columnwidth="5">
+                                    <wm-label caption="Categorised Groups" name="label10" fontsize="20" fontweight="bold" textalign="left"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn74_1"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn74_1" columnwidth="1"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow35_2">
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn76_3">
-                                    <wm-label caption="Click to select" fontsize="15" textalign="left" name="label9"></wm-label>
+                                <wm-gridcolumn name="gridcolumn76_3" columnwidth="3">
+                                    <wm-label caption="Click to select" name="label9" fontsize="15" textalign="left"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="2" name="gridcolumn77_3"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn78_2">
-                                    <wm-label caption="Click to select" fontsize="15" textalign="left" name="label10_1"></wm-label>
+                                <wm-gridcolumn name="gridcolumn77_3" columnwidth="2"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn78_2" columnwidth="5">
+                                    <wm-label caption="Click to select" name="label10_1" fontsize="15" textalign="left"></wm-label>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn79_2"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn79_2" columnwidth="1"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow25">
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn81" readonlygrid="true">
-                                    <wm-grid readonlygrid="true" name="GridClassificationsList" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroups.dataSet" gridfirstrowselect="true" showrecordcount="true" height="500" fontsize="14"
-                                    width="100%" pagesize="8">
-                                        <wm-grid-column binding="Messages" caption="Messages" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="NAME" caption="NAME" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-gridcolumn name="gridcolumn81" readonlygrid="true" columnwidth="3">
+                                    <wm-grid name="GridClassificationsList" height="500" width="100%" readonlygrid="true" fontsize="14" pagesize="8" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroups.dataSet" showrecordcount="true"
+                                    gridfirstrowselect="true" on-Click="Rovermar01ExecuteFunctionCallRoverCcolumnList">
+                                        <wm-grid-column caption="Messages" mobiledisplay="true" pcdisplay="true" binding="Messages"></wm-grid-column>
+                                        <wm-grid-column caption="NAME" mobiledisplay="true" pcdisplay="true" binding="NAME"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="2" name="gridcolumn98" readonlygrid="true">
-                                    <wm-layoutgrid name="layoutgrid4" marginleft="25" width="175">
+                                <wm-gridcolumn name="gridcolumn98" readonlygrid="true" columnwidth="2">
+                                    <wm-layoutgrid name="layoutgrid4" width="175" marginleft="25">
                                         <wm-gridrow name="gridrow37">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn81_1" horizontalalign="center">
-                                                <wm-label caption="Selected" fontsize="20" textalign="center" name="label8_1" width="100%" fontweight="bold"></wm-label>
+                                            <wm-gridcolumn name="gridcolumn81_1" horizontalalign="center" columnwidth="12">
+                                                <wm-label caption="Selected" name="label8_1" width="100%" fontsize="20" fontweight="bold" textalign="center"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow36">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn80_1" height="20"></wm-gridcolumn>
+                                            <wm-gridcolumn name="gridcolumn80_1" height="20" columnwidth="12"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow30_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn73_1" horizontalalign="center">
-                                                <wm-label caption="bind:Variables.StaticGridClassifiListSelect.dataSet.dataValue" fontsize="14" textalign="center" name="label8_1" width="100%"></wm-label>
+                                            <wm-gridcolumn name="gridcolumn73_1" horizontalalign="center" columnwidth="12">
+                                                <wm-label caption="bind:Widgets.GridClassificationsList.selecteditem.NAME" name="labelGroupName" width="100%" fontsize="14" textalign="center"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow34_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn78_1" height="20"></wm-gridcolumn>
+                                            <wm-gridcolumn name="gridcolumn78_1" height="20" columnwidth="12"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow33_1" horizontalalign="center">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn77_1">
-                                                <wm-button class="btn-default" caption="Show The Data" type="button" on-click="goToPage_ShowMeDataDifference" width="150" backgroundcolor="#ffefbf" color="#000000" iconclass="glyphicon glyphicon-search fa-lg"
-                                                borderstyle="none" name="button13"></wm-button>
+                                            <wm-gridcolumn name="gridcolumn77_1" columnwidth="12">
+                                                <wm-button class="btn-default" type="button" caption="Show The Data" name="button13" color="#000000" borderstyle="none" width="150" on-click="goToPage_ShowMeDataDifference" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-search fa-lg"></wm-button>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow32_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn76_1" height="20"></wm-gridcolumn>
+                                            <wm-gridcolumn name="gridcolumn76_1" height="20" columnwidth="12"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow31_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn75_1" horizontalalign="center">
-                                                <wm-button class="btn-default" caption="Build The Rule" type="button" on-click="confirmBuildRule.show" name="button8" width="150" iconclass="glyphicon glyphicon-folder-open fa-lg" backgroundcolor="#ffefbf" borderstyle="none"
-                                                color="#000000" accessroles="Everyone"></wm-button>
+                                            <wm-gridcolumn name="gridcolumn75_1" horizontalalign="center" columnwidth="12">
+                                                <wm-button class="btn-default" type="button" caption="Build The Rule" name="button8" color="#000000" borderstyle="none" width="150" on-click="confirmBuildRule.show" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-folder-open fa-lg"
+                                                accessroles="Everyone"></wm-button>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow35_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn79_1" height="20"></wm-gridcolumn>
+                                            <wm-gridcolumn name="gridcolumn79_1" height="20" columnwidth="12"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow29_1" horizontalalign="center">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn72_1" readonlygrid="true" horizontalalign="center">
-                                                <wm-grid readonlygrid="true" name="gridDifferences" dataset="bind:Variables.Rover2ProcBClassificationColumnListForThisSystem.dataSet" showrecordcount="true" shownavigation="false" enablesort="false" fontsize="14"
-                                                width="175" height="400px" textalign="center" marginleft="0">
-                                                    <wm-grid-column binding="data_item" caption="Items that Differ" type="string" textalignment="center" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
-                                                    mobiledisplay="true"></wm-grid-column>
+                                            <wm-gridcolumn name="gridcolumn72_1" horizontalalign="center" readonlygrid="true" columnwidth="12">
+                                                <wm-grid name="gridDifferences" height="400px" width="175" readonlygrid="true" fontsize="14" textalign="center" enablesort="false" shownavigation="false" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCcolumnList.dataSet"
+                                                showrecordcount="true" marginleft="0">
+                                                    <wm-grid-column caption="Data_item" mobiledisplay="true" pcdisplay="true" binding="data_item"></wm-grid-column>
                                                 </wm-grid>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn112" readonlygrid="true">
-                                    <wm-grid readonlygrid="true" name="gridCatQueryD" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" fontsize="14" height="500" showrecordcount="true" pagesize="8" marginleft="25">
-                                        <wm-grid-column binding="Messages" caption="Messages" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="category" caption="Category" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="NAME" caption="NAME" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="COMMENT" caption="COMMENT" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="who" caption="Who" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-gridcolumn name="gridcolumn112" readonlygrid="true" columnwidth="5">
+                                    <wm-grid name="gridCatQueryD" height="500" readonlygrid="true" fontsize="14" pagesize="8" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCategorisedGroups.dataSet" showrecordcount="true" marginleft="25">
+                                        <wm-grid-column caption="Messages" mobiledisplay="true" pcdisplay="true" binding="Messages"></wm-grid-column>
+                                        <wm-grid-column caption="Category" mobiledisplay="true" pcdisplay="true" binding="category"></wm-grid-column>
+                                        <wm-grid-column caption="NAME" mobiledisplay="true" pcdisplay="true" binding="NAME"></wm-grid-column>
+                                        <wm-grid-column caption="COMMENT" mobiledisplay="true" pcdisplay="true" binding="COMMENT"></wm-grid-column>
+                                        <wm-grid-column caption="Who" mobiledisplay="true" pcdisplay="true" binding="who"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="2" name="gridcolumn103" readonlygrid="true">
-                                    <wm-layoutgrid name="layoutgrid5" width="175" horizontalalign="center" marginleft="25">
+                                <wm-gridcolumn name="gridcolumn103" readonlygrid="true" columnwidth="2">
+                                    <wm-layoutgrid name="layoutgrid5" horizontalalign="center" width="175" marginleft="25">
                                         <wm-gridrow name="gridrow34">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn77_2">
-                                                <wm-label caption="Selected" fontsize="20" textalign="center" width="100%" name="label8_2" fontweight="bold"></wm-label>
+                                            <wm-gridcolumn name="gridcolumn77_2" columnwidth="12">
+                                                <wm-label caption="Selected" name="label8_2" width="100%" fontsize="20" fontweight="bold" textalign="center"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow33_2">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn76_2" height="20"></wm-gridcolumn>
+                                            <wm-gridcolumn name="gridcolumn76_2" height="20" columnwidth="12"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow28_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn71_2">
-                                                <wm-label caption="bind:Variables.staticGridCatQueryDValues.dataSet.Classification" fontsize="14" textalign="center" width="100%" name="label7_2" fontweight="bold" height="20"></wm-label>
+                                            <wm-gridcolumn name="gridcolumn71_2" columnwidth="12">
+                                                <wm-label caption="bind:Variables.staticGridCatQueryDValues.dataSet.Classification" name="label7_2" height="20" width="100%" fontsize="14" fontweight="bold" textalign="center"></wm-label>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow27_1">
-                                            <wm-gridcolumn columnwidth="12" name="gridcolumn70_2" height="20"></wm-gridcolumn>
+                                            <wm-gridcolumn name="gridcolumn70_2" height="20" columnwidth="12"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow33">
-                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn104">
-                                                <wm-button class="btn-default" caption="Edit Rule" type="button" on-click="goToPage_EditRule" name="button12" backgroundcolor="#ffefbf" borderstyle="none" color="#000000" iconclass="glyphicon glyphicon-pencil fa-lg"
-                                                width="150"></wm-button>
+                                            <wm-gridcolumn name="gridcolumn104" horizontalalign="center" columnwidth="12">
+                                                <wm-button class="btn-default" type="button" caption="Edit Rule" name="button12" color="#000000" borderstyle="none" width="150" on-click="goToPage_EditRule" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-pencil fa-lg"></wm-button>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow35">
-                                            <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn106" height="20"></wm-gridcolumn>
-                                            <wm-button class="btn-default" caption="Delete Rule" type="button" on-click="confirmDeleteRule.show" name="button13_1" iconclass="glyphicon glyphicon-remove fa-lg" backgroundcolor="#ffefbf" borderstyle="none"
-                                            color="#000000" width="150"></wm-button>
+                                            <wm-gridcolumn name="gridcolumn106" horizontalalign="center" height="20" columnwidth="12"></wm-gridcolumn>
+                                            <wm-button class="btn-default" type="button" caption="Delete Rule" name="button13_1" color="#000000" borderstyle="none" width="150" on-click="confirmDeleteRule.show" backgroundcolor="#ffefbf"
+                                            iconclass="glyphicon glyphicon-remove fa-lg"></wm-button>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow26">
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn84"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn85"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn86"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn84" columnwidth="5"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn85" columnwidth="1"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn86" columnwidth="5"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow27">
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn87"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn88"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn89"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn87" columnwidth="5"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn88" columnwidth="1"></wm-gridcolumn>
+                                <wm-gridcolumn name="gridcolumn89" columnwidth="5"></wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn56"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn56" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow17">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn57"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn58"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn59"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn57" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn58" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn59" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow18">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn60"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn61"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn62"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn60" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn61" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn62" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow19">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn63"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn64"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn65"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn63" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn64" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn65" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow20">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn66"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn67"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn68"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn66" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn67" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn68" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow21">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn69"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn70"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn71"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn69" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn70" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn71" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow22">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn72"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn73"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn74"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn72" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn73" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn74" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow23">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn75"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn76"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn77"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn75" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn76" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn77" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow24">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn78"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn79"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn80"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn78" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn79" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn80" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
-    <wm-view class="dialog-view" name="view1" show="false">
-        <wm-confirmdialog name="confirmBuildRule" title="Confirm Build Rule" message="Confirm build a rule using default values?" readonlygrid="true" accessroles="Everyone" on-ok="Rovermar01ExecuteFunctionroverBuildCategorisationRule"></wm-confirmdialog>
+    <wm-view class="dialog-view" show="false" name="view1">
+        <wm-confirmdialog title="Confirm Build Rule" name="confirmBuildRule" message="Confirm build a rule using default values?" readonlygrid="true" accessroles="Everyone" on-ok="Rovermar01ExecuteFunctionroverBuildCategorisationRule"></wm-confirmdialog>
     </wm-view>
-    <wm-view class="dialog-view" name="view2" show="false">
-        <wm-confirmdialog name="confirmDeleteRule" title="Confirm Delete Rule" on-ok="Rovermar01ExecuteFunctionRoverRemoveCategorisationRule" readonlygrid="true" message="Confirm Delete Rule?"></wm-confirmdialog>
+    <wm-view class="dialog-view" show="false" name="view2">
+        <wm-confirmdialog title="Confirm Delete Rule" name="confirmDeleteRule" message="Confirm Delete Rule?" readonlygrid="true" on-ok="Rovermar01ExecuteFunctionRoverRemoveCategorisationRule"></wm-confirmdialog>
     </wm-view>
 </wm-page>
 </script>

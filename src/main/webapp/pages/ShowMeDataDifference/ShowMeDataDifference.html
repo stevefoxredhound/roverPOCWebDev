@@ -1,62 +1,69 @@
 <wm-page data-ng-controller="ShowMeDataDifferencePageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
     <wm-content name="content1">
-        <wm-page-content columnwidth="12" name="page_content1" backgroundcolor="#ffffff">
+        <wm-page-content name="page_content1" backgroundcolor="#ffffff" columnwidth="12">
             <wm-layoutgrid name="layoutgrid2">
                 <wm-gridrow name="gridrow5">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn13"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn14"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn15"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn13" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn14" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn15" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow6">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn16"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn17"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn18"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn16" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn17" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn18" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow7">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn19"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn20"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn21"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn19" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn20" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn21" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow8">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn22" horizontalalign="right">
-                        <wm-button class="btn-default" caption="" type="button" on-click="goToPage_ClassAndCat" width="50" backgroundcolor="#ffefbf" borderstyle="none" color="#00000" iconclass="glyphicon glyphicon-backward fa-lg" name="button2"></wm-button>
+                    <wm-gridcolumn name="gridcolumn22" horizontalalign="right" columnwidth="1">
+                        <wm-button class="btn-default" type="button" caption="" name="button2" color="#00000" borderstyle="none" width="50" on-click="goToPage_ClassAndCat" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-backward fa-lg"></wm-button>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn23">
-                        <wm-label caption="System:" fontsize="30" textalign="left" name="label3"></wm-label>
-                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" textalign="center" fontweight="bold" fontsize="30" name="label4"></wm-label>
+                    <wm-gridcolumn name="gridcolumn23" columnwidth="10">
+                        <wm-label caption="System:" name="label3" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" name="label4" fontsize="30" fontweight="bold" textalign="center"></wm-label>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn24" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow9">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn25"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn26">
-                        <wm-label caption="Group:" fontsize="30" textalign="left" name="label5"></wm-label>
-                        <wm-label fontsize="30" caption="bind:Variables.StaticGridClassifiListSelect.dataSet.dataValue" name="label6" fontweight="bold"></wm-label>
+                    <wm-gridcolumn name="gridcolumn25" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn26" columnwidth="10">
+                        <wm-label caption="Group:" name="label5" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="bind:Variables.StaticGridClassifiListSelect.dataSet.dataValue" name="label6" fontsize="30" fontweight="bold"></wm-label>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn27" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow10">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn28" height="30"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn29"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn28" height="30" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn29" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn30" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow11">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn31"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn32" readonlygrid="true">
-                        <wm-grid readonlygrid="true" name="grid1" dataset="bind:Variables.Rover2QueryAAMessagesforthisClassificationsWithDifferences.dataSet" pagesize="20" height="100%" showrecordcount="true" enablesort="false"></wm-grid>
+                    <wm-gridcolumn name="gridcolumn31" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn32" readonlygrid="true" columnwidth="10">
+                        <wm-grid name="grid1" height="100%" readonlygrid="true" pagesize="20" enablesort="false" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverShowDataDifferences.dataSet" showrecordcount="true">
+                            <wm-grid-column caption="FTDATE" mobiledisplay="true" pcdisplay="true" binding="FTDATE"></wm-grid-column>
+                            <wm-grid-column caption="FUSER" mobiledisplay="true" pcdisplay="true" binding="FUSER"></wm-grid-column>
+                            <wm-grid-column caption="Core_source" mobiledisplay="true" pcdisplay="true" binding="core_source"></wm-grid-column>
+                            <wm-grid-column caption="Core_system" mobiledisplay="true" pcdisplay="true" binding="core_system"></wm-grid-column>
+                            <wm-grid-column caption="Core_key" mobiledisplay="true" pcdisplay="true" binding="core_key"></wm-grid-column>
+                            <wm-grid-column caption="FRECNO" mobiledisplay="true" pcdisplay="true" binding="FRECNO"></wm-grid-column>
+                        </wm-grid>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn33"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn33" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow12">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn34"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn35"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn36"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn34" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn35" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn36" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow13">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn37"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn38"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn39"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn37" columnwidth="1"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn38" columnwidth="10"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn39" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
         </wm-page-content>

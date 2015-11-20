@@ -298,19 +298,6 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
-	@RequestMapping(value = "/procedure/execute/FunctionCallRoverShowDataDifferences", method = RequestMethod.GET)
-	@ApiOperation(value = "Process request to execute Procedure")
-	public List<Object> executeFunctionCallRoverShowDataDifferences(
-			@RequestParam(value="p1", required=false) java.lang.String p1
-		 )
-	     throws QueryParameterMismatchException{
-			LOGGER.debug("Executing named procedure FunctionCallRoverShowDataDifferences");
-
-		List<Object> result = procedureService.executeFunctionCallRoverShowDataDifferences( p1);
-
-		LOGGER.debug("got the result of named procedure {}", result);
-		return result;
-	}
 	@RequestMapping(value = "/procedure/execute/FunctionroverBuildCategorisationRule", method = RequestMethod.GET)
 	@ApiOperation(value = "Process request to execute Procedure")
 	public List<Object> executeFunctionroverBuildCategorisationRule(
@@ -372,6 +359,47 @@ public class ProcedureExecutionController {
 			LOGGER.debug("Executing named procedure FunctionRoverGroupReport");
 
 		List<Object> result = procedureService.executeFunctionRoverGroupReport( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallroverUpdateCategorisationRule", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallroverUpdateCategorisationRule(
+			@RequestParam(value="name", required=false) java.lang.String name,
+			@RequestParam(value="category", required=false) java.lang.String category,
+			@RequestParam(value="comment", required=false) java.lang.String comment
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallroverUpdateCategorisationRule");
+
+		List<Object> result = procedureService.executeFunctionCallroverUpdateCategorisationRule( name, category, comment);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverCcolumnList", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverCcolumnList(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverCcolumnList");
+
+		List<Object> result = procedureService.executeFunctionCallRoverCcolumnList( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverShowDataDifferences", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverShowDataDifferences(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverShowDataDifferences");
+
+		List<Object> result = procedureService.executeFunctionCallRoverShowDataDifferences( p1);
 
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;

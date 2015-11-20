@@ -1,4 +1,4 @@
-<wm-page name="page1" data-ng-controller="EditRulePageController">
+<wm-page data-ng-controller="EditRulePageController" name="page1">
     <wm-header content="header" name="header1"></wm-header>
     <wm-content name="content1">
         <wm-page-content name="page_content1" backgroundcolor="#ffffff" columnwidth="12">
@@ -10,19 +10,19 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow13">
                     <wm-gridcolumn name="gridcolumn45" horizontalalign="right" columnwidth="1">
-                        <wm-button class="btn-default" type="button" name="button3" caption="" color="#00000" borderstyle="none" width="50" on-click="goToPage_ClassAndCat" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-backward fa-lg"></wm-button>
+                        <wm-button class="btn-default" type="button" caption="" name="button3" color="#00000" borderstyle="none" width="50" on-click="goToPage_ClassAndCat" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-backward fa-lg"></wm-button>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn46" columnwidth="10">
-                        <wm-label name="label9" caption="System:" fontsize="30" textalign="left"></wm-label>
-                        <wm-label name="label10" caption="bind:Variables.staticGridVenMain.dataSet.System" fontsize="30" fontweight="bold" textalign="center"></wm-label>
+                        <wm-label caption="System:" name="label9" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="bind:Variables.staticGridVenMain.dataSet.System" name="label10" fontsize="30" fontweight="bold" textalign="center"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn47" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow14">
                     <wm-gridcolumn name="gridcolumn48" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn49" columnwidth="10">
-                        <wm-label name="label11" caption="Group:" fontsize="30" textalign="left"></wm-label>
-                        <wm-label name="label12" caption="bind:Widgets.textClassification.datavalue" fontsize="30" fontweight="bold"></wm-label>
+                        <wm-label caption="Group:" name="label11" fontsize="30" textalign="left"></wm-label>
+                        <wm-label caption="bind:Widgets.textClassification.datavalue" name="label12" fontsize="30" fontweight="bold"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn50" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
@@ -39,7 +39,7 @@
                 <wm-gridrow name="gridrow16">
                     <wm-gridcolumn name="gridcolumn54" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn55" columnwidth="10">
-                        <wm-label name="label13" caption="Edit Category or Comment below then confirm changes via the UPDATE RECORD button"></wm-label>
+                        <wm-label caption="Edit Category or Comment below then confirm changes via the UPDATE RECORD button" name="label13"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn56" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
@@ -56,11 +56,11 @@
                 <wm-gridrow name="gridrow18_1">
                     <wm-gridcolumn name="gridcolumn53_1" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn54_1" columnwidth="5">
-                        <wm-label name="label12_1" caption="Group Details" fontsize="20" fontweight="bold"></wm-label>
+                        <wm-label caption="Group Details" name="label12_1" fontsize="20" fontweight="bold"></wm-label>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn57_1" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn55_1" columnwidth="4">
-                        <wm-label name="label11_1" caption="Group Report" fontsize="20" fontweight="bold"></wm-label>
+                        <wm-label caption="Group Report" name="label11_1" fontsize="20" fontweight="bold"></wm-label>
                     </wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow18">
@@ -69,7 +69,7 @@
                         <wm-layoutgrid name="layoutgrid3">
                             <wm-gridrow name="gridrow19">
                                 <wm-gridcolumn name="gridcolumn63" horizontalalign="right" columnwidth="1">
-                                    <wm-label name="label14" caption="Group"></wm-label>
+                                    <wm-label caption="Group" name="label14"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn89" columnwidth="1"></wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn64" columnwidth="10">
@@ -78,7 +78,7 @@
                             </wm-gridrow>
                             <wm-gridrow name="gridrow22">
                                 <wm-gridcolumn name="gridcolumn72" horizontalalign="right" columnwidth="1">
-                                    <wm-label name="label15" caption="Messages"></wm-label>
+                                    <wm-label caption="Messages" name="label15"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn90" columnwidth="1"></wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn73" columnwidth="10">
@@ -87,7 +87,7 @@
                             </wm-gridrow>
                             <wm-gridrow name="gridrow23">
                                 <wm-gridcolumn name="gridcolumn74" horizontalalign="right" columnwidth="1">
-                                    <wm-label name="label16" caption="Category"></wm-label>
+                                    <wm-label caption="Category" name="label16"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn91" columnwidth="1"></wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn75" columnwidth="10">
@@ -96,7 +96,7 @@
                             </wm-gridrow>
                             <wm-gridrow name="gridrow24">
                                 <wm-gridcolumn name="gridcolumn76" horizontalalign="right" columnwidth="1">
-                                    <wm-label name="label17" caption="Comment"></wm-label>
+                                    <wm-label caption="Comment" name="label17"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn92" columnwidth="1"></wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn77" columnwidth="10">
@@ -105,7 +105,7 @@
                             </wm-gridrow>
                             <wm-gridrow name="gridrow25">
                                 <wm-gridcolumn name="gridcolumn78" horizontalalign="right" columnwidth="1">
-                                    <wm-label name="label18" caption="Who"></wm-label>
+                                    <wm-label caption="Who" name="label18"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn93" columnwidth="1"></wm-gridcolumn>
                                 <wm-gridcolumn name="gridcolumn79" columnwidth="10">
@@ -116,7 +116,7 @@
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn56_1" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn52_1" height="350" columnwidth="4">
-                        <wm-label name="label13_1" caption="bind:Variables.Rovermar01ExecuteFunctionRoverGroupReport.dataSet[0].v_group_report" height="350" width="100%" fontsize="14"></wm-label>
+                        <wm-label caption="bind:Variables.Rovermar01ExecuteFunctionRoverGroupReport.dataSet[0].v_group_report" name="label13_1" height="350" width="100%" fontsize="14"></wm-label>
                     </wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow26">
@@ -127,7 +127,7 @@
                 <wm-gridrow name="gridrow27">
                     <wm-gridcolumn name="gridcolumn83" columnwidth="1"></wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn84" columnwidth="10">
-                        <wm-button class="btn-default" type="button" name="buttonUpdateRecord" caption="Update Record" color="#000000" borderstyle="none" on-click="confirmUpdateRecord.show" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-save fa-lg"></wm-button>
+                        <wm-button class="btn-default" type="button" caption="Update Record" name="buttonUpdateRecord" color="#000000" borderstyle="none" on-click="confirmUpdateRecord.show" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-save fa-lg"></wm-button>
                     </wm-gridcolumn>
                     <wm-gridcolumn name="gridcolumn85" columnwidth="1"></wm-gridcolumn>
                 </wm-gridrow>
@@ -141,7 +141,7 @@
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
-    <wm-view class="dialog-view" name="view2" show="false">
-        <wm-confirmdialog title="Confirm Update Record" name="confirmUpdateRecord" message="Update record?" on-ok="Rover2ProcAEditRuleUpdate"></wm-confirmdialog>
+    <wm-view class="dialog-view" show="false" name="view2">
+        <wm-confirmdialog title="Confirm Update Record" name="confirmUpdateRecord" message="Update record?" on-ok="Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule"></wm-confirmdialog>
     </wm-view>
 </wm-page>

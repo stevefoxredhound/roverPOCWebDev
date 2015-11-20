@@ -255,17 +255,6 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
 
-	public List<Object> executeFunctionCallRoverShowDataDifferences(java.lang.String p1)
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("p1", p1);
-        return procedureExecutor.executeNamedProcedure("FunctionCallRoverShowDataDifferences", params);
-
-	}
-	@Transactional(value = "rovermar01TransactionManager")
-	@Override
-
 	public List<Object> executeFunctionroverBuildCategorisationRule(java.lang.String p1)
 
 	throws QueryParameterMismatchException{
@@ -316,6 +305,41 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("p1", p1);
         return procedureExecutor.executeNamedProcedure("FunctionRoverGroupReport", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallroverUpdateCategorisationRule(java.lang.String name,java.lang.String category,java.lang.String comment)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("name", name);
+        params.put("category", category);
+        params.put("comment", comment);
+        return procedureExecutor.executeNamedProcedure("FunctionCallroverUpdateCategorisationRule", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverCcolumnList(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverCcolumnList", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverShowDataDifferences(java.lang.String p1)
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("p1", p1);
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverShowDataDifferences", params);
 
 	}
 
