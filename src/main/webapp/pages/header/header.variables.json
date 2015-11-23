@@ -1,1 +1,39 @@
-{}
+{
+	"Rovermar01ExecuteFuntionCallRoverComparisonEngine": {
+		"name": "Rovermar01ExecuteFuntionCallRoverComparisonEngine",
+		"type": "rovermar01FuntionCallRoverComparisonEnginertnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFuntionCallRoverComparisonEngine",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFuntionCallRoverComparisonEngine",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FuntionCallRoverComparisonEngine",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFuntionCallRoverComparisonEngine-wm.ServiceVariable-1448042465672"
+	}
+}
