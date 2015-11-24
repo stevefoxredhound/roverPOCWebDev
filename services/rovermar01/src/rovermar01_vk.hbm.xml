@@ -154,6 +154,21 @@
       <column name="core_key" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
+  <class table="operators" name="com.roverpoc.rovermar01.Operators" entity-name="com.roverpoc.rovermar01.Operators">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="operator" type="text">
+      <column name="operator" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="command" type="text">
+      <column name="command" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
   <class table="GMI_uat_messages" name="com.roverpoc.rovermar01.GmiUatMessages" entity-name="com.roverpoc.rovermar01.GmiUatMessages">
     <id name="id" type="integer">
       <column name="id" length="255" not-null="true" precision="19"/>
@@ -209,21 +224,6 @@
     </property>
     <property name="fttickle" type="text">
       <column name="FTTICKLE" length="65535" not-null="false" precision="19"/>
-    </property>
-  </class>
-  <class table="operators" name="com.roverpoc.rovermar01.Operators" entity-name="com.roverpoc.rovermar01.Operators">
-    <id name="id" type="integer">
-      <column name="id" length="255" not-null="true" precision="19"/>
-      <generator class="identity"/>
-    </id>
-    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
-      <column name="date_time" length="255" not-null="false" precision="19"/>
-    </property>
-    <property name="operator" type="text">
-      <column name="operator" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="command" type="text">
-      <column name="command" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
   <class table="sysa_uat_messages" name="com.roverpoc.rovermar01.SysaUatMessages" entity-name="com.roverpoc.rovermar01.SysaUatMessages">
@@ -389,6 +389,30 @@
     </property>
     <property name="colE" type="text">
       <column name="ColE" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="control" name="com.roverpoc.rovermar01.Control" entity-name="com.roverpoc.rovermar01.Control">
+    <id name="id" type="integer">
+      <column name="id" length="255" not-null="true" precision="19"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="date_time" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="controlStatus" type="text">
+      <column name="control_status" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="engineStatus" type="text">
+      <column name="engine_status" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="resetStatus" type="text">
+      <column name="reset_status" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="loggingLevel" type="integer">
+      <column name="logging_level" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="processDate" type="date">
+      <column name="process_date" length="10" not-null="false" precision="19"/>
     </property>
   </class>
   <class table="categories" name="com.roverpoc.rovermar01.Categories" entity-name="com.roverpoc.rovermar01.Categories">
