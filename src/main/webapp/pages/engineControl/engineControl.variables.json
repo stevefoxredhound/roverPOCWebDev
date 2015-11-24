@@ -1,5 +1,6 @@
 {
 	"Rovermar01ExecuteFunctionCallRoverEngineControl": {
+		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl",
 		"type": "rovermar01FunctionCallRoverEngineControlrtnType",
 		"isList": false,
 		"owner": "Page",
@@ -33,7 +34,6 @@
 			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineControl",
 			"parameters": []
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
-		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154"
 	}
 }

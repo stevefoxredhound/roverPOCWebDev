@@ -3382,7 +3382,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -3392,6 +3392,118 @@
 		"category": "wm.LiveVariable",
 		"isDefault": true,
 		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01ControlData-wm.LiveVariable-1448354302149"
+		"_id": "wm-Rovermar01ControlData-wm.LiveVariable-1448354302149",
+		"package": "com.roverpoc.rovermar01.Control",
+		"tableName": "control",
+		"tableType": "TABLE",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "controlStatus",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "control_status",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "engineStatus",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "engine_status",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "resetStatus",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "reset_status",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "loggingLevel",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "logging_level",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "processDate",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "process_date",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 10,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Control",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Control",
+			"tableType": "TABLE"
+		},
+		"bindCount": 2
 	}
 }

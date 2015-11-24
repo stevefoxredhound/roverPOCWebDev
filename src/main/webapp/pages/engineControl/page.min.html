@@ -23,10 +23,25 @@ Application.$controller("engineControlPageController", ["$scope", function ($sco
 
 }]);
 
+
+Application.$controller("ControlGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("ControlLiveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="engineControl.variables.json">
 var _engineControlPage_Variables_ ={
 	"Rovermar01ExecuteFunctionCallRoverEngineControl": {
+		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl",
 		"type": "rovermar01FunctionCallRoverEngineControlrtnType",
 		"isList": false,
 		"owner": "Page",
@@ -60,8 +75,7 @@ var _engineControlPage_Variables_ ={
 			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineControl",
 			"parameters": []
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
-		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154"
 	}
 }
 </script>
@@ -107,24 +121,77 @@ var _engineControlPage_Variables_ ={
                 </wm-gridrow>
                 <wm-gridrow name="gridrow9">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn25"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn26"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn26" horizontalalign="right">
+                        <wm-button class="btn-default" type="button" caption="Run the Engine" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-play fa-lg" name="button2" on-click="Rovermar01ExecuteFunctionCallRoverEngineControl"></wm-button>
+                    </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow10">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn28"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn29">
-                        <wm-label caption="The db grid will go here" fontsize="30" textalign="left" name="label2"></wm-label>
-                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn29"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
-                </wm-gridrow>
-                <wm-gridrow name="gridrow11">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn31" height="60"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn32"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn33"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow12">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn34"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn35"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn35">
+                        <wm-livegrid name="ControlLivegrid1" service="rovermar01@Control">
+                            <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="ControlGrid2" dataset="bind:Variables.Rovermar01ControlData.dataSet">
+                                <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="dateTime" caption="Date Time" type="datetime" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" datepattern="dd-MMM-yyyy HH:mm:ss" formatpattern="toDate"
+                                is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="loggingLevel" caption="Logging Level" type="integer" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="controlStatus" caption="Control Status" type="text" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="resetStatus" caption="Reset Status" type="text" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="engineStatus" caption="Engine Status" type="text" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="processDate" caption="Process Date" type="date" generator="assigned" readonly="false" col-class="" col-ng-class="" search-placeholder="Enter date in yyyy-mm-dd" datepattern="yyyy-MM-dd"
+                                formatpattern="toDate" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                            </wm-grid>
+                            <wm-liveform novalidate="false" title="Details" name="ControlLiveform1" dataset="bind:Variables.Rovermar01ControlData.dataSet" formtype="inline">
+                                <wm-layoutgrid name="layoutgrid1">
+                                    <wm-gridrow name="gridrow1">
+                                        <wm-gridcolumn show="hide" name="gridcolumn1" columnwidth="12">
+                                            <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn show="show" name="gridcolumn2" columnwidth="12">
+                                            <wm-form-field display-name="Date Time" show="true" primary-key="false" generator="assigned" key="dateTime" type="datetime" is-related="false" readonly="false" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn show="show" name="gridcolumn3" columnwidth="12">
+                                            <wm-form-field display-name="Control Status" show="true" primary-key="false" generator="assigned" key="controlStatus" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn show="show" name="gridcolumn4" columnwidth="12">
+                                            <wm-form-field display-name="Engine Status" show="true" primary-key="false" generator="assigned" key="engineStatus" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn show="show" name="gridcolumn5" columnwidth="12">
+                                            <wm-form-field display-name="Reset Status" show="true" primary-key="false" generator="assigned" key="resetStatus" type="text" maxvalue="65535" is-related="false" readonly="false" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn show="show" name="gridcolumn6" columnwidth="12">
+                                            <wm-form-field display-name="Logging Level" show="true" primary-key="false" generator="assigned" key="loggingLevel" type="integer" is-related="false" readonly="false" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn show="show" name="gridcolumn7" columnwidth="12">
+                                            <wm-form-field display-name="Process Date" show="true" primary-key="false" generator="assigned" key="processDate" type="date" is-related="false" readonly="false" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                                <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                                <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                            </wm-liveform>
+                        </wm-livegrid>
+                    </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn36"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow13">
@@ -149,9 +216,7 @@ var _engineControlPage_Variables_ ={
                 </wm-gridrow>
                 <wm-gridrow name="gridrow8">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn22"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn23">
-                        <wm-button class="btn-default" type="button" caption="Run the Engine" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-play fa-lg" name="button2" on-click="Rovermar01ExecuteFunctionCallRoverEngineControl"></wm-button>
-                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn23"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow3">

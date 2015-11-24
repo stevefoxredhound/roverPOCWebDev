@@ -18,3 +18,18 @@ Application.$controller("engineControlPageController", ["$scope", function ($sco
     };
 
 }]);
+
+
+Application.$controller("ControlGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("ControlLiveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
