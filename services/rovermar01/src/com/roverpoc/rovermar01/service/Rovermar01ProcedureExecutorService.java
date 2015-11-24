@@ -1,7 +1,3 @@
-/*Copyright (c) 2015-2016 redhound.net All Rights Reserved.
- This software is the confidential and proprietary information of redhound.net You shall not disclose such Confidential Information and shall use it only in accordance
- with the terms of the source code license agreement you entered into with redhound.net*/
-
 
 package com.roverpoc.rovermar01.service;
 
@@ -105,6 +101,9 @@ public interface Rovermar01ProcedureExecutorService {
 
 
     List<Object> executeFunctionCallRoverEngineControl() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverDuplicatesForAllSystems() throws QueryParameterMismatchException;
 
 
 	

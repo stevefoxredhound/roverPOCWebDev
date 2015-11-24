@@ -3364,6 +3364,7 @@
 		"_id": "wm-goToPage_engineControl-wm.NavigationVariable-1448316870600"
 	},
 	"Rovermar01ControlData": {
+		"name": "Rovermar01ControlData",
 		"type": "Control",
 		"isList": true,
 		"owner": "App",

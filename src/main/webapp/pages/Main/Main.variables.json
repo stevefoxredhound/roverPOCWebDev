@@ -5,7 +5,7 @@
 		"autoStart": true,
 		"repeating": true,
 		"delay": 30000,
-		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverSystemCount;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat;Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem",
+		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverSystemCount;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat;Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem;Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems",
 		"category": "wm.TimerVariable",
 		"_id": "wm-timerVennMain-wm.TimerVariable-1445864232969",
 		"dataBinding": [
@@ -297,5 +297,42 @@
 			"parameters": []
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd-wm.ServiceVariable-1447925522321"
+	},
+	"Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems": {
+		"type": "rovermar01FunctionCallRoverDuplicatesForAllSystemsrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverDuplicatesForAllSystems",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverDuplicatesForAllSystems",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverDuplicatesForAllSystems",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems-wm.ServiceVariable-1448392536063",
+		"name": "Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems"
 	}
 }

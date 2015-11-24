@@ -118,6 +118,9 @@
     <operation operationType="procedure" name="FunctionCallRoverEngineControl">
         <return typeRef="rovermar01FunctionCallRoverEngineControlrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverDuplicatesForAllSystems">
+        <return typeRef="rovermar01FunctionCallRoverDuplicatesForAllSystemsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -403,5 +406,10 @@
         </dataobject>
         <dataobject javaType="rovermar01FuntionCallRoverComparisonEnginertnType"/>
         <dataobject javaType="rovermar01FunctionCallRoverEngineControlrtnType"/>
+        <dataobject javaType="rovermar01FunctionCallRoverDuplicatesForAllSystemsrtnType">
+            <element name="UAT" typeRef="java.lang.Long"/>
+            <element name="System" typeRef="java.lang.String"/>
+            <element name="PROD" typeRef="java.lang.Long"/>
+        </dataobject>
     </dataobjects>
 </service>

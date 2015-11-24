@@ -74,6 +74,15 @@ Application.$controller("coreSystemSelectMainController", ["$scope",
 	}
 ]);
 
+
+
+Application.$controller("grid3Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
 Application.$controller("gridVenMainController", ["$scope",
 	function($scope) {
 		"use strict";
@@ -81,7 +90,7 @@ Application.$controller("gridVenMainController", ["$scope",
 	}
 ]);
 
-Application.$controller("grid3Controller", ["$scope",
+Application.$controller("grid4Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
@@ -96,7 +105,7 @@ var _MainPage_Variables_ ={
 		"autoStart": true,
 		"repeating": true,
 		"delay": 30000,
-		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverSystemCount;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat;Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem",
+		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverSystemCount;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat;Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem;Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems",
 		"category": "wm.TimerVariable",
 		"_id": "wm-timerVennMain-wm.TimerVariable-1445864232969",
 		"dataBinding": [
@@ -388,6 +397,43 @@ var _MainPage_Variables_ ={
 			"parameters": []
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd-wm.ServiceVariable-1447925522321"
+	},
+	"Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems": {
+		"type": "rovermar01FunctionCallRoverDuplicatesForAllSystemsrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverDuplicatesForAllSystems",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverDuplicatesForAllSystems",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverDuplicatesForAllSystems",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems-wm.ServiceVariable-1448392536063",
+		"name": "Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems"
 	}
 }
 </script>
@@ -502,23 +548,32 @@ var _MainPage_Variables_ ={
                     <wm-gridcolumn columnwidth="10" name="gridcolumn50"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn51"></wm-gridcolumn>
                 </wm-gridrow>
-                <wm-gridrow name="gridrow18">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn52"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="5" name="gridcolumn53">
-                        <wm-label caption="Active Systems" fontsize="30" textalign="left" name="label9"></wm-label>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="5" name="gridcolumn54">
-                        <wm-label caption="Uncategorised Groups" fontsize="30" textalign="left" name="label10"></wm-label>
-                    </wm-gridcolumn>
+                <wm-gridrow name="gridrow29_2">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn90_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn91_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn92_1"></wm-gridcolumn>
                 </wm-gridrow>
-                <wm-gridrow name="gridrow28">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn113"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn114">
-                        <wm-layoutgrid name="layoutgrid8">
-                            <wm-gridrow name="gridrow32">
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn125" readonlygrid="true" overflow="hidden">
+                <wm-gridrow name="gridrow28_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn87_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="11" name="gridcolumn88">
+                        <wm-layoutgrid name="layoutgrid8_1">
+                            <wm-gridrow name="gridrow30_1">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn93_1">
+                                    <wm-label caption="Active Systems" fontsize="30" textalign="left" name="label12"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn94_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn104">
+                                    <wm-label caption="Duplicates" fontsize="30" textalign="left" name="label14"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn105"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn95_1">
+                                    <wm-label caption="Uncategorised Groups" fontsize="30" textalign="left" name="label13_1"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow31_1">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn96_1" readonlygrid="true">
                                     <wm-grid name="gridVenMain" readonlygrid="true" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems.dataSet" shownavigation="false" gridcaption="Select a system below to drill down" on-select="goToPage_SystemDetails"
-                                    enablesort="false" pagesize="null" fontsize="14" height="250">
+                                    enablesort="false" pagesize="null" fontsize="13" height="250" title="Select a system below">
                                         <wm-grid-column binding="System" caption="System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                         <wm-grid-column binding="PROD" caption="PROD" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                         <wm-grid-column binding="PROD ONLY" caption="PROD ONLY" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
@@ -527,59 +582,37 @@ var _MainPage_Variables_ ={
                                         <wm-grid-column binding="UAT" caption="UAT" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn126"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn127">
-                                    <wm-chart type="Bar" name="chart1" theme="Orient" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem.dataSet" readonlygrid="true" xaxislabel="Core System" showlegend="false" legendposition="Top"
-                                    legendtype="classic" xaxislabeldistance="12" fontweight="bold" height="250" labeltype="value" showlabelsoutside="true" xaxisdatakey="core_system" yaxisdatakey="Uncategorised Groups"></wm-chart>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn97_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn103" readonlygrid="true">
+                                    <wm-grid readonlygrid="true" shownavigation="false" enablesort="false" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems.dataSet" name="grid4" title="Select a system below" height="250" fontsize="13">
+                                        <wm-grid-column binding="System" caption="System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="PROD" caption="PROD" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="UAT" caption="UAT" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    </wm-grid>
                                 </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn102"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn98_1">
+                                    <wm-chart type="Bar" name="chart1" theme="Orient" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem.dataSet" readonlygrid="true" xaxislabel="Core System" showlegend="false" legendposition="Top"
+                                    legendtype="classic" xaxislabeldistance="12" fontweight="bold" height="250" labeltype="value" showlabelsoutside="true" xaxisdatakey="core_system" yaxisdatakey="Uncategorised Groups" fontsize="13"></wm-chart>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow32_1">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn99"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn100_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn101"></wm-gridcolumn>
                             </wm-gridrow>
                         </wm-layoutgrid>
                     </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn115"></wm-gridcolumn>
-                </wm-gridrow>
-                <wm-gridrow name="gridrow29_1">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn116"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn117"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn118"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow30">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn119" height="45"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn120"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn121"></wm-gridcolumn>
                 </wm-gridrow>
-                <wm-gridrow name="gridrow19">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn55"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="5" name="gridcolumn56">
-                        <wm-label caption="Duplicates Across Systems" fontsize="30" textalign="left" name="label13"></wm-label>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="5" name="gridcolumn79"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn57"></wm-gridcolumn>
-                </wm-gridrow>
                 <wm-gridrow name="gridrow20_1">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn58"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn59"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn60"></wm-gridcolumn>
-                </wm-gridrow>
-                <wm-gridrow name="gridrow21_1">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn61"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn62">
-                        <wm-layoutgrid name="layoutgrid7">
-                            <wm-gridrow name="gridrow27_2">
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn81_1">
-                                    <wm-grid readonlygrid="true" name="grid3">
-                                        <wm-grid-column caption="Column1" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column caption="Column2" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column caption="Column3" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column caption="Column4" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column caption="Column5" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                    </wm-grid>
-                                </wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn82_1"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn83_1"></wm-gridcolumn>
-                            </wm-gridrow>
-                        </wm-layoutgrid>
-                    </wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn63"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow22_1">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn64"></wm-gridcolumn>

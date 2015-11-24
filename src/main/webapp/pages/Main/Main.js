@@ -70,6 +70,15 @@ Application.$controller("coreSystemSelectMainController", ["$scope",
 	}
 ]);
 
+
+
+Application.$controller("grid3Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
 Application.$controller("gridVenMainController", ["$scope",
 	function($scope) {
 		"use strict";
@@ -77,7 +86,7 @@ Application.$controller("gridVenMainController", ["$scope",
 	}
 ]);
 
-Application.$controller("grid3Controller", ["$scope",
+Application.$controller("grid4Controller", ["$scope",
 	function($scope) {
 		"use strict";
 		$scope.ctrlScope = $scope;
