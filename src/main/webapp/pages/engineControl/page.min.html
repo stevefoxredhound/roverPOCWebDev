@@ -25,7 +25,45 @@ Application.$controller("engineControlPageController", ["$scope", function ($sco
 
 </script>
 <script id="engineControl.variables.json">
-var _engineControlPage_Variables_ ={};
+var _engineControlPage_Variables_ ={
+	"Rovermar01ExecuteFunctionCallRoverEngineControl": {
+		"type": "rovermar01FunctionCallRoverEngineControlrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverEngineControl",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverEngineControl",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineControl",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
+		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl"
+	}
+}
 </script>
 <script id="engineControl.html" type="text/ng-template">
 <wm-page data-ng-controller="engineControlPageController" pagetitle="Engine Control" name="page1">
@@ -58,7 +96,7 @@ var _engineControlPage_Variables_ ={};
                     <wm-gridcolumn columnwidth="1" name="gridcolumn15"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow6">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn16"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn16" height="60"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn17"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn18"></wm-gridcolumn>
                 </wm-gridrow>
@@ -67,9 +105,53 @@ var _engineControlPage_Variables_ ={};
                     <wm-gridcolumn columnwidth="10" name="gridcolumn20"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn21"></wm-gridcolumn>
                 </wm-gridrow>
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn25"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn26"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn28"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn29">
+                        <wm-label caption="The db grid will go here" fontsize="30" textalign="left" name="label2"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn31" height="60"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn32"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn33"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn34"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn35"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn36"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn37"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn38"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn39"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn40"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn41"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn42"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow15">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn43"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn44"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn45"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn46"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn47"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn48"></wm-gridcolumn>
+                </wm-gridrow>
                 <wm-gridrow name="gridrow8">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn22"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn23"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn23">
+                        <wm-button class="btn-default" type="button" caption="Run the Engine" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-play fa-lg" name="button2" on-click="Rovermar01ExecuteFunctionCallRoverEngineControl"></wm-button>
+                    </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow3">

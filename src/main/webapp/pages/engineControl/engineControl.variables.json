@@ -1,0 +1,39 @@
+{
+	"Rovermar01ExecuteFunctionCallRoverEngineControl": {
+		"type": "rovermar01FunctionCallRoverEngineControlrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverEngineControl",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverEngineControl",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineControl",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
+		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl"
+	}
+}

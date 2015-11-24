@@ -3354,6 +3354,7 @@
 		"_id": "wm-goToPage_AboutUs-wm.NavigationVariable-1448031193503"
 	},
 	"goToPage_engineControl": {
+		"name": "goToPage_engineControl",
 		"owner": "App",
 		"operation": "gotoPage",
 		"pageName": "engineControl",

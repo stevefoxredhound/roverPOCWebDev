@@ -100,6 +100,9 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFuntionCallRoverComparisonEngine() throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionCallRoverEngineControl() throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

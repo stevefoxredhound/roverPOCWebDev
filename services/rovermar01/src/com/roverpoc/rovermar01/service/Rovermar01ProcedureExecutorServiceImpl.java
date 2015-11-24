@@ -352,6 +352,16 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
         return procedureExecutor.executeNamedProcedure("FuntionCallRoverComparisonEngine", params);
 
 	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverEngineControl()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverEngineControl", params);
+
+	}
 
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
