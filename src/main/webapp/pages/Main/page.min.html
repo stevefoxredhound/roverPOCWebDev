@@ -80,6 +80,13 @@ Application.$controller("gridVenMainController", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
+
+Application.$controller("grid3Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="Main.variables.json">
 var _MainPage_Variables_ ={
@@ -536,9 +543,63 @@ var _MainPage_Variables_ ={
                     <wm-gridcolumn columnwidth="1" name="gridcolumn118"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow30">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn119"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn119" height="45"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn120"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn121"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow19">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn55"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn56">
+                        <wm-label caption="Duplicates Across Systems" fontsize="30" textalign="left" name="label13"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn79"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn57"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow20_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn58"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn59"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn60"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow21_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn61"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn62">
+                        <wm-layoutgrid name="layoutgrid7">
+                            <wm-gridrow name="gridrow27_2">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn81_1">
+                                    <wm-grid readonlygrid="true" name="grid3">
+                                        <wm-grid-column caption="Column1" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column caption="Column2" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column caption="Column3" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column caption="Column4" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column caption="Column5" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    </wm-grid>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn82_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn83_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn63"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow22_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn64"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn65"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn66"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow23_1">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn67"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn68"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn69"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow24">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn70"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn71"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn72"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow25">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn73"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn74"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn75"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow31">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn122"></wm-gridcolumn>
