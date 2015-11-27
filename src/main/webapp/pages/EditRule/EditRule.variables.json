@@ -1,121 +1,107 @@
 {
-	"Rovermar01ExecuteFunctionRoverGroupReport": {
-		"name": "Rovermar01ExecuteFunctionRoverGroupReport",
-		"type": "rovermar01FunctionRoverGroupReportrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"type": "string",
-						"value": "bind:Variables.staticGridCatQueryDValues.dataSet.Classification"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionRoverGroupReport",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionRoverGroupReport",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverGroupReport",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionRoverGroupReport-wm.ServiceVariable-1447956312978"
-	},
-	"Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule": {
-		"type": "rovermar01FunctionCallroverUpdateCategorisationRulertnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "name",
-						"type": "string",
-						"value": "bind:Widgets.textClassification.datavalue"
-					},
-					{
-						"name": "category",
-						"type": "string",
-						"value": "bind:Widgets.textCategory.datavalue"
-					},
-					{
-						"name": "comment",
-						"type": "string",
-						"value": "bind:Widgets.textComment.datavalue"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallroverUpdateCategorisationRule",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"onSuccess": "goToPage_ClassAndCat",
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallroverUpdateCategorisationRule",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallroverUpdateCategorisationRule",
-			"parameters": [
-				{
-					"name": "name",
-					"parameterType": "query",
-					"type": "string"
-				},
-				{
-					"name": "category",
-					"parameterType": "query",
-					"type": "string"
-				},
-				{
-					"name": "comment",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule-wm.ServiceVariable-1448016707548",
-		"name": "Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule"
-	}
+  "Rovermar01ExecuteFunctionRoverGroupReport" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverGroupReport",
+      "httpMethod" : "get",
+      "name" : "executeFunctionRoverGroupReport",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionRoverGroupReportrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionRoverGroupReport",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "name" : "p1",
+        "value" : "bind:Variables.staticGridCatQueryDValues.dataSet.Classification",
+        "type" : "string"
+      } ]
+    } ],
+    "_id" : "wm-Rovermar01ExecuteFunctionRoverGroupReport-wm.ServiceVariable-1447956312978",
+    "operationType" : "get",
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Rovermar01ExecuteFunctionRoverGroupReport",
+    "service" : "rovermar01",
+    "owner" : "Page"
+  },
+  "Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "goToPage_ClassAndCat",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallroverUpdateCategorisationRule",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallroverUpdateCategorisationRule",
+      "parameters" : [ {
+        "name" : "name",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "category",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "comment",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rovermar01FunctionCallroverUpdateCategorisationRulertnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallroverUpdateCategorisationRule",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "saveInPhonegap" : false,
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "name" : "name",
+        "value" : "bind:Widgets.textClassification.datavalue",
+        "type" : "string"
+      }, {
+        "name" : "category",
+        "value" : "bind:Widgets.textCategory.datavalue",
+        "type" : "string"
+      }, {
+        "name" : "comment",
+        "value" : "bind:Widgets.textComment.datavalue",
+        "type" : "string"
+      } ]
+    } ],
+    "_id" : "wm-Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule-wm.ServiceVariable-1448016707548",
+    "operationType" : "get",
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule",
+    "service" : "rovermar01",
+    "owner" : "Page"
+  }
 }

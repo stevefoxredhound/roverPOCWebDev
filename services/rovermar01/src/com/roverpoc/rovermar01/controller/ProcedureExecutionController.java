@@ -31,18 +31,6 @@ public class ProcedureExecutionController {
 	@Autowired
 	private Rovermar01ProcedureExecutorService procedureService;
 	
-	@RequestMapping(value = "/procedure/execute/FunctionCallRoverSystemCount", method = RequestMethod.GET)
-	@ApiOperation(value = "Process request to execute Procedure")
-	public List<Object> executeFunctionCallRoverSystemCount(
-		 )
-	    {
-			LOGGER.debug("Executing named procedure FunctionCallRoverSystemCount");
-
-		List<Object> result = procedureService.executeFunctionCallRoverSystemCount();
-
-		LOGGER.debug("got the result of named procedure {}", result);
-		return result;
-	}
 	@RequestMapping(value = "/procedure/execute/FunctionCallRoverNumberOfUncategorisedGroups", method = RequestMethod.GET)
 	@ApiOperation(value = "Process request to execute Procedure")
 	public List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups(
@@ -436,6 +424,18 @@ public class ProcedureExecutionController {
 			LOGGER.debug("Executing named procedure FunctionCallRoverDuplicatesForAllSystems");
 
 		List<Object> result = procedureService.executeFunctionCallRoverDuplicatesForAllSystems();
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverSystemCount", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverSystemCount(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FunctionCallRoverSystemCount");
+
+		List<Object> result = procedureService.executeFunctionCallRoverSystemCount();
 
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;

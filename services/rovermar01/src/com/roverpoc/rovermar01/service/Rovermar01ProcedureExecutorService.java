@@ -10,9 +10,6 @@ import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 public interface Rovermar01ProcedureExecutorService {
 
-    List<Object> executeFunctionCallRoverSystemCount() throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups() throws QueryParameterMismatchException;
 
 
@@ -104,6 +101,9 @@ public interface Rovermar01ProcedureExecutorService {
 
 
     List<Object> executeFunctionCallRoverDuplicatesForAllSystems() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverSystemCount() throws QueryParameterMismatchException;
 
 
 	

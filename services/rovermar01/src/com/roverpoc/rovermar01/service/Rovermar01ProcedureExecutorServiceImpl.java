@@ -30,16 +30,6 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	@Transactional(value = "rovermar01TransactionManager")
 	@Override
 
-	public List<Object> executeFunctionCallRoverSystemCount()
-
-	throws QueryParameterMismatchException{
-        Map<String, Object> params = new HashMap<String, Object>();
-        return procedureExecutor.executeNamedProcedure("FunctionCallRoverSystemCount", params);
-
-	}
-	@Transactional(value = "rovermar01TransactionManager")
-	@Override
-
 	public List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups()
 
 	throws QueryParameterMismatchException{
@@ -370,6 +360,16 @@ public class Rovermar01ProcedureExecutorServiceImpl implements Rovermar01Procedu
 	throws QueryParameterMismatchException{
         Map<String, Object> params = new HashMap<String, Object>();
         return procedureExecutor.executeNamedProcedure("FunctionCallRoverDuplicatesForAllSystems", params);
+
+	}
+	@Transactional(value = "rovermar01TransactionManager")
+	@Override
+
+	public List<Object> executeFunctionCallRoverSystemCount()
+
+	throws QueryParameterMismatchException{
+        Map<String, Object> params = new HashMap<String, Object>();
+        return procedureExecutor.executeNamedProcedure("FunctionCallRoverSystemCount", params);
 
 	}
 

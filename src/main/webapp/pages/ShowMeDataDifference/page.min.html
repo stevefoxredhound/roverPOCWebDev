@@ -32,55 +32,50 @@ Application.$controller("grid1Controller", ["$scope",
 </script>
 <script id="ShowMeDataDifference.variables.json">
 var _ShowMeDataDifferencePage_Variables_ ={
-	"Rovermar01ExecuteFunctionCallRoverShowDataDifferences": {
-		"name": "Rovermar01ExecuteFunctionCallRoverShowDataDifferences",
-		"type": "rovermar01FunctionCallRoverShowDataDifferencesrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"type": "string",
-						"value": "bind:Variables.StaticGridClassifiListSelect.dataSet.dataValue"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverShowDataDifferences",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverShowDataDifferences",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverShowDataDifferences",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverShowDataDifferences-wm.ServiceVariable-1447934146407"
-	}
+  "Rovermar01ExecuteFunctionCallRoverShowDataDifferences" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverShowDataDifferences",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverShowDataDifferences",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rovermar01FunctionCallRoverShowDataDifferencesrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverShowDataDifferences",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "saveInPhonegap" : false,
+    "dataBinding" : [ {
+      "name" : "dataBinding",
+      "type" : "object",
+      "fields" : [ {
+        "name" : "p1",
+        "value" : "bind:Variables.StaticGridClassifiListSelect.dataSet.dataValue",
+        "type" : "string"
+      } ]
+    } ],
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverShowDataDifferences-wm.ServiceVariable-1447934146407",
+    "operationType" : "get",
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Rovermar01ExecuteFunctionCallRoverShowDataDifferences",
+    "service" : "rovermar01",
+    "owner" : "Page"
+  }
 }
 </script>
 <script id="ShowMeDataDifference.html" type="text/ng-template">

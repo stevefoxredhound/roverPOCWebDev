@@ -11,6 +11,121 @@
 		"category": "wm.LogoutVariable",
 		"_id": "wm-logoutVariable-wm.LogoutVariable-1444054009709"
 	},
+	"Rovermar01LoggingData": {
+		"name": "Rovermar01LoggingData",
+		"type": "Logging",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.Logging",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "process",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "PROCESS",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "logDetails",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "log_details",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Logging",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Logging",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01LoggingData-wm.LiveVariable-1447842250758",
+		"isDefault": true,
+		"tableName": "logging",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
 	"goToPage_EditRule": {
 		"name": "goToPage_EditRule",
 		"owner": "App",
@@ -98,428 +213,9 @@
 		"category": "wm.Variable",
 		"_id": "wm-staticGridVenMain-staticGidVenMain-staticGraham-wm.Variable-1444125737245"
 	},
-	"loginVariable": {
-		"name": "loginVariable",
-		"type": "string",
-		"owner": "App",
-		"dataSet": {
-			"username": "",
-			"password": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "username",
-						"type": "string"
-					},
-					{
-						"name": "password",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"onError": "Javascript",
-		"useDefaultSuccessHandler": false,
-		"category": "wm.LoginVariable",
-		"_id": "wm-loginVariable-wm.LoginVariable-1444054009709"
-	},
-	"goToPage_Unclassified": {
-		"name": "goToPage_Unclassified",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Unclassified",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Unclassified-wm.NavigationVariable-1444386341823"
-	},
-	"goToPage_ShowMeDataDifference": {
-		"name": "goToPage_ShowMeDataDifference",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "ShowMeDataDifference",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_ShowMeDataDifference-wm.NavigationVariable-1445501022298"
-	},
-	"goToPage_ComparisonRules": {
-		"name": "goToPage_ComparisonRules",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "ComparisonRules",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_ComparisonRules-wm.NavigationVariable-1444295506238"
-	},
-	"goToPage_UATRecords": {
-		"name": "goToPage_UATRecords",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "UATRecords",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_UATRecords-wm.NavigationVariable-1444222678478"
-	},
-	"goToPage_ProductionRecords": {
-		"name": "goToPage_ProductionRecords",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "ProductionRecords",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_ProductionRecords-wm.NavigationVariable-1444221723604"
-	},
-	"staticProdSytem": {
-		"name": "staticProdSytem",
-		"type": "com.roverpoc.rover2.CoreSystems",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"id": "",
-			"coreUatTable": "",
-			"coreSystem": "",
-			"coreProdTable": "",
-			"coreSystemStatus": "",
-			"coreProdConnectivity": "",
-			"dateTime": "",
-			"coreSystemRoverName": "",
-			"coreSystemLoggingLevel": "",
-			"coreUatConnectivity": ""
-		},
-		"dataBinding": [
-			{
-				"isList": false,
-				"name": "dataSet",
-				"type": "com.roverpoc.rover2.CoreSystems",
-				"fields": [
-					{
-						"isList": false,
-						"name": "coreUatTable",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "id",
-						"type": "java.lang.Integer"
-					},
-					{
-						"isList": false,
-						"name": "coreSystem",
-						"value": "bind:Widgets.coreSystemSelectMain.selecteditem.coreSystem",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "coreSystemStatus",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "coreProdTable",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "coreProdConnectivity",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "dateTime",
-						"type": "org.joda.time.LocalDateTime"
-					},
-					{
-						"isList": false,
-						"name": "coreSystemLoggingLevel",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "coreSystemRoverName",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "coreUatConnectivity",
-						"type": "java.lang.String"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-staticProdSytem-staticCoreSystem-wm.Variable-1444056104442"
-	},
-	"loggedInUser": {
-		"name": "loggedInUser",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"tenantId": "",
-			"id": "",
-			"isSecurityEnabled": true,
-			"isAuthenticated": false,
-			"roles": [],
-			"name": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataSet",
-				"type": "object",
-				"fields": [
-					{
-						"name": "dataValue",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-loggedInUser-wm.Variable-1444054009710"
-	},
-	"goToPage_OperatorMaintenance": {
-		"name": "goToPage_OperatorMaintenance",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "OperatorMaintenance",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_OperatorMaintenance-wm.NavigationVariable-1444299191724"
-	},
-	"goToPage_Categories": {
-		"name": "goToPage_Categories",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Categories",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Categories-wm.NavigationVariable-1444295791803"
-	},
-	"goToPage_ClassAndCat": {
-		"name": "goToPage_ClassAndCat",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "ClassAndCat",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_ClassAndCat-wm.NavigationVariable-1444748302356"
-	},
-	"goToPage_RulesMaintenance": {
-		"name": "goToPage_RulesMaintenance",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "RulesMaintenance",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_RulesMaintenance-wm.NavigationVariable-1444144903991"
-	},
-	"supportedLocale": {
-		"name": "supportedLocale",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"en": "English"
-		},
-		"dataBinding": [
-			{
-				"name": "dataSet",
-				"type": "object",
-				"fields": [
-					{
-						"name": "dataValue",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-supportedLocale-wm.Variable1402640443182"
-	},
-	"goToPage_NoDifferences": {
-		"name": "goToPage_NoDifferences",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "NoDifferences",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_NoDifferences-wm.NavigationVariable-1444385527271"
-	},
-	"staticGridCatQueryDValues": {
-		"name": "staticGridCatQueryDValues",
-		"type": "rover2procDClassAndCatClassificationsWithCatRulessListForThisSystemrtnType",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"Messages": "",
-			"Category": "",
-			"Who": "",
-			"Classification": "",
-			"Comment": ""
-		},
-		"dataBinding": [
-			{
-				"isList": false,
-				"name": "dataSet",
-				"type": "rover2procDClassAndCatClassificationsWithCatRulessListForThisSystemrtnType",
-				"fields": [
-					{
-						"isList": false,
-						"name": "Messages",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.Messages",
-						"type": "java.lang.Integer"
-					},
-					{
-						"isList": false,
-						"name": "Category",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.category",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "Classification",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.NAME",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "Who",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.who",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "Comment",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.COMMENT",
-						"type": "java.lang.String"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-staticGridCatQueryDValues-wm.Variable-1445346713311"
-	},
-	"goToPage_Main": {
-		"name": "goToPage_Main",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Main",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Main-wm.NavigationVariable1389180517517"
-	},
-	"goToPage_CombinedRecords": {
-		"name": "goToPage_CombinedRecords",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "CombinedRecords",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_CombinedRecords-wm.NavigationVariable-1444224871800"
-	},
-	"goToPage_UserMaintenance": {
-		"name": "goToPage_UserMaintenance",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "UserMaintenance",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_UserMaintenance-wm.NavigationVariable-1444144749430"
-	},
-	"goToPage_ClassificactionDiffe": {
-		"name": "goToPage_ClassificactionDiffe",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "ClassificactionDiffe",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_ClassificactionDiffe-wm.NavigationVariable-1444226347743"
-	},
-	"goToPage_CoreSystems": {
-		"name": "goToPage_CoreSystems",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "CoreSystems",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_CoreSystems-wm.NavigationVariable-1444295594798"
-	},
-	"logout": {
-		"name": "logout",
-		"type": "string",
-		"owner": "App",
-		"saveInPhonegap": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"useDefaultSuccessHandler": true,
-		"category": "wm.LogoutVariable",
-		"_id": "wm-logout-wm.LogoutVariable-1444116468367"
-	},
-	"goToPage_Uncategorised": {
-		"name": "goToPage_Uncategorised",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "Uncategorised",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_Uncategorised-wm.NavigationVariable-1444385873979"
-	},
-	"StaticGridClassifiListSelect": {
-		"name": "StaticGridClassifiListSelect",
-		"type": "string",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataSet",
-				"type": "object",
-				"fields": [
-					{
-						"name": "dataValue",
-						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"category": "wm.Variable",
-		"_id": "wm-StaticGridClassifiListSelect-StaticGridClassifiListSelec-gridClassificationsListSelection-wm.Variable-1444999122323"
-	},
-	"Rovermar01CategoriesData": {
-		"name": "Rovermar01CategoriesData",
-		"type": "Categories",
+	"Rovermar01OperatorsData": {
+		"name": "Rovermar01OperatorsData",
+		"type": "Operators",
 		"isList": true,
 		"owner": "App",
 		"dataSet": {
@@ -544,13 +240,8 @@
 		"liveSource": "rovermar01",
 		"ignoreCase": false,
 		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01CategoriesData-wm.LiveVariable-1447842250726",
-		"package": "com.roverpoc.rovermar01.Categories",
-		"tableName": "categories",
-		"tableType": "TABLE",
+		"bindCount": 2,
+		"package": "com.roverpoc.rovermar01.Operators",
 		"propertiesMap": {
 			"columns": [
 				{
@@ -576,395 +267,6 @@
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "category",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "category",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "Categories",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.Categories",
-			"tableType": "TABLE"
-		},
-		"bindCount": 1
-	},
-	"Rovermar01CategorisationRulesData": {
-		"name": "Rovermar01CategorisationRulesData",
-		"type": "CategorisationRules",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01CategorisationRulesData-wm.LiveVariable-1447842250738",
-		"package": "com.roverpoc.rovermar01.CategorisationRules",
-		"tableName": "categorisation_rules",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "classificationName",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "classification_name",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "category",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "category",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "comment",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "COMMENT",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "who",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "who",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "updatedTimestamp",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "updated_timestamp",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "CategorisationRules",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.CategorisationRules",
-			"tableType": "TABLE"
-		},
-		"bindCount": 2
-	},
-	"Rovermar01ClassificationsData": {
-		"name": "Rovermar01ClassificationsData",
-		"type": "Classifications",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01ClassificationsData-wm.LiveVariable-1447842250743",
-		"package": "com.roverpoc.rovermar01.Classifications",
-		"tableName": "classifications",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "compid",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "compid",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "name",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "NAME",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "Classifications",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.Classifications",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01ComparisonRulesData": {
-		"name": "Rovermar01ComparisonRulesData",
-		"type": "ComparisonRules",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01ComparisonRulesData-wm.LiveVariable-1447842250746",
-		"package": "com.roverpoc.rovermar01.ComparisonRules",
-		"tableName": "comparison_rules",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dataOrder",
-					"type": "big_decimal",
-					"hibernateType": "big_decimal",
-					"fullyQualifiedType": "big_decimal",
-					"columnName": "data_order",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 20,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dataItem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "data_item",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
 					"precision": 19,
 					"generator": "assigned",
 					"isRelated": false,
@@ -983,16 +285,35 @@
 					"generator": "assigned",
 					"isRelated": false,
 					"defaultValue": null
+				},
+				{
+					"fieldName": "command",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "command",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
 				}
 			],
 			"primaryKeys": [
 				"id"
 			],
-			"entityName": "ComparisonRules",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.ComparisonRules",
+			"entityName": "Operators",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Operators",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
+		"_id": "wm-Rovermar01OperatorsData-wm.LiveVariable-1447842250764",
+		"isDefault": true,
+		"tableName": "operators",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
 	},
 	"Rovermar01CoreSystemsData": {
 		"name": "Rovermar01CoreSystemsData",
@@ -1021,13 +342,8 @@
 		"liveSource": "rovermar01",
 		"ignoreCase": false,
 		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01CoreSystemsData-wm.LiveVariable-1447842250748",
+		"bindCount": 2,
 		"package": "com.roverpoc.rovermar01.CoreSystems",
-		"tableName": "core_systems",
-		"tableType": "TABLE",
 		"propertiesMap": {
 			"columns": [
 				{
@@ -1206,7 +522,2339 @@
 			"fullyQualifiedName": "com.roverpoc.rovermar01.CoreSystems",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
+		"_id": "wm-Rovermar01CoreSystemsData-wm.LiveVariable-1447842250748",
+		"isDefault": true,
+		"tableName": "core_systems",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"loginVariable": {
+		"name": "loginVariable",
+		"type": "string",
+		"owner": "App",
+		"dataSet": {
+			"username": "",
+			"password": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"name": "password",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"startUpdate": false,
+		"autoUpdate": false,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"onError": "Javascript",
+		"useDefaultSuccessHandler": false,
+		"category": "wm.LoginVariable",
+		"_id": "wm-loginVariable-wm.LoginVariable-1444054009709"
+	},
+	"goToPage_Unclassified": {
+		"name": "goToPage_Unclassified",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Unclassified",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Unclassified-wm.NavigationVariable-1444386341823"
+	},
+	"goToPage_ShowMeDataDifference": {
+		"name": "goToPage_ShowMeDataDifference",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "ShowMeDataDifference",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_ShowMeDataDifference-wm.NavigationVariable-1445501022298"
+	},
+	"Rovermar01GmiProdMessagesData": {
+		"name": "Rovermar01GmiProdMessagesData",
+		"type": "GmiProdMessages",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.GmiProdMessages",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "forder",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FORDER",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftdate",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTDATE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fwstim",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FWSTIM",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftrace",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTRACE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "frecno",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FRECNO",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fuser",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FUSER",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fsdsc1",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FSDSC1",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fsqty",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FSQTY",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fexbkr",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FEXBKR",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fopbkr",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FOPBKR",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftpric",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTPRIC",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftslap",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTSLAP",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftand",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTAND",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fttickle",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTTICKLE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "GmiProdMessages",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.GmiProdMessages",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01GmiProdMessagesData-wm.LiveVariable-1447842250753",
+		"isDefault": true,
+		"tableName": "GMI_prod_messages",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_ComparisonRules": {
+		"name": "goToPage_ComparisonRules",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "ComparisonRules",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_ComparisonRules-wm.NavigationVariable-1444295506238"
+	},
+	"Rovermar01NcProdMessagesData": {
+		"name": "Rovermar01NcProdMessagesData",
+		"type": "NcProdMessages",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.NcProdMessages",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "marketOrder",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "Market_Order",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "marketTrade",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "Market_trade",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "lots",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "lots",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "product",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "product",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "price",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "price",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "NcProdMessages",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.NcProdMessages",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01NcProdMessagesData-wm.LiveVariable-1447842250761",
+		"isDefault": true,
+		"tableName": "NC_prod_messages",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_UATRecords": {
+		"name": "goToPage_UATRecords",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "UATRecords",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_UATRecords-wm.NavigationVariable-1444222678478"
+	},
+	"goToPage_ProductionRecords": {
+		"name": "goToPage_ProductionRecords",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "ProductionRecords",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_ProductionRecords-wm.NavigationVariable-1444221723604"
+	},
+	"goToPage_engineControl": {
+		"name": "goToPage_engineControl",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "engineControl",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_engineControl-wm.NavigationVariable-1448316870600"
+	},
+	"staticProdSytem": {
+		"name": "staticProdSytem",
+		"type": "com.roverpoc.rover2.CoreSystems",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"id": "",
+			"coreUatTable": "",
+			"coreSystem": "",
+			"coreProdTable": "",
+			"coreSystemStatus": "",
+			"coreProdConnectivity": "",
+			"dateTime": "",
+			"coreSystemRoverName": "",
+			"coreSystemLoggingLevel": "",
+			"coreUatConnectivity": ""
+		},
+		"dataBinding": [
+			{
+				"isList": false,
+				"name": "dataSet",
+				"type": "com.roverpoc.rover2.CoreSystems",
+				"fields": [
+					{
+						"isList": false,
+						"name": "coreUatTable",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "id",
+						"type": "java.lang.Integer"
+					},
+					{
+						"isList": false,
+						"name": "coreSystem",
+						"value": "bind:Widgets.coreSystemSelectMain.selecteditem.coreSystem",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "coreSystemStatus",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "coreProdTable",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "coreProdConnectivity",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "dateTime",
+						"type": "org.joda.time.LocalDateTime"
+					},
+					{
+						"isList": false,
+						"name": "coreSystemLoggingLevel",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "coreSystemRoverName",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "coreUatConnectivity",
+						"type": "java.lang.String"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-staticProdSytem-staticCoreSystem-wm.Variable-1444056104442"
+	},
+	"loggedInUser": {
+		"name": "loggedInUser",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"tenantId": "",
+			"id": "",
+			"isSecurityEnabled": true,
+			"isAuthenticated": false,
+			"roles": [],
+			"name": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-loggedInUser-wm.Variable-1444054009710"
+	},
+	"goToPage_OperatorMaintenance": {
+		"name": "goToPage_OperatorMaintenance",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "OperatorMaintenance",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_OperatorMaintenance-wm.NavigationVariable-1444299191724"
+	},
+	"Rovermar01GmiUatMessagesData": {
+		"name": "Rovermar01GmiUatMessagesData",
+		"type": "GmiUatMessages",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.GmiUatMessages",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "forder",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FORDER",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftdate",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTDATE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fwstim",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FWSTIM",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftrace",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTRACE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "frecno",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FRECNO",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fuser",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FUSER",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fsdsc1",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FSDSC1",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fsqty",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FSQTY",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fexbkr",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FEXBKR",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fopbkr",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FOPBKR",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftpric",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTPRIC",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftslap",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTSLAP",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "ftand",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTAND",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "fttickle",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "FTTICKLE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "GmiUatMessages",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.GmiUatMessages",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01GmiUatMessagesData-wm.LiveVariable-1447842250756",
+		"isDefault": true,
+		"tableName": "GMI_uat_messages",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_Categories": {
+		"name": "goToPage_Categories",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Categories",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Categories-wm.NavigationVariable-1444295791803"
+	},
+	"Rovermar01ControlData": {
+		"name": "Rovermar01ControlData",
+		"type": "Control",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"bindCount": 2,
+		"package": "com.roverpoc.rovermar01.Control",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "controlStatus",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "control_status",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "engineStatus",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "engine_status",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "resetStatus",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "reset_status",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "loggingLevel",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "logging_level",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "processDate",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "process_date",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 10,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Control",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Control",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01ControlData-wm.LiveVariable-1448354302149",
+		"isDefault": true,
+		"tableName": "control",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_ClassAndCat": {
+		"name": "goToPage_ClassAndCat",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "ClassAndCat",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_ClassAndCat-wm.NavigationVariable-1444748302356"
+	},
+	"goToPage_FilterRules": {
+		"name": "goToPage_FilterRules",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "FilterRules",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_FilterRules-wm.NavigationVariable-1448030332188"
+	},
+	"goToPage_RulesMaintenance": {
+		"name": "goToPage_RulesMaintenance",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "RulesMaintenance",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_RulesMaintenance-wm.NavigationVariable-1444144903991"
+	},
+	"supportedLocale": {
+		"name": "supportedLocale",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"en": "English"
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-supportedLocale-wm.Variable1402640443182"
+	},
+	"Rovermar01UserLoginData": {
+		"name": "Rovermar01UserLoginData",
+		"type": "UserLogin",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"bindCount": 2,
+		"package": "com.roverpoc.rovermar01.UserLogin",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "userid",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "userid",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "username",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "username",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "password",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "PASSWORD",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "role",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "role",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "tenantid",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "tenantid",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "UserLogin",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.UserLogin",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01UserLoginData-wm.LiveVariable-1447842250770",
+		"isDefault": true,
+		"tableName": "user_login",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_NoDifferences": {
+		"name": "goToPage_NoDifferences",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "NoDifferences",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_NoDifferences-wm.NavigationVariable-1444385527271"
+	},
+	"staticGridCatQueryDValues": {
+		"name": "staticGridCatQueryDValues",
+		"type": "rover2procDClassAndCatClassificationsWithCatRulessListForThisSystemrtnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"Messages": "",
+			"Category": "",
+			"Who": "",
+			"Classification": "",
+			"Comment": ""
+		},
+		"dataBinding": [
+			{
+				"isList": false,
+				"name": "dataSet",
+				"type": "rover2procDClassAndCatClassificationsWithCatRulessListForThisSystemrtnType",
+				"fields": [
+					{
+						"isList": false,
+						"name": "Messages",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.Messages",
+						"type": "java.lang.Integer"
+					},
+					{
+						"isList": false,
+						"name": "Category",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.category",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "Classification",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.NAME",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "Who",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.who",
+						"type": "java.lang.String"
+					},
+					{
+						"isList": false,
+						"name": "Comment",
+						"value": "bind:Widgets.gridCatQueryD.selecteditem.COMMENT",
+						"type": "java.lang.String"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-staticGridCatQueryDValues-wm.Variable-1445346713311"
+	},
+	"staticVariable1": {
+		"name": "staticVariable1",
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-staticVariable1-wm.Variable-1447946397350"
+	},
+	"goToPage_Main": {
+		"name": "goToPage_Main",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Main",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Main-wm.NavigationVariable1389180517517"
+	},
+	"Rovermar01ClassificationsData": {
+		"name": "Rovermar01ClassificationsData",
+		"type": "Classifications",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.Classifications",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "compid",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "compid",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "name",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "NAME",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Classifications",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Classifications",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01ClassificationsData-wm.LiveVariable-1447842250743",
+		"isDefault": true,
+		"tableName": "classifications",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
+		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly",
+		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": [
+					{
+						"name": "p1",
+						"value": "bind:Variables.staticGridVenMain.dataSet.System",
+						"type": "string"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverNumberOfRecordInProdOnly",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceSubType": "procedure",
+		"wmServiceOperationInfo": {
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProdOnly",
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverNumberOfRecordInProdOnly",
+			"parameters": [
+				{
+					"name": "p1",
+					"parameterType": "query",
+					"type": "string"
+				}
+			]
+		},
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165",
+		"isDefault": true
+	},
+	"Rovermar01CategoriesData": {
+		"name": "Rovermar01CategoriesData",
+		"type": "Categories",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"bindCount": 1,
+		"package": "com.roverpoc.rovermar01.Categories",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "category",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "category",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Categories",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Categories",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01CategoriesData-wm.LiveVariable-1447842250726",
+		"isDefault": true,
+		"tableName": "categories",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_AboutUs": {
+		"name": "goToPage_AboutUs",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "AboutUs",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_AboutUs-wm.NavigationVariable-1448031193503"
+	},
+	"Rovermar01SysaUatMessagesData": {
+		"name": "Rovermar01SysaUatMessagesData",
+		"type": "SysaUatMessages",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.SysaUatMessages",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colA",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColA",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colB",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColB",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colC",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColC",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colD",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColD",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colE",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "SysaUatMessages",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.SysaUatMessages",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01SysaUatMessagesData-wm.LiveVariable-1447842250769",
+		"isDefault": true,
+		"tableName": "sysa_uat_messages",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_CombinedRecords": {
+		"name": "goToPage_CombinedRecords",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "CombinedRecords",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_CombinedRecords-wm.NavigationVariable-1444224871800"
+	},
+	"Rovermar01NcUatMessagesData": {
+		"name": "Rovermar01NcUatMessagesData",
+		"type": "NcUatMessages",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.NcUatMessages",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "marketOrder",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "Market_Order",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "marketTrade",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "Market_trade",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "lots",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "lots",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "product",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "product",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "price",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "price",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "NcUatMessages",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.NcUatMessages",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01NcUatMessagesData-wm.LiveVariable-1447842250762",
+		"isDefault": true,
+		"tableName": "NC_uat_messages",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"goToPage_UserMaintenance": {
+		"name": "goToPage_UserMaintenance",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "UserMaintenance",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_UserMaintenance-wm.NavigationVariable-1444144749430"
+	},
+	"Rovermar01ResultsData": {
+		"name": "Rovermar01ResultsData",
+		"type": "Results",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.Results",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "compid",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "compid",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "Results",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.Results",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01ResultsData-wm.LiveVariable-1447842250766",
+		"isDefault": true,
+		"tableName": "results",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
+	},
+	"Rovermar01SysaProdMessagesData": {
+		"name": "Rovermar01SysaProdMessagesData",
+		"type": "SysaProdMessages",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.SysaProdMessages",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreKey",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_key",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colA",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColA",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colB",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColB",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colC",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColC",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colD",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColD",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "colE",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "ColE",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "SysaProdMessages",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.SysaProdMessages",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01SysaProdMessagesData-wm.LiveVariable-1447842250767",
+		"isDefault": true,
+		"tableName": "sysa_prod_messages",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
 	},
 	"Rovermar01FilterRulesData": {
 		"name": "Rovermar01FilterRulesData",
@@ -1235,13 +2883,8 @@
 		"liveSource": "rovermar01",
 		"ignoreCase": false,
 		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01FilterRulesData-wm.LiveVariable-1447842250750",
+		"bindCount": 2,
 		"package": "com.roverpoc.rovermar01.FilterRules",
-		"tableName": "filter_rules",
-		"tableType": "TABLE",
 		"propertiesMap": {
 			"columns": [
 				{
@@ -1518,1062 +3161,47 @@
 			"fullyQualifiedName": "com.roverpoc.rovermar01.FilterRules",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
+		"_id": "wm-Rovermar01FilterRulesData-wm.LiveVariable-1447842250750",
+		"isDefault": true,
+		"tableName": "filter_rules",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
 	},
-	"Rovermar01GmiProdMessagesData": {
-		"name": "Rovermar01GmiProdMessagesData",
-		"type": "GmiProdMessages",
-		"isList": true,
+	"goToPage_ClassificactionDiffe": {
+		"name": "goToPage_ClassificactionDiffe",
 		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
+		"operation": "gotoPage",
+		"pageName": "ClassificactionDiffe",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_ClassificactionDiffe-wm.NavigationVariable-1444226347743"
+	},
+	"goToPage_CoreSystems": {
+		"name": "goToPage_CoreSystems",
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "CoreSystems",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_CoreSystems-wm.NavigationVariable-1444295594798"
+	},
+	"logout": {
+		"name": "logout",
+		"type": "string",
+		"owner": "App",
 		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01GmiProdMessagesData-wm.LiveVariable-1447842250753",
-		"package": "com.roverpoc.rovermar01.GmiProdMessages",
-		"tableName": "GMI_prod_messages",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "forder",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FORDER",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftdate",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTDATE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fwstim",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FWSTIM",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftrace",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTRACE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "frecno",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FRECNO",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fuser",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FUSER",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fsdsc1",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FSDSC1",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fsqty",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FSQTY",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fexbkr",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FEXBKR",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fopbkr",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FOPBKR",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftpric",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTPRIC",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftslap",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTSLAP",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftand",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTAND",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fttickle",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTTICKLE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "GmiProdMessages",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.GmiProdMessages",
-			"tableType": "TABLE"
-		}
+		"useDefaultSuccessHandler": true,
+		"category": "wm.LogoutVariable",
+		"_id": "wm-logout-wm.LogoutVariable-1444116468367"
 	},
-	"Rovermar01GmiUatMessagesData": {
-		"name": "Rovermar01GmiUatMessagesData",
-		"type": "GmiUatMessages",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01GmiUatMessagesData-wm.LiveVariable-1447842250756",
-		"package": "com.roverpoc.rovermar01.GmiUatMessages",
-		"tableName": "GMI_uat_messages",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "forder",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FORDER",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftdate",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTDATE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fwstim",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FWSTIM",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftrace",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTRACE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "frecno",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FRECNO",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fuser",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FUSER",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fsdsc1",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FSDSC1",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fsqty",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FSQTY",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fexbkr",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FEXBKR",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fopbkr",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FOPBKR",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftpric",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTPRIC",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftslap",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTSLAP",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "ftand",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTAND",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "fttickle",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "FTTICKLE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "GmiUatMessages",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.GmiUatMessages",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01LoggingData": {
-		"name": "Rovermar01LoggingData",
-		"type": "Logging",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01LoggingData-wm.LiveVariable-1447842250758",
-		"package": "com.roverpoc.rovermar01.Logging",
-		"tableName": "logging",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "process",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "PROCESS",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "logDetails",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "log_details",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "Logging",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.Logging",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01NcProdMessagesData": {
-		"name": "Rovermar01NcProdMessagesData",
-		"type": "NcProdMessages",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01NcProdMessagesData-wm.LiveVariable-1447842250761",
-		"package": "com.roverpoc.rovermar01.NcProdMessages",
-		"tableName": "NC_prod_messages",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "marketOrder",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "Market_Order",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "marketTrade",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "Market_trade",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "lots",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "lots",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "product",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "product",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "price",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "price",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "NcProdMessages",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.NcProdMessages",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01NcUatMessagesData": {
-		"name": "Rovermar01NcUatMessagesData",
-		"type": "NcUatMessages",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01NcUatMessagesData-wm.LiveVariable-1447842250762",
-		"package": "com.roverpoc.rovermar01.NcUatMessages",
-		"tableName": "NC_uat_messages",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "marketOrder",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "Market_Order",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "marketTrade",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "Market_trade",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "lots",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "lots",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "product",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "product",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "price",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "price",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "NcUatMessages",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.NcUatMessages",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01OperatorsData": {
-		"name": "Rovermar01OperatorsData",
-		"type": "Operators",
+	"Rovermar01ComparisonRulesData": {
+		"name": "Rovermar01ComparisonRulesData",
+		"type": "ComparisonRules",
 		"isList": true,
 		"owner": "App",
 		"dataSet": {
@@ -2598,13 +3226,8 @@
 		"liveSource": "rovermar01",
 		"ignoreCase": false,
 		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01OperatorsData-wm.LiveVariable-1447842250764",
-		"package": "com.roverpoc.rovermar01.Operators",
-		"tableName": "operators",
-		"tableType": "TABLE",
+		"bindCount": 2,
+		"package": "com.roverpoc.rovermar01.ComparisonRules",
 		"propertiesMap": {
 			"columns": [
 				{
@@ -2622,14 +3245,42 @@
 					"defaultValue": null
 				},
 				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dataOrder",
+					"type": "big_decimal",
+					"hibernateType": "big_decimal",
+					"fullyQualifiedType": "big_decimal",
+					"columnName": "data_order",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 255,
+					"precision": 20,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dataItem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "data_item",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
 					"precision": 19,
 					"generator": "assigned",
 					"isRelated": false,
@@ -2648,491 +3299,35 @@
 					"generator": "assigned",
 					"isRelated": false,
 					"defaultValue": null
-				},
-				{
-					"fieldName": "command",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "command",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
 				}
 			],
 			"primaryKeys": [
 				"id"
 			],
-			"entityName": "Operators",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.Operators",
+			"entityName": "ComparisonRules",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.ComparisonRules",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
-	},
-	"Rovermar01ResultsData": {
-		"name": "Rovermar01ResultsData",
-		"type": "Results",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
+		"_id": "wm-Rovermar01ComparisonRulesData-wm.LiveVariable-1447842250746",
 		"isDefault": true,
+		"tableName": "comparison_rules",
 		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01ResultsData-wm.LiveVariable-1447842250766",
-		"package": "com.roverpoc.rovermar01.Results",
-		"tableName": "results",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "compid",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "compid",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "Results",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.Results",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01SysaProdMessagesData": {
-		"name": "Rovermar01SysaProdMessagesData",
-		"type": "SysaProdMessages",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
 		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01SysaProdMessagesData-wm.LiveVariable-1447842250767",
-		"package": "com.roverpoc.rovermar01.SysaProdMessages",
-		"tableName": "sysa_prod_messages",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colA",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColA",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colB",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColB",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colC",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColC",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colD",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColD",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colE",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "SysaProdMessages",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.SysaProdMessages",
-			"tableType": "TABLE"
-		}
+		"tableType": "TABLE"
 	},
-	"Rovermar01SysaUatMessagesData": {
-		"name": "Rovermar01SysaUatMessagesData",
-		"type": "SysaUatMessages",
-		"isList": true,
+	"goToPage_Uncategorised": {
+		"name": "goToPage_Uncategorised",
 		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01SysaUatMessagesData-wm.LiveVariable-1447842250769",
-		"package": "com.roverpoc.rovermar01.SysaUatMessages",
-		"tableName": "sysa_uat_messages",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreKey",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_key",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colA",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColA",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colB",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColB",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colC",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColC",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colD",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColD",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "colE",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "ColE",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "SysaUatMessages",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.SysaUatMessages",
-			"tableType": "TABLE"
-		}
+		"operation": "gotoPage",
+		"pageName": "Uncategorised",
+		"dataBinding": {},
+		"pageTransitions": "none",
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage_Uncategorised-wm.NavigationVariable-1444385873979"
 	},
-	"Rovermar01UserLoginData": {
-		"name": "Rovermar01UserLoginData",
-		"type": "UserLogin",
+	"Rovermar01CategorisationRulesData": {
+		"name": "Rovermar01CategorisationRulesData",
+		"type": "CategorisationRules",
 		"isList": true,
 		"owner": "App",
 		"dataSet": {
@@ -3157,13 +3352,8 @@
 		"liveSource": "rovermar01",
 		"ignoreCase": false,
 		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01UserLoginData-wm.LiveVariable-1447842250770",
-		"package": "com.roverpoc.rovermar01.UserLogin",
-		"tableName": "user_login",
-		"tableType": "TABLE",
+		"bindCount": 2,
+		"package": "com.roverpoc.rovermar01.CategorisationRules",
 		"propertiesMap": {
 			"columns": [
 				{
@@ -3181,11 +3371,11 @@
 					"defaultValue": null
 				},
 				{
-					"fieldName": "userid",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "userid",
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 255,
@@ -3195,11 +3385,11 @@
 					"defaultValue": null
 				},
 				{
-					"fieldName": "username",
+					"fieldName": "coreSystem",
 					"type": "text",
 					"hibernateType": "string",
 					"fullyQualifiedType": "text",
-					"columnName": "username",
+					"columnName": "core_system",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 65535,
@@ -3209,11 +3399,11 @@
 					"defaultValue": null
 				},
 				{
-					"fieldName": "password",
+					"fieldName": "classificationName",
 					"type": "text",
 					"hibernateType": "string",
 					"fullyQualifiedType": "text",
-					"columnName": "PASSWORD",
+					"columnName": "classification_name",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 65535,
@@ -3223,11 +3413,11 @@
 					"defaultValue": null
 				},
 				{
-					"fieldName": "role",
+					"fieldName": "category",
 					"type": "text",
 					"hibernateType": "string",
 					"fullyQualifiedType": "text",
-					"columnName": "role",
+					"columnName": "category",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 65535,
@@ -3237,11 +3427,39 @@
 					"defaultValue": null
 				},
 				{
-					"fieldName": "tenantid",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "tenantid",
+					"fieldName": "comment",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "COMMENT",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "who",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "who",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "updatedTimestamp",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "updated_timestamp",
 					"isPrimaryKey": false,
 					"notNull": false,
 					"length": 255,
@@ -3254,63 +3472,19 @@
 			"primaryKeys": [
 				"id"
 			],
-			"entityName": "UserLogin",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.UserLogin",
+			"entityName": "CategorisationRules",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.CategorisationRules",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
-	},
-	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly",
-		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"type": "string",
-						"value": "bind:Variables.staticGridVenMain.dataSet.System"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverNumberOfRecordInProdOnly",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
+		"_id": "wm-Rovermar01CategorisationRulesData-wm.LiveVariable-1447842250738",
 		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverNumberOfRecordInProdOnly",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProdOnly",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165"
+		"tableName": "categorisation_rules",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE"
 	},
-	"staticVariable1": {
-		"name": "staticVariable1",
+	"StaticGridClassifiListSelect": {
+		"name": "StaticGridClassifiListSelect",
 		"type": "string",
 		"isList": false,
 		"owner": "App",
@@ -3324,6 +3498,7 @@
 				"fields": [
 					{
 						"name": "dataValue",
+						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME",
 						"type": "string"
 					}
 				]
@@ -3331,180 +3506,6 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-staticVariable1-wm.Variable-1447946397350"
-	},
-	"goToPage_FilterRules": {
-		"name": "goToPage_FilterRules",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "FilterRules",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_FilterRules-wm.NavigationVariable-1448030332188"
-	},
-	"goToPage_AboutUs": {
-		"name": "goToPage_AboutUs",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "AboutUs",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_AboutUs-wm.NavigationVariable-1448031193503"
-	},
-	"goToPage_engineControl": {
-		"name": "goToPage_engineControl",
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "engineControl",
-		"dataBinding": {},
-		"pageTransitions": "none",
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage_engineControl-wm.NavigationVariable-1448316870600"
-	},
-	"Rovermar01ControlData": {
-		"name": "Rovermar01ControlData",
-		"type": "Control",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01ControlData-wm.LiveVariable-1448354302149",
-		"package": "com.roverpoc.rovermar01.Control",
-		"tableName": "control",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "controlStatus",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "control_status",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "engineStatus",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "engine_status",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "resetStatus",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "reset_status",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "loggingLevel",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "logging_level",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "processDate",
-					"type": "date",
-					"hibernateType": "date",
-					"fullyQualifiedType": "date",
-					"columnName": "process_date",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 10,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "Control",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.Control",
-			"tableType": "TABLE"
-		},
-		"bindCount": 2
+		"_id": "wm-StaticGridClassifiListSelect-StaticGridClassifiListSelec-gridClassificationsListSelection-wm.Variable-1444999122323"
 	}
 }
