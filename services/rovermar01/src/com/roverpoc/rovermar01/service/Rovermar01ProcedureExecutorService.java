@@ -115,6 +115,12 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverDashboardCounts() throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionCallRoverSystemDetailCounts( java.lang.String p1) throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverVennSetCounts( java.lang.String p1) throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

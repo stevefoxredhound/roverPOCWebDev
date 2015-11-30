@@ -2060,56 +2060,6 @@
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE"
 	},
-	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly",
-		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.System",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverNumberOfRecordInProdOnly",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProdOnly",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverNumberOfRecordInProdOnly",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447930981165",
-		"isDefault": true
-	},
 	"Rovermar01CategoriesData": {
 		"name": "Rovermar01CategoriesData",
 		"type": "Categories",

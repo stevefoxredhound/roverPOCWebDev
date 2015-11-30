@@ -92,88 +92,6 @@ Application.$controller("gridVenMainController", ["$scope",
 </script>
 <script id="Main.variables.json">
 var _MainPage_Variables_ ={
-	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat": {
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat",
-		"type": "rovermar01FunctionCallRoverNumberOfRecordInUatrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "P1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.System",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverNumberOfRecordInUat",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInUat",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverNumberOfRecordInUat",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat-wm.ServiceVariable-1447846298432",
-		"isDefault": true
-	},
-	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd": {
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd",
-		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverNumberOfRecordInProd",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProd",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverNumberOfRecordInProd",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd-wm.ServiceVariable-1447925522321",
-		"isDefault": true
-	},
 	"Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem": {
 		"name": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem",
 		"type": "rovermar01FunctionCallRoverUncategorisedGroupsBySystemrtnType",
@@ -202,9 +120,9 @@ var _MainPage_Variables_ ={
 		"transformationRequired": false,
 		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverUncategorisedGroupsBySystem",
 			"httpMethod": "get",
 			"name": "executeFunctionCallRoverUncategorisedGroupsBySystem",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverUncategorisedGroupsBySystem",
 			"parameters": []
 		},
 		"serviceType": "DataService",
@@ -217,8 +135,8 @@ var _MainPage_Variables_ ={
 		"owner": "Page",
 		"autoStart": true,
 		"repeating": true,
-		"delay": 10000,
-		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem;Rovermar01ExecuteFunctionCallRoverDashboardCounts",
+		"delay": 60000,
+		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem;Rovermar01ExecuteFunctionCallRoverDashboardCounts;Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems",
 		"category": "wm.TimerVariable",
 		"_id": "wm-timerVennMain-wm.TimerVariable-1445864232969",
 		"dataBinding": [
@@ -227,44 +145,6 @@ var _MainPage_Variables_ ={
 				"fields": []
 			}
 		]
-	},
-	"Rovermar01ExecuteFunctionCallRoverSystemCount": {
-		"name": "Rovermar01ExecuteFunctionCallRoverSystemCount",
-		"type": "rovermar01FunctionCallRoverSystemCountrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverSystemCount",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverSystemCount",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverSystemCount",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverSystemCount-wm.ServiceVariable-1447842832596",
-		"isDefault": true
 	},
 	"Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems": {
 		"name": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems",
@@ -302,132 +182,6 @@ var _MainPage_Variables_ ={
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems-wm.ServiceVariable-1447847251666",
-		"isDefault": true
-	},
-	"Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups": {
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups",
-		"type": "rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverNumberOfUncategorisedGroups",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfUncategorisedGroups",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverNumberOfUncategorisedGroups",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups-wm.ServiceVariable-1447846461583",
-		"isDefault": true
-	},
-	"Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly": {
-		"name": "Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly",
-		"type": "rovermar01FunctionCallRoverNumberOfRecordInProdOnlyrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "P1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.System",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverNumberOfRecordInProdOnly",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverNumberOfRecordInProdOnly",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverNumberOfRecordInProdOnly",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProdOnly-wm.ServiceVariable-1447855721205",
-		"isDefault": true
-	},
-	"Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems": {
-		"name": "Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems",
-		"type": "rovermar01FunctionCallRoverDuplicatesForAllSystemsrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverDuplicatesForAllSystems",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverDuplicatesForAllSystems",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverDuplicatesForAllSystems",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems-wm.ServiceVariable-1448392536063",
 		"isDefault": true
 	},
 	"Rovermar01ExecuteFunctionCallRoverDashboardCounts": {
@@ -524,7 +278,7 @@ var _MainPage_Variables_ ={
                                             <wm-icon iconclass="fa fa-dashboard fa-2x" name="icon5_1"></wm-icon>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="8" class="col-xs-8" name="gridcolumn83">
-                                            <wm-label width="100%" caption="Systems<br>Monitored" class="text-uppercase" fontsize="12" name="label16_1"></wm-label>
+                                            <wm-label width="100%" caption="Systems<br>Monitored" class="text-uppercase" fontsize="14" name="label16_1"></wm-label>
                                             <wm-label width="100%" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverDashboardCounts.dataSet[0].NumberOfSystems" class="h3" margintop="0" marginbottom="0" textalign="center" fontweight="bold"
                                             fontsize="20" name="label_numberSystems" readonlygrid="true" color="#000000"></wm-label>
                                         </wm-gridcolumn>
@@ -540,7 +294,7 @@ var _MainPage_Variables_ ={
                                             <wm-icon iconclass="fa fa-circle fa-2x" name="icon6"></wm-icon>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="8" class="col-xs-8" name="gridcolumn86">
-                                            <wm-label width="100%" caption="Messages<br>in PROD" class="text-uppercase" fontsize="12" name="label18"></wm-label>
+                                            <wm-label width="100%" caption="Messages<br>in PROD" class="text-uppercase" fontsize="14" name="label18"></wm-label>
                                             <wm-label width="100%" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverDashboardCounts.dataSet[0].RecordsInProd" class="h3" margintop="0" marginbottom="0" textalign="center" fontweight="bold"
                                             fontsize="20" name="label_prodMessages" readonlygrid="true"></wm-label>
                                         </wm-gridcolumn>
@@ -556,7 +310,7 @@ var _MainPage_Variables_ ={
                                             <wm-icon iconclass="fa fa-circle-o fa-2x" name="icon5"></wm-icon>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="8" class="col-xs-8" name="gridcolumn109_1">
-                                            <wm-label width="100%" caption="Messages<br>in UAT" class="text-uppercase" fontsize="12" name="label17_1"></wm-label>
+                                            <wm-label width="100%" caption="Messages<br>in UAT" class="text-uppercase" fontsize="14" name="label17_1"></wm-label>
                                             <wm-label width="100%" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverDashboardCounts.dataSet[0].RecordsInUAT" class="h3" margintop="0" marginbottom="0" fontsize="20" fontweight="bold"
                                             textalign="center" name="label_uatMessages" readonlygrid="true"></wm-label>
                                         </wm-gridcolumn>
@@ -572,7 +326,7 @@ var _MainPage_Variables_ ={
                                             <wm-icon iconclass="fa fa-exclamation-circle fa-2x" name="icon8"></wm-icon>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="8" class="col-xs-8" name="gridcolumn92">
-                                            <wm-label fontsize="12" width="100%" caption="Uncategorised<br>Groups" class="text-uppercase" name="label22"></wm-label>
+                                            <wm-label fontsize="14" width="100%" caption="Uncategorised<br>Groups" class="text-uppercase" name="label22"></wm-label>
                                             <wm-label width="100%" caption="bind:Variables.Rovermar01ExecuteFunctionCallRoverDashboardCounts.dataSet[0].GroupsUncat" class="h3" margintop="0" marginbottom="0" fontsize="20" fontweight="bold" name="label_uncatGroups"
                                             readonlygrid="true"></wm-label>
                                         </wm-gridcolumn>

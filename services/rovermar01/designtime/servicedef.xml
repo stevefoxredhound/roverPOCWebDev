@@ -132,6 +132,14 @@
     <operation operationType="procedure" name="FunctionCallRoverDashboardCounts">
         <return typeRef="rovermar01FunctionCallRoverDashboardCountsrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverSystemDetailCounts">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverSystemDetailCountsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverVennSetCounts">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverVennSetCountsrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -435,6 +443,29 @@
             <element name="RecordsInProd" typeRef="java.lang.Long"/>
             <element name="RecordsInUAT" typeRef="java.lang.Long"/>
             <element name="GroupsUncat" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverSystemDetailCountsrtnType">
+            <element name="MessageCoverage" typeRef="java.lang.String"/>
+            <element name="NumGroupsUncat" typeRef="java.lang.Long"/>
+            <element name="NumGroups" typeRef="java.lang.Long"/>
+            <element name="GroupCoverage" typeRef="java.lang.String"/>
+            <element name="NumGroupsCat" typeRef="java.lang.Long"/>
+            <element name="NumRecsNoDiff" typeRef="java.lang.Long"/>
+            <element name="NumRecsDiffUncat" typeRef="java.lang.Long"/>
+            <element name="NumRecsDiffCat" typeRef="java.lang.Long"/>
+            <element name="NumRecsDiff" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsrtnType">
+            <element name="BOTH" typeRef="java.lang.Long"/>
+            <element name="PROD ONLY" typeRef="java.lang.Long"/>
+            <element name="UAT ONLY" typeRef="java.lang.Long"/>
+            <element name="PROD Duplicates" typeRef="java.math.BigDecimal"/>
+            <element name="UAT" typeRef="java.lang.Long"/>
+            <element name="UAT Duplicates" typeRef="java.math.BigDecimal"/>
+            <element name="PROD Total" typeRef="java.lang.Long"/>
+            <element name="UAT Total" typeRef="java.lang.Long"/>
+            <element name="System" typeRef="java.lang.String"/>
+            <element name="PROD" typeRef="java.lang.Long"/>
         </dataobject>
     </dataobjects>
 </service>
