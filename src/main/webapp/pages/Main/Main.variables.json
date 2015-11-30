@@ -124,8 +124,8 @@
 		"owner": "Page",
 		"autoStart": true,
 		"repeating": true,
-		"delay": 30000,
-		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverSystemCount;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInProd;Rovermar01ExecuteFunctionCallRoverNumberOfRecordInUat;Rovermar01ExecuteFunctionCallRoverNumberOfUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem;Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems",
+		"delay": 10000,
+		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems;Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem;Rovermar01ExecuteFunctionCallRoverDashboardCounts",
 		"category": "wm.TimerVariable",
 		"_id": "wm-timerVennMain-wm.TimerVariable-1445864232969",
 		"dataBinding": [
@@ -336,5 +336,42 @@
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDuplicatesForAllSystems-wm.ServiceVariable-1448392536063",
 		"isDefault": true
+	},
+	"Rovermar01ExecuteFunctionCallRoverDashboardCounts": {
+		"name": "Rovermar01ExecuteFunctionCallRoverDashboardCounts",
+		"type": "rovermar01FunctionCallRoverDashboardCountsrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverDashboardCounts",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverDashboardCounts",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverDashboardCounts",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDashboardCounts-wm.ServiceVariable-1448833100216"
 	}
 }

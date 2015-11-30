@@ -43,18 +43,6 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
-	@RequestMapping(value = "/procedure/execute/FunctionCallRoverVennSetCountsForAllSystems", method = RequestMethod.GET)
-	@ApiOperation(value = "Process request to execute Procedure")
-	public List<Object> executeFunctionCallRoverVennSetCountsForAllSystems(
-		 )
-	    {
-			LOGGER.debug("Executing named procedure FunctionCallRoverVennSetCountsForAllSystems");
-
-		List<Object> result = procedureService.executeFunctionCallRoverVennSetCountsForAllSystems();
-
-		LOGGER.debug("got the result of named procedure {}", result);
-		return result;
-	}
 	@RequestMapping(value = "/procedure/execute/FunctionCallRoverUncategorisedGroupsBySystem", method = RequestMethod.GET)
 	@ApiOperation(value = "Process request to execute Procedure")
 	public List<Object> executeFunctionCallRoverUncategorisedGroupsBySystem(
@@ -436,6 +424,56 @@ public class ProcedureExecutionController {
 			LOGGER.debug("Executing named procedure FunctionCallRoverSystemCount");
 
 		List<Object> result = procedureService.executeFunctionCallRoverSystemCount();
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverVennSetCountsForAllSystems", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverVennSetCountsForAllSystems(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FunctionCallRoverVennSetCountsForAllSystems");
+
+		List<Object> result = procedureService.executeFunctionCallRoverVennSetCountsForAllSystems();
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverDuplicateCountForProd", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverDuplicateCountForProd(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverDuplicateCountForProd");
+
+		List<Object> result = procedureService.executeFunctionCallRoverDuplicateCountForProd( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverDuplicateCountForUAT", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverDuplicateCountForUAT(
+			@RequestParam(value="p1", required=false) java.lang.String p1
+		 )
+	     throws QueryParameterMismatchException{
+			LOGGER.debug("Executing named procedure FunctionCallRoverDuplicateCountForUAT");
+
+		List<Object> result = procedureService.executeFunctionCallRoverDuplicateCountForUAT( p1);
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverDashboardCounts", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverDashboardCounts(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FunctionCallRoverDashboardCounts");
+
+		List<Object> result = procedureService.executeFunctionCallRoverDashboardCounts();
 
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;

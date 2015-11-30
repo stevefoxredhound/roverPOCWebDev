@@ -3,9 +3,6 @@
     <operation operationType="procedure" name="FunctionCallRoverNumberOfUncategorisedGroups">
         <return typeRef="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType" isList="false"/>
     </operation>
-    <operation operationType="procedure" name="FunctionCallRoverVennSetCountsForAllSystems">
-        <return typeRef="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="FunctionCallRoverUncategorisedGroupsBySystem">
         <return typeRef="rovermar01FunctionCallRoverUncategorisedGroupsBySystemrtnType" isList="false"/>
     </operation>
@@ -120,6 +117,20 @@
     </operation>
     <operation operationType="procedure" name="FunctionCallRoverSystemCount">
         <return isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverVennSetCountsForAllSystems">
+        <return typeRef="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverDuplicateCountForProd">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverDuplicateCountForProdrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverDuplicateCountForUAT">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverDuplicateCountForUATrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverDashboardCounts">
+        <return typeRef="rovermar01FunctionCallRoverDashboardCountsrtnType" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
@@ -313,14 +324,6 @@
         <dataobject javaType="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType">
             <element name="NumberOfUncategorisedGroups" typeRef="java.lang.Long"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType">
-            <element name="BOTH" typeRef="java.lang.Long"/>
-            <element name="PROD ONLY" typeRef="java.lang.Long"/>
-            <element name="UAT ONLY" typeRef="java.lang.Long"/>
-            <element name="UAT" typeRef="java.lang.Long"/>
-            <element name="System" typeRef="java.lang.String"/>
-            <element name="PROD" typeRef="java.lang.Long"/>
-        </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverUncategorisedGroupsBySystemrtnType">
             <element name="core_system" typeRef="java.lang.String"/>
             <element name="Uncategorised Groups" typeRef="java.lang.Long"/>
@@ -410,6 +413,28 @@
             <element name="UAT" typeRef="java.lang.Long"/>
             <element name="System" typeRef="java.lang.String"/>
             <element name="PROD" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType">
+            <element name="BOTH" typeRef="java.lang.Long"/>
+            <element name="PROD ONLY" typeRef="java.lang.Long"/>
+            <element name="UAT ONLY" typeRef="java.lang.Long"/>
+            <element name="PROD Duplicates" typeRef="java.lang.Long"/>
+            <element name="UAT" typeRef="java.lang.Long"/>
+            <element name="UAT Duplicates" typeRef="java.lang.Long"/>
+            <element name="System" typeRef="java.lang.String"/>
+            <element name="PROD" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverDuplicateCountForProdrtnType">
+            <element name="NumberOfDuplicates" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverDuplicateCountForUATrtnType">
+            <element name="NumberOfDuplicates" typeRef="java.lang.Long"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverDashboardCountsrtnType">
+            <element name="NumberOfSystems" typeRef="java.lang.Long"/>
+            <element name="RecordsInProd" typeRef="java.lang.Long"/>
+            <element name="RecordsInUAT" typeRef="java.lang.Long"/>
+            <element name="GroupsUncat" typeRef="java.lang.Long"/>
         </dataobject>
     </dataobjects>
 </service>
