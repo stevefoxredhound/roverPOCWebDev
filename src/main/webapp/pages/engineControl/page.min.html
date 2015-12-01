@@ -161,7 +161,7 @@ var _engineControlPage_Variables_ ={
                     <wm-gridcolumn columnwidth="10" name="gridcolumn113">
                         <wm-layoutgrid name="layoutgrid3">
                             <wm-gridrow name="gridrow44">
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn115" horizontalalign="center">
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn115" horizontalalign="center" backgroundcolor="#F3F3F4">
                                     <wm-label caption="Settings" fontsize="30" textalign="left" name="label7_1"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn116"></wm-gridcolumn>
@@ -174,15 +174,45 @@ var _engineControlPage_Variables_ ={
                                 </wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow47">
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn126" horizontalalign="left">
-                                    <wm-layoutgrid name="layoutgrid4">
-                                        <wm-gridrow name="gridrow61">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn178"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn179"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn126" horizontalalign="left" bordercolor="#F3F3F4">
+                                    <wm-layoutgrid name="layoutgrid4" bordercolor="#F3F3F4" borderstyle="solid">
+                                        <wm-gridrow name="gridrow70">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn185_1" backgroundcolor="#F3F3F4">
+                                                <wm-label class="col-md-3" width="100%" caption="Date Settings" fontsize="20" fontweight="bold" name="label15"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow73">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn188_1" height="20px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn189_1"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow67">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn179_1">
+                                                <wm-label class="col-md-3" name="label8" width="155px" caption="Specific Date" fontsize="16" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn180_1" horizontalalign="right">
+                                                <wm-checkbox caption="Toggle" type="toggle" name="toggleAllOrOne" checkedvalue="One" uncheckedvalue="All" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].engineAllOrOne"></wm-checkbox>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow66_1">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn177_1">
+                                                <wm-label class="col-md-3" name="label7" caption="Process Date" width="155px" fontsize="16" fontweight="bold"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn178_1" horizontalalign="right">
+                                                <wm-date name="date2" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[$i].processDate" fontsize="14" fontweight="bold" textalign="right"></wm-date>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow65_1">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn175_1" height="40px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn176_1"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow62">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn180"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn181"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn180" backgroundcolor="#F3F3F4">
+                                                <wm-label class="col-md-3" width="100%" caption="Comparison Engine" fontsize="20" fontweight="bold" name="label16"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow74">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn190" height="20px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn191"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow54">
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn161" horizontalalign="left">
@@ -194,32 +224,30 @@ var _engineControlPage_Variables_ ={
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow66">
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn188"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn189">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn189" horizontalalign="right">
                                                 <wm-label class="col-md-3" caption="Force Reset" fontsize="12" width="155px" fontweight="bold" name="label14"></wm-label>
                                                 <wm-checkbox caption="Toggle" type="toggle" name="toggle4" height="20px" width="40px" checkedvalue="On" uncheckedvalue="Off" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[$i].resetStatus"></wm-checkbox>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow60">
-                                            <wm-gridcolumn columnwidth="7" name="gridcolumn176" horizontalalign="right">
-                                                <wm-label class="col-md-3" caption="Force Reset" fontsize="12" width="155px" fontweight="bold" name="label10"></wm-label>
-                                            </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="5" name="gridcolumn177" horizontalalign="left"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow59">
-                                            <wm-gridcolumn columnwidth="7" name="gridcolumn174" horizontalalign="right">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn176" horizontalalign="right"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn177" horizontalalign="right">
                                                 <wm-label class="col-md-3" caption="Compare" fontsize="12" width="155px" fontweight="bold" name="label12"></wm-label>
-                                            </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="5" name="gridcolumn175">
                                                 <wm-checkbox caption="Toggle" type="toggle" name="toggle5" width="40px" height="20px" checkedvalue="On" uncheckedvalue="Off" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[$i].engineStatus"></wm-checkbox>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow58">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn172"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn172" height="40px"></wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="4" name="gridcolumn173"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow57">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn170"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn171"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn170" backgroundcolor="#F3F3F4">
+                                                <wm-label class="col-md-3" width="100%" caption="Collation Engine" fontsize="20" fontweight="bold" name="label17"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow75">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn192" height="20px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn193"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow55">
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn164" horizontalalign="left">
@@ -230,8 +258,17 @@ var _engineControlPage_Variables_ ={
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow56">
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn167"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn167" height="40px"></wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn168"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow72">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn186_1" backgroundcolor="#F3F3F4">
+                                                <wm-label class="col-md-3" width="100%" caption="System" fontsize="20" fontweight="bold" name="label17_1"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow76">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn194" height="20px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn195"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow63" horizontalalign="left">
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn182" horizontalalign="left">
@@ -241,13 +278,17 @@ var _engineControlPage_Variables_ ={
                                                 <wm-slider name="sliderLoggingLevel" minvalue="1" maxvalue="5" width="200px" step="1" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].loggingLevel"></wm-slider>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
-                                        <wm-gridrow name="gridrow64">
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn184"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn185"></wm-gridcolumn>
+                                        <wm-gridrow name="gridrow77">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn196" height="40px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn197"></wm-gridcolumn>
                                         </wm-gridrow>
-                                        <wm-gridrow name="gridrow65">
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn186"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="6" name="gridcolumn187"></wm-gridcolumn>
+                                        <wm-gridrow name="gridrow78">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn198" horizontalalign="center">
+                                                <wm-button class="btn-default" type="button" caption="Save Settings" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-save fa-lg" name="button4"></wm-button>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow79">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn200" height="20px"></wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
@@ -257,25 +298,23 @@ var _engineControlPage_Variables_ ={
                                 <wm-gridcolumn columnwidth="3" name="gridcolumn130"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow50">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn141"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn141" height="20px"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn142"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn143"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn144"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn145"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow51">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn146"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn146" horizontalalign="center"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn147"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn148"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn149">
                                     <wm-composite name="composite6_1">
-                                        <wm-label class="col-md-3" name="label11"></wm-label>
                                         <wm-container class="col-md-9" name="container6_1"></wm-container>
                                     </wm-composite>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn150">
                                     <wm-composite name="composite7_1">
-                                        <wm-label class="col-md-3" name="label13"></wm-label>
                                         <wm-container class="col-md-9" name="container7_1"></wm-container>
                                     </wm-composite>
                                 </wm-gridcolumn>
@@ -371,10 +410,7 @@ var _engineControlPage_Variables_ ={
                     <wm-gridcolumn columnwidth="1" name="gridcolumn73"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn74">
                         <wm-composite name="composite7">
-                            <wm-label class="col-md-3" name="label8" width="255px" caption="Specific Date"></wm-label>
-                            <wm-container class="col-md-9" name="container7">
-                                <wm-checkbox caption="Toggle" type="toggle" name="toggleAllOrOne" checkedvalue="One" uncheckedvalue="All" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].engineAllOrOne"></wm-checkbox>
-                            </wm-container>
+                            <wm-container class="col-md-9" name="container7"></wm-container>
                         </wm-composite>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn75"></wm-gridcolumn>
@@ -383,10 +419,7 @@ var _engineControlPage_Variables_ ={
                     <wm-gridcolumn columnwidth="1" name="gridcolumn70"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn71">
                         <wm-composite name="composite6">
-                            <wm-label class="col-md-3" name="label7" caption="Process Date" width="255px"></wm-label>
-                            <wm-container class="col-md-9" name="container6" horizontalalign="left">
-                                <wm-date name="date2" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[$i].processDate"></wm-date>
-                            </wm-container>
+                            <wm-container class="col-md-9" name="container6" horizontalalign="left"></wm-container>
                         </wm-composite>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn72"></wm-gridcolumn>
@@ -403,9 +436,7 @@ var _engineControlPage_Variables_ ={
                 </wm-gridrow>
                 <wm-gridrow name="gridrow26">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn61"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn62">
-                        <wm-button class="btn-default" type="button" caption="Update Control" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-save fa-lg" name="button4"></wm-button>
-                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn62"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn63"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow25">
