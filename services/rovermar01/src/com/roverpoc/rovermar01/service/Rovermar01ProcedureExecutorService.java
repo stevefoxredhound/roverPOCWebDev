@@ -124,6 +124,9 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverCollationControl() throws QueryParameterMismatchException;
 
 
+    List<Object> executeFunctionCallRoverEngineStatus() throws QueryParameterMismatchException;
+
+
 	
 	List<Object> executeWMCustomProcedure(CustomProcedure procedure) ;
 

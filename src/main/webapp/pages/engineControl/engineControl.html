@@ -41,13 +41,10 @@
                                     <wm-label caption="Settings" fontsize="30" textalign="left" name="label7_1"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn116"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn117" horizontalalign="center">
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn117" horizontalalign="left">
                                     <wm-label caption="Status" fontsize="30" textalign="left" name="label8_1"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn124"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn125" horizontalalign="center">
-                                    <wm-label caption="Orchestration" fontsize="30" textalign="left" name="label9"></wm-label>
-                                </wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow47">
                                 <wm-gridcolumn columnwidth="3" name="gridcolumn126" horizontalalign="left" bordercolor="#F3F3F4">
@@ -74,7 +71,7 @@
                                                 <wm-label class="col-md-3" name="label7" caption="Process Date" width="155px" fontsize="16" fontweight="bold"></wm-label>
                                             </wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn178_1" horizontalalign="right">
-                                                <wm-date name="date2" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[$i].processDate" fontsize="14" fontweight="bold" textalign="right"></wm-date>
+                                                <wm-date name="date2" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].processDate" fontsize="14" fontweight="bold" textalign="right"></wm-date>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow65_1">
@@ -109,7 +106,7 @@
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn176" horizontalalign="right"></wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn177" horizontalalign="right">
                                                 <wm-label class="col-md-3" caption="Compare" fontsize="12" width="155px" fontweight="bold" name="label12"></wm-label>
-                                                <wm-checkbox caption="Toggle" type="toggle" name="toggle5" width="40px" height="20px" checkedvalue="On" uncheckedvalue="Off" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[$i].engineStatus"></wm-checkbox>
+                                                <wm-checkbox caption="Toggle" type="toggle" name="toggle5" width="40px" height="20px" checkedvalue="On" uncheckedvalue="Off" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].engineStatus"></wm-checkbox>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow58">
@@ -151,7 +148,7 @@
                                                 <wm-label class="col-md-3" name="label4" caption="Logging Level" fontsize="16" width="255px" fontweight="bold"></wm-label>
                                             </wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn183">
-                                                <wm-slider name="sliderLoggingLevel" minvalue="1" maxvalue="5" width="200px" step="1" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].loggingLevel"></wm-slider>
+                                                <wm-slider name="sliderLoggingLevel" minvalue="1" maxvalue="5" width="150px" step="1" datavalue="bind:Variables.Rovermar01ControlData.dataSet.data[0].loggingLevel"></wm-slider>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow77">
@@ -169,79 +166,19 @@
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn127"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn128"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="1" name="gridcolumn129"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="3" name="gridcolumn130">
-                                    <wm-layoutgrid name="layoutgrid5">
-                                        <wm-gridrow name="gridrow71">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn181" height="40px"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn182_1"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow72_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn184"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn185">
-                                                <wm-button class="btn-default" type="button" caption="Run the Engine" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-play fa-lg" name="button2" on-click="Rovermar01ExecuteFunctionCallRoverEngineControl"></wm-button>
-                                            </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn190_1"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow73_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn187" height="60px"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn188_2"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn191_1"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow74_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn192_1"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn193_1">
-                                                <wm-button class="btn-default" type="button" caption="Collate Results" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-eject fa-lg" on-click="Rovermar01ExecuteFunctionCallRoverCollationControl"
-                                                name="button3"></wm-button>
-                                            </wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn194_1"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow75_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn195_1"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn196_1"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn197_1"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow76_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn198_1"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn199"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn200_1"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow77_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn201"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn202"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn203"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow78_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn204"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn205"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn206"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow79_1">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn207"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn208"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn209"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow80">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn210"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn211"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn212"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow81">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn213"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn214"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn215"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                        <wm-gridrow name="gridrow82">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn216"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn217"></wm-gridcolumn>
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn218"></wm-gridcolumn>
-                                        </wm-gridrow>
-                                    </wm-layoutgrid>
+                                <wm-gridcolumn columnwidth="7" name="gridcolumn128" height="500px">
+                                    <wm-grid readonlygrid="true" name="gridLogging" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverEngineStatus.dataSet" shownavigation="false" enablesort="false" fontsize="14" height="950px" pagesize="30">
+                                        <wm-grid-column binding="id" caption="Id" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="date_time" caption="Date_time" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" datepattern="yyyy-MM-dd HH:mm:ss:sss" formatpattern="toDate"
+                                        is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="PROCESS" caption="PROCESS" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="log_details" caption="Log_details" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    </wm-grid>
                                 </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn129"></wm-gridcolumn>
                             </wm-gridrow>
                             <wm-gridrow name="gridrow50">
-                                <wm-gridcolumn columnwidth="4" name="gridcolumn141" height="20px"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn141" height="100px"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn142"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn143"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="4" name="gridcolumn144"></wm-gridcolumn>
@@ -287,12 +224,17 @@
                 </wm-gridrow>
                 <wm-gridrow name="gridrow41">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn106"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn107"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn107">
+                        <wm-button class="btn-default" type="button" caption="Run the Engine" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-play fa-lg" name="button2" on-click="Rovermar01ExecuteFunctionCallRoverEngineControl"></wm-button>
+                    </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn108"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow40">
                     <wm-gridcolumn columnwidth="1" name="gridcolumn103"></wm-gridcolumn>
-                    <wm-gridcolumn columnwidth="10" name="gridcolumn104"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="10" name="gridcolumn104">
+                        <wm-button class="btn-default" type="button" caption="Collate Results" color="#000000" borderstyle="none" width="150" backgroundcolor="#ffefbf" iconclass="glyphicon glyphicon-eject fa-lg" on-click="Rovermar01ExecuteFunctionCallRoverCollationControl"
+                        name="button3"></wm-button>
+                    </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn105"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow39">

@@ -516,6 +516,18 @@ public class ProcedureExecutionController {
 		LOGGER.debug("got the result of named procedure {}", result);
 		return result;
 	}
+	@RequestMapping(value = "/procedure/execute/FunctionCallRoverEngineStatus", method = RequestMethod.GET)
+	@ApiOperation(value = "Process request to execute Procedure")
+	public List<Object> executeFunctionCallRoverEngineStatus(
+		 )
+	    {
+			LOGGER.debug("Executing named procedure FunctionCallRoverEngineStatus");
+
+		List<Object> result = procedureService.executeFunctionCallRoverEngineStatus();
+
+		LOGGER.debug("got the result of named procedure {}", result);
+		return result;
+	}
 	
 
 	@RequestMapping(value = "/procedure/execute/wm_custom", method = RequestMethod.POST)
