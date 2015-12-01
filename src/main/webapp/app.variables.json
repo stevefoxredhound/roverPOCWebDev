@@ -3585,6 +3585,7 @@
 		"_id": "wm-StaticGridClassifiListSelect-StaticGridClassifiListSelec-gridClassificationsListSelection-wm.Variable-1444999122323"
 	},
 	"Rovermar01CollatedResultsData": {
+		"name": "Rovermar01CollatedResultsData",
 		"type": "CollatedResults",
 		"isList": true,
 		"owner": "App",

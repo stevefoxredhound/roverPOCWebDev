@@ -36,5 +36,42 @@
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
 		"isDefault": true
+	},
+	"Rovermar01ExecuteFunctionCallRoverCollationControl": {
+		"name": "Rovermar01ExecuteFunctionCallRoverCollationControl",
+		"type": "rovermar01FunctionCallRoverCollationControlrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverCollationControl",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverCollationControl",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCollationControl",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCollationControl-wm.ServiceVariable-1448959394902"
 	}
 }
