@@ -3908,5 +3908,42 @@
 			"fullyQualifiedName": "com.roverpoc.rovermar01.CollatedResults",
 			"tableType": "TABLE"
 		}
+	},
+	"Rovermar01ExecuteFunctionCallRoverEngineStatus": {
+		"type": "rovermar01FunctionCallRoverEngineStatusrtnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverEngineStatus",
+		"operationType": "procedure",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverEngineStatus",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineStatus",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1449000192863",
+		"name": "Rovermar01ExecuteFunctionCallRoverEngineStatus"
 	}
 }

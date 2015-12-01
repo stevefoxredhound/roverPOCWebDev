@@ -146,6 +146,9 @@
     <operation operationType="procedure" name="FunctionCallRoverEngineStatus">
         <return typeRef="rovermar01FunctionCallRoverEngineStatusrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverCollationStatus">
+        <return typeRef="rovermar01FunctionCallRoverCollationStatusrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -502,7 +505,8 @@
             <element name="PROD" typeRef="java.lang.Long"/>
         </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverCollationControlrtnType"/>
-        <dataobject javaType="rovermar01FunctionCallRoverEngineStatusrtnType">
+        <dataobject javaType="rovermar01FunctionCallRoverEngineStatusrtnType"/>
+        <dataobject javaType="rovermar01FunctionCallRoverCollationStatusrtnType">
             <element name="id" typeRef="java.lang.Integer"/>
             <element name="log_details" typeRef="java.lang.String"/>
             <element name="core_system" typeRef="java.lang.String"/>

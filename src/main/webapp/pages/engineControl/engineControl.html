@@ -28,7 +28,7 @@
                     <wm-gridcolumn columnwidth="1" name="gridcolumn15"></wm-gridcolumn>
                 </wm-gridrow>
                 <wm-gridrow name="gridrow6">
-                    <wm-gridcolumn columnwidth="1" name="gridcolumn16" height="60"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn16" height="40"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="10" name="gridcolumn17"></wm-gridcolumn>
                     <wm-gridcolumn columnwidth="1" name="gridcolumn18"></wm-gridcolumn>
                 </wm-gridrow>
@@ -42,7 +42,7 @@
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn116"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="5" name="gridcolumn117" horizontalalign="left">
-                                    <wm-label caption="Status" fontsize="30" textalign="left" name="label8_1"></wm-label>
+                                    <wm-label caption="Engine Status" fontsize="30" textalign="left" name="label8_1"></wm-label>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn124"></wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="2" name="gridcolumn180_2" horizontalalign="center" backgroundcolor="#F3F3F4">
@@ -122,7 +122,7 @@
                                             <wm-gridcolumn columnwidth="1" name="gridcolumn204"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow58">
-                                            <wm-gridcolumn columnwidth="4" name="gridcolumn172" height="40px"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn172" height="20px"></wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="4" name="gridcolumn173"></wm-gridcolumn>
                                         </wm-gridrow>
                                         <wm-gridrow name="gridrow57">
@@ -182,8 +182,34 @@
                                     </wm-layoutgrid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn127"></wm-gridcolumn>
-                                <wm-gridcolumn columnwidth="5" name="gridcolumn128" height="500px">
-                                    <wm-grid readonlygrid="true" name="gridLogging" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverEngineStatus.dataSet" shownavigation="false" enablesort="false" fontsize="14" height="950px" pagesize="30">
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn128" height="950px" readonlygrid="true">
+                                    <wm-grid readonlygrid="true" name="gridLogging" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverEngineStatus.dataSet" shownavigation="false" enablesort="false" fontsize="14" height="400px" pagesize="10">
+                                        <wm-grid-column binding="date_time" caption="Timestamp" type="string" width="30%" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" datepattern="yyyy-MM-dd HH:mm:ss:sss" formatpattern="toDate"
+                                        is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="PROCESS" caption="Process" type="string" width="30%" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="core_system" caption="System" type="string" width="25%" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                        mobiledisplay="true"></wm-grid-column>
+                                        <wm-grid-column binding="log_details" caption="Status" type="string" width="15%" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true"
+                                        mobiledisplay="true"></wm-grid-column>
+                                    </wm-grid>
+                                    <wm-layoutgrid name="layoutgrid6">
+                                        <wm-gridrow name="gridrow76_1">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn209"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn210"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn211"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow77_1">
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn212"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn213"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="4" name="gridcolumn214"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow78_1">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn215">
+                                                <wm-label caption="Collation Status" fontsize="30" textalign="left" name="label16_1"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-grid readonlygrid="true" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverCollationStatus.dataSet" shownavigation="false" enablesort="false" fontsize="14" height="400px" pagesize="10" name="grid5">
                                         <wm-grid-column binding="date_time" caption="Timestamp" type="string" width="30%" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" datepattern="yyyy-MM-dd HH:mm:ss:sss" formatpattern="toDate"
                                         is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                         <wm-grid-column binding="PROCESS" caption="Process" type="string" width="30%" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>

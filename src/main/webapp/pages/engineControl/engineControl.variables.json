@@ -117,7 +117,7 @@
 		"autoStart": true,
 		"repeating": true,
 		"delay": 3000,
-		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverEngineStatus",
+		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverEngineStatus;Rovermar01ExecuteFunctionCallRoverCollationStatus",
 		"dataBinding": [
 			{
 				"name": "dataSet",
@@ -126,5 +126,42 @@
 		],
 		"category": "wm.TimerVariable",
 		"_id": "wm-timerControlPage-wm.TimerVariable-1448993000742"
+	},
+	"Rovermar01ExecuteFunctionCallRoverCollationStatus": {
+		"type": "rovermar01FunctionCallRoverCollationStatusrtnType",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 30,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverCollationStatus",
+		"operationType": "get",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"isDefault": true,
+		"wmServiceOperationInfo": {
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverCollationStatus",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCollationStatus",
+			"parameters": []
+		},
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCollationStatus-wm.ServiceVariable-1449002726238",
+		"name": "Rovermar01ExecuteFunctionCallRoverCollationStatus"
 	}
 }
