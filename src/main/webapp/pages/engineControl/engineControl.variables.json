@@ -110,5 +110,21 @@
 			"parameters": []
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1448988484522"
+	},
+	"timerControlPage": {
+		"name": "timerControlPage",
+		"owner": "Page",
+		"autoStart": true,
+		"repeating": true,
+		"delay": 3000,
+		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverEngineStatus",
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"fields": []
+			}
+		],
+		"category": "wm.TimerVariable",
+		"_id": "wm-timerControlPage-wm.TimerVariable-1448993000742"
 	}
 }
