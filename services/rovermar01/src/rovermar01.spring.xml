@@ -17,7 +17,7 @@
                       p:jdbcUrl="${rovermar01.url}"
                       p:user="${rovermar01.username}"
                       p:password="${rovermar01.password}"
-                      p:maxPoolSize="4"
+                      p:maxPoolSize="10"
                       p:minPoolSize="2"
                       p:maxIdleTime="600"
                       p:maxStatements="50"
