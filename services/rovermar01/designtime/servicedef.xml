@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="rovermar01" type="DataService" springFile="rovermar01.spring.xml">
-    <operation operationType="procedure" name="FunctionCallRoverNumberOfUncategorisedGroups">
-        <return typeRef="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="FunctionCallRoverUncategorisedGroupsBySystem">
         <return typeRef="rovermar01FunctionCallRoverUncategorisedGroupsBySystemrtnType" isList="false"/>
     </operation>
@@ -118,9 +115,6 @@
     <operation operationType="procedure" name="FunctionCallRoverSystemCount">
         <return isList="false"/>
     </operation>
-    <operation operationType="procedure" name="FunctionCallRoverVennSetCountsForAllSystems">
-        <return typeRef="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="FunctionCallRoverDuplicateCountForProd">
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverDuplicateCountForProdrtnType" isList="false"/>
@@ -136,10 +130,6 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverSystemDetailCountsrtnType" isList="false"/>
     </operation>
-    <operation operationType="procedure" name="FunctionCallRoverVennSetCounts">
-        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
-        <return typeRef="rovermar01FunctionCallRoverVennSetCountsrtnType" isList="false"/>
-    </operation>
     <operation operationType="procedure" name="FunctionCallRoverCollationControl">
         <return typeRef="rovermar01FunctionCallRoverCollationControlrtnType" isList="false"/>
     </operation>
@@ -148,6 +138,19 @@
     </operation>
     <operation operationType="procedure" name="FunctionCallRoverCollationStatus">
         <return typeRef="rovermar01FunctionCallRoverCollationStatusrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverNumberOfUncategorisedGroups">
+        <return isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverVennSetCountsForAllSystems">
+        <return typeRef="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverDashboardVennCounts">
+        <return typeRef="rovermar01FunctionCallRoverDashboardVennCountsrtnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverVennSetCounts">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverVennSetCountsrtnType" isList="false"/>
     </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
@@ -459,16 +462,6 @@
             <element name="System" typeRef="java.lang.String"/>
             <element name="PROD" typeRef="java.lang.Long"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType">
-            <element name="BOTH" typeRef="java.lang.Long"/>
-            <element name="PROD ONLY" typeRef="java.lang.Long"/>
-            <element name="UAT ONLY" typeRef="java.lang.Long"/>
-            <element name="PROD Duplicates" typeRef="java.lang.Long"/>
-            <element name="UAT" typeRef="java.lang.Long"/>
-            <element name="UAT Duplicates" typeRef="java.lang.Long"/>
-            <element name="System" typeRef="java.lang.String"/>
-            <element name="PROD" typeRef="java.lang.Long"/>
-        </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverDuplicateCountForProdrtnType">
             <element name="NumberOfDuplicates" typeRef="java.lang.Long"/>
         </dataobject>
@@ -492,18 +485,6 @@
             <element name="NumRecsDiffCat" typeRef="java.lang.Long"/>
             <element name="NumRecsDiff" typeRef="java.lang.Long"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsrtnType">
-            <element name="BOTH" typeRef="java.lang.Long"/>
-            <element name="PROD ONLY" typeRef="java.lang.Long"/>
-            <element name="UAT ONLY" typeRef="java.lang.Long"/>
-            <element name="PROD Duplicates" typeRef="java.math.BigDecimal"/>
-            <element name="UAT" typeRef="java.lang.Long"/>
-            <element name="UAT Duplicates" typeRef="java.math.BigDecimal"/>
-            <element name="PROD Total" typeRef="java.lang.Long"/>
-            <element name="UAT Total" typeRef="java.lang.Long"/>
-            <element name="System" typeRef="java.lang.String"/>
-            <element name="PROD" typeRef="java.lang.Long"/>
-        </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverCollationControlrtnType"/>
         <dataobject javaType="rovermar01FunctionCallRoverEngineStatusrtnType"/>
         <dataobject javaType="rovermar01FunctionCallRoverCollationStatusrtnType">
@@ -512,6 +493,27 @@
             <element name="core_system" typeRef="java.lang.String"/>
             <element name="PROCESS" typeRef="java.lang.String"/>
             <element name="date_time" typeRef="java.sql.Timestamp"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType">
+            <element name="core_system" typeRef="java.lang.String"/>
+            <element name="uat_only" typeRef="java.lang.Integer"/>
+            <element name="prod_only" typeRef="java.lang.Integer"/>
+            <element name="uat_dups" typeRef="java.lang.Integer"/>
+            <element name="prod_unique" typeRef="java.lang.Integer"/>
+            <element name="prod_dups" typeRef="java.lang.Integer"/>
+            <element name="uat_unique" typeRef="java.lang.Integer"/>
+            <element name="in_both" typeRef="java.lang.Integer"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverDashboardVennCountsrtnType"/>
+        <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsrtnType">
+            <element name="core_system" typeRef="java.lang.String"/>
+            <element name="uat_only" typeRef="java.lang.Integer"/>
+            <element name="prod_only" typeRef="java.lang.Integer"/>
+            <element name="uat_dups" typeRef="java.lang.Integer"/>
+            <element name="prod_unique" typeRef="java.lang.Integer"/>
+            <element name="prod_dups" typeRef="java.lang.Integer"/>
+            <element name="uat_unique" typeRef="java.lang.Integer"/>
+            <element name="in_both" typeRef="java.lang.Integer"/>
         </dataobject>
     </dataobjects>
 </service>

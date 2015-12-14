@@ -9,7 +9,8 @@
 		"redirectTo": "Login",
 		"useDefaultSuccessHandler": true,
 		"category": "wm.LogoutVariable",
-		"_id": "wm-logoutVariable-wm.LogoutVariable-1444054009709"
+		"_id": "wm-logoutVariable-wm.LogoutVariable-1444054009709",
+		"$$hashKey": "object:4402"
 	},
 	"Rovermar01LoggingData": {
 		"name": "Rovermar01LoggingData",
@@ -124,7 +125,8 @@
 		"tableName": "logging",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4414"
 	},
 	"goToPage_EditRule": {
 		"name": "goToPage_EditRule",
@@ -158,60 +160,30 @@
 	},
 	"staticGridVenMain": {
 		"name": "staticGridVenMain",
-		"type": "rover2procVenMainrtnType",
+		"type": "string",
 		"isList": false,
 		"owner": "App",
 		"dataSet": {
-			"BOTH": "",
-			"PROD_ONLY": "",
-			"UAT": "",
-			"UAT_ONLY": "",
-			"System": "",
-			"PROD": ""
+			"dataValue": ""
 		},
 		"dataBinding": [
 			{
-				"isList": false,
 				"name": "dataSet",
-				"type": "rover2procVenMainrtnType",
 				"fields": [
 					{
-						"isList": false,
-						"name": "BOTH",
-						"type": "java.lang.Integer"
-					},
-					{
-						"isList": false,
-						"name": "PROD_ONLY",
-						"type": "java.lang.Integer"
-					},
-					{
-						"isList": false,
-						"name": "UAT",
-						"type": "java.lang.Integer"
-					},
-					{
-						"isList": false,
-						"name": "UAT_ONLY",
-						"type": "java.lang.Integer"
-					},
-					{
-						"isList": false,
-						"name": "System",
-						"value": "bind:Widgets.gridVenMain.selecteditem.System",
-						"type": "java.lang.String"
-					},
-					{
-						"isList": false,
-						"name": "PROD",
-						"type": "java.lang.Integer"
+						"name": "dataValue",
+						"type": "string",
+						"value": "bind:Widgets.gridVenMain.selecteditem.core_system"
 					}
-				]
+				],
+				"type": "object",
+				"isList": false
 			}
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-staticGridVenMain-staticGidVenMain-staticGraham-wm.Variable-1444125737245"
+		"_id": "wm-staticGridVenMain-staticGidVenMain-staticGraham-wm.Variable-1444125737245",
+		"$$hashKey": "object:4424"
 	},
 	"Rovermar01OperatorsData": {
 		"name": "Rovermar01OperatorsData",
@@ -313,7 +285,8 @@
 		"tableName": "operators",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4417"
 	},
 	"Rovermar01CoreSystemsData": {
 		"name": "Rovermar01CoreSystemsData",
@@ -527,7 +500,47 @@
 		"tableName": "core_systems",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4409"
+	},
+	"Rovermar01ExecuteFunctionCallRoverEngineStatus": {
+		"name": "Rovermar01ExecuteFunctionCallRoverEngineStatus",
+		"type": "rovermar01FunctionCallRoverEngineStatusrtnType",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"service": "rovermar01",
+		"operation": "executeFunctionCallRoverEngineStatus",
+		"operationType": "get",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"serviceSubType": "procedure",
+		"wmServiceOperationInfo": {
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineStatus",
+			"httpMethod": "get",
+			"name": "executeFunctionCallRoverEngineStatus",
+			"parameters": []
+		},
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1449000192863",
+		"isDefault": true,
+		"$$hashKey": "object:4410"
 	},
 	"loginVariable": {
 		"name": "loginVariable",
@@ -561,7 +574,8 @@
 		"onError": "Javascript",
 		"useDefaultSuccessHandler": false,
 		"category": "wm.LoginVariable",
-		"_id": "wm-loginVariable-wm.LoginVariable-1444054009709"
+		"_id": "wm-loginVariable-wm.LoginVariable-1444054009709",
+		"$$hashKey": "object:4400"
 	},
 	"goToPage_Unclassified": {
 		"name": "goToPage_Unclassified",
@@ -892,7 +906,8 @@
 		"tableName": "GMI_prod_messages",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4412"
 	},
 	"goToPage_ComparisonRules": {
 		"name": "goToPage_ComparisonRules",
@@ -1087,7 +1102,8 @@
 		"tableName": "NC_prod_messages",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4415"
 	},
 	"goToPage_UATRecords": {
 		"name": "goToPage_UATRecords",
@@ -1198,7 +1214,8 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-staticProdSytem-staticCoreSystem-wm.Variable-1444056104442"
+		"_id": "wm-staticProdSytem-staticCoreSystem-wm.Variable-1444056104442",
+		"$$hashKey": "object:4425"
 	},
 	"loggedInUser": {
 		"name": "loggedInUser",
@@ -1227,7 +1244,8 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-loggedInUser-wm.Variable-1444054009710"
+		"_id": "wm-loggedInUser-wm.Variable-1444054009710",
+		"$$hashKey": "object:4399"
 	},
 	"goToPage_OperatorMaintenance": {
 		"name": "goToPage_OperatorMaintenance",
@@ -1548,7 +1566,8 @@
 		"tableName": "GMI_uat_messages",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4413"
 	},
 	"goToPage_Categories": {
 		"name": "goToPage_Categories",
@@ -1730,7 +1749,8 @@
 		"tableName": "control",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4408"
 	},
 	"goToPage_ClassAndCat": {
 		"name": "goToPage_ClassAndCat",
@@ -1784,7 +1804,8 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-supportedLocale-wm.Variable1402640443182"
+		"_id": "wm-supportedLocale-wm.Variable1402640443182",
+		"$$hashKey": "object:4427"
 	},
 	"Rovermar01UserLoginData": {
 		"name": "Rovermar01UserLoginData",
@@ -1914,7 +1935,8 @@
 		"tableName": "user_login",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4421"
 	},
 	"goToPage_NoDifferences": {
 		"name": "goToPage_NoDifferences",
@@ -1925,6 +1947,332 @@
 		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage_NoDifferences-wm.NavigationVariable-1444385527271"
+	},
+	"Rovermar01CollatedResultsData": {
+		"name": "Rovermar01CollatedResultsData",
+		"type": "CollatedResults",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "rovermar01",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"package": "com.roverpoc.rovermar01.CollatedResults",
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateTime",
+					"type": "datetime",
+					"hibernateType": "datetime",
+					"fullyQualifiedType": "datetime",
+					"columnName": "date_time",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "processDate",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "process_date",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 10,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "coreSystem",
+					"type": "text",
+					"hibernateType": "string",
+					"fullyQualifiedType": "text",
+					"columnName": "core_system",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 65535,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numProd",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_prod",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numProdOnly",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_prod_only",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numBoth",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_both",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numUatOnly",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_uat_only",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numUat",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_uat",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numMsgsNoDiff",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_msgs_no_diff",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numMsgsDiff",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_msgs_diff",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numMsgsDiffUncat",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_msgs_diff_uncat",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numMsgsDiffCat",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_msgs_diff_cat",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numGroups",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_groups",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numGroupsUncat",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_groups_uncat",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numGroupsCat",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_groups_cat",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numMsgsCoverage",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_msgs_coverage",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numGroupCoverage",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_group_coverage",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numProdDuplicates",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_prod_duplicates",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numUatDuplicates",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_uat_duplicates",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": "assigned",
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "CollatedResults",
+			"fullyQualifiedName": "com.roverpoc.rovermar01.CollatedResults",
+			"tableType": "TABLE"
+		},
+		"_id": "wm-Rovermar01CollatedResultsData-wm.LiveVariable-1448923132577",
+		"isDefault": true,
+		"tableName": "collated_results",
+		"dbSystem": "MySQL",
+		"category": "wm.LiveVariable",
+		"tableType": "TABLE",
+		"$$hashKey": "object:4406"
 	},
 	"staticGridCatQueryDValues": {
 		"name": "staticGridCatQueryDValues",
@@ -1979,7 +2327,8 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-staticGridCatQueryDValues-wm.Variable-1445346713311"
+		"_id": "wm-staticGridCatQueryDValues-wm.Variable-1445346713311",
+		"$$hashKey": "object:4422"
 	},
 	"staticVariable1": {
 		"name": "staticVariable1",
@@ -2003,7 +2352,8 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-staticVariable1-wm.Variable-1447946397350"
+		"_id": "wm-staticVariable1-wm.Variable-1447946397350",
+		"$$hashKey": "object:4426"
 	},
 	"goToPage_Main": {
 		"name": "goToPage_Main",
@@ -2142,7 +2492,8 @@
 		"tableName": "classifications",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4405"
 	},
 	"Rovermar01CategoriesData": {
 		"name": "Rovermar01CategoriesData",
@@ -2230,7 +2581,8 @@
 		"tableName": "categories",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4403"
 	},
 	"goToPage_AboutUs": {
 		"name": "goToPage_AboutUs",
@@ -2411,7 +2763,8 @@
 		"tableName": "sysa_uat_messages",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4420"
 	},
 	"goToPage_CombinedRecords": {
 		"name": "goToPage_CombinedRecords",
@@ -2606,7 +2959,8 @@
 		"tableName": "NC_uat_messages",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4416"
 	},
 	"goToPage_UserMaintenance": {
 		"name": "goToPage_UserMaintenance",
@@ -2745,7 +3099,8 @@
 		"tableName": "results",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4418"
 	},
 	"Rovermar01SysaProdMessagesData": {
 		"name": "Rovermar01SysaProdMessagesData",
@@ -2916,7 +3271,8 @@
 		"tableName": "sysa_prod_messages",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4419"
 	},
 	"Rovermar01FilterRulesData": {
 		"name": "Rovermar01FilterRulesData",
@@ -3228,7 +3584,8 @@
 		"tableName": "filter_rules",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4411"
 	},
 	"goToPage_ClassificactionDiffe": {
 		"name": "goToPage_ClassificactionDiffe",
@@ -3259,7 +3616,8 @@
 		"transformationRequired": false,
 		"useDefaultSuccessHandler": true,
 		"category": "wm.LogoutVariable",
-		"_id": "wm-logout-wm.LogoutVariable-1444116468367"
+		"_id": "wm-logout-wm.LogoutVariable-1444116468367",
+		"$$hashKey": "object:4401"
 	},
 	"Rovermar01ComparisonRulesData": {
 		"name": "Rovermar01ComparisonRulesData",
@@ -3375,7 +3733,8 @@
 		"tableName": "comparison_rules",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4407"
 	},
 	"goToPage_Uncategorised": {
 		"name": "goToPage_Uncategorised",
@@ -3557,7 +3916,8 @@
 		"tableName": "categorisation_rules",
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
-		"tableType": "TABLE"
+		"tableType": "TABLE",
+		"$$hashKey": "object:4404"
 	},
 	"StaticGridClassifiListSelect": {
 		"name": "StaticGridClassifiListSelect",
@@ -3582,368 +3942,7 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-StaticGridClassifiListSelect-StaticGridClassifiListSelec-gridClassificationsListSelection-wm.Variable-1444999122323"
-	},
-	"Rovermar01CollatedResultsData": {
-		"name": "Rovermar01CollatedResultsData",
-		"type": "CollatedResults",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "rovermar01",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "MySQL",
-		"_id": "wm-Rovermar01CollatedResultsData-wm.LiveVariable-1448923132577",
-		"package": "com.roverpoc.rovermar01.CollatedResults",
-		"tableName": "collated_results",
-		"tableType": "TABLE",
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "dateTime",
-					"type": "datetime",
-					"hibernateType": "datetime",
-					"fullyQualifiedType": "datetime",
-					"columnName": "date_time",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "processDate",
-					"type": "date",
-					"hibernateType": "date",
-					"fullyQualifiedType": "date",
-					"columnName": "process_date",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 10,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "coreSystem",
-					"type": "text",
-					"hibernateType": "string",
-					"fullyQualifiedType": "text",
-					"columnName": "core_system",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 65535,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numProd",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_prod",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numProdOnly",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_prod_only",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numBoth",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_both",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numUatOnly",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_uat_only",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numUat",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_uat",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numMsgsNoDiff",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_msgs_no_diff",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numMsgsDiff",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_msgs_diff",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numMsgsDiffUncat",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_msgs_diff_uncat",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numMsgsDiffCat",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_msgs_diff_cat",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numGroups",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_groups",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numGroupsUncat",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_groups_uncat",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numGroupsCat",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_groups_cat",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numMsgsCoverage",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_msgs_coverage",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numGroupCoverage",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_group_coverage",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numProdDuplicates",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_prod_duplicates",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "numUatDuplicates",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "num_uat_duplicates",
-					"isPrimaryKey": false,
-					"notNull": false,
-					"length": 255,
-					"precision": 19,
-					"generator": "assigned",
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "CollatedResults",
-			"fullyQualifiedName": "com.roverpoc.rovermar01.CollatedResults",
-			"tableType": "TABLE"
-		}
-	},
-	"Rovermar01ExecuteFunctionCallRoverEngineStatus": {
-		"name": "Rovermar01ExecuteFunctionCallRoverEngineStatus",
-		"type": "rovermar01FunctionCallRoverEngineStatusrtnType",
-		"isList": false,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverEngineStatus",
-		"operationType": "procedure",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverEngineStatus",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineStatus",
-			"parameters": []
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1449000192863"
+		"_id": "wm-StaticGridClassifiListSelect-StaticGridClassifiListSelec-gridClassificationsListSelection-wm.Variable-1444999122323",
+		"$$hashKey": "object:4423"
 	}
 }

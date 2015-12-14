@@ -33,9 +33,9 @@
 		"transformationRequired": false,
 		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverShowDataDifferences",
 			"httpMethod": "get",
 			"name": "executeFunctionCallRoverShowDataDifferences",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverShowDataDifferences",
 			"parameters": [
 				{
 					"name": "p1",

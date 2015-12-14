@@ -14,7 +14,7 @@
 				"fields": [
 					{
 						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.System",
+						"value": "bind:Variables.staticGridVenMain.dataSet.dataValue",
 						"type": "string"
 					}
 				]
@@ -31,9 +31,7 @@
 		"autoUpdate": false,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
+		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
 			"httpMethod": "get",
 			"name": "executeFunctionCallRoverSystemDetailCounts",
@@ -46,7 +44,11 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverSystemDetailCounts-wm.ServiceVariable-1448908522423"
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverSystemDetailCounts-wm.ServiceVariable-1448908522423",
+		"isDefault": true,
+		"$$hashKey": "object:12467"
 	},
 	"Rovermar01ExecuteFunctionCallRoverVennSetCounts": {
 		"name": "Rovermar01ExecuteFunctionCallRoverVennSetCounts",
@@ -63,7 +65,7 @@
 				"fields": [
 					{
 						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.System",
+						"value": "bind:Variables.staticGridVenMain.dataSet.dataValue",
 						"type": "string"
 					}
 				]
@@ -80,9 +82,7 @@
 		"autoUpdate": false,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
+		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
 			"httpMethod": "get",
 			"name": "executeFunctionCallRoverVennSetCounts",
@@ -95,6 +95,10 @@
 				}
 			]
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverVennSetCounts-wm.ServiceVariable-1448909467119"
+		"serviceType": "DataService",
+		"category": "wm.ServiceVariable",
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverVennSetCounts-wm.ServiceVariable-1448909467119",
+		"isDefault": true,
+		"$$hashKey": "object:12468"
 	}
 }

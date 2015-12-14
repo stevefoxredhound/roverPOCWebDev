@@ -10,9 +10,6 @@ import com.wavemaker.runtime.data.exception.QueryParameterMismatchException;
 
 public interface Rovermar01ProcedureExecutorService {
 
-    List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups() throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionCallRoverUncategorisedGroupsBySystem() throws QueryParameterMismatchException;
 
 
@@ -103,9 +100,6 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverSystemCount() throws QueryParameterMismatchException;
 
 
-    List<Object> executeFunctionCallRoverVennSetCountsForAllSystems() throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionCallRoverDuplicateCountForProd( java.lang.String p1) throws QueryParameterMismatchException;
 
 
@@ -118,9 +112,6 @@ public interface Rovermar01ProcedureExecutorService {
     List<Object> executeFunctionCallRoverSystemDetailCounts( java.lang.String p1) throws QueryParameterMismatchException;
 
 
-    List<Object> executeFunctionCallRoverVennSetCounts( java.lang.String p1) throws QueryParameterMismatchException;
-
-
     List<Object> executeFunctionCallRoverCollationControl() throws QueryParameterMismatchException;
 
 
@@ -128,6 +119,18 @@ public interface Rovermar01ProcedureExecutorService {
 
 
     List<Object> executeFunctionCallRoverCollationStatus() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverNumberOfUncategorisedGroups() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverVennSetCountsForAllSystems() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverDashboardVennCounts() throws QueryParameterMismatchException;
+
+
+    List<Object> executeFunctionCallRoverVennSetCounts( java.lang.String p1) throws QueryParameterMismatchException;
 
 
 	
