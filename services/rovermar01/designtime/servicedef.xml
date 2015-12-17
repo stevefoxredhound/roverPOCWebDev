@@ -152,6 +152,14 @@
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
         <return typeRef="rovermar01FunctionCallRoverVennSetCountsrtnType" isList="false"/>
     </operation>
+    <operation operationType="procedure" name="FunctionCallRoverReportHealthCheckTable">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverReportHealthCheckTablertnType" isList="false"/>
+    </operation>
+    <operation operationType="procedure" name="FunctionCallRoverReportHealthCheck">
+        <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
+        <return typeRef="rovermar01FunctionCallRoverReportHealthCheckrtnType" isList="false"/>
+    </operation>
     <dataobjects>
         <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -514,6 +522,29 @@
             <element name="prod_dups" typeRef="java.lang.Integer"/>
             <element name="uat_unique" typeRef="java.lang.Integer"/>
             <element name="in_both" typeRef="java.lang.Integer"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverReportHealthCheckTablertnType">
+            <element name="category" typeRef="java.lang.String"/>
+            <element name="Total" typeRef="java.math.BigDecimal"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverReportHealthCheckrtnType">
+            <element name="@HealthCheckRegressionImage" typeRef="java.lang.String"/>
+            <element name="@RoutingProdUnique" typeRef="java.math.BigDecimal"/>
+            <element name="@RoutingProdOnly" typeRef="java.math.BigDecimal"/>
+            <element name="@HealthCheckRegression" typeRef="java.math.BigDecimal"/>
+            <element name="@RegressionTotalCategorised" typeRef="java.math.BigDecimal"/>
+            <element name="@RoutingUATOnly" typeRef="java.math.BigDecimal"/>
+            <element name="@HealthCheckDuplication" typeRef="java.math.BigDecimal"/>
+            <element name="@RegressionTotalUncategorised" typeRef="java.math.BigDecimal"/>
+            <element name="@DuplicationUATDups" typeRef="java.math.BigDecimal"/>
+            <element name="@HealthCheckRegressionExpected" typeRef="java.math.BigDecimal"/>
+            <element name="@RoutingUATUnique" typeRef="java.math.BigDecimal"/>
+            <element name="@HealthCheckRoutingImage" typeRef="java.lang.String"/>
+            <element name="@DuplicationProdDups" typeRef="java.math.BigDecimal"/>
+            <element name="@RoutingInBoth" typeRef="java.math.BigDecimal"/>
+            <element name="@HealthCheckRouting" typeRef="java.math.BigDecimal"/>
+            <element name="@RegressionWithoutRegression" typeRef="java.math.BigDecimal"/>
+            <element name="@HealthCheckDuplicationImage" typeRef="java.lang.String"/>
         </dataobject>
     </dataobjects>
 </service>
