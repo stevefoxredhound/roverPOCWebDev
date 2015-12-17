@@ -40,12 +40,7 @@ Application.$controller("grid2Controller", ["$scope",
 
 
 
-Application.$controller("grid6Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
+
 
 Application.$controller("grid7Controller", ["$scope",
 	function($scope) {
