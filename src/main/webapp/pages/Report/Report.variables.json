@@ -35,7 +35,7 @@
 			"parameters": []
 		},
 		"_id": "wm-Rovermar01ExecuteGCT_Test-wm.ServiceVariable-1450202201919",
-		"$$hashKey": "object:91904"
+		"$$hashKey": "object:24962"
 	},
 	"Rovermar01ExecuteFunctionCallRoverReportHealthCheck": {
 		"name": "Rovermar01ExecuteFunctionCallRoverReportHealthCheck",
@@ -53,7 +53,7 @@
 					{
 						"name": "p1",
 						"type": "string",
-						"value": "2015-12-18"
+						"value": "bind:Variables.staticReportDate.dataSet.dataValue"
 					}
 				]
 			}
@@ -85,7 +85,7 @@
 			]
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverReportHealthCheck-wm.ServiceVariable-1450268967562",
-		"$$hashKey": "object:91902"
+		"$$hashKey": "object:24960"
 	},
 	"Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable": {
 		"name": "Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable",
@@ -103,7 +103,7 @@
 					{
 						"name": "p1",
 						"type": "string",
-						"value": "2015-12-18"
+						"value": "bind:Variables.staticReportDate.dataSet.dataValue"
 					}
 				]
 			}
@@ -135,6 +135,6 @@
 			]
 		},
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable-wm.ServiceVariable-1450273390443",
-		"$$hashKey": "object:91903"
+		"$$hashKey": "object:24961"
 	}
 }

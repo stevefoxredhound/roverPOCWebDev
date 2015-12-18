@@ -128,7 +128,8 @@ var _MainPage_Variables_ ={
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverUncategorisedGroupsBySystem-wm.ServiceVariable-1447847602930",
-		"isDefault": true
+		"isDefault": true,
+		"$$hashKey": "object:31559"
 	},
 	"timerVennMain": {
 		"name": "timerVennMain",
@@ -144,7 +145,8 @@ var _MainPage_Variables_ ={
 				"name": "dataSet",
 				"fields": []
 			}
-		]
+		],
+		"$$hashKey": "object:31561"
 	},
 	"Rovermar01ExecuteFunctionCallRoverDashboardCounts": {
 		"name": "Rovermar01ExecuteFunctionCallRoverDashboardCounts",
@@ -182,7 +184,8 @@ var _MainPage_Variables_ ={
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDashboardCounts-wm.ServiceVariable-1448833100216",
-		"isDefault": true
+		"isDefault": true,
+		"$$hashKey": "object:31557"
 	},
 	"Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems": {
 		"name": "Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems",
@@ -201,7 +204,7 @@ var _MainPage_Variables_ ={
 		],
 		"saveInPhonegap": false,
 		"firstRow": 0,
-		"maxResults": 20,
+		"maxResults": 50,
 		"designMaxResults": 10,
 		"service": "rovermar01",
 		"operation": "executeFunctionCallRoverVennSetCountsForAllSystems",
@@ -212,15 +215,16 @@ var _MainPage_Variables_ ={
 		"transformationRequired": false,
 		"serviceSubType": "procedure",
 		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverVennSetCountsForAllSystems",
 			"httpMethod": "get",
 			"name": "executeFunctionCallRoverVennSetCountsForAllSystems",
+			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverVennSetCountsForAllSystems",
 			"parameters": []
 		},
 		"serviceType": "DataService",
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems-wm.ServiceVariable-1447847251666",
-		"isDefault": true
+		"isDefault": true,
+		"$$hashKey": "object:31560"
 	},
 	"Rovermar01ExecuteFunctionCallRoverDashboardVennCounts": {
 		"name": "Rovermar01ExecuteFunctionCallRoverDashboardVennCounts",
@@ -257,7 +261,8 @@ var _MainPage_Variables_ ={
 			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverDashboardVennCounts",
 			"parameters": []
 		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDashboardVennCounts-wm.ServiceVariable-1449866675539"
+		"_id": "wm-Rovermar01ExecuteFunctionCallRoverDashboardVennCounts-wm.ServiceVariable-1449866675539",
+		"$$hashKey": "object:31558"
 	}
 }
 </script>
@@ -410,8 +415,8 @@ var _MainPage_Variables_ ={
                             </wm-gridrow>
                             <wm-gridrow name="gridrow31_1">
                                 <wm-gridcolumn columnwidth="7" name="gridcolumn96_1" readonlygrid="true">
-                                    <wm-grid name="gridVenMain" readonlygrid="true" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems.dataSet" shownavigation="false" gridcaption="Select a system below to drill down" on-select="goToPage_SystemDetails"
-                                    enablesort="false" pagesize="null" fontsize="14" height="500" title="Select a system below">
+                                    <wm-grid name="gridVenMain" readonlygrid="true" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems.dataSet" shownavigation="true" gridcaption="Select a system below to drill down" on-select="goToPage_SystemDetails"
+                                    enablesort="false" pagesize="20" fontsize="14" height="800" title="Select a system below">
                                         <wm-grid-column binding="core_system" caption="System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                         <wm-grid-column binding="prod_dups" caption="PROD Duplicates" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber"
                                         is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>

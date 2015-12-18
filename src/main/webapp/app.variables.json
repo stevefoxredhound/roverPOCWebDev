@@ -10,7 +10,7 @@
 		"useDefaultSuccessHandler": true,
 		"category": "wm.LogoutVariable",
 		"_id": "wm-logoutVariable-wm.LogoutVariable-1444054009709",
-		"$$hashKey": "object:9987"
+		"$$hashKey": "object:1179"
 	},
 	"Rovermar01LoggingData": {
 		"name": "Rovermar01LoggingData",
@@ -126,7 +126,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9999"
+		"$$hashKey": "object:1191"
 	},
 	"goToPage_EditRule": {
 		"name": "goToPage_EditRule",
@@ -183,7 +183,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-staticGridVenMain-staticGidVenMain-staticGraham-wm.Variable-1444125737245",
-		"$$hashKey": "object:10009"
+		"$$hashKey": "object:1201"
 	},
 	"Rovermar01OperatorsData": {
 		"name": "Rovermar01OperatorsData",
@@ -286,7 +286,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10002"
+		"$$hashKey": "object:1194"
 	},
 	"Rovermar01CoreSystemsData": {
 		"name": "Rovermar01CoreSystemsData",
@@ -501,7 +501,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9994"
+		"$$hashKey": "object:1186"
 	},
 	"Rovermar01ExecuteFunctionCallRoverEngineStatus": {
 		"name": "Rovermar01ExecuteFunctionCallRoverEngineStatus",
@@ -540,7 +540,7 @@
 		"category": "wm.ServiceVariable",
 		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1449000192863",
 		"isDefault": true,
-		"$$hashKey": "object:9995"
+		"$$hashKey": "object:1187"
 	},
 	"loginVariable": {
 		"name": "loginVariable",
@@ -575,7 +575,7 @@
 		"useDefaultSuccessHandler": false,
 		"category": "wm.LoginVariable",
 		"_id": "wm-loginVariable-wm.LoginVariable-1444054009709",
-		"$$hashKey": "object:9985"
+		"$$hashKey": "object:1177"
 	},
 	"goToPage_Unclassified": {
 		"name": "goToPage_Unclassified",
@@ -907,7 +907,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9997"
+		"$$hashKey": "object:1189"
 	},
 	"goToPage_ComparisonRules": {
 		"name": "goToPage_ComparisonRules",
@@ -1103,7 +1103,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10000"
+		"$$hashKey": "object:1192"
 	},
 	"goToPage_UATRecords": {
 		"name": "goToPage_UATRecords",
@@ -1215,7 +1215,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-staticProdSytem-staticCoreSystem-wm.Variable-1444056104442",
-		"$$hashKey": "object:10010"
+		"$$hashKey": "object:1202"
 	},
 	"loggedInUser": {
 		"name": "loggedInUser",
@@ -1245,7 +1245,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-loggedInUser-wm.Variable-1444054009710",
-		"$$hashKey": "object:9984"
+		"$$hashKey": "object:1176"
 	},
 	"goToPage_OperatorMaintenance": {
 		"name": "goToPage_OperatorMaintenance",
@@ -1567,7 +1567,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9998"
+		"$$hashKey": "object:1190"
 	},
 	"goToPage_Categories": {
 		"name": "goToPage_Categories",
@@ -1606,7 +1606,7 @@
 		"liveSource": "rovermar01",
 		"ignoreCase": false,
 		"matchMode": "start",
-		"bindCount": 2,
+		"bindCount": 1,
 		"package": "com.roverpoc.rovermar01.Control",
 		"propertiesMap": {
 			"columns": [
@@ -1750,7 +1750,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9993"
+		"$$hashKey": "object:1185"
 	},
 	"goToPage_ClassAndCat": {
 		"name": "goToPage_ClassAndCat",
@@ -1805,7 +1805,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-supportedLocale-wm.Variable1402640443182",
-		"$$hashKey": "object:10012"
+		"$$hashKey": "object:1204"
 	},
 	"Rovermar01UserLoginData": {
 		"name": "Rovermar01UserLoginData",
@@ -1936,7 +1936,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10006"
+		"$$hashKey": "object:1198"
 	},
 	"goToPage_NoDifferences": {
 		"name": "goToPage_NoDifferences",
@@ -2272,7 +2272,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9991"
+		"$$hashKey": "object:1183"
 	},
 	"staticGridCatQueryDValues": {
 		"name": "staticGridCatQueryDValues",
@@ -2328,7 +2328,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-staticGridCatQueryDValues-wm.Variable-1445346713311",
-		"$$hashKey": "object:10007"
+		"$$hashKey": "object:1199"
 	},
 	"staticVariable1": {
 		"name": "staticVariable1",
@@ -2353,7 +2353,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-staticVariable1-wm.Variable-1447946397350",
-		"$$hashKey": "object:10011"
+		"$$hashKey": "object:1203"
 	},
 	"goToPage_Main": {
 		"name": "goToPage_Main",
@@ -2493,7 +2493,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9990"
+		"$$hashKey": "object:1182"
 	},
 	"Rovermar01CategoriesData": {
 		"name": "Rovermar01CategoriesData",
@@ -2582,7 +2582,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9988"
+		"$$hashKey": "object:1180"
 	},
 	"goToPage_AboutUs": {
 		"name": "goToPage_AboutUs",
@@ -2764,7 +2764,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10005"
+		"$$hashKey": "object:1197"
 	},
 	"goToPage_CombinedRecords": {
 		"name": "goToPage_CombinedRecords",
@@ -2960,7 +2960,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10001"
+		"$$hashKey": "object:1193"
 	},
 	"goToPage_UserMaintenance": {
 		"name": "goToPage_UserMaintenance",
@@ -3100,7 +3100,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10003"
+		"$$hashKey": "object:1195"
 	},
 	"Rovermar01SysaProdMessagesData": {
 		"name": "Rovermar01SysaProdMessagesData",
@@ -3272,7 +3272,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:10004"
+		"$$hashKey": "object:1196"
 	},
 	"Rovermar01FilterRulesData": {
 		"name": "Rovermar01FilterRulesData",
@@ -3585,7 +3585,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9996"
+		"$$hashKey": "object:1188"
 	},
 	"goToPage_ClassificactionDiffe": {
 		"name": "goToPage_ClassificactionDiffe",
@@ -3617,7 +3617,7 @@
 		"useDefaultSuccessHandler": true,
 		"category": "wm.LogoutVariable",
 		"_id": "wm-logout-wm.LogoutVariable-1444116468367",
-		"$$hashKey": "object:9986"
+		"$$hashKey": "object:1178"
 	},
 	"Rovermar01ComparisonRulesData": {
 		"name": "Rovermar01ComparisonRulesData",
@@ -3734,7 +3734,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9992"
+		"$$hashKey": "object:1184"
 	},
 	"goToPage_Uncategorised": {
 		"name": "goToPage_Uncategorised",
@@ -3917,7 +3917,7 @@
 		"dbSystem": "MySQL",
 		"category": "wm.LiveVariable",
 		"tableType": "TABLE",
-		"$$hashKey": "object:9989"
+		"$$hashKey": "object:1181"
 	},
 	"StaticGridClassifiListSelect": {
 		"name": "StaticGridClassifiListSelect",
@@ -3943,7 +3943,7 @@
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
 		"_id": "wm-StaticGridClassifiListSelect-StaticGridClassifiListSelec-gridClassificationsListSelection-wm.Variable-1444999122323",
-		"$$hashKey": "object:10008"
+		"$$hashKey": "object:1200"
 	},
 	"goToPage_Report": {
 		"name": "goToPage_Report",
@@ -3954,5 +3954,31 @@
 		"pageTransitions": "none",
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage_Report-wm.NavigationVariable-1450189778552"
+	},
+	"staticReportDate": {
+		"type": "string",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"type": "object",
+				"fields": [
+					{
+						"name": "dataValue",
+						"type": "string",
+						"value": "bind:Widgets.dateReport.datavalue"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-staticReportDate-wm.Variable-1450432993702",
+		"name": "staticReportDate",
+		"$$hashKey": "object:24966"
 	}
 }
