@@ -1,140 +1,114 @@
 {
-	"Rovermar01ExecuteGCT_Test": {
-		"name": "Rovermar01ExecuteGCT_Test",
-		"type": "rovermar01GCT_TestrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeGCT_Test",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeGCT_Test",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/GCT_Test",
-			"parameters": []
-		},
-		"_id": "wm-Rovermar01ExecuteGCT_Test-wm.ServiceVariable-1450202201919",
-		"$$hashKey": "object:24962"
-	},
-	"Rovermar01ExecuteFunctionCallRoverReportHealthCheck": {
-		"name": "Rovermar01ExecuteFunctionCallRoverReportHealthCheck",
-		"type": "rovermar01FunctionCallRoverReportHealthCheckrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"type": "string",
-						"value": "bind:Variables.staticReportDate.dataSet.dataValue"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverReportHealthCheck",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverReportHealthCheck",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverReportHealthCheck",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverReportHealthCheck-wm.ServiceVariable-1450268967562",
-		"$$hashKey": "object:24960"
-	},
-	"Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable": {
-		"name": "Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable",
-		"type": "rovermar01FunctionCallRoverReportHealthCheckTablertnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"type": "string",
-						"value": "bind:Variables.staticReportDate.dataSet.dataValue"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverReportHealthCheckTable",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"isDefault": true,
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverReportHealthCheckTable",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverReportHealthCheckTable",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable-wm.ServiceVariable-1450273390443",
-		"$$hashKey": "object:24961"
-	}
+  "Rovermar01ExecuteGCT_Test" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:24962",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/GCT_Test",
+      "httpMethod" : "get",
+      "name" : "executeGCT_Test",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01GCT_TestrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeGCT_Test",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteGCT_Test-wm.ServiceVariable-1450202201919",
+    "dataBinding" : [ ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteGCT_Test",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionCallRoverReportHealthCheck" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:24960",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverReportHealthCheck",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverReportHealthCheck",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverReportHealthCheckrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverReportHealthCheck",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverReportHealthCheck-wm.ServiceVariable-1450268967562",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticReportDate.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverReportHealthCheck",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:24961",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverReportHealthCheckTable",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverReportHealthCheckTable",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverReportHealthCheckTablertnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverReportHealthCheckTable",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable-wm.ServiceVariable-1450273390443",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticReportDate.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverReportHealthCheckTable",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  }
 }

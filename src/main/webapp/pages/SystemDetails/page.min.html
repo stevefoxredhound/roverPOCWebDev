@@ -180,108 +180,88 @@ Application.$controller("grid15Controller", ["$scope",
 </script>
 <script id="SystemDetails.variables.json">
 var _SystemDetailsPage_Variables_ ={
-	"Rovermar01ExecuteFunctionCallRoverSystemDetailCounts": {
-		"name": "Rovermar01ExecuteFunctionCallRoverSystemDetailCounts",
-		"type": "rovermar01FunctionCallRoverSystemDetailCountsrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.dataValue",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverSystemDetailCounts",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverSystemDetailCounts",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverSystemDetailCounts",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverSystemDetailCounts-wm.ServiceVariable-1448908522423",
-		"isDefault": true,
-		"$$hashKey": "object:12467"
-	},
-	"Rovermar01ExecuteFunctionCallRoverVennSetCounts": {
-		"name": "Rovermar01ExecuteFunctionCallRoverVennSetCounts",
-		"type": "rovermar01FunctionCallRoverVennSetCountsrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.dataValue",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverVennSetCounts",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverVennSetCounts",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverVennSetCounts",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverVennSetCounts-wm.ServiceVariable-1448909467119",
-		"isDefault": true,
-		"$$hashKey": "object:12468"
-	}
+  "Rovermar01ExecuteFunctionCallRoverSystemDetailCounts" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:12467",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverSystemDetailCounts",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverSystemDetailCounts",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverSystemDetailCountsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverSystemDetailCounts",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverSystemDetailCounts-wm.ServiceVariable-1448908522423",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticGridVenMain.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverSystemDetailCounts",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionCallRoverVennSetCounts" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:12468",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverVennSetCounts",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverVennSetCounts",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverVennSetCountsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverVennSetCounts",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverVennSetCounts-wm.ServiceVariable-1448909467119",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticGridVenMain.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverVennSetCounts",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  }
 }
 </script>
 <script id="SystemDetails.html" type="text/ng-template">

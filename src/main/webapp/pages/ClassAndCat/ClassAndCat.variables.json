@@ -1,259 +1,209 @@
 {
-	"Rovermar01ExecuteFunctionRoverRemoveCategorisationRule": {
-		"name": "Rovermar01ExecuteFunctionRoverRemoveCategorisationRule",
-		"type": "rovermar01FunctionRoverRemoveCategorisationRulertnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Widgets.gridCatQueryD.selecteditem.NAME",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionRoverRemoveCategorisationRule",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"onResult": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionRoverRemoveCategorisationRule",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverRemoveCategorisationRule",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionRoverRemoveCategorisationRule-wm.ServiceVariable-1447951620417",
-		"isDefault": true,
-		"$$hashKey": "object:1170"
-	},
-	"Rovermar01ExecuteFunctionCallRoverCategorisedGroups": {
-		"name": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
-		"type": "rovermar01FunctionCallRoverCategorisedGroupsrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.dataValue",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverCategorisedGroups",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverCategorisedGroups",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCategorisedGroups",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCategorisedGroups-wm.ServiceVariable-1447934573914",
-		"isDefault": true,
-		"$$hashKey": "object:1166"
-	},
-	"Rovermar01ExecuteFunctionCallRoverUncategorisedGroups": {
-		"name": "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
-		"type": "rovermar01FunctionCallRoverUncategorisedGroupsrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Variables.staticGridVenMain.dataSet.dataValue",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverUncategorisedGroups",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverUncategorisedGroups",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverUncategorisedGroups",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverUncategorisedGroups-wm.ServiceVariable-1447933642653",
-		"isDefault": true,
-		"$$hashKey": "object:1168"
-	},
-	"Rovermar01ExecuteFunctionroverBuildCategorisationRule": {
-		"name": "Rovermar01ExecuteFunctionroverBuildCategorisationRule",
-		"type": "rovermar01FunctionroverBuildCategorisationRulertnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionroverBuildCategorisationRule",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"onSuccess": "Rovermar01ExecuteFunctionCallRoverCategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"httpMethod": "get",
-			"name": "executeFunctionroverBuildCategorisationRule",
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionroverBuildCategorisationRule",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionroverBuildCategorisationRule-wm.ServiceVariable-1447945163814",
-		"isDefault": true,
-		"$$hashKey": "object:1169"
-	},
-	"Rovermar01ExecuteFunctionCallRoverCcolumnList": {
-		"name": "Rovermar01ExecuteFunctionCallRoverCcolumnList",
-		"type": "rovermar01FunctionCallRoverCcolumnListrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": [
-					{
-						"name": "p1",
-						"value": "bind:Widgets.GridClassificationsList.selecteditem.NAME",
-						"type": "string"
-					}
-				]
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverCcolumnList",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": false,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCcolumnList",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverCcolumnList",
-			"parameters": [
-				{
-					"name": "p1",
-					"parameterType": "query",
-					"type": "string"
-				}
-			]
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCcolumnList-wm.ServiceVariable-1448017520424",
-		"isDefault": true,
-		"$$hashKey": "object:1167"
-	}
+  "Rovermar01ExecuteFunctionRoverRemoveCategorisationRule" : {
+    "firstRow" : 0,
+    "isList" : false,
+    "$$hashKey" : "object:1170",
+    "serviceSubType" : "procedure",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverRemoveCategorisationRule",
+      "httpMethod" : "get",
+      "name" : "executeFunctionRoverRemoveCategorisationRule",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "type" : "rovermar01FunctionRoverRemoveCategorisationRulertnType",
+    "startUpdate" : false,
+    "transformationRequired" : false,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionRoverRemoveCategorisationRule",
+    "saveInPhonegap" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionRoverRemoveCategorisationRule-wm.ServiceVariable-1447951620417",
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Rovermar01ExecuteFunctionRoverRemoveCategorisationRule",
+    "inFlightBehavior" : "executeLast",
+    "onResult" : "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups;Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
+    "serviceType" : "DataService",
+    "maxResults" : 20,
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Widgets.gridCatQueryD.selecteditem.NAME",
+      "type" : "string"
+    } ],
+    "operationType" : "get",
+    "service" : "rovermar01",
+    "owner" : "Page"
+  },
+  "Rovermar01ExecuteFunctionCallRoverCategorisedGroups" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:1166",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCategorisedGroups",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverCategorisedGroups",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverCategorisedGroupsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverCategorisedGroups",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverCategorisedGroups-wm.ServiceVariable-1447934573914",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticGridVenMain.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverCategorisedGroups",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionroverBuildCategorisationRule" : {
+    "firstRow" : 0,
+    "isList" : false,
+    "$$hashKey" : "object:1169",
+    "serviceSubType" : "procedure",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionroverBuildCategorisationRule",
+      "httpMethod" : "get",
+      "name" : "executeFunctionroverBuildCategorisationRule",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "type" : "rovermar01FunctionroverBuildCategorisationRulertnType",
+    "startUpdate" : false,
+    "transformationRequired" : false,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionroverBuildCategorisationRule",
+    "saveInPhonegap" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionroverBuildCategorisationRule-wm.ServiceVariable-1447945163814",
+    "isDefault" : true,
+    "designMaxResults" : 10,
+    "name" : "Rovermar01ExecuteFunctionroverBuildCategorisationRule",
+    "inFlightBehavior" : "executeLast",
+    "onSuccess" : "Rovermar01ExecuteFunctionCallRoverCategorisedGroups;Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
+    "serviceType" : "DataService",
+    "maxResults" : 20,
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Widgets.GridClassificationsList.selecteditem.NAME",
+      "type" : "string"
+    } ],
+    "operationType" : "get",
+    "service" : "rovermar01",
+    "owner" : "Page"
+  },
+  "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:1168",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverUncategorisedGroups",
+      "httpMethod" : "get",
+      "name" : "executeFunctionCallRoverUncategorisedGroups",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverUncategorisedGroupsrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverUncategorisedGroups",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverUncategorisedGroups-wm.ServiceVariable-1447933642653",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticGridVenMain.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverUncategorisedGroups",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionCallRoverCcolumnList" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:1167",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCcolumnList",
+      "name" : "executeFunctionCallRoverCcolumnList",
+      "parameters" : [ {
+        "name" : "p1",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rovermar01FunctionCallRoverCcolumnListrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverCcolumnList",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : false,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverCcolumnList-wm.ServiceVariable-1448017520424",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Widgets.GridClassificationsList.selecteditem.NAME",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverCcolumnList",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  }
 }

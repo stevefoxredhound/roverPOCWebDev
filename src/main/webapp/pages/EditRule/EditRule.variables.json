@@ -5,8 +5,8 @@
     "serviceSubType" : "procedure",
     "inFlightBehavior" : "executeLast",
     "wmServiceOperationInfo" : {
-      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverGroupReport",
       "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionRoverGroupReport",
       "name" : "executeFunctionRoverGroupReport",
       "parameters" : [ {
         "name" : "p1",
@@ -25,23 +25,19 @@
     "operation" : "executeFunctionRoverGroupReport",
     "category" : "wm.ServiceVariable",
     "autoUpdate" : true,
-    "saveInPhonegap" : false,
-    "dataBinding" : [ {
-      "name" : "dataBinding",
-      "type" : "object",
-      "fields" : [ {
-        "name" : "p1",
-        "value" : "bind:Variables.staticGridCatQueryDValues.dataSet.Classification",
-        "type" : "string"
-      } ]
-    } ],
     "_id" : "wm-Rovermar01ExecuteFunctionRoverGroupReport-wm.ServiceVariable-1447956312978",
-    "operationType" : "get",
+    "dataBinding" : [ {
+      "target" : "p1",
+      "value" : "bind:Variables.staticGridCatQueryDValues.dataSet.Classification",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
     "isDefault" : true,
-    "designMaxResults" : 10,
+    "operationType" : "get",
     "name" : "Rovermar01ExecuteFunctionRoverGroupReport",
-    "service" : "rovermar01",
-    "owner" : "Page"
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
   },
   "Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule" : {
     "isList" : false,
@@ -50,8 +46,8 @@
     "inFlightBehavior" : "executeLast",
     "onSuccess" : "goToPage_ClassAndCat",
     "wmServiceOperationInfo" : {
-      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallroverUpdateCategorisationRule",
       "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallroverUpdateCategorisationRule",
       "name" : "executeFunctionCallroverUpdateCategorisationRule",
       "parameters" : [ {
         "name" : "name",
@@ -78,30 +74,26 @@
     "operation" : "executeFunctionCallroverUpdateCategorisationRule",
     "category" : "wm.ServiceVariable",
     "autoUpdate" : false,
-    "saveInPhonegap" : false,
-    "dataBinding" : [ {
-      "name" : "dataBinding",
-      "type" : "object",
-      "fields" : [ {
-        "name" : "name",
-        "value" : "bind:Widgets.textClassification.datavalue",
-        "type" : "string"
-      }, {
-        "name" : "category",
-        "value" : "bind:Widgets.textCategory.datavalue",
-        "type" : "string"
-      }, {
-        "name" : "comment",
-        "value" : "bind:Widgets.textComment.datavalue",
-        "type" : "string"
-      } ]
-    } ],
     "_id" : "wm-Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule-wm.ServiceVariable-1448016707548",
-    "operationType" : "get",
+    "dataBinding" : [ {
+      "target" : "name",
+      "value" : "bind:Widgets.textClassification.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "category",
+      "value" : "bind:Widgets.textCategory.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "comment",
+      "value" : "bind:Widgets.textComment.datavalue",
+      "type" : "string"
+    } ],
+    "saveInPhonegap" : false,
     "isDefault" : true,
-    "designMaxResults" : 10,
+    "operationType" : "get",
     "name" : "Rovermar01ExecuteFunctionCallroverUpdateCategorisationRule",
-    "service" : "rovermar01",
-    "owner" : "Page"
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
   }
 }

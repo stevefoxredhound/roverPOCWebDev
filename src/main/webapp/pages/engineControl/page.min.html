@@ -58,179 +58,150 @@ Application.$controller("grid5Controller", ["$scope",
 </script>
 <script id="engineControl.variables.json">
 var _engineControlPage_Variables_ ={
-	"Rovermar01ExecuteFunctionCallRoverCollationControl": {
-		"name": "Rovermar01ExecuteFunctionCallRoverCollationControl",
-		"type": "rovermar01FunctionCallRoverCollationControlrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverCollationControl",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCollationControl",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverCollationControl",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCollationControl-wm.ServiceVariable-1448959394902",
-		"isDefault": true,
-		"$$hashKey": "object:30582"
-	},
-	"Rovermar01ExecuteFunctionCallRoverEngineStatus": {
-		"name": "Rovermar01ExecuteFunctionCallRoverEngineStatus",
-		"type": "rovermar01FunctionCallRoverEngineStatusrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 30,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverEngineStatus",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineStatus",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverEngineStatus",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1448988484522",
-		"isDefault": true,
-		"$$hashKey": "object:30585"
-	},
-	"Rovermar01ExecuteFunctionCallRoverCollationStatus": {
-		"name": "Rovermar01ExecuteFunctionCallRoverCollationStatus",
-		"type": "rovermar01FunctionCallRoverCollationStatusrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 30,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverCollationStatus",
-		"operationType": "get",
-		"startUpdate": true,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCollationStatus",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverCollationStatus",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverCollationStatus-wm.ServiceVariable-1449002726238",
-		"isDefault": true,
-		"$$hashKey": "object:30583"
-	},
-	"Rovermar01ExecuteFunctionCallRoverEngineControl": {
-		"name": "Rovermar01ExecuteFunctionCallRoverEngineControl",
-		"type": "rovermar01FunctionCallRoverEngineControlrtnType",
-		"isList": false,
-		"owner": "Page",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"service": "rovermar01",
-		"operation": "executeFunctionCallRoverEngineControl",
-		"operationType": "get",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"serviceSubType": "procedure",
-		"wmServiceOperationInfo": {
-			"relativePath": "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineControl",
-			"httpMethod": "get",
-			"name": "executeFunctionCallRoverEngineControl",
-			"parameters": []
-		},
-		"serviceType": "DataService",
-		"category": "wm.ServiceVariable",
-		"_id": "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
-		"isDefault": true,
-		"$$hashKey": "object:30584"
-	},
-	"timerControlPage": {
-		"name": "timerControlPage",
-		"owner": "Page",
-		"autoStart": true,
-		"repeating": true,
-		"delay": 3000,
-		"onTimerFire": "Rovermar01ExecuteFunctionCallRoverEngineStatus;Rovermar01ExecuteFunctionCallRoverCollationStatus",
-		"category": "wm.TimerVariable",
-		"dataBinding": [
-			{
-				"name": "dataSet",
-				"fields": []
-			}
-		],
-		"_id": "wm-timerControlPage-wm.TimerVariable-1448993000742",
-		"$$hashKey": "object:30586"
-	}
+  "Rovermar01ExecuteFunctionCallRoverCollationControl" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:30582",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCollationControl",
+      "name" : "executeFunctionCallRoverCollationControl",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rovermar01FunctionCallRoverCollationControlrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverCollationControl",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverCollationControl-wm.ServiceVariable-1448959394902",
+    "dataBinding" : [ ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverCollationControl",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionCallRoverEngineStatus" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:30585",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineStatus",
+      "name" : "executeFunctionCallRoverEngineStatus",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverEngineStatusrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 30,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverEngineStatus",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverEngineStatus-wm.ServiceVariable-1448988484522",
+    "dataBinding" : [ ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverEngineStatus",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "Rovermar01ExecuteFunctionCallRoverCollationStatus" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:30583",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverCollationStatus",
+      "name" : "executeFunctionCallRoverCollationStatus",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : true,
+    "type" : "rovermar01FunctionCallRoverCollationStatusrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 30,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverCollationStatus",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverCollationStatus-wm.ServiceVariable-1449002726238",
+    "dataBinding" : [ ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverCollationStatus",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  },
+  "timerControlPage" : {
+    "category" : "wm.TimerVariable",
+    "onTimerFire" : "Rovermar01ExecuteFunctionCallRoverEngineStatus;Rovermar01ExecuteFunctionCallRoverCollationStatus",
+    "$$hashKey" : "object:30586",
+    "_id" : "wm-timerControlPage-wm.TimerVariable-1448993000742",
+    "dataBinding" : [ ],
+    "autoStart" : true,
+    "name" : "timerControlPage",
+    "owner" : "Page",
+    "delay" : 3000,
+    "repeating" : true
+  },
+  "Rovermar01ExecuteFunctionCallRoverEngineControl" : {
+    "isList" : false,
+    "firstRow" : 0,
+    "$$hashKey" : "object:30584",
+    "serviceSubType" : "procedure",
+    "inFlightBehavior" : "executeLast",
+    "wmServiceOperationInfo" : {
+      "httpMethod" : "get",
+      "relativePath" : "/rovermar01/procedureExecutor/procedure/execute/FunctionCallRoverEngineControl",
+      "name" : "executeFunctionCallRoverEngineControl",
+      "parameters" : [ ]
+    },
+    "serviceType" : "DataService",
+    "startUpdate" : false,
+    "type" : "rovermar01FunctionCallRoverEngineControlrtnType",
+    "transformationRequired" : false,
+    "maxResults" : 20,
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "operation" : "executeFunctionCallRoverEngineControl",
+    "category" : "wm.ServiceVariable",
+    "autoUpdate" : true,
+    "_id" : "wm-Rovermar01ExecuteFunctionCallRoverEngineControl-wm.ServiceVariable-1448318207154",
+    "dataBinding" : [ ],
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "operationType" : "get",
+    "name" : "Rovermar01ExecuteFunctionCallRoverEngineControl",
+    "designMaxResults" : 10,
+    "owner" : "Page",
+    "service" : "rovermar01"
+  }
 }
 </script>
 <script id="engineControl.html" type="text/ng-template">
