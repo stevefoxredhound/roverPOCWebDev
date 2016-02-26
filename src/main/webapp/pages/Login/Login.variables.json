@@ -3,10 +3,13 @@
     "onError" : "Javascript",
     "category" : "wm.LoginVariable",
     "autoUpdate" : false,
-    "dataBinding" : {
-      "username" : "bind:Widgets.usernametext.datavalue",
-      "password" : "bind:Widgets.passwordtext.datavalue"
-    },
+    "dataBinding" : [ {
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "target" : "username"
+    }, {
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "target" : "password"
+    } ],
     "saveInPhonegap" : false,
     "_id" : "wm-loginVariable-wm.LoginVariable-1398237232072",
     "name" : "loginVariable",

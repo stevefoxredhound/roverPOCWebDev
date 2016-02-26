@@ -1,1 +1,1 @@
-var _WM_APP_PROPERTIES = {"defaultLanguage":"en","type":"APPLICATION","homePage":"Main","platformType":"WEB","activeTheme":"default"}
+var _WM_APP_PROPERTIES = {"name":"roverPOCWebDev","version":"0.1","defaultLanguage":"en","type":"APPLICATION","homePage":"Main","platformType":"WEB","activeTheme":"default"}

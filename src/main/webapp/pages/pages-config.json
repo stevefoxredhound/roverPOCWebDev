@@ -1,0 +1,91 @@
+[ {
+  "name" : "AboutUs",
+  "type" : "PAGE"
+}, {
+  "name" : "Categories",
+  "type" : "PAGE"
+}, {
+  "name" : "ClassAndCat",
+  "type" : "PAGE"
+}, {
+  "name" : "ClassificactionDiffe",
+  "type" : "PAGE"
+}, {
+  "name" : "Classified",
+  "type" : "PAGE"
+}, {
+  "name" : "CombinedRecords",
+  "type" : "PAGE"
+}, {
+  "name" : "Common",
+  "type" : "PARTIAL"
+}, {
+  "name" : "ComparisonRules",
+  "type" : "PAGE"
+}, {
+  "name" : "CoreSystems",
+  "type" : "PAGE"
+}, {
+  "name" : "EditRule",
+  "type" : "PAGE"
+}, {
+  "name" : "FilterRules",
+  "type" : "PAGE"
+}, {
+  "name" : "Login",
+  "type" : "PAGE"
+}, {
+  "name" : "Main",
+  "type" : "PAGE"
+}, {
+  "name" : "NoDifferences",
+  "type" : "PAGE"
+}, {
+  "name" : "OperatorMaintenance",
+  "type" : "PAGE"
+}, {
+  "name" : "ProductionRecords",
+  "type" : "PAGE"
+}, {
+  "name" : "Report",
+  "type" : "PAGE"
+}, {
+  "name" : "RulesMaintenance",
+  "type" : "PAGE"
+}, {
+  "name" : "ShowMeDataDifference",
+  "type" : "PAGE"
+}, {
+  "name" : "SystemDetails",
+  "type" : "PAGE"
+}, {
+  "name" : "UATRecords",
+  "type" : "PAGE"
+}, {
+  "name" : "Uncategorised",
+  "type" : "PAGE"
+}, {
+  "name" : "Unclassified",
+  "type" : "PAGE"
+}, {
+  "name" : "UserMaintenance",
+  "type" : "PAGE"
+}, {
+  "name" : "engineControl",
+  "type" : "PAGE"
+}, {
+  "name" : "footer",
+  "type" : "PARTIAL"
+}, {
+  "name" : "header",
+  "type" : "PARTIAL"
+}, {
+  "name" : "leftnav",
+  "type" : "PARTIAL"
+}, {
+  "name" : "rightnav",
+  "type" : "PARTIAL"
+}, {
+  "name" : "topnav",
+  "type" : "PARTIAL"
+} ]

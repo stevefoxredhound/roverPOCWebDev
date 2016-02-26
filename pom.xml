@@ -7,8 +7,8 @@
   <version>1.0</version>
   <packaging>war</packaging>
   <properties>
-    <profile.props.file>development.properties</profile.props.file>
     <spring.version>{{spring.version}}</spring.version>
+    <profile.props.file>development.properties</profile.props.file>
     <spring.security.version>{{spring.security.version}}</spring.security.version>
     <wavemaker.studio.version>{{wavemaker.studio.version}}</wavemaker.studio.version>
   </properties>
@@ -244,6 +244,12 @@
       <id>GCT_Docker</id>
       <properties>
         <profile.props.file>GCT_Docker.properties</profile.props.file>
+      </properties>
+    </profile>
+    <profile>
+      <id>Config_JNDI</id>
+      <properties>
+        <profile.props.file>Config_JNDI.properties</profile.props.file>
       </properties>
     </profile>
   </profiles>

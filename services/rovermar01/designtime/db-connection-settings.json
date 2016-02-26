@@ -1,1 +1,22 @@
-{"username":"rhlmariadbadmin","password":"7b6a43524a3725163a3e344e372d6170477c612a43","url":"jdbc:mysql://rhlmariadb.ckfdbyxf0ugu.eu-west-1.rds.amazonaws.com:3306/rovermar01?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull","driverClass":"com.mysql.jdbc.Driver","dialect":"com.wavemaker.runtime.data.dialect.MySQLDialect","serviceId":"rovermar01","packageName":"com.roverpoc.rovermar01","dbType":"MySQL","host":"rhlmariadb.ckfdbyxf0ugu.eu-west-1.rds.amazonaws.com","dbName":"rovermar01","port":"3306","tableFilter":"categories,categorisation_rules,classifications,collated_results,comparison_rules,control,core_systems,filter_rules,GMI_prod_messages,GMI_uat_messages,logging,NC_prod_messages,NC_uat_messages,operators,results,sysa_prod_messages,sysa_uat_messages,user_login","schemaName":null,"schemaFilter":".*","revengNamingStrategyClassName":"com.wavemaker.studio.core.data.hibernate.reveng.MySQLRevengNamingStrategy","impersonateUser":false,"activeDirectoryDomain":null,"overwrite":false,"metadatadialect":"com.wavemaker.studio.core.data.hibernate.dialect.WMMySQLMetaDataDialect","hbm2ddl":"none","maxPageSize":100,"dataSourceType":"WM_MANAGED_DATASOURCE","jndiName":""}
+{
+  "username" : "rhlmariadbadmin",
+  "password" : "7b6a43524a3725163a3e344e372d6170477c612a43",
+  "url" : "jdbc:mysql://rhlmariadb.ckfdbyxf0ugu.eu-west-1.rds.amazonaws.com:3306/rovermar01?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "rovermar01",
+  "packageName" : "com.roverpoc.rovermar01",
+  "dbType" : "MySQL",
+  "host" : "rhlmariadb.ckfdbyxf0ugu.eu-west-1.rds.amazonaws.com",
+  "dbName" : "rovermar01",
+  "port" : "3306",
+  "schemaName" : null,
+  "schemaFilter" : [ ".*" ],
+  "tableFilter" : [ "categories", "categorisation_rules", "classifications", "collated_results", "comparison_rules", "control", "core_systems", "filter_rules", "GMI_prod_messages", "GMI_uat_messages", "logging", "NC_prod_messages", "NC_uat_messages", "operators", "results", "sysa_prod_messages", "sysa_uat_messages", "user_login" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : ""
+}

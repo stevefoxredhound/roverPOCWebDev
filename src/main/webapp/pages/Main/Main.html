@@ -147,22 +147,23 @@
                             <wm-gridrow name="gridrow31_1">
                                 <wm-gridcolumn columnwidth="7" name="gridcolumn96_1" readonlygrid="true">
                                     <wm-grid name="gridVenMain" readonlygrid="true" dataset="bind:Variables.Rovermar01ExecuteFunctionCallRoverVennSetCountsForAllSystems.dataSet" shownavigation="true" gridcaption="Select a system below to drill down" on-select="goToPage_SystemDetails"
-                                    enablesort="false" pagesize="20" fontsize="14" height="800" title="Select a system below">
-                                        <wm-grid-column binding="core_system" caption="System" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="prod_dups" caption="PROD Duplicates" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber"
-                                        is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="prod_unique" caption="PROD" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="prod_only" caption="PROD Only" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="in_both" caption="Both" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="uat_only" caption="UAT Only" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="uat_unique" caption="UAT" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber" is-related-pk="false"
-                                        pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                        <wm-grid-column binding="uat_dups" caption="UAT Duplicates" type="string" textalignment="right" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber"
-                                        is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                    enablesort="false" pagesize="20" fontsize="14" height="800" title="Select a system below" showheader="true">
+                                        <wm-grid-column binding="core_system" caption="System" type="string" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search" disable-inline-editing="false" is-related-pk="false"
+                                        pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="prod_dups" caption="PROD Duplicates" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search"
+                                        formatpattern="toNumber" disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="prod_unique" caption="PROD" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber"
+                                        disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="prod_only" caption="PROD Only" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search"
+                                        formatpattern="toNumber" disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="in_both" caption="Both" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber"
+                                        disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="uat_only" caption="UAT Only" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search"
+                                        formatpattern="toNumber" disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="uat_unique" caption="UAT" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search" formatpattern="toNumber"
+                                        disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
+                                        <wm-grid-column binding="uat_dups" caption="UAT Duplicates" type="string" textalignment="right" backgroundcolor="" textcolor="" primary-key="" col-class="" col-ng-class="" search-placeholder="Search"
+                                        formatpattern="toNumber" disable-inline-editing="false" is-related-pk="false" pcdisplay="true" mobiledisplay="true" readonly="false"></wm-grid-column>
                                     </wm-grid>
                                 </wm-gridcolumn>
                                 <wm-gridcolumn columnwidth="1" name="gridcolumn97_1"></wm-gridcolumn>
