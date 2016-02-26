@@ -60,7 +60,8 @@ public interface OperatorsService {
 	 * @return The found operators. If no operators is found, this method returns
 	 *         null.
 	 */
-	public Operators findById(Integer id) throws EntityNotFoundException;
+	public Operators findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a operators.
 	 * 

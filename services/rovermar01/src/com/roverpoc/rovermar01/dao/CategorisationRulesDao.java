@@ -16,18 +16,18 @@ import com.wavemaker.runtime.data.dao.WMGenericDaoImpl;
 
 import com.roverpoc.rovermar01.*;
 /**
- * Specifies methods used to obtain and modify CategorisationRules related information
- * which is stored in the database.
- */
+* Specifies methods used to obtain and modify CategorisationRules related information
+* which is stored in the database.
+*/
 @Repository("rovermar01.CategorisationRulesDao")
 public class CategorisationRulesDao extends WMGenericDaoImpl <CategorisationRules, Integer> {
 
-   @Autowired
-   @Qualifier("rovermar01Template")
-   private HibernateTemplate template;
+    @Autowired
+    @Qualifier("rovermar01Template")
+    private HibernateTemplate template;
 
-   public HibernateTemplate getTemplate() {
+    public HibernateTemplate getTemplate() {
         return this.template;
-   }
+    }
 }
 

@@ -16,18 +16,18 @@ import com.wavemaker.runtime.data.dao.WMGenericDaoImpl;
 
 import com.roverpoc.rovermar01.*;
 /**
- * Specifies methods used to obtain and modify Control related information
- * which is stored in the database.
- */
+* Specifies methods used to obtain and modify Control related information
+* which is stored in the database.
+*/
 @Repository("rovermar01.ControlDao")
 public class ControlDao extends WMGenericDaoImpl <Control, Integer> {
 
-   @Autowired
-   @Qualifier("rovermar01Template")
-   private HibernateTemplate template;
+    @Autowired
+    @Qualifier("rovermar01Template")
+    private HibernateTemplate template;
 
-   public HibernateTemplate getTemplate() {
+    public HibernateTemplate getTemplate() {
         return this.template;
-   }
+    }
 }
 

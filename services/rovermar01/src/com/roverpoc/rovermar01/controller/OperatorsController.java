@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class OperatorsController {
         return operatorsService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the Operators instance associated with the given id.")
-    public Operators getOperators(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting Operators with id: {}", id);
-        Operators instance = operatorsService.findById(id);
-        LOGGER.debug("Operators details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the Operators instance associated with the given id.")
-    public boolean deleteOperators(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Operators with id: {}", id);
-        Operators deleted = operatorsService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the Operators instance associated with the given id.")
-    public Operators editOperators(@PathVariable("id") Integer id, @RequestBody Operators instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing Operators with id: {}", instance.getId());
-        instance.setId(id);
-        instance = operatorsService.update(instance);
-        LOGGER.debug("Operators details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new Operators instance.")
-    public Operators createOperators(@RequestBody Operators instance) {
-        LOGGER.debug("Create Operators with information: {}", instance);
-        instance = operatorsService.create(instance);
-        LOGGER.debug("Created Operators with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class OperatorsController {
         this.operatorsService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Operators instance.")
+    public Operators createOperators(@RequestBody Operators instance) {
+        LOGGER.debug("Create Operators with information: {}", instance);
+        instance = operatorsService.create(instance);
+        LOGGER.debug("Created Operators with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of Operators instances.")
@@ -114,5 +89,35 @@ public class OperatorsController {
         LOGGER.debug("counting Operatorss");
         Long count = operatorsService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the Operators instance associated with the given id.")
+    public Operators getOperators(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting Operators with id: {}", id);
+        Operators instance = operatorsService.findById(id);
+        LOGGER.debug("Operators details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the Operators instance associated with the given id.")
+    public Operators editOperators(@PathVariable(value = "id") Integer id, @RequestBody Operators instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing Operators with id: {}", instance.getId());
+        instance.setId(id);
+        instance = operatorsService.update(instance);
+        LOGGER.debug("Operators details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the Operators instance associated with the given id.")
+    public boolean deleteOperators(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Operators with id: {}", id);
+        Operators deleted = operatorsService.delete(id);
+        return deleted != null;
     }
 }

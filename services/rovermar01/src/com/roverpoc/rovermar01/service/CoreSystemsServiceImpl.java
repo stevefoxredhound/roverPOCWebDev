@@ -9,6 +9,7 @@ package com.roverpoc.rovermar01.service;
 
 
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,7 @@ public class CoreSystemsServiceImpl implements CoreSystemsService {
     @Autowired
     @Qualifier("rovermar01.CoreSystemsDao")
     private WMGenericDao<CoreSystems, Integer> wmGenericDao;
+
     public void setWMGenericDao(WMGenericDao<CoreSystems, Integer> wmGenericDao){
         this.wmGenericDao = wmGenericDao;
     }
@@ -97,7 +99,10 @@ public class CoreSystemsServiceImpl implements CoreSystemsService {
     public CoreSystems update(CoreSystems updated) throws EntityNotFoundException {
         LOGGER.debug("Updating coresystems with information: {}" , updated);
         this.wmGenericDao.update(updated);
-        return this.wmGenericDao.findById((Integer)updated.getId());
+
+        Integer id = (Integer)updated.getId();
+
+        return this.wmGenericDao.findById(id);
     }
 
     @Transactional(readOnly = true, value = "rovermar01TransactionManager")

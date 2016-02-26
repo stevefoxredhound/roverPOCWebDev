@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class CategoriesController {
         return categoriesService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the Categories instance associated with the given id.")
-    public Categories getCategories(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting Categories with id: {}", id);
-        Categories instance = categoriesService.findById(id);
-        LOGGER.debug("Categories details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the Categories instance associated with the given id.")
-    public boolean deleteCategories(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Categories with id: {}", id);
-        Categories deleted = categoriesService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the Categories instance associated with the given id.")
-    public Categories editCategories(@PathVariable("id") Integer id, @RequestBody Categories instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing Categories with id: {}", instance.getId());
-        instance.setId(id);
-        instance = categoriesService.update(instance);
-        LOGGER.debug("Categories details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new Categories instance.")
-    public Categories createCategories(@RequestBody Categories instance) {
-        LOGGER.debug("Create Categories with information: {}", instance);
-        instance = categoriesService.create(instance);
-        LOGGER.debug("Created Categories with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class CategoriesController {
         this.categoriesService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Categories instance.")
+    public Categories createCategories(@RequestBody Categories instance) {
+        LOGGER.debug("Create Categories with information: {}", instance);
+        instance = categoriesService.create(instance);
+        LOGGER.debug("Created Categories with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of Categories instances.")
@@ -114,5 +89,35 @@ public class CategoriesController {
         LOGGER.debug("counting Categoriess");
         Long count = categoriesService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the Categories instance associated with the given id.")
+    public Categories getCategories(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting Categories with id: {}", id);
+        Categories instance = categoriesService.findById(id);
+        LOGGER.debug("Categories details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the Categories instance associated with the given id.")
+    public Categories editCategories(@PathVariable(value = "id") Integer id, @RequestBody Categories instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing Categories with id: {}", instance.getId());
+        instance.setId(id);
+        instance = categoriesService.update(instance);
+        LOGGER.debug("Categories details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the Categories instance associated with the given id.")
+    public boolean deleteCategories(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Categories with id: {}", id);
+        Categories deleted = categoriesService.delete(id);
+        return deleted != null;
     }
 }

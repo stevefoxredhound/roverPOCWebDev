@@ -113,7 +113,7 @@
         <return typeRef="rovermar01FunctionCallRoverDuplicatesForAllSystemsrtnType" isList="false"/>
     </operation>
     <operation operationType="procedure" name="FunctionCallRoverSystemCount">
-        <return isList="false"/>
+        <return typeRef="rovermar01FunctionCallRoverSystemCountrtnType" isList="false"/>
     </operation>
     <operation operationType="procedure" name="FunctionCallRoverDuplicateCountForProd">
         <parameter name="p1" typeRef="java.lang.String" isList="false" parameterType="IN"/>
@@ -140,7 +140,7 @@
         <return typeRef="rovermar01FunctionCallRoverCollationStatusrtnType" isList="false"/>
     </operation>
     <operation operationType="procedure" name="FunctionCallRoverNumberOfUncategorisedGroups">
-        <return isList="false"/>
+        <return typeRef="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType" isList="false"/>
     </operation>
     <operation operationType="procedure" name="FunctionCallRoverVennSetCountsForAllSystems">
         <return typeRef="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType" isList="false"/>
@@ -161,224 +161,1114 @@
         <return typeRef="rovermar01FunctionCallRoverReportHealthCheckrtnType" isList="false"/>
     </operation>
     <dataobjects>
-        <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lsValue" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lsSide" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lsField" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lsString" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lsStart" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lsLength" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="operator" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="rsValue" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="rsSide" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="rsField" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="rsString" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="rsStart" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="rsLength" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="comment" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="who" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="updatedTimestamp" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.ComparisonRules">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="dataOrder" typeRef="java.math.BigDecimal" isList="false" allowNull="true"/>
-            <element name="dataItem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="operator" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.GmiProdMessages">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreProcessDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="forder" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftdate" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fwstim" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftrace" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="frecno" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fuser" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fsdsc1" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fsqty" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fexbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fopbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftpric" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftslap" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftand" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fttickle" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.Results">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="processDate" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="compid" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.Operators">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="operator" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="command" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.GmiUatMessages">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreProcessDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="forder" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftdate" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fwstim" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftrace" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="frecno" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fuser" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fsdsc1" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fsqty" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fexbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fopbkr" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftpric" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftslap" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="ftand" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="fttickle" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        <dataobject javaType="com.roverpoc.rovermar01.CollatedGroups">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="category" typeRef="java.lang.String" allowNull="true"/>
+            <element name="classificationName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="compid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="totalMessages" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="processDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="who" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.roverpoc.rovermar01.SysaUatMessages">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colA" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colB" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colC" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colD" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colE" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.CategorisationRules">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="processDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="classificationName" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="category" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="comment" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="who" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="updatedTimestamp" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.NcUatMessages">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreProcessDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="marketOrder" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="marketTrade" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lots" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="product" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="price" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.Classifications">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="processDate" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="compid" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="name" typeRef="java.lang.String" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.NcProdMessages">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreProcessDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="marketOrder" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="marketTrade" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lots" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="product" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="price" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colB" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="colC" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="colA" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="colD" typeRef="java.lang.String" allowNull="true"/>
+            <element name="colE" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.roverpoc.rovermar01.SysaProdMessages">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreKey" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colA" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colB" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colC" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colD" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="colE" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="colB" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="colC" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="colA" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="colD" typeRef="java.lang.String" allowNull="true"/>
+            <element name="colE" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.Control">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="controlStatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="engineStatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="resetStatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="collationStatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="loggingLevel" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="engineAllOrOne" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="processDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+        <dataobject javaType="com.roverpoc.rovermar01.SysAProdMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.Categories">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="category" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        <dataobject javaType="com.roverpoc.rovermar01.Operators">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="command" typeRef="java.lang.String" allowNull="true"/>
+            <element name="operator" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.Logging">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="process" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="logDetails" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        <dataobject javaType="com.roverpoc.rovermar01.NcUatMessages">
+            <element name="product" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="marketTrade" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lots" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketOrder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.UserLogin">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="userid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="password" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="role" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="tenantid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        <dataobject javaType="com.roverpoc.rovermar01.DashboardCounts">
+            <element name="uatDups" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="prodUnique" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="prodDups" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="inBoth" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="prodTotal" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="uatOnly" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="uatTotal" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="process" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="prodOnly" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="processDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="uatUnique" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="com.roverpoc.rovermar01.CollatedResults">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="processDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="numProd" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numProdOnly" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numBoth" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numUatOnly" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numUat" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numMsgsNoDiff" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numMsgsDiff" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numMsgsDiffUncat" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numMsgsDiffCat" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numGroups" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numGroupsUncat" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numGroupsCat" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numMsgsCoverage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numGroupCoverage" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numProdDuplicates" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="numUatDuplicates" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiVennUatTotal">
+            <element name="count___" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.TestNcliteProdMessages">
+            <element name="sourceCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="buySell" typeRef="java.lang.String" allowNull="true"/>
+            <element name="batchId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contractType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="quantity" typeRef="java.lang.String" allowNull="true"/>
+            <element name="login" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcOffice" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcOrderId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketStatusDesc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="giveInMsg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcExecutingBroker" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcAccountType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="openClose" typeRef="java.lang.String" allowNull="true"/>
+            <element name="misc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contractCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="misc2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="misc3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcContract" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="tradeId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcContractType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcFirm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketStamp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sourceId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="expiry" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="businessDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="strike" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcCurrency" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcTradeId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcMarket" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="trader" typeRef="java.lang.String" allowNull="true"/>
+            <element name="orderId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcAccount" typeRef="java.lang.String" allowNull="true"/>
+            <element name="office" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="currencyCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="environmentCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="firm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="executingBroker" typeRef="java.lang.String" allowNull="true"/>
+            <element name="environmentId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="subType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="accountType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="account" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketAction" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysBProdMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiDataBothGmi256">
+            <element name="price" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.TestGmiUatMessages">
+            <element name="fdayc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frout3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frout2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffof" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fucusp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fqtedt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="flevel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdayq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdelta" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fother" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffualo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frout1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forig" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpedt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcmnt1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcurac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcmnt3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcmnt2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fccnty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fpcnty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fnet" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmvarn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="floc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatalo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="facct" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsessn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstins" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffbacc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdbkg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fiexng" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fyield" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffeeex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fscrid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdgiv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftime" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fiad" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fzone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrprc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcurat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatbkg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdflr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatflr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatbko" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcurcd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffubkg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdam1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="flegnd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdam2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffubko" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcursy" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdelet" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fschov" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdctco" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fordty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdbko" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatb" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbrokr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtpr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatf" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcabcd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuord" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbs" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftfrq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstata" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmothr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmbkof" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdlvya" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatj" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdest" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatk" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fctlno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmwire" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmtabl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdalo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="famt1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fiefrm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopfrm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdlvyq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexrat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswac1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswac2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsegq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="famt2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuoth" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fclose" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffic" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frtht" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fptype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtcp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fchit" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcusip" typeRef="java.lang.String" allowNull="true"/>
+            <element name="friskg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbkchg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmordr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprcdt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frefno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbatch" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fxtrct" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuflr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fomncd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspdq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatgiv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdscx" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="finpmo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcalc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fschdl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspdc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fminit" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fpgmid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmgncv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbustq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fctym" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fofffn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frxdat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frefof" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmatdt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdeal" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgivio" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcvtbl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswas2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswas1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsbcus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexpdt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fltdat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fundcp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdwir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstyp2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdsc3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexch" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdsc2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmpgmn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcomm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgivfx" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ficode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmflor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprice" typeRef="java.lang.String" allowNull="true"/>
+            <element name="finpyr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fclrid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcusp2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsrcac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtuc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcti" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspedt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmakeq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fleavq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatwir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwsid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmembr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgichg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frefrr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fystmv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmkval" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdord" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstrik" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3f" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffeecl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3a" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3o" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgross" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsymbl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3t" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffugiv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatord" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsortk" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdscx" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdcom" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbasis" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffirm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fordor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel2a" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdoth" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftbkt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel2f" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fclass" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcod" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubcl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatcom" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="frel2o" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel2t" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrdex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcard" typeRef="java.lang.String" allowNull="true"/>
+            <element name="facnty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1a" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fscrq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmultf" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fovnc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprvcp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1f" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatoth" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fscrc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fttype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1o" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuwir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1t" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswap1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmuntl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fovnq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswap2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexpr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspred" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.GmiUatMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiVennBoth">
+            <element name="count_distinct_coreKey__" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.CategorisationRules">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="updatedTimestamp" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="category" typeRef="java.lang.String" allowNull="true"/>
+            <element name="classificationName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="processDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="who" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.TestNcliteUatMessages">
+            <element name="sourceCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="buySell" typeRef="java.lang.String" allowNull="true"/>
+            <element name="batchId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contractType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="quantity" typeRef="java.lang.String" allowNull="true"/>
+            <element name="login" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcOffice" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcOrderId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketStatusDesc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="giveInMsg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcExecutingBroker" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcAccountType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="openClose" typeRef="java.lang.String" allowNull="true"/>
+            <element name="misc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="contractCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="misc2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="misc3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcContract" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="tradeId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcContractType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcFirm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketStamp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sourceId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="expiry" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="businessDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="strike" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcCurrency" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcTradeId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcMarket" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="trader" typeRef="java.lang.String" allowNull="true"/>
+            <element name="orderId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="srcAccount" typeRef="java.lang.String" allowNull="true"/>
+            <element name="office" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="currencyCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="environmentCode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="firm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="executingBroker" typeRef="java.lang.String" allowNull="true"/>
+            <element name="environmentId" typeRef="java.lang.String" allowNull="true"/>
+            <element name="subType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="accountType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="account" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketAction" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Results">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="compid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="processDate" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.roverpoc.rovermar01.CoreSystems">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" isList="false" allowNull="true"/>
-            <element name="coreSystem" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystemRoverName" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreProdTable" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreProdConnectivity" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreUatTable" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreUatConnectivity" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystemStatus" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystemLogging" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystemAlert" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="coreSystemAlertTarget" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="coreUatTable" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystemLogging" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystemStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProdTable" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProdConnectivity" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="coreSystemAlertTarget" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystemRoverName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystemAlert" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreUatConnectivity" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
-        <dataobject javaType="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType">
-            <element name="NumberOfUncategorisedGroups" typeRef="java.lang.Long"/>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiVennProdTotal">
+            <element name="count___" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.CollatedResults">
+            <element name="numMsgsDiff" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numMsgsNoDiff" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="numBoth" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numUatOnly" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numProd" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numMsgsCoverage" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numMsgsDiffCat" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numUatDuplicates" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numUat" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="numGroupsUncat" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numGroups" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numProdDuplicates" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numGroupCoverage" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numGroupsCat" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numMsgsDiffUncat" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="numProdOnly" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="processDate" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysCUatMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Classifications">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="compid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="processDate" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Categories">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="category" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Control">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="resetStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="controlStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="engineStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="loggingLevel" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="engineAllOrOne" typeRef="java.lang.String" allowNull="true"/>
+            <element name="collationStatus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="processDate" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.Logging">
+            <element name="process" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="logDetails" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysCProdMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.TestGmiProdMessages">
+            <element name="fdayc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frout3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frout2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffof" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fucusp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fqtedt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="flevel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdayq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdelta" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fother" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffualo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frout1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forig" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpedt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcmnt1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcurac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcmnt3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcmnt2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fccnty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fpcnty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fnet" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmvarn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="floc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatalo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="facct" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsessn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstins" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffbacc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdbkg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fiexng" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fyield" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffeeex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fscrid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdgiv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftime" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fiad" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fzone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrprc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcurat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatbkg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdflr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatflr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatbko" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcurcd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffubkg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdam1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="flegnd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdam2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffubko" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcursy" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdelet" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fschov" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdctco" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fordty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdbko" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatb" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbrokr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtpr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatf" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcabcd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuord" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbs" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftfrq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstata" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmothr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmbkof" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdlvya" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatj" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdest" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstatk" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fctlno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmwire" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmtabl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdalo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="famt1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fiefrm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopfrm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdlvyq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexrat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswac1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswac2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsegq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="famt2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuoth" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fclose" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffic" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frtht" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbarg5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fptype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtcp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fchit" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstat1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcusip" typeRef="java.lang.String" allowNull="true"/>
+            <element name="friskg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbkchg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmordr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprcdt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frefno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbatch" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fxtrct" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuflr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fomncd" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspdq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatgiv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdscx" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="finpmo" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcalc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fschdl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspdc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fminit" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fpgmid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmgncv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbustq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fctym" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fofffn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frxdat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frefof" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmatdt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fdeal" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgivio" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcvtbl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswas2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswas1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsbcus" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexpdt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fltdat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fundcp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdwir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstyp2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdsc3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexch" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdsc2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdfe1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmpgmn" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcomm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgivfx" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ficode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmflor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprice" typeRef="java.lang.String" allowNull="true"/>
+            <element name="finpyr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fclrid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcusp2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsrcac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprtuc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcti" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspedt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmakeq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fleavq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatwir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwsid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmembr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgichg" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frefrr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatfe6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fystmv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmkval" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdord" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee5" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee4" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee7" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee6" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee9" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffee8" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstrik" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3f" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffeecl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3a" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3o" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fgross" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsymbl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel3t" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffugiv" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatord" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsortk" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdscx" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdcom" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fbasis" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffirm" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fordor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel2a" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffdoth" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftbkt" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel2f" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fclass" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcod" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsubcl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatcom" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="frel2o" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel2t" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrdex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fcard" typeRef="java.lang.String" allowNull="true"/>
+            <element name="facnty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1a" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fscrq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffufe1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmultf" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fovnc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fprvcp" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1f" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffat" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fatoth" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fscrc" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fttype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1o" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fstype" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ffuwir" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frel1t" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswap1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fmuntl" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fovnq" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fswap2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="foffac" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fexpr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fspred" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysAUatMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.GmiProdMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.UserLogin">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="username" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="role" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tenantid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.SysBUatMessages">
+            <element name="ftand" typeRef="java.lang.String" allowNull="true"/>
+            <element name="forder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fopbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fuser" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="fttickle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftrace" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsdsc1" typeRef="java.lang.String" allowNull="true"/>
+            <element name="frecno" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fexbkr" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fsqty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftdate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fwstim" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="ftslap" typeRef="java.lang.String" allowNull="true"/>
+            <element name="ftpric" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.FilterRules">
+            <element name="lsField" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rsStart" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lsSide" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rsSide" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="lsValue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lsString" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rsValue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rsString" typeRef="java.lang.String" allowNull="true"/>
+            <element name="operator" typeRef="java.lang.String" allowNull="true"/>
+            <element name="who" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="updatedTimestamp" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="lsLength" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lsStart" typeRef="java.lang.String" allowNull="true"/>
+            <element name="comment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rsField" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rsLength" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ComparisonRules">
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dataItem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dataOrder" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="operator" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiVennProdUnique">
+            <element name="count_distinct_coreKey__" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiVennUatUnique">
+            <element name="count_distinct_coreKey__" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.ConnectGmiDataProdView">
+            <element name="member" typeRef="java.lang.String" allowNull="true"/>
+            <element name="productIsin" typeRef="java.lang.String" allowNull="true"/>
+            <element name="buySell" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="qty" typeRef="java.lang.String" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+            <element name="expiry" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="product" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tradeDate" typeRef="java.lang.String" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="trader" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.roverpoc.rovermar01.NcProdMessages">
+            <element name="product" typeRef="java.lang.String" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="marketTrade" typeRef="java.lang.String" allowNull="true"/>
+            <element name="coreSystem" typeRef="java.lang.String" allowNull="true"/>
+            <element name="price" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lots" typeRef="java.lang.String" allowNull="true"/>
+            <element name="marketOrder" typeRef="java.lang.String" allowNull="true"/>
+            <element name="dateTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="coreProcessDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="coreKey" typeRef="java.lang.String" allowNull="true"/>
         </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverUncategorisedGroupsBySystemrtnType">
             <element name="core_system" typeRef="java.lang.String"/>
@@ -470,6 +1360,7 @@
             <element name="System" typeRef="java.lang.String"/>
             <element name="PROD" typeRef="java.lang.Long"/>
         </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverSystemCountrtnType"/>
         <dataobject javaType="rovermar01FunctionCallRoverDuplicateCountForProdrtnType">
             <element name="NumberOfDuplicates" typeRef="java.lang.Long"/>
         </dataobject>
@@ -501,6 +1392,9 @@
             <element name="core_system" typeRef="java.lang.String"/>
             <element name="PROCESS" typeRef="java.lang.String"/>
             <element name="date_time" typeRef="java.sql.Timestamp"/>
+        </dataobject>
+        <dataobject javaType="rovermar01FunctionCallRoverNumberOfUncategorisedGroupsrtnType">
+            <element name="NumberOfUncategorisedGroups" typeRef="java.lang.Long"/>
         </dataobject>
         <dataobject javaType="rovermar01FunctionCallRoverVennSetCountsForAllSystemsrtnType">
             <element name="core_system" typeRef="java.lang.String"/>

@@ -60,7 +60,8 @@ public interface LoggingService {
 	 * @return The found logging. If no logging is found, this method returns
 	 *         null.
 	 */
-	public Logging findById(Integer id) throws EntityNotFoundException;
+	public Logging findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a logging.
 	 * 

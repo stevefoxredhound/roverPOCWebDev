@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class ControlController {
         return controlService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the Control instance associated with the given id.")
-    public Control getControl(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting Control with id: {}", id);
-        Control instance = controlService.findById(id);
-        LOGGER.debug("Control details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the Control instance associated with the given id.")
-    public boolean deleteControl(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Control with id: {}", id);
-        Control deleted = controlService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the Control instance associated with the given id.")
-    public Control editControl(@PathVariable("id") Integer id, @RequestBody Control instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing Control with id: {}", instance.getId());
-        instance.setId(id);
-        instance = controlService.update(instance);
-        LOGGER.debug("Control details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new Control instance.")
-    public Control createControl(@RequestBody Control instance) {
-        LOGGER.debug("Create Control with information: {}", instance);
-        instance = controlService.create(instance);
-        LOGGER.debug("Created Control with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class ControlController {
         this.controlService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Control instance.")
+    public Control createControl(@RequestBody Control instance) {
+        LOGGER.debug("Create Control with information: {}", instance);
+        instance = controlService.create(instance);
+        LOGGER.debug("Created Control with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of Control instances.")
@@ -114,5 +89,35 @@ public class ControlController {
         LOGGER.debug("counting Controls");
         Long count = controlService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the Control instance associated with the given id.")
+    public Control getControl(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting Control with id: {}", id);
+        Control instance = controlService.findById(id);
+        LOGGER.debug("Control details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the Control instance associated with the given id.")
+    public Control editControl(@PathVariable(value = "id") Integer id, @RequestBody Control instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing Control with id: {}", instance.getId());
+        instance.setId(id);
+        instance = controlService.update(instance);
+        LOGGER.debug("Control details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the Control instance associated with the given id.")
+    public boolean deleteControl(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Control with id: {}", id);
+        Control deleted = controlService.delete(id);
+        return deleted != null;
     }
 }

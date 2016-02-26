@@ -60,7 +60,8 @@ public interface CoreSystemsService {
 	 * @return The found coresystems. If no coresystems is found, this method returns
 	 *         null.
 	 */
-	public CoreSystems findById(Integer id) throws EntityNotFoundException;
+	public CoreSystems findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a coresystems.
 	 * 

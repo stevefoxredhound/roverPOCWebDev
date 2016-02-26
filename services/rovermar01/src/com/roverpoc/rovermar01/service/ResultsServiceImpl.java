@@ -9,6 +9,7 @@ package com.roverpoc.rovermar01.service;
 
 
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,7 @@ public class ResultsServiceImpl implements ResultsService {
     @Autowired
     @Qualifier("rovermar01.ResultsDao")
     private WMGenericDao<Results, Integer> wmGenericDao;
+
     public void setWMGenericDao(WMGenericDao<Results, Integer> wmGenericDao){
         this.wmGenericDao = wmGenericDao;
     }
@@ -97,7 +99,10 @@ public class ResultsServiceImpl implements ResultsService {
     public Results update(Results updated) throws EntityNotFoundException {
         LOGGER.debug("Updating results with information: {}" , updated);
         this.wmGenericDao.update(updated);
-        return this.wmGenericDao.findById((Integer)updated.getId());
+
+        Integer id = (Integer)updated.getId();
+
+        return this.wmGenericDao.findById(id);
     }
 
     @Transactional(readOnly = true, value = "rovermar01TransactionManager")

@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class FilterRulesController {
         return filterRulesService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the FilterRules instance associated with the given id.")
-    public FilterRules getFilterRules(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting FilterRules with id: {}", id);
-        FilterRules instance = filterRulesService.findById(id);
-        LOGGER.debug("FilterRules details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the FilterRules instance associated with the given id.")
-    public boolean deleteFilterRules(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting FilterRules with id: {}", id);
-        FilterRules deleted = filterRulesService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the FilterRules instance associated with the given id.")
-    public FilterRules editFilterRules(@PathVariable("id") Integer id, @RequestBody FilterRules instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing FilterRules with id: {}", instance.getId());
-        instance.setId(id);
-        instance = filterRulesService.update(instance);
-        LOGGER.debug("FilterRules details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new FilterRules instance.")
-    public FilterRules createFilterRules(@RequestBody FilterRules instance) {
-        LOGGER.debug("Create FilterRules with information: {}", instance);
-        instance = filterRulesService.create(instance);
-        LOGGER.debug("Created FilterRules with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class FilterRulesController {
         this.filterRulesService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new FilterRules instance.")
+    public FilterRules createFilterRules(@RequestBody FilterRules instance) {
+        LOGGER.debug("Create FilterRules with information: {}", instance);
+        instance = filterRulesService.create(instance);
+        LOGGER.debug("Created FilterRules with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of FilterRules instances.")
@@ -114,5 +89,35 @@ public class FilterRulesController {
         LOGGER.debug("counting FilterRuless");
         Long count = filterRulesService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the FilterRules instance associated with the given id.")
+    public FilterRules getFilterRules(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting FilterRules with id: {}", id);
+        FilterRules instance = filterRulesService.findById(id);
+        LOGGER.debug("FilterRules details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the FilterRules instance associated with the given id.")
+    public FilterRules editFilterRules(@PathVariable(value = "id") Integer id, @RequestBody FilterRules instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing FilterRules with id: {}", instance.getId());
+        instance.setId(id);
+        instance = filterRulesService.update(instance);
+        LOGGER.debug("FilterRules details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the FilterRules instance associated with the given id.")
+    public boolean deleteFilterRules(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting FilterRules with id: {}", id);
+        FilterRules deleted = filterRulesService.delete(id);
+        return deleted != null;
     }
 }

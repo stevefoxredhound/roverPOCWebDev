@@ -60,7 +60,8 @@ public interface CategorisationRulesService {
 	 * @return The found categorisationrules. If no categorisationrules is found, this method returns
 	 *         null.
 	 */
-	public CategorisationRules findById(Integer id) throws EntityNotFoundException;
+	public CategorisationRules findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a categorisationrules.
 	 * 

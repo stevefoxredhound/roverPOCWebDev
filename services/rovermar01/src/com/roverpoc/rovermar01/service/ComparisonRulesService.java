@@ -60,7 +60,8 @@ public interface ComparisonRulesService {
 	 * @return The found comparisonrules. If no comparisonrules is found, this method returns
 	 *         null.
 	 */
-	public ComparisonRules findById(Integer id) throws EntityNotFoundException;
+	public ComparisonRules findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a comparisonrules.
 	 * 

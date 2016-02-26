@@ -60,7 +60,8 @@ public interface CollatedResultsService {
 	 * @return The found collatedresults. If no collatedresults is found, this method returns
 	 *         null.
 	 */
-	public CollatedResults findById(Integer id) throws EntityNotFoundException;
+	public CollatedResults findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a collatedresults.
 	 * 

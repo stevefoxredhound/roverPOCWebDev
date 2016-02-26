@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class UserLoginController {
         return userLoginService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the UserLogin instance associated with the given id.")
-    public UserLogin getUserLogin(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting UserLogin with id: {}", id);
-        UserLogin instance = userLoginService.findById(id);
-        LOGGER.debug("UserLogin details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the UserLogin instance associated with the given id.")
-    public boolean deleteUserLogin(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting UserLogin with id: {}", id);
-        UserLogin deleted = userLoginService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the UserLogin instance associated with the given id.")
-    public UserLogin editUserLogin(@PathVariable("id") Integer id, @RequestBody UserLogin instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing UserLogin with id: {}", instance.getId());
-        instance.setId(id);
-        instance = userLoginService.update(instance);
-        LOGGER.debug("UserLogin details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new UserLogin instance.")
-    public UserLogin createUserLogin(@RequestBody UserLogin instance) {
-        LOGGER.debug("Create UserLogin with information: {}", instance);
-        instance = userLoginService.create(instance);
-        LOGGER.debug("Created UserLogin with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class UserLoginController {
         this.userLoginService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new UserLogin instance.")
+    public UserLogin createUserLogin(@RequestBody UserLogin instance) {
+        LOGGER.debug("Create UserLogin with information: {}", instance);
+        instance = userLoginService.create(instance);
+        LOGGER.debug("Created UserLogin with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of UserLogin instances.")
@@ -114,5 +89,35 @@ public class UserLoginController {
         LOGGER.debug("counting UserLogins");
         Long count = userLoginService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the UserLogin instance associated with the given id.")
+    public UserLogin getUserLogin(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting UserLogin with id: {}", id);
+        UserLogin instance = userLoginService.findById(id);
+        LOGGER.debug("UserLogin details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the UserLogin instance associated with the given id.")
+    public UserLogin editUserLogin(@PathVariable(value = "id") Integer id, @RequestBody UserLogin instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing UserLogin with id: {}", instance.getId());
+        instance.setId(id);
+        instance = userLoginService.update(instance);
+        LOGGER.debug("UserLogin details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the UserLogin instance associated with the given id.")
+    public boolean deleteUserLogin(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting UserLogin with id: {}", id);
+        UserLogin deleted = userLoginService.delete(id);
+        return deleted != null;
     }
 }

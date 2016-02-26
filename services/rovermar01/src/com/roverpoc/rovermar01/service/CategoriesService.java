@@ -60,7 +60,8 @@ public interface CategoriesService {
 	 * @return The found categories. If no categories is found, this method returns
 	 *         null.
 	 */
-	public Categories findById(Integer id) throws EntityNotFoundException;
+	public Categories findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a categories.
 	 * 

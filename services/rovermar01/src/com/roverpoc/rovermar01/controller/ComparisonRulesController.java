@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class ComparisonRulesController {
         return comparisonRulesService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the ComparisonRules instance associated with the given id.")
-    public ComparisonRules getComparisonRules(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting ComparisonRules with id: {}", id);
-        ComparisonRules instance = comparisonRulesService.findById(id);
-        LOGGER.debug("ComparisonRules details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the ComparisonRules instance associated with the given id.")
-    public boolean deleteComparisonRules(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting ComparisonRules with id: {}", id);
-        ComparisonRules deleted = comparisonRulesService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the ComparisonRules instance associated with the given id.")
-    public ComparisonRules editComparisonRules(@PathVariable("id") Integer id, @RequestBody ComparisonRules instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing ComparisonRules with id: {}", instance.getId());
-        instance.setId(id);
-        instance = comparisonRulesService.update(instance);
-        LOGGER.debug("ComparisonRules details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new ComparisonRules instance.")
-    public ComparisonRules createComparisonRules(@RequestBody ComparisonRules instance) {
-        LOGGER.debug("Create ComparisonRules with information: {}", instance);
-        instance = comparisonRulesService.create(instance);
-        LOGGER.debug("Created ComparisonRules with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class ComparisonRulesController {
         this.comparisonRulesService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new ComparisonRules instance.")
+    public ComparisonRules createComparisonRules(@RequestBody ComparisonRules instance) {
+        LOGGER.debug("Create ComparisonRules with information: {}", instance);
+        instance = comparisonRulesService.create(instance);
+        LOGGER.debug("Created ComparisonRules with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of ComparisonRules instances.")
@@ -114,5 +89,35 @@ public class ComparisonRulesController {
         LOGGER.debug("counting ComparisonRuless");
         Long count = comparisonRulesService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the ComparisonRules instance associated with the given id.")
+    public ComparisonRules getComparisonRules(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting ComparisonRules with id: {}", id);
+        ComparisonRules instance = comparisonRulesService.findById(id);
+        LOGGER.debug("ComparisonRules details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the ComparisonRules instance associated with the given id.")
+    public ComparisonRules editComparisonRules(@PathVariable(value = "id") Integer id, @RequestBody ComparisonRules instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing ComparisonRules with id: {}", instance.getId());
+        instance.setId(id);
+        instance = comparisonRulesService.update(instance);
+        LOGGER.debug("ComparisonRules details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the ComparisonRules instance associated with the given id.")
+    public boolean deleteComparisonRules(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting ComparisonRules with id: {}", id);
+        ComparisonRules deleted = comparisonRulesService.delete(id);
+        return deleted != null;
     }
 }

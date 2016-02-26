@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class ResultsController {
         return resultsService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the Results instance associated with the given id.")
-    public Results getResults(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting Results with id: {}", id);
-        Results instance = resultsService.findById(id);
-        LOGGER.debug("Results details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the Results instance associated with the given id.")
-    public boolean deleteResults(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Results with id: {}", id);
-        Results deleted = resultsService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the Results instance associated with the given id.")
-    public Results editResults(@PathVariable("id") Integer id, @RequestBody Results instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing Results with id: {}", instance.getId());
-        instance.setId(id);
-        instance = resultsService.update(instance);
-        LOGGER.debug("Results details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new Results instance.")
-    public Results createResults(@RequestBody Results instance) {
-        LOGGER.debug("Create Results with information: {}", instance);
-        instance = resultsService.create(instance);
-        LOGGER.debug("Created Results with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class ResultsController {
         this.resultsService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Results instance.")
+    public Results createResults(@RequestBody Results instance) {
+        LOGGER.debug("Create Results with information: {}", instance);
+        instance = resultsService.create(instance);
+        LOGGER.debug("Created Results with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of Results instances.")
@@ -114,5 +89,35 @@ public class ResultsController {
         LOGGER.debug("counting Resultss");
         Long count = resultsService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the Results instance associated with the given id.")
+    public Results getResults(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting Results with id: {}", id);
+        Results instance = resultsService.findById(id);
+        LOGGER.debug("Results details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the Results instance associated with the given id.")
+    public Results editResults(@PathVariable(value = "id") Integer id, @RequestBody Results instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing Results with id: {}", instance.getId());
+        instance.setId(id);
+        instance = resultsService.update(instance);
+        LOGGER.debug("Results details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the Results instance associated with the given id.")
+    public boolean deleteResults(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Results with id: {}", id);
+        Results deleted = resultsService.delete(id);
+        return deleted != null;
     }
 }

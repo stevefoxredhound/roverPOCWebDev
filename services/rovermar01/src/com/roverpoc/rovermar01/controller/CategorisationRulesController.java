@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class CategorisationRulesController {
         return categorisationRulesService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the CategorisationRules instance associated with the given id.")
-    public CategorisationRules getCategorisationRules(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting CategorisationRules with id: {}", id);
-        CategorisationRules instance = categorisationRulesService.findById(id);
-        LOGGER.debug("CategorisationRules details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the CategorisationRules instance associated with the given id.")
-    public boolean deleteCategorisationRules(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting CategorisationRules with id: {}", id);
-        CategorisationRules deleted = categorisationRulesService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the CategorisationRules instance associated with the given id.")
-    public CategorisationRules editCategorisationRules(@PathVariable("id") Integer id, @RequestBody CategorisationRules instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing CategorisationRules with id: {}", instance.getId());
-        instance.setId(id);
-        instance = categorisationRulesService.update(instance);
-        LOGGER.debug("CategorisationRules details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new CategorisationRules instance.")
-    public CategorisationRules createCategorisationRules(@RequestBody CategorisationRules instance) {
-        LOGGER.debug("Create CategorisationRules with information: {}", instance);
-        instance = categorisationRulesService.create(instance);
-        LOGGER.debug("Created CategorisationRules with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class CategorisationRulesController {
         this.categorisationRulesService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new CategorisationRules instance.")
+    public CategorisationRules createCategorisationRules(@RequestBody CategorisationRules instance) {
+        LOGGER.debug("Create CategorisationRules with information: {}", instance);
+        instance = categorisationRulesService.create(instance);
+        LOGGER.debug("Created CategorisationRules with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of CategorisationRules instances.")
@@ -114,5 +89,35 @@ public class CategorisationRulesController {
         LOGGER.debug("counting CategorisationRuless");
         Long count = categorisationRulesService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the CategorisationRules instance associated with the given id.")
+    public CategorisationRules getCategorisationRules(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting CategorisationRules with id: {}", id);
+        CategorisationRules instance = categorisationRulesService.findById(id);
+        LOGGER.debug("CategorisationRules details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the CategorisationRules instance associated with the given id.")
+    public CategorisationRules editCategorisationRules(@PathVariable(value = "id") Integer id, @RequestBody CategorisationRules instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing CategorisationRules with id: {}", instance.getId());
+        instance.setId(id);
+        instance = categorisationRulesService.update(instance);
+        LOGGER.debug("CategorisationRules details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the CategorisationRules instance associated with the given id.")
+    public boolean deleteCategorisationRules(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting CategorisationRules with id: {}", id);
+        CategorisationRules deleted = categorisationRulesService.delete(id);
+        return deleted != null;
     }
 }

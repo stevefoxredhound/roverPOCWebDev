@@ -1,598 +1,2991 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.roverpoc.rovermar01">
-  <class table="`filter_rules`" name="com.roverpoc.rovermar01.FilterRules" entity-name="com.roverpoc.rovermar01.FilterRules">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`CONNECT_GMI_Venn_Prod_Total`" name="com.roverpoc.rovermar01.ConnectGmiVennProdTotal" entity-name="com.roverpoc.rovermar01.ConnectGmiVennProdTotal">
+    <id name="count___" type="big_decimal">
+      <column name="`COUNT(*)`" length="255" not-null="false" precision="38"/>
+      <generator class="assigned"/>
+    </id>
+  </class>
+  <class table="`TEST_NCLite_prod_messages`" name="com.roverpoc.rovermar01.TestNcliteProdMessages" entity-name="com.roverpoc.rovermar01.TestNcliteProdMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="lsValue" type="text">
-      <column name="`ls_value`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="lsSide" type="text">
-      <column name="`ls_side`" length="65535" not-null="false" precision="19"/>
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="lsField" type="text">
-      <column name="`ls_field`" length="65535" not-null="false" precision="19"/>
+    <property name="marketId" type="string">
+      <column name="`MARKET_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="lsString" type="text">
-      <column name="`ls_string`" length="65535" not-null="false" precision="19"/>
+    <property name="batchId" type="string">
+      <column name="`BATCH_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="lsStart" type="text">
-      <column name="`ls_start`" length="65535" not-null="false" precision="19"/>
+    <property name="marketAction" type="string">
+      <column name="`MARKET_ACTION`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="lsLength" type="text">
-      <column name="`ls_length`" length="65535" not-null="false" precision="19"/>
+    <property name="srcTradeId" type="string">
+      <column name="`SRC_TRADE_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="operator" type="text">
-      <column name="`operator`" length="65535" not-null="false" precision="19"/>
+    <property name="srcOrderId" type="string">
+      <column name="`SRC_ORDER_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="rsValue" type="text">
-      <column name="`rs_value`" length="65535" not-null="false" precision="19"/>
+    <property name="tradeId" type="string">
+      <column name="`TRADE_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="rsSide" type="text">
-      <column name="`rs_side`" length="65535" not-null="false" precision="19"/>
+    <property name="orderId" type="string">
+      <column name="`ORDER_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="rsField" type="text">
-      <column name="`rs_field`" length="65535" not-null="false" precision="19"/>
+    <property name="tradeType" type="string">
+      <column name="`TRADE_TYPE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="rsString" type="text">
-      <column name="`rs_string`" length="65535" not-null="false" precision="19"/>
+    <property name="tradeStatus" type="string">
+      <column name="`TRADE_STATUS`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="rsStart" type="text">
-      <column name="`rs_start`" length="65535" not-null="false" precision="19"/>
+    <property name="environmentId" type="string">
+      <column name="`ENVIRONMENT_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="rsLength" type="text">
-      <column name="`rs_length`" length="65535" not-null="false" precision="19"/>
+    <property name="environmentCode" type="string">
+      <column name="`ENVIRONMENT_CODE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="comment" type="text">
-      <column name="`comment`" length="65535" not-null="false" precision="19"/>
+    <property name="sourceId" type="string">
+      <column name="`SOURCE_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="who" type="text">
-      <column name="`who`" length="65535" not-null="false" precision="19"/>
+    <property name="sourceCode" type="string">
+      <column name="`SOURCE_CODE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="updatedTimestamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
-      <column name="`updated_timestamp`" length="255" not-null="false" precision="19"/>
+    <property name="srcMarket" type="string">
+      <column name="`SRC_MARKET`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcContract" type="string">
+      <column name="`SRC_CONTRACT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcContractType" type="string">
+      <column name="`SRC_CONTRACT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketCode" type="string">
+      <column name="`MARKET_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="contractCode" type="string">
+      <column name="`CONTRACT_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="contractType" type="string">
+      <column name="`CONTRACT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="expiry" type="string">
+      <column name="`EXPIRY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="subType" type="string">
+      <column name="`SUB_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="strike" type="string">
+      <column name="`STRIKE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="price" type="string">
+      <column name="`PRICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="buySell" type="string">
+      <column name="`BUY_SELL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="quantity" type="string">
+      <column name="`QUANTITY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcExecutingBroker" type="string">
+      <column name="`SRC_EXECUTING_BROKER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="executingBroker" type="string">
+      <column name="`EXECUTING_BROKER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="trader" type="string">
+      <column name="`TRADER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="giveInMsg" type="string">
+      <column name="`GIVE_IN_MSG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="openClose" type="string">
+      <column name="`OPEN_CLOSE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="businessDate" type="string">
+      <column name="`BUSINESS_DATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="tradeDate" type="string">
+      <column name="`TRADE_DATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="userId" type="string">
+      <column name="`USER_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="login" type="string">
+      <column name="`LOGIN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="comment" type="string">
+      <column name="`COMMENT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="misc1" type="string">
+      <column name="`MISC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="misc2" type="string">
+      <column name="`MISC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="misc3" type="string">
+      <column name="`MISC3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcCurrency" type="string">
+      <column name="`SRC_CURRENCY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="currencyCode" type="string">
+      <column name="`CURRENCY_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcFirm" type="string">
+      <column name="`SRC_FIRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcOffice" type="string">
+      <column name="`SRC_OFFICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcAccount" type="string">
+      <column name="`SRC_ACCOUNT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcAccountType" type="string">
+      <column name="`SRC_ACCOUNT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="firm" type="string">
+      <column name="`FIRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="office" type="string">
+      <column name="`OFFICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="account" type="string">
+      <column name="`ACCOUNT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="accountType" type="string">
+      <column name="`ACCOUNT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketStamp" type="string">
+      <column name="`MARKET_STAMP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketStatus" type="string">
+      <column name="`MARKET_STATUS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketStatusDesc" type="string">
+      <column name="`MARKET_STATUS_DESC`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
+  <class table="`CONNECT_GMI_Venn_UAT_Unique`" name="com.roverpoc.rovermar01.ConnectGmiVennUatUnique" entity-name="com.roverpoc.rovermar01.ConnectGmiVennUatUnique">
+    <id name="count_distinct_coreKey__" type="big_decimal">
+      <column name="`COUNT(DISTINCT(CORE_KEY))`" length="255" not-null="false" precision="38"/>
+      <generator class="assigned"/>
+    </id>
+  </class>
   <class table="`comparison_rules`" name="com.roverpoc.rovermar01.ComparisonRules" entity-name="com.roverpoc.rovermar01.ComparisonRules">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
-    <property name="coreSystem" type="text">
+    <property name="coreSystem" type="string">
       <column name="`core_system`" length="65535" not-null="false" precision="19"/>
     </property>
     <property name="dataOrder" type="big_decimal">
       <column name="`data_order`" length="255" not-null="false" precision="20"/>
     </property>
-    <property name="dataItem" type="text">
+    <property name="dataItem" type="string">
       <column name="`data_item`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="operator" type="text">
+    <property name="operator" type="string">
       <column name="`operator`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`GMI_prod_messages`" name="com.roverpoc.rovermar01.GmiProdMessages" entity-name="com.roverpoc.rovermar01.GmiProdMessages">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`SysB_uat_messages`" name="com.roverpoc.rovermar01.SysBUatMessages" entity-name="com.roverpoc.rovermar01.SysBUatMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreProcessDate" type="date">
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="forder" type="text">
+    <property name="forder" type="string">
       <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftdate" type="text">
+    <property name="ftdate" type="string">
       <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fwstim" type="text">
+    <property name="fwstim" type="string">
       <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftrace" type="text">
+    <property name="ftrace" type="string">
       <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="frecno" type="text">
+    <property name="frecno" type="string">
       <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fuser" type="text">
+    <property name="fuser" type="string">
       <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fsdsc1" type="text">
+    <property name="fsdsc1" type="string">
       <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fsqty" type="text">
+    <property name="fsqty" type="string">
       <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fexbkr" type="text">
+    <property name="fexbkr" type="string">
       <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fopbkr" type="text">
+    <property name="fopbkr" type="string">
       <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftpric" type="text">
+    <property name="ftpric" type="string">
       <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftslap" type="text">
+    <property name="ftslap" type="string">
       <column name="`FTSLAP`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftand" type="text">
+    <property name="ftand" type="string">
       <column name="`FTAND`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fttickle" type="text">
+    <property name="fttickle" type="string">
       <column name="`FTTICKLE`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`results`" name="com.roverpoc.rovermar01.Results" entity-name="com.roverpoc.rovermar01.Results">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`collated_groups`" name="com.roverpoc.rovermar01.CollatedGroups" entity-name="com.roverpoc.rovermar01.CollatedGroups">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="processDate" type="text">
+    <property name="processDate" type="string">
       <column name="`process_date`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
+    <property name="coreSystem" type="string">
       <column name="`core_system`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="compid" type="text">
+    <property name="compid" type="string">
       <column name="`compid`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
+    <property name="classificationName" type="string">
+      <column name="`classification_name`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="category" type="string">
+      <column name="`category`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="comment" type="string">
+      <column name="`comment`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="who" type="string">
+      <column name="`who`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="totalMessages" type="java.lang.Integer">
+      <column name="`total_messages`" length="255" not-null="false" precision="10"/>
     </property>
   </class>
-  <class table="`operators`" name="com.roverpoc.rovermar01.Operators" entity-name="com.roverpoc.rovermar01.Operators">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`SysC_prod_messages`" name="com.roverpoc.rovermar01.SysCProdMessages" entity-name="com.roverpoc.rovermar01.SysCProdMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="operator" type="text">
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="forder" type="string">
+      <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdate" type="string">
+      <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwstim" type="string">
+      <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrace" type="string">
+      <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="string">
+      <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="string">
+      <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="string">
+      <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="string">
+      <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="string">
+      <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="string">
+      <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="string">
+      <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftslap" type="string">
+      <column name="`FTSLAP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftand" type="string">
+      <column name="`FTAND`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttickle" type="string">
+      <column name="`FTTICKLE`" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`CONNECT_GMI_Venn_Both`" name="com.roverpoc.rovermar01.ConnectGmiVennBoth" entity-name="com.roverpoc.rovermar01.ConnectGmiVennBoth">
+    <id name="count_distinct_coreKey__" type="big_decimal">
+      <column name="`COUNT(DISTINCT(CORE_KEY))`" length="255" not-null="false" precision="38"/>
+      <generator class="assigned"/>
+    </id>
+  </class>
+  <class table="`operators`" name="com.roverpoc.rovermar01.Operators" entity-name="com.roverpoc.rovermar01.Operators">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="operator" type="string">
       <column name="`operator`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="command" type="text">
+    <property name="command" type="string">
       <column name="`command`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`GMI_uat_messages`" name="com.roverpoc.rovermar01.GmiUatMessages" entity-name="com.roverpoc.rovermar01.GmiUatMessages">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`CONNECT_GMI_Venn_UAT_Total`" name="com.roverpoc.rovermar01.ConnectGmiVennUatTotal" entity-name="com.roverpoc.rovermar01.ConnectGmiVennUatTotal">
+    <id name="count___" type="big_decimal">
+      <column name="`COUNT(*)`" length="255" not-null="false" precision="38"/>
+      <generator class="assigned"/>
+    </id>
+  </class>
+  <class table="`SysA_prod_messages`" name="com.roverpoc.rovermar01.SysAProdMessages" entity-name="com.roverpoc.rovermar01.SysAProdMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreProcessDate" type="date">
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="forder" type="text">
+    <property name="forder" type="string">
       <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftdate" type="text">
+    <property name="ftdate" type="string">
       <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fwstim" type="text">
+    <property name="fwstim" type="string">
       <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftrace" type="text">
+    <property name="ftrace" type="string">
       <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="frecno" type="text">
+    <property name="frecno" type="string">
       <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fuser" type="text">
+    <property name="fuser" type="string">
       <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fsdsc1" type="text">
+    <property name="fsdsc1" type="string">
       <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fsqty" type="text">
+    <property name="fsqty" type="string">
       <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fexbkr" type="text">
+    <property name="fexbkr" type="string">
       <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fopbkr" type="text">
+    <property name="fopbkr" type="string">
       <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftpric" type="text">
+    <property name="ftpric" type="string">
       <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftslap" type="text">
+    <property name="ftslap" type="string">
       <column name="`FTSLAP`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="ftand" type="text">
+    <property name="ftand" type="string">
       <column name="`FTAND`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="fttickle" type="text">
+    <property name="fttickle" type="string">
       <column name="`FTTICKLE`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`sysa_uat_messages`" name="com.roverpoc.rovermar01.SysaUatMessages" entity-name="com.roverpoc.rovermar01.SysaUatMessages">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
-      <generator class="identity"/>
-    </id>
-    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
-      <column name="`date_time`" length="255" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="colA" type="text">
-      <column name="`ColA`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="colB" type="text">
-      <column name="`ColB`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="colC" type="text">
-      <column name="`ColC`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="colD" type="text">
-      <column name="`ColD`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="colE" type="text">
-      <column name="`ColE`" length="65535" not-null="false" precision="19"/>
-    </property>
-  </class>
   <class table="`categorisation_rules`" name="com.roverpoc.rovermar01.CategorisationRules" entity-name="com.roverpoc.rovermar01.CategorisationRules">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="processDate" type="date">
+    <property name="processDate" type="java.sql.Date">
       <column name="`process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
+    <property name="coreSystem" type="string">
       <column name="`core_system`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="classificationName" type="text">
+    <property name="classificationName" type="string">
       <column name="`classification_name`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="category" type="text">
+    <property name="category" type="string">
       <column name="`category`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="comment" type="text">
+    <property name="comment" type="string">
       <column name="`COMMENT`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="who" type="text">
+    <property name="who" type="string">
       <column name="`who`" length="65535" not-null="false" precision="19"/>
     </property>
     <property name="updatedTimestamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`updated_timestamp`" length="255" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`NC_uat_messages`" name="com.roverpoc.rovermar01.NcUatMessages" entity-name="com.roverpoc.rovermar01.NcUatMessages">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`TEST_GMI_UAT_messages`" name="com.roverpoc.rovermar01.TestGmiUatMessages" entity-name="com.roverpoc.rovermar01.TestGmiUatMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreProcessDate" type="date">
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="marketOrder" type="text">
-      <column name="`Market_Order`" length="65535" not-null="false" precision="19"/>
+    <property name="frecid" type="string">
+      <column name="`FRECID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="marketTrade" type="text">
-      <column name="`Market_trade`" length="65535" not-null="false" precision="19"/>
+    <property name="ffirm" type="string">
+      <column name="`FFIRM`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="lots" type="text">
-      <column name="`lots`" length="65535" not-null="false" precision="19"/>
+    <property name="foffic" type="string">
+      <column name="`FOFFIC`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="product" type="text">
-      <column name="`product`" length="65535" not-null="false" precision="19"/>
+    <property name="facct" type="string">
+      <column name="`FACCT`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="price" type="text">
-      <column name="`price`" length="65535" not-null="false" precision="19"/>
+    <property name="fatype" type="string">
+      <column name="`FATYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcusip" type="string">
+      <column name="`FCUSIP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcusp2" type="string">
+      <column name="`FCUSP2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fctym" type="string">
+      <column name="`FCTYM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsbcus" type="string">
+      <column name="`FSBCUS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstype" type="string">
+      <column name="`FSTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubty" type="string">
+      <column name="`FSUBTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstyp2" type="string">
+      <column name="`FSTYP2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstrik" type="string">
+      <column name="`FSTRIK`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexpdt" type="string">
+      <column name="`FEXPDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubac" type="string">
+      <column name="`FSUBAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdeal" type="string">
+      <column name="`FDEAL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdate" type="string">
+      <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="string">
+      <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbs" type="string">
+      <column name="`FBS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="floc" type="string">
+      <column name="`FLOC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbrokr" type="string">
+      <column name="`FBROKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspred" type="string">
+      <column name="`FSPRED`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrace" type="string">
+      <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ficode" type="string">
+      <column name="`FICODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frefno" type="string">
+      <column name="`FREFNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswac1" type="string">
+      <column name="`FSWAC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswap1" type="string">
+      <column name="`FSWAP1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswas1" type="string">
+      <column name="`FSWAS1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswac2" type="string">
+      <column name="`FSWAC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswap2" type="string">
+      <column name="`FSWAP2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswas2" type="string">
+      <column name="`FSWAS2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fzone" type="string">
+      <column name="`FZONE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="facnty" type="string">
+      <column name="`FACNTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fclass" type="string">
+      <column name="`FCLASS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubcl" type="string">
+      <column name="`FSUBCL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frr" type="string">
+      <column name="`FRR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="friskg" type="string">
+      <column name="`FRISKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmembr" type="string">
+      <column name="`FMEMBR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsname" type="string">
+      <column name="`FSNAME`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsrcac" type="string">
+      <column name="`FSRCAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frefof" type="string">
+      <column name="`FREFOF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frefrr" type="string">
+      <column name="`FREFRR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fofffn" type="string">
+      <column name="`FOFFFN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffof" type="string">
+      <column name="`FOFFOF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffac" type="string">
+      <column name="`FOFFAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffat" type="string">
+      <column name="`FOFFAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmpgmn" type="string">
+      <column name="`FMPGMN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstata" type="string">
+      <column name="`FSTATA`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatb" type="string">
+      <column name="`FSTATB`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatc" type="string">
+      <column name="`FSTATC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatd" type="string">
+      <column name="`FSTATD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstate" type="string">
+      <column name="`FSTATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatf" type="string">
+      <column name="`FSTATF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatg" type="string">
+      <column name="`FSTATG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstath" type="string">
+      <column name="`FSTATH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatj" type="string">
+      <column name="`FSTATJ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatk" type="string">
+      <column name="`FSTATK`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat1" type="string">
+      <column name="`FSTAT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat2" type="string">
+      <column name="`FSTAT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat3" type="string">
+      <column name="`FSTAT3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat4" type="string">
+      <column name="`FSTAT4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat5" type="string">
+      <column name="`FSTAT5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat6" type="string">
+      <column name="`FSTAT6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat7" type="string">
+      <column name="`FSTAT7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat8" type="string">
+      <column name="`FSTAT8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat9" type="string">
+      <column name="`FSTAT9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fqtedt" type="string">
+      <column name="`FQTEDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fqty" type="string">
+      <column name="`FQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtq" type="string">
+      <column name="`FPRTQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbustq" type="string">
+      <column name="`FBUSTQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmakeq" type="string">
+      <column name="`FMAKEQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fleavq" type="string">
+      <column name="`FLEAVQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsegq" type="string">
+      <column name="`FSEGQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftfrq" type="string">
+      <column name="`FTFRQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdlvyq" type="string">
+      <column name="`FDLVYQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdlvya" type="string">
+      <column name="`FDLVYA`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdscx" type="string">
+      <column name="`FSDSCX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="string">
+      <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc2" type="string">
+      <column name="`FSDSC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc3" type="string">
+      <column name="`FSDSC3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdscx" type="string">
+      <column name="`FTDSCX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdsc1" type="string">
+      <column name="`FTDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdsc2" type="string">
+      <column name="`FTDSC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdsc3" type="string">
+      <column name="`FTDSC3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmkval" type="string">
+      <column name="`FMKVAL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fystmv" type="string">
+      <column name="`FYSTMV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmultf" type="string">
+      <column name="`FMULTF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdate" type="string">
+      <column name="`FSDATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexrat" type="string">
+      <column name="`FEXRAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frxdat" type="string">
+      <column name="`FRXDAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fiad" type="string">
+      <column name="`FIAD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fyield" type="string">
+      <column name="`FYIELD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdctco" type="string">
+      <column name="`FDCTCO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdelta" type="string">
+      <column name="`FDELTA`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fltdat" type="string">
+      <column name="`FLTDAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fctlno" type="string">
+      <column name="`FCTLNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fpcnty" type="string">
+      <column name="`FPCNTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexch" type="string">
+      <column name="`FEXCH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffc" type="string">
+      <column name="`FFC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftype" type="string">
+      <column name="`FTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsymbl" type="string">
+      <column name="`FSYMBL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fptype" type="string">
+      <column name="`FPTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubex" type="string">
+      <column name="`FSUBEX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrdex" type="string">
+      <column name="`FTRDEX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmatdt" type="string">
+      <column name="`FMATDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtpr" type="string">
+      <column name="`FPRTPR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbasis" type="string">
+      <column name="`FBASIS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fclose" type="string">
+      <column name="`FCLOSE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprcdt" type="string">
+      <column name="`FPRCDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtcp" type="string">
+      <column name="`FPRTCP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fundcp" type="string">
+      <column name="`FUNDCP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtuc" type="string">
+      <column name="`FPRTUC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprvcp" type="string">
+      <column name="`FPRVCP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrprc" type="string">
+      <column name="`FTRPRC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexpr" type="string">
+      <column name="`FEXPR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprice" type="string">
+      <column name="`FPRICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspedt" type="string">
+      <column name="`FSPEDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpedt" type="string">
+      <column name="`FTPEDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcursy" type="string">
+      <column name="`FCURSY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcurcd" type="string">
+      <column name="`FCURCD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcalc" type="string">
+      <column name="`FCALC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcmnt1" type="string">
+      <column name="`FCMNT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcmnt2" type="string">
+      <column name="`FCMNT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcmnt3" type="string">
+      <column name="`FCMNT3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="flegnd" type="string">
+      <column name="`FLEGND`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fomncd" type="string">
+      <column name="`FOMNCD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frtht" type="string">
+      <column name="`FRTHT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fschdl" type="string">
+      <column name="`FSCHDL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foc" type="string">
+      <column name="`FOC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcod" type="string">
+      <column name="`FCOD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fucusp" type="string">
+      <column name="`FUCUSP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcvtbl" type="string">
+      <column name="`FCVTBL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="string">
+      <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="string">
+      <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopfrm" type="string">
+      <column name="`FOPFRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgivio" type="string">
+      <column name="`FGIVIO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgivfx" type="string">
+      <column name="`FGIVFX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fiexng" type="string">
+      <column name="`FIEXNG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fiefrm" type="string">
+      <column name="`FIEFRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcard" type="string">
+      <column name="`FCARD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="forder" type="string">
+      <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fchit" type="string">
+      <column name="`FCHIT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffeecl" type="string">
+      <column name="`FFEECL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffeeex" type="string">
+      <column name="`FFEEEX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcti" type="string">
+      <column name="`FCTI`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fordty" type="string">
+      <column name="`FORDTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fordor" type="string">
+      <column name="`FORDOR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftime" type="string">
+      <column name="`FTIME`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftbkt" type="string">
+      <column name="`FTBKT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsessn" type="string">
+      <column name="`FSESSN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstins" type="string">
+      <column name="`FSTINS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttype" type="string">
+      <column name="`FTTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg1" type="string">
+      <column name="`FBARG1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg2" type="string">
+      <column name="`FBARG2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg3" type="string">
+      <column name="`FBARG3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg4" type="string">
+      <column name="`FBARG4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg5" type="string">
+      <column name="`FBARG5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmtabl" type="string">
+      <column name="`FMTABL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fminit" type="string">
+      <column name="`FMINIT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmvarn" type="string">
+      <column name="`FMVARN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmuntl" type="string">
+      <column name="`FMUNTL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmgncv" type="string">
+      <column name="`FMGNCV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1f" type="string">
+      <column name="`FREL1F`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1o" type="string">
+      <column name="`FREL1O`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1a" type="string">
+      <column name="`FREL1A`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1t" type="string">
+      <column name="`FREL1T`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2f" type="string">
+      <column name="`FREL2F`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2o" type="string">
+      <column name="`FREL2O`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2a" type="string">
+      <column name="`FREL2A`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2t" type="string">
+      <column name="`FREL2T`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3f" type="string">
+      <column name="`FREL3F`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3o" type="string">
+      <column name="`FREL3O`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3a" type="string">
+      <column name="`FREL3A`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3t" type="string">
+      <column name="`FREL3T`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcomm" type="string">
+      <column name="`FCOMM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee1" type="string">
+      <column name="`FFEE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee2" type="string">
+      <column name="`FFEE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee3" type="string">
+      <column name="`FFEE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee4" type="string">
+      <column name="`FFEE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee5" type="string">
+      <column name="`FFEE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee6" type="string">
+      <column name="`FFEE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee7" type="string">
+      <column name="`FFEE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee8" type="string">
+      <column name="`FFEE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee9" type="string">
+      <column name="`FFEE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgichg" type="string">
+      <column name="`FGICHG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbkchg" type="string">
+      <column name="`FBKCHG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fother" type="string">
+      <column name="`FOTHER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgross" type="string">
+      <column name="`FGROSS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fnet" type="string">
+      <column name="`FNET`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmbkof" type="string">
+      <column name="`FMBKOF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmflor" type="string">
+      <column name="`FMFLOR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmordr" type="string">
+      <column name="`FMORDR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmwire" type="string">
+      <column name="`FMWIRE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmothr" type="string">
+      <column name="`FMOTHR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatcom" type="string">
+      <column name="`FATCOM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe1" type="string">
+      <column name="`FATFE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe2" type="string">
+      <column name="`FATFE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe3" type="string">
+      <column name="`FATFE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe4" type="string">
+      <column name="`FATFE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe5" type="string">
+      <column name="`FATFE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe6" type="string">
+      <column name="`FATFE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe7" type="string">
+      <column name="`FATFE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe8" type="string">
+      <column name="`FATFE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe9" type="string">
+      <column name="`FATFE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatgiv" type="string">
+      <column name="`FATGIV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatbkg" type="string">
+      <column name="`FATBKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatoth" type="string">
+      <column name="`FATOTH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatbko" type="string">
+      <column name="`FATBKO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatflr" type="string">
+      <column name="`FATFLR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatord" type="string">
+      <column name="`FATORD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatwir" type="string">
+      <column name="`FATWIR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatalo" type="string">
+      <column name="`FATALO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdcom" type="string">
+      <column name="`FFDCOM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe1" type="string">
+      <column name="`FFDFE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe2" type="string">
+      <column name="`FFDFE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe3" type="string">
+      <column name="`FFDFE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe4" type="string">
+      <column name="`FFDFE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe5" type="string">
+      <column name="`FFDFE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe6" type="string">
+      <column name="`FFDFE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe7" type="string">
+      <column name="`FFDFE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe8" type="string">
+      <column name="`FFDFE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe9" type="string">
+      <column name="`FFDFE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdgiv" type="string">
+      <column name="`FFDGIV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdbkg" type="string">
+      <column name="`FFDBKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdoth" type="string">
+      <column name="`FFDOTH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdbko" type="string">
+      <column name="`FFDBKO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdflr" type="string">
+      <column name="`FFDFLR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdord" type="string">
+      <column name="`FFDORD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdwir" type="string">
+      <column name="`FFDWIR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdalo" type="string">
+      <column name="`FFDALO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe1" type="string">
+      <column name="`FFUFE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe2" type="string">
+      <column name="`FFUFE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe3" type="string">
+      <column name="`FFUFE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe4" type="string">
+      <column name="`FFUFE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe5" type="string">
+      <column name="`FFUFE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe6" type="string">
+      <column name="`FFUFE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe7" type="string">
+      <column name="`FFUFE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe8" type="string">
+      <column name="`FFUFE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe9" type="string">
+      <column name="`FFUFE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffugiv" type="string">
+      <column name="`FFUGIV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffubkg" type="string">
+      <column name="`FFUBKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuoth" type="string">
+      <column name="`FFUOTH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffubko" type="string">
+      <column name="`FFUBKO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuflr" type="string">
+      <column name="`FFUFLR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuord" type="string">
+      <column name="`FFUORD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuwir" type="string">
+      <column name="`FFUWIR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffualo" type="string">
+      <column name="`FFUALO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fovnq" type="string">
+      <column name="`FOVNQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdayq" type="string">
+      <column name="`FDAYQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fscrq" type="string">
+      <column name="`FSCRQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspdq" type="string">
+      <column name="`FSPDQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fovnc" type="string">
+      <column name="`FOVNC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdayc" type="string">
+      <column name="`FDAYC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fscrc" type="string">
+      <column name="`FSCRC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspdc" type="string">
+      <column name="`FSPDC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsortk" type="string">
+      <column name="`FSORTK`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="flevel" type="string">
+      <column name="`FLEVEL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbatch" type="string">
+      <column name="`FBATCH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="string">
+      <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fclrid" type="string">
+      <column name="`FCLRID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="finpmo" type="string">
+      <column name="`FINPMO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="finpyr" type="string">
+      <column name="`FINPYR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffbacc" type="string">
+      <column name="`FFBACC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="forig" type="string">
+      <column name="`FORIG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcabcd" type="string">
+      <column name="`FCABCD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fschov" type="string">
+      <column name="`FSCHOV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fpgmid" type="string">
+      <column name="`FPGMID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fscrid" type="string">
+      <column name="`FSCRID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="string">
+      <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwsid" type="string">
+      <column name="`FWSID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwstim" type="string">
+      <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdest" type="string">
+      <column name="`FDEST`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdelet" type="string">
+      <column name="`FDELET`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fxtrct" type="string">
+      <column name="`FXTRCT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbqty" type="string">
+      <column name="`FBQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="string">
+      <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdam1" type="string">
+      <column name="`FFDAM1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="famt1" type="string">
+      <column name="`FAMT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdam2" type="string">
+      <column name="`FFDAM2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="famt2" type="string">
+      <column name="`FAMT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frout1" type="string">
+      <column name="`FROUT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frout2" type="string">
+      <column name="`FROUT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frout3" type="string">
+      <column name="`FROUT3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcurac" type="string">
+      <column name="`FCURAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcurat" type="string">
+      <column name="`FCURAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fccnty" type="string">
+      <column name="`FCCNTY`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
   <class table="`classifications`" name="com.roverpoc.rovermar01.Classifications" entity-name="com.roverpoc.rovermar01.Classifications">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="processDate" type="text">
+    <property name="processDate" type="string">
       <column name="`process_date`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
+    <property name="coreSystem" type="string">
       <column name="`core_system`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="compid" type="text">
+    <property name="compid" type="string">
       <column name="`compid`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="name" type="text">
+    <property name="name" type="string">
       <column name="`NAME`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`NC_prod_messages`" name="com.roverpoc.rovermar01.NcProdMessages" entity-name="com.roverpoc.rovermar01.NcProdMessages">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`SysA_uat_messages`" name="com.roverpoc.rovermar01.SysAUatMessages" entity-name="com.roverpoc.rovermar01.SysAUatMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreProcessDate" type="date">
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="marketOrder" type="text">
-      <column name="`Market_Order`" length="65535" not-null="false" precision="19"/>
+    <property name="forder" type="string">
+      <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="marketTrade" type="text">
-      <column name="`Market_trade`" length="65535" not-null="false" precision="19"/>
+    <property name="ftdate" type="string">
+      <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="lots" type="text">
-      <column name="`lots`" length="65535" not-null="false" precision="19"/>
+    <property name="fwstim" type="string">
+      <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="product" type="text">
-      <column name="`product`" length="65535" not-null="false" precision="19"/>
+    <property name="ftrace" type="string">
+      <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="price" type="text">
-      <column name="`price`" length="65535" not-null="false" precision="19"/>
+    <property name="frecno" type="string">
+      <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="string">
+      <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="string">
+      <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="string">
+      <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="string">
+      <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="string">
+      <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="string">
+      <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftslap" type="string">
+      <column name="`FTSLAP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftand" type="string">
+      <column name="`FTAND`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttickle" type="string">
+      <column name="`FTTICKLE`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`sysa_prod_messages`" name="com.roverpoc.rovermar01.SysaProdMessages" entity-name="com.roverpoc.rovermar01.SysaProdMessages">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`SysB_prod_messages`" name="com.roverpoc.rovermar01.SysBProdMessages" entity-name="com.roverpoc.rovermar01.SysBProdMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="coreKey" type="text">
-      <column name="`core_key`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="colA" type="text">
-      <column name="`ColA`" length="65535" not-null="false" precision="19"/>
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="colB" type="text">
-      <column name="`ColB`" length="65535" not-null="false" precision="19"/>
+    <property name="forder" type="string">
+      <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="colC" type="text">
-      <column name="`ColC`" length="65535" not-null="false" precision="19"/>
+    <property name="ftdate" type="string">
+      <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="colD" type="text">
-      <column name="`ColD`" length="65535" not-null="false" precision="19"/>
+    <property name="fwstim" type="string">
+      <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="colE" type="text">
-      <column name="`ColE`" length="65535" not-null="false" precision="19"/>
+    <property name="ftrace" type="string">
+      <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="string">
+      <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="string">
+      <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="string">
+      <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="string">
+      <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="string">
+      <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="string">
+      <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="string">
+      <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftslap" type="string">
+      <column name="`FTSLAP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftand" type="string">
+      <column name="`FTAND`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttickle" type="string">
+      <column name="`FTTICKLE`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`control`" name="com.roverpoc.rovermar01.Control" entity-name="com.roverpoc.rovermar01.Control">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`TEST_NCLite_UAT_messages`" name="com.roverpoc.rovermar01.TestNcliteUatMessages" entity-name="com.roverpoc.rovermar01.TestNcliteUatMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="controlStatus" type="text">
-      <column name="`control_status`" length="65535" not-null="false" precision="19"/>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="engineStatus" type="text">
-      <column name="`engine_status`" length="65535" not-null="false" precision="19"/>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
     </property>
-    <property name="resetStatus" type="text">
-      <column name="`reset_status`" length="65535" not-null="false" precision="19"/>
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="collationStatus" type="text">
-      <column name="`collation_status`" length="65535" not-null="false" precision="19"/>
+    <property name="marketId" type="string">
+      <column name="`MARKET_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="loggingLevel" type="integer">
-      <column name="`logging_level`" length="255" not-null="false" precision="19"/>
+    <property name="batchId" type="string">
+      <column name="`BATCH_ID`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="engineAllOrOne" type="text">
-      <column name="`engine_all_or_one`" length="65535" not-null="false" precision="19"/>
+    <property name="marketAction" type="string">
+      <column name="`MARKET_ACTION`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="processDate" type="date">
-      <column name="`process_date`" length="10" not-null="false" precision="19"/>
+    <property name="srcTradeId" type="string">
+      <column name="`SRC_TRADE_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcOrderId" type="string">
+      <column name="`SRC_ORDER_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="tradeId" type="string">
+      <column name="`TRADE_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="orderId" type="string">
+      <column name="`ORDER_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="tradeType" type="string">
+      <column name="`TRADE_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="tradeStatus" type="string">
+      <column name="`TRADE_STATUS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="environmentId" type="string">
+      <column name="`ENVIRONMENT_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="environmentCode" type="string">
+      <column name="`ENVIRONMENT_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="sourceId" type="string">
+      <column name="`SOURCE_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="sourceCode" type="string">
+      <column name="`SOURCE_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcMarket" type="string">
+      <column name="`SRC_MARKET`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcContract" type="string">
+      <column name="`SRC_CONTRACT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcContractType" type="string">
+      <column name="`SRC_CONTRACT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketCode" type="string">
+      <column name="`MARKET_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="contractCode" type="string">
+      <column name="`CONTRACT_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="contractType" type="string">
+      <column name="`CONTRACT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="expiry" type="string">
+      <column name="`EXPIRY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="subType" type="string">
+      <column name="`SUB_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="strike" type="string">
+      <column name="`STRIKE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="price" type="string">
+      <column name="`PRICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="buySell" type="string">
+      <column name="`BUY_SELL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="quantity" type="string">
+      <column name="`QUANTITY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcExecutingBroker" type="string">
+      <column name="`SRC_EXECUTING_BROKER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="executingBroker" type="string">
+      <column name="`EXECUTING_BROKER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="trader" type="string">
+      <column name="`TRADER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="giveInMsg" type="string">
+      <column name="`GIVE_IN_MSG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="openClose" type="string">
+      <column name="`OPEN_CLOSE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="businessDate" type="string">
+      <column name="`BUSINESS_DATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="tradeDate" type="string">
+      <column name="`TRADE_DATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="userId" type="string">
+      <column name="`USER_ID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="login" type="string">
+      <column name="`LOGIN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="comment" type="string">
+      <column name="`COMMENT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="misc1" type="string">
+      <column name="`MISC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="misc2" type="string">
+      <column name="`MISC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="misc3" type="string">
+      <column name="`MISC3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcCurrency" type="string">
+      <column name="`SRC_CURRENCY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="currencyCode" type="string">
+      <column name="`CURRENCY_CODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcFirm" type="string">
+      <column name="`SRC_FIRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcOffice" type="string">
+      <column name="`SRC_OFFICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcAccount" type="string">
+      <column name="`SRC_ACCOUNT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="srcAccountType" type="string">
+      <column name="`SRC_ACCOUNT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="firm" type="string">
+      <column name="`FIRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="office" type="string">
+      <column name="`OFFICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="account" type="string">
+      <column name="`ACCOUNT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="accountType" type="string">
+      <column name="`ACCOUNT_TYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketStamp" type="string">
+      <column name="`MARKET_STAMP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketStatus" type="string">
+      <column name="`MARKET_STATUS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="marketStatusDesc" type="string">
+      <column name="`MARKET_STATUS_DESC`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
   <class table="`categories`" name="com.roverpoc.rovermar01.Categories" entity-name="com.roverpoc.rovermar01.Categories">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="category" type="text">
+    <property name="category" type="string">
       <column name="`category`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
-  <class table="`logging`" name="com.roverpoc.rovermar01.Logging" entity-name="com.roverpoc.rovermar01.Logging">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+  <class table="`core_systems`" name="com.roverpoc.rovermar01.CoreSystems" entity-name="com.roverpoc.rovermar01.CoreSystems">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="process" type="text">
-      <column name="`PROCESS`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystem" type="text">
+    <property name="coreSystem" type="string">
       <column name="`core_system`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="logDetails" type="text">
+    <property name="coreSystemRoverName" type="string">
+      <column name="`core_system_rover_name`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProdTable" type="string">
+      <column name="`core_prod_table`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProdConnectivity" type="string">
+      <column name="`core_prod_connectivity`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreUatTable" type="string">
+      <column name="`core_uat_table`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreUatConnectivity" type="string">
+      <column name="`core_uat_connectivity`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemStatus" type="string">
+      <column name="`core_system_status`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemLogging" type="string">
+      <column name="`core_system_logging`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemAlert" type="string">
+      <column name="`core_system_alert`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystemAlertTarget" type="string">
+      <column name="`core_system_alert_target`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreConnectSystemRdbms" type="string">
+      <column name="`core_connect_system_rdbms`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreConnectBlockSize" type="string">
+      <column name="`core_connect_block_size`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreConnectConnectionString" type="string">
+      <column name="`core_connect_connection_string`" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`filter_rules`" name="com.roverpoc.rovermar01.FilterRules" entity-name="com.roverpoc.rovermar01.FilterRules">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="string">
+      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsValue" type="string">
+      <column name="`ls_value`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsSide" type="string">
+      <column name="`ls_side`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsField" type="string">
+      <column name="`ls_field`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsString" type="string">
+      <column name="`ls_string`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsStart" type="string">
+      <column name="`ls_start`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="lsLength" type="string">
+      <column name="`ls_length`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="operator" type="string">
+      <column name="`operator`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsValue" type="string">
+      <column name="`rs_value`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsSide" type="string">
+      <column name="`rs_side`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsField" type="string">
+      <column name="`rs_field`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsString" type="string">
+      <column name="`rs_string`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsStart" type="string">
+      <column name="`rs_start`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="rsLength" type="string">
+      <column name="`rs_length`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="comment" type="string">
+      <column name="`comment`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="who" type="string">
+      <column name="`who`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="updatedTimestamp" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`updated_timestamp`" length="255" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`SysC_uat_messages`" name="com.roverpoc.rovermar01.SysCUatMessages" entity-name="com.roverpoc.rovermar01.SysCUatMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="forder" type="string">
+      <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdate" type="string">
+      <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwstim" type="string">
+      <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrace" type="string">
+      <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="string">
+      <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="string">
+      <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="string">
+      <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="string">
+      <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="string">
+      <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="string">
+      <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="string">
+      <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftslap" type="string">
+      <column name="`FTSLAP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftand" type="string">
+      <column name="`FTAND`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttickle" type="string">
+      <column name="`FTTICKLE`" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`dashboard_counts`" name="com.roverpoc.rovermar01.DashboardCounts" entity-name="com.roverpoc.rovermar01.DashboardCounts">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="processDate" type="string">
+      <column name="`process_date`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="process" type="java.lang.String">
+      <column name="`process`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="prodTotal" type="java.lang.Integer">
+      <column name="`prod_total`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="prodDups" type="java.lang.Integer">
+      <column name="`prod_dups`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="prodUnique" type="java.lang.Integer">
+      <column name="`prod_unique`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="prodOnly" type="java.lang.Integer">
+      <column name="`prod_only`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="inBoth" type="java.lang.Integer">
+      <column name="`in_both`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="uatOnly" type="java.lang.Integer">
+      <column name="`uat_only`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="uatUnique" type="java.lang.Integer">
+      <column name="`uat_unique`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="uatDups" type="java.lang.Integer">
+      <column name="`uat_dups`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="uatTotal" type="java.lang.Integer">
+      <column name="`uat_total`" length="255" not-null="false" precision="10"/>
+    </property>
+  </class>
+  <class table="`results`" name="com.roverpoc.rovermar01.Results" entity-name="com.roverpoc.rovermar01.Results">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="processDate" type="string">
+      <column name="`process_date`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="compid" type="string">
+      <column name="`compid`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`CONNECT_GMI_Venn_Prod_Unique`" name="com.roverpoc.rovermar01.ConnectGmiVennProdUnique" entity-name="com.roverpoc.rovermar01.ConnectGmiVennProdUnique">
+    <id name="count_distinct_coreKey__" type="big_decimal">
+      <column name="`COUNT(DISTINCT(CORE_KEY))`" length="255" not-null="false" precision="38"/>
+      <generator class="assigned"/>
+    </id>
+  </class>
+  <class table="`TEST_GMI_prod_messages`" name="com.roverpoc.rovermar01.TestGmiProdMessages" entity-name="com.roverpoc.rovermar01.TestGmiProdMessages">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="java.lang.String">
+      <column name="`core_system`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="coreKey" type="java.lang.String">
+      <column name="`core_key`" length="250" not-null="false" precision="19"/>
+    </property>
+    <property name="coreProcessDate" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`core_process_date`" length="10" not-null="false" precision="19"/>
+    </property>
+    <property name="frecid" type="string">
+      <column name="`FRECID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffirm" type="string">
+      <column name="`FFIRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffic" type="string">
+      <column name="`FOFFIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="facct" type="string">
+      <column name="`FACCT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatype" type="string">
+      <column name="`FATYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcusip" type="string">
+      <column name="`FCUSIP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcusp2" type="string">
+      <column name="`FCUSP2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fctym" type="string">
+      <column name="`FCTYM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsbcus" type="string">
+      <column name="`FSBCUS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstype" type="string">
+      <column name="`FSTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubty" type="string">
+      <column name="`FSUBTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstyp2" type="string">
+      <column name="`FSTYP2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstrik" type="string">
+      <column name="`FSTRIK`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexpdt" type="string">
+      <column name="`FEXPDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubac" type="string">
+      <column name="`FSUBAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdeal" type="string">
+      <column name="`FDEAL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdate" type="string">
+      <column name="`FTDATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpric" type="string">
+      <column name="`FTPRIC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbs" type="string">
+      <column name="`FBS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="floc" type="string">
+      <column name="`FLOC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbrokr" type="string">
+      <column name="`FBROKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspred" type="string">
+      <column name="`FSPRED`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrace" type="string">
+      <column name="`FTRACE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ficode" type="string">
+      <column name="`FICODE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frefno" type="string">
+      <column name="`FREFNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswac1" type="string">
+      <column name="`FSWAC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswap1" type="string">
+      <column name="`FSWAP1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswas1" type="string">
+      <column name="`FSWAS1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswac2" type="string">
+      <column name="`FSWAC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswap2" type="string">
+      <column name="`FSWAP2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fswas2" type="string">
+      <column name="`FSWAS2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fzone" type="string">
+      <column name="`FZONE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="facnty" type="string">
+      <column name="`FACNTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fclass" type="string">
+      <column name="`FCLASS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubcl" type="string">
+      <column name="`FSUBCL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frr" type="string">
+      <column name="`FRR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="friskg" type="string">
+      <column name="`FRISKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmembr" type="string">
+      <column name="`FMEMBR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsname" type="string">
+      <column name="`FSNAME`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsrcac" type="string">
+      <column name="`FSRCAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frefof" type="string">
+      <column name="`FREFOF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frefrr" type="string">
+      <column name="`FREFRR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fofffn" type="string">
+      <column name="`FOFFFN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffof" type="string">
+      <column name="`FOFFOF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffac" type="string">
+      <column name="`FOFFAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foffat" type="string">
+      <column name="`FOFFAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmpgmn" type="string">
+      <column name="`FMPGMN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstata" type="string">
+      <column name="`FSTATA`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatb" type="string">
+      <column name="`FSTATB`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatc" type="string">
+      <column name="`FSTATC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatd" type="string">
+      <column name="`FSTATD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstate" type="string">
+      <column name="`FSTATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatf" type="string">
+      <column name="`FSTATF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatg" type="string">
+      <column name="`FSTATG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstath" type="string">
+      <column name="`FSTATH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatj" type="string">
+      <column name="`FSTATJ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstatk" type="string">
+      <column name="`FSTATK`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat1" type="string">
+      <column name="`FSTAT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat2" type="string">
+      <column name="`FSTAT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat3" type="string">
+      <column name="`FSTAT3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat4" type="string">
+      <column name="`FSTAT4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat5" type="string">
+      <column name="`FSTAT5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat6" type="string">
+      <column name="`FSTAT6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat7" type="string">
+      <column name="`FSTAT7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat8" type="string">
+      <column name="`FSTAT8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstat9" type="string">
+      <column name="`FSTAT9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fqtedt" type="string">
+      <column name="`FQTEDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fqty" type="string">
+      <column name="`FQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtq" type="string">
+      <column name="`FPRTQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbustq" type="string">
+      <column name="`FBUSTQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmakeq" type="string">
+      <column name="`FMAKEQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fleavq" type="string">
+      <column name="`FLEAVQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsegq" type="string">
+      <column name="`FSEGQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftfrq" type="string">
+      <column name="`FTFRQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdlvyq" type="string">
+      <column name="`FDLVYQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdlvya" type="string">
+      <column name="`FDLVYA`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdscx" type="string">
+      <column name="`FSDSCX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc1" type="string">
+      <column name="`FSDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc2" type="string">
+      <column name="`FSDSC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdsc3" type="string">
+      <column name="`FSDSC3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdscx" type="string">
+      <column name="`FTDSCX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdsc1" type="string">
+      <column name="`FTDSC1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdsc2" type="string">
+      <column name="`FTDSC2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftdsc3" type="string">
+      <column name="`FTDSC3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmkval" type="string">
+      <column name="`FMKVAL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fystmv" type="string">
+      <column name="`FYSTMV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmultf" type="string">
+      <column name="`FMULTF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsdate" type="string">
+      <column name="`FSDATE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexrat" type="string">
+      <column name="`FEXRAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frxdat" type="string">
+      <column name="`FRXDAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fiad" type="string">
+      <column name="`FIAD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fyield" type="string">
+      <column name="`FYIELD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdctco" type="string">
+      <column name="`FDCTCO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdelta" type="string">
+      <column name="`FDELTA`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fltdat" type="string">
+      <column name="`FLTDAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fctlno" type="string">
+      <column name="`FCTLNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fpcnty" type="string">
+      <column name="`FPCNTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexch" type="string">
+      <column name="`FEXCH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffc" type="string">
+      <column name="`FFC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftype" type="string">
+      <column name="`FTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsymbl" type="string">
+      <column name="`FSYMBL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fptype" type="string">
+      <column name="`FPTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsubex" type="string">
+      <column name="`FSUBEX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrdex" type="string">
+      <column name="`FTRDEX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmatdt" type="string">
+      <column name="`FMATDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtpr" type="string">
+      <column name="`FPRTPR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbasis" type="string">
+      <column name="`FBASIS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fclose" type="string">
+      <column name="`FCLOSE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprcdt" type="string">
+      <column name="`FPRCDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtcp" type="string">
+      <column name="`FPRTCP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fundcp" type="string">
+      <column name="`FUNDCP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprtuc" type="string">
+      <column name="`FPRTUC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprvcp" type="string">
+      <column name="`FPRVCP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftrprc" type="string">
+      <column name="`FTRPRC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexpr" type="string">
+      <column name="`FEXPR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fprice" type="string">
+      <column name="`FPRICE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspedt" type="string">
+      <column name="`FSPEDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftpedt" type="string">
+      <column name="`FTPEDT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcursy" type="string">
+      <column name="`FCURSY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcurcd" type="string">
+      <column name="`FCURCD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcalc" type="string">
+      <column name="`FCALC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcmnt1" type="string">
+      <column name="`FCMNT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcmnt2" type="string">
+      <column name="`FCMNT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcmnt3" type="string">
+      <column name="`FCMNT3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="flegnd" type="string">
+      <column name="`FLEGND`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fomncd" type="string">
+      <column name="`FOMNCD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frtht" type="string">
+      <column name="`FRTHT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fschdl" type="string">
+      <column name="`FSCHDL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="foc" type="string">
+      <column name="`FOC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcod" type="string">
+      <column name="`FCOD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fucusp" type="string">
+      <column name="`FUCUSP`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcvtbl" type="string">
+      <column name="`FCVTBL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fexbkr" type="string">
+      <column name="`FEXBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopbkr" type="string">
+      <column name="`FOPBKR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fopfrm" type="string">
+      <column name="`FOPFRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgivio" type="string">
+      <column name="`FGIVIO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgivfx" type="string">
+      <column name="`FGIVFX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fiexng" type="string">
+      <column name="`FIEXNG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fiefrm" type="string">
+      <column name="`FIEFRM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcard" type="string">
+      <column name="`FCARD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="forder" type="string">
+      <column name="`FORDER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fchit" type="string">
+      <column name="`FCHIT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffeecl" type="string">
+      <column name="`FFEECL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffeeex" type="string">
+      <column name="`FFEEEX`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcti" type="string">
+      <column name="`FCTI`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fordty" type="string">
+      <column name="`FORDTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fordor" type="string">
+      <column name="`FORDOR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftime" type="string">
+      <column name="`FTIME`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ftbkt" type="string">
+      <column name="`FTBKT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsessn" type="string">
+      <column name="`FSESSN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fstins" type="string">
+      <column name="`FSTINS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fttype" type="string">
+      <column name="`FTTYPE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg1" type="string">
+      <column name="`FBARG1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg2" type="string">
+      <column name="`FBARG2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg3" type="string">
+      <column name="`FBARG3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg4" type="string">
+      <column name="`FBARG4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbarg5" type="string">
+      <column name="`FBARG5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmtabl" type="string">
+      <column name="`FMTABL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fminit" type="string">
+      <column name="`FMINIT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmvarn" type="string">
+      <column name="`FMVARN`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmuntl" type="string">
+      <column name="`FMUNTL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmgncv" type="string">
+      <column name="`FMGNCV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1f" type="string">
+      <column name="`FREL1F`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1o" type="string">
+      <column name="`FREL1O`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1a" type="string">
+      <column name="`FREL1A`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel1t" type="string">
+      <column name="`FREL1T`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2f" type="string">
+      <column name="`FREL2F`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2o" type="string">
+      <column name="`FREL2O`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2a" type="string">
+      <column name="`FREL2A`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel2t" type="string">
+      <column name="`FREL2T`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3f" type="string">
+      <column name="`FREL3F`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3o" type="string">
+      <column name="`FREL3O`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3a" type="string">
+      <column name="`FREL3A`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frel3t" type="string">
+      <column name="`FREL3T`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcomm" type="string">
+      <column name="`FCOMM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee1" type="string">
+      <column name="`FFEE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee2" type="string">
+      <column name="`FFEE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee3" type="string">
+      <column name="`FFEE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee4" type="string">
+      <column name="`FFEE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee5" type="string">
+      <column name="`FFEE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee6" type="string">
+      <column name="`FFEE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee7" type="string">
+      <column name="`FFEE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee8" type="string">
+      <column name="`FFEE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffee9" type="string">
+      <column name="`FFEE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgichg" type="string">
+      <column name="`FGICHG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbkchg" type="string">
+      <column name="`FBKCHG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fother" type="string">
+      <column name="`FOTHER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fgross" type="string">
+      <column name="`FGROSS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fnet" type="string">
+      <column name="`FNET`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmbkof" type="string">
+      <column name="`FMBKOF`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmflor" type="string">
+      <column name="`FMFLOR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmordr" type="string">
+      <column name="`FMORDR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmwire" type="string">
+      <column name="`FMWIRE`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fmothr" type="string">
+      <column name="`FMOTHR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatcom" type="string">
+      <column name="`FATCOM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe1" type="string">
+      <column name="`FATFE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe2" type="string">
+      <column name="`FATFE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe3" type="string">
+      <column name="`FATFE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe4" type="string">
+      <column name="`FATFE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe5" type="string">
+      <column name="`FATFE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe6" type="string">
+      <column name="`FATFE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe7" type="string">
+      <column name="`FATFE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe8" type="string">
+      <column name="`FATFE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatfe9" type="string">
+      <column name="`FATFE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatgiv" type="string">
+      <column name="`FATGIV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatbkg" type="string">
+      <column name="`FATBKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatoth" type="string">
+      <column name="`FATOTH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatbko" type="string">
+      <column name="`FATBKO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatflr" type="string">
+      <column name="`FATFLR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatord" type="string">
+      <column name="`FATORD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatwir" type="string">
+      <column name="`FATWIR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fatalo" type="string">
+      <column name="`FATALO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdcom" type="string">
+      <column name="`FFDCOM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe1" type="string">
+      <column name="`FFDFE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe2" type="string">
+      <column name="`FFDFE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe3" type="string">
+      <column name="`FFDFE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe4" type="string">
+      <column name="`FFDFE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe5" type="string">
+      <column name="`FFDFE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe6" type="string">
+      <column name="`FFDFE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe7" type="string">
+      <column name="`FFDFE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe8" type="string">
+      <column name="`FFDFE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdfe9" type="string">
+      <column name="`FFDFE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdgiv" type="string">
+      <column name="`FFDGIV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdbkg" type="string">
+      <column name="`FFDBKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdoth" type="string">
+      <column name="`FFDOTH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdbko" type="string">
+      <column name="`FFDBKO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdflr" type="string">
+      <column name="`FFDFLR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdord" type="string">
+      <column name="`FFDORD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdwir" type="string">
+      <column name="`FFDWIR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdalo" type="string">
+      <column name="`FFDALO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe1" type="string">
+      <column name="`FFUFE1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe2" type="string">
+      <column name="`FFUFE2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe3" type="string">
+      <column name="`FFUFE3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe4" type="string">
+      <column name="`FFUFE4`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe5" type="string">
+      <column name="`FFUFE5`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe6" type="string">
+      <column name="`FFUFE6`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe7" type="string">
+      <column name="`FFUFE7`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe8" type="string">
+      <column name="`FFUFE8`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffufe9" type="string">
+      <column name="`FFUFE9`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffugiv" type="string">
+      <column name="`FFUGIV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffubkg" type="string">
+      <column name="`FFUBKG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuoth" type="string">
+      <column name="`FFUOTH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffubko" type="string">
+      <column name="`FFUBKO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuflr" type="string">
+      <column name="`FFUFLR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuord" type="string">
+      <column name="`FFUORD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffuwir" type="string">
+      <column name="`FFUWIR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffualo" type="string">
+      <column name="`FFUALO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fovnq" type="string">
+      <column name="`FOVNQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdayq" type="string">
+      <column name="`FDAYQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fscrq" type="string">
+      <column name="`FSCRQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspdq" type="string">
+      <column name="`FSPDQ`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fovnc" type="string">
+      <column name="`FOVNC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdayc" type="string">
+      <column name="`FDAYC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fscrc" type="string">
+      <column name="`FSCRC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fspdc" type="string">
+      <column name="`FSPDC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsortk" type="string">
+      <column name="`FSORTK`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="flevel" type="string">
+      <column name="`FLEVEL`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbatch" type="string">
+      <column name="`FBATCH`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frecno" type="string">
+      <column name="`FRECNO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fclrid" type="string">
+      <column name="`FCLRID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="finpmo" type="string">
+      <column name="`FINPMO`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="finpyr" type="string">
+      <column name="`FINPYR`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffbacc" type="string">
+      <column name="`FFBACC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="forig" type="string">
+      <column name="`FORIG`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcabcd" type="string">
+      <column name="`FCABCD`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fschov" type="string">
+      <column name="`FSCHOV`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fpgmid" type="string">
+      <column name="`FPGMID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fscrid" type="string">
+      <column name="`FSCRID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fuser" type="string">
+      <column name="`FUSER`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwsid" type="string">
+      <column name="`FWSID`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fwstim" type="string">
+      <column name="`FWSTIM`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdest" type="string">
+      <column name="`FDEST`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fdelet" type="string">
+      <column name="`FDELET`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fxtrct" type="string">
+      <column name="`FXTRCT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fbqty" type="string">
+      <column name="`FBQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fsqty" type="string">
+      <column name="`FSQTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdam1" type="string">
+      <column name="`FFDAM1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="famt1" type="string">
+      <column name="`FAMT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="ffdam2" type="string">
+      <column name="`FFDAM2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="famt2" type="string">
+      <column name="`FAMT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frout1" type="string">
+      <column name="`FROUT1`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frout2" type="string">
+      <column name="`FROUT2`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="frout3" type="string">
+      <column name="`FROUT3`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcurac" type="string">
+      <column name="`FCURAC`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fcurat" type="string">
+      <column name="`FCURAT`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="fccnty" type="string">
+      <column name="`FCCNTY`" length="65535" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`control`" name="com.roverpoc.rovermar01.Control" entity-name="com.roverpoc.rovermar01.Control">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="controlStatus" type="string">
+      <column name="`control_status`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="engineStatus" type="string">
+      <column name="`engine_status`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="resetStatus" type="string">
+      <column name="`reset_status`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="collationStatus" type="string">
+      <column name="`collation_status`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="loggingLevel" type="java.lang.Integer">
+      <column name="`logging_level`" length="255" not-null="false" precision="10"/>
+    </property>
+    <property name="engineAllOrOne" type="string">
+      <column name="`engine_all_or_one`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="processDate" type="java.sql.Date">
+      <column name="`process_date`" length="10" not-null="false" precision="19"/>
+    </property>
+  </class>
+  <class table="`CONNECT_GMI_Data_BOTH_GMI_256`" name="com.roverpoc.rovermar01.ConnectGmiDataBothGmi256" entity-name="com.roverpoc.rovermar01.ConnectGmiDataBothGmi256">
+    <composite-id mapped="true" class="ConnectGmiDataBothGmi256Id">
+      <key-property name="coreKey" type="java.lang.String">
+        <column name="`CORE_KEY`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="coreProcessDate" type="java.sql.Timestamp">
+        <column name="`CORE_PROCESS_DATE`" length="19" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="price" type="java.lang.String">
+        <column name="`PRICE`" length="250" not-null="false" precision="19"/>
+      </key-property>
+    </composite-id>
+  </class>
+  <class table="`logging`" name="com.roverpoc.rovermar01.Logging" entity-name="com.roverpoc.rovermar01.Logging">
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
+      <generator class="identity"/>
+    </id>
+    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
+      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    </property>
+    <property name="process" type="string">
+      <column name="`PROCESS`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="coreSystem" type="string">
+      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
+    </property>
+    <property name="logDetails" type="string">
       <column name="`log_details`" length="65535" not-null="false" precision="19"/>
     </property>
   </class>
   <class table="`user_login`" name="com.roverpoc.rovermar01.UserLogin" entity-name="com.roverpoc.rovermar01.UserLogin">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
-    <property name="userid" type="integer">
-      <column name="`userid`" length="255" not-null="false" precision="19"/>
+    <property name="userid" type="java.lang.Integer">
+      <column name="`userid`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="username" type="text">
+    <property name="username" type="string">
       <column name="`username`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="password" type="text">
+    <property name="password" type="string">
       <column name="`PASSWORD`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="role" type="text">
+    <property name="role" type="string">
       <column name="`role`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="tenantid" type="integer">
-      <column name="`tenantid`" length="255" not-null="false" precision="19"/>
+    <property name="tenantid" type="java.lang.Integer">
+      <column name="`tenantid`" length="255" not-null="false" precision="10"/>
     </property>
+  </class>
+  <class table="`CONNECT_GMI_Data_Prod_View`" name="com.roverpoc.rovermar01.ConnectGmiDataProdView" entity-name="com.roverpoc.rovermar01.ConnectGmiDataProdView">
+    <composite-id mapped="true" class="ConnectGmiDataProdViewId">
+      <key-property name="id" type="big_decimal">
+        <column name="`ID`" length="255" not-null="false" precision="20"/>
+      </key-property>
+      <key-property name="dateTime" type="java.sql.Timestamp">
+        <column name="`DATE_TIME`" length="19" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="coreSystem" type="java.lang.String">
+        <column name="`CORE_SYSTEM`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="coreKey" type="java.lang.String">
+        <column name="`CORE_KEY`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="coreProcessDate" type="java.sql.Timestamp">
+        <column name="`CORE_PROCESS_DATE`" length="19" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="tradeDate" type="java.lang.String">
+        <column name="`TRADE_DATE`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="member" type="java.lang.String">
+        <column name="`MEMBER`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="trader" type="java.lang.String">
+        <column name="`TRADER`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="qty" type="java.lang.String">
+        <column name="`QTY`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="price" type="java.lang.String">
+        <column name="`PRICE`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="product" type="java.lang.String">
+        <column name="`PRODUCT`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="expiry" type="java.lang.String">
+        <column name="`EXPIRY`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="currency" type="java.lang.String">
+        <column name="`CURRENCY`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="buySell" type="java.lang.String">
+        <column name="`BUY_SELL`" length="250" not-null="false" precision="19"/>
+      </key-property>
+      <key-property name="productIsin" type="java.lang.String">
+        <column name="`PRODUCT_ISIN`" length="250" not-null="false" precision="19"/>
+      </key-property>
+    </composite-id>
   </class>
   <class table="`collated_results`" name="com.roverpoc.rovermar01.CollatedResults" entity-name="com.roverpoc.rovermar01.CollatedResults">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
+    <id name="id" type="java.lang.Integer">
+      <column name="`id`" length="255" not-null="true" precision="10"/>
       <generator class="identity"/>
     </id>
     <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
       <column name="`date_time`" length="255" not-null="false" precision="19"/>
     </property>
-    <property name="processDate" type="date">
+    <property name="processDate" type="java.sql.Date">
       <column name="`process_date`" length="10" not-null="false" precision="19"/>
     </property>
-    <property name="coreSystem" type="text">
+    <property name="coreSystem" type="string">
       <column name="`core_system`" length="65535" not-null="false" precision="19"/>
     </property>
-    <property name="numProd" type="integer">
-      <column name="`num_prod`" length="255" not-null="false" precision="19"/>
+    <property name="prodTotal" type="java.lang.Integer">
+      <column name="`prod_total`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numProdOnly" type="integer">
-      <column name="`num_prod_only`" length="255" not-null="false" precision="19"/>
+    <property name="prodDups" type="java.lang.Integer">
+      <column name="`prod_dups`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numBoth" type="integer">
-      <column name="`num_both`" length="255" not-null="false" precision="19"/>
+    <property name="prodUnique" type="java.lang.Integer">
+      <column name="`prod_unique`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numUatOnly" type="integer">
-      <column name="`num_uat_only`" length="255" not-null="false" precision="19"/>
+    <property name="prodOnly" type="java.lang.Integer">
+      <column name="`prod_only`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numUat" type="integer">
-      <column name="`num_uat`" length="255" not-null="false" precision="19"/>
+    <property name="inBoth" type="java.lang.Integer">
+      <column name="`in_both`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numMsgsNoDiff" type="integer">
-      <column name="`num_msgs_no_diff`" length="255" not-null="false" precision="19"/>
+    <property name="uatOnly" type="java.lang.Integer">
+      <column name="`uat_only`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numMsgsDiff" type="integer">
-      <column name="`num_msgs_diff`" length="255" not-null="false" precision="19"/>
+    <property name="uatUnique" type="java.lang.Integer">
+      <column name="`uat_unique`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numMsgsDiffUncat" type="integer">
-      <column name="`num_msgs_diff_uncat`" length="255" not-null="false" precision="19"/>
+    <property name="uatDups" type="java.lang.Integer">
+      <column name="`uat_dups`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numMsgsDiffCat" type="integer">
-      <column name="`num_msgs_diff_cat`" length="255" not-null="false" precision="19"/>
+    <property name="uatTotal" type="java.lang.Integer">
+      <column name="`uat_total`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numGroups" type="integer">
-      <column name="`num_groups`" length="255" not-null="false" precision="19"/>
+    <property name="msgsNoDiff" type="java.lang.Integer">
+      <column name="`msgs_no_diff`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numGroupsUncat" type="integer">
-      <column name="`num_groups_uncat`" length="255" not-null="false" precision="19"/>
+    <property name="msgsDiff" type="java.lang.Integer">
+      <column name="`msgs_diff`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numGroupsCat" type="integer">
-      <column name="`num_groups_cat`" length="255" not-null="false" precision="19"/>
+    <property name="msgsDiffUncat" type="java.lang.Integer">
+      <column name="`msgs_diff_uncat`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numMsgsCoverage" type="integer">
-      <column name="`num_msgs_coverage`" length="255" not-null="false" precision="19"/>
+    <property name="msgsDiffCat" type="java.lang.Integer">
+      <column name="`msgs_diff_cat`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numGroupCoverage" type="integer">
-      <column name="`num_group_coverage`" length="255" not-null="false" precision="19"/>
+    <property name="groups" type="java.lang.Integer">
+      <column name="`groups`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numProdDuplicates" type="integer">
-      <column name="`num_prod_duplicates`" length="255" not-null="false" precision="19"/>
+    <property name="groupsUncat" type="java.lang.Integer">
+      <column name="`groups_uncat`" length="255" not-null="false" precision="10"/>
     </property>
-    <property name="numUatDuplicates" type="integer">
-      <column name="`num_uat_duplicates`" length="255" not-null="false" precision="19"/>
+    <property name="groupsCat" type="java.lang.Integer">
+      <column name="`groups_cat`" length="255" not-null="false" precision="10"/>
     </property>
-  </class>
-  <class table="`core_systems`" name="com.roverpoc.rovermar01.CoreSystems" entity-name="com.roverpoc.rovermar01.CoreSystems">
-    <id name="id" type="integer">
-      <column name="`id`" length="255" not-null="true" precision="19"/>
-      <generator class="identity"/>
-    </id>
-    <property name="dateTime" type="com.wavemaker.studio.common.data.type.WMPersistentLocalDateTime">
-      <column name="`date_time`" length="255" not-null="false" precision="19"/>
+    <property name="msgsCoverage" type="java.lang.Float">
+      <column name="`msgs_coverage`" length="255" not-null="false" precision="5" scale="2"/>
     </property>
-    <property name="coreSystem" type="text">
-      <column name="`core_system`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystemRoverName" type="text">
-      <column name="`core_system_rover_name`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreProdTable" type="text">
-      <column name="`core_prod_table`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreProdConnectivity" type="text">
-      <column name="`core_prod_connectivity`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreUatTable" type="text">
-      <column name="`core_uat_table`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreUatConnectivity" type="text">
-      <column name="`core_uat_connectivity`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystemStatus" type="text">
-      <column name="`core_system_status`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystemLogging" type="text">
-      <column name="`core_system_logging`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystemAlert" type="text">
-      <column name="`core_system_alert`" length="65535" not-null="false" precision="19"/>
-    </property>
-    <property name="coreSystemAlertTarget" type="text">
-      <column name="`core_system_alert_target`" length="65535" not-null="false" precision="19"/>
+    <property name="groupCoverage" type="java.lang.Float">
+      <column name="`group_coverage`" length="255" not-null="false" precision="5" scale="2"/>
     </property>
   </class>
 </hibernate-mapping>

@@ -60,7 +60,8 @@ public interface FilterRulesService {
 	 * @return The found filterrules. If no filterrules is found, this method returns
 	 *         null.
 	 */
-	public FilterRules findById(Integer id) throws EntityNotFoundException;
+	public FilterRules findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a filterrules.
 	 * 

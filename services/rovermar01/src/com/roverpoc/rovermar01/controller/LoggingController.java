@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class LoggingController {
         return loggingService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the Logging instance associated with the given id.")
-    public Logging getLogging(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting Logging with id: {}", id);
-        Logging instance = loggingService.findById(id);
-        LOGGER.debug("Logging details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the Logging instance associated with the given id.")
-    public boolean deleteLogging(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Logging with id: {}", id);
-        Logging deleted = loggingService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the Logging instance associated with the given id.")
-    public Logging editLogging(@PathVariable("id") Integer id, @RequestBody Logging instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing Logging with id: {}", instance.getId());
-        instance.setId(id);
-        instance = loggingService.update(instance);
-        LOGGER.debug("Logging details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new Logging instance.")
-    public Logging createLogging(@RequestBody Logging instance) {
-        LOGGER.debug("Create Logging with information: {}", instance);
-        instance = loggingService.create(instance);
-        LOGGER.debug("Created Logging with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class LoggingController {
         this.loggingService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Logging instance.")
+    public Logging createLogging(@RequestBody Logging instance) {
+        LOGGER.debug("Create Logging with information: {}", instance);
+        instance = loggingService.create(instance);
+        LOGGER.debug("Created Logging with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of Logging instances.")
@@ -114,5 +89,35 @@ public class LoggingController {
         LOGGER.debug("counting Loggings");
         Long count = loggingService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the Logging instance associated with the given id.")
+    public Logging getLogging(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting Logging with id: {}", id);
+        Logging instance = loggingService.findById(id);
+        LOGGER.debug("Logging details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the Logging instance associated with the given id.")
+    public Logging editLogging(@PathVariable(value = "id") Integer id, @RequestBody Logging instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing Logging with id: {}", instance.getId());
+        instance.setId(id);
+        instance = loggingService.update(instance);
+        LOGGER.debug("Logging details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the Logging instance associated with the given id.")
+    public boolean deleteLogging(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Logging with id: {}", id);
+        Logging deleted = loggingService.delete(id);
+        return deleted != null;
     }
 }

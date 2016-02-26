@@ -60,7 +60,8 @@ public interface ControlService {
 	 * @return The found control. If no control is found, this method returns
 	 *         null.
 	 */
-	public Control findById(Integer id) throws EntityNotFoundException;
+	public Control findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a control.
 	 * 

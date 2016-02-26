@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class CoreSystemsController {
         return coreSystemsService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the CoreSystems instance associated with the given id.")
-    public CoreSystems getCoreSystems(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting CoreSystems with id: {}", id);
-        CoreSystems instance = coreSystemsService.findById(id);
-        LOGGER.debug("CoreSystems details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the CoreSystems instance associated with the given id.")
-    public boolean deleteCoreSystems(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting CoreSystems with id: {}", id);
-        CoreSystems deleted = coreSystemsService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the CoreSystems instance associated with the given id.")
-    public CoreSystems editCoreSystems(@PathVariable("id") Integer id, @RequestBody CoreSystems instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing CoreSystems with id: {}", instance.getId());
-        instance.setId(id);
-        instance = coreSystemsService.update(instance);
-        LOGGER.debug("CoreSystems details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new CoreSystems instance.")
-    public CoreSystems createCoreSystems(@RequestBody CoreSystems instance) {
-        LOGGER.debug("Create CoreSystems with information: {}", instance);
-        instance = coreSystemsService.create(instance);
-        LOGGER.debug("Created CoreSystems with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class CoreSystemsController {
         this.coreSystemsService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new CoreSystems instance.")
+    public CoreSystems createCoreSystems(@RequestBody CoreSystems instance) {
+        LOGGER.debug("Create CoreSystems with information: {}", instance);
+        instance = coreSystemsService.create(instance);
+        LOGGER.debug("Created CoreSystems with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of CoreSystems instances.")
@@ -114,5 +89,35 @@ public class CoreSystemsController {
         LOGGER.debug("counting CoreSystemss");
         Long count = coreSystemsService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the CoreSystems instance associated with the given id.")
+    public CoreSystems getCoreSystems(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting CoreSystems with id: {}", id);
+        CoreSystems instance = coreSystemsService.findById(id);
+        LOGGER.debug("CoreSystems details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the CoreSystems instance associated with the given id.")
+    public CoreSystems editCoreSystems(@PathVariable(value = "id") Integer id, @RequestBody CoreSystems instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing CoreSystems with id: {}", instance.getId());
+        instance.setId(id);
+        instance = coreSystemsService.update(instance);
+        LOGGER.debug("CoreSystems details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the CoreSystems instance associated with the given id.")
+    public boolean deleteCoreSystems(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting CoreSystems with id: {}", id);
+        CoreSystems deleted = coreSystemsService.delete(id);
+        return deleted != null;
     }
 }

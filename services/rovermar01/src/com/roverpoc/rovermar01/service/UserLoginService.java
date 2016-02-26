@@ -60,7 +60,8 @@ public interface UserLoginService {
 	 * @return The found userlogin. If no userlogin is found, this method returns
 	 *         null.
 	 */
-	public UserLogin findById(Integer id) throws EntityNotFoundException;
+	public UserLogin findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a userlogin.
 	 * 

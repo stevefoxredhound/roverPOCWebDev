@@ -60,7 +60,8 @@ public interface ResultsService {
 	 * @return The found results. If no results is found, this method returns
 	 *         null.
 	 */
-	public Results findById(Integer id) throws EntityNotFoundException;
+	public Results findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a results.
 	 * 

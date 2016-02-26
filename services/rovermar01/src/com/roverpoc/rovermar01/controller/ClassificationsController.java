@@ -27,6 +27,7 @@ import com.wavemaker.runtime.data.exception.EntityNotFoundException;
 import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.runtime.util.WMRuntimeUtils;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import com.wordnik.swagger.annotations.*;
 import com.roverpoc.rovermar01.*;
 import com.roverpoc.rovermar01.service.*;
@@ -62,42 +63,6 @@ public class ClassificationsController {
         return classificationsService.findAll(pageable);
     }
 
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
-    @ApiOperation(value = "Returns the Classifications instance associated with the given id.")
-    public Classifications getClassifications(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Getting Classifications with id: {}", id);
-        Classifications instance = classificationsService.findById(id);
-        LOGGER.debug("Classifications details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
-    @ApiOperation(value = "Deletes the Classifications instance associated with the given id.")
-    public boolean deleteClassifications(@PathVariable("id") Integer id) throws EntityNotFoundException {
-        LOGGER.debug("Deleting Classifications with id: {}", id);
-        Classifications deleted = classificationsService.delete(id);
-        return deleted != null;
-    }
-
-    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
-    @ApiOperation(value = "Updates the Classifications instance associated with the given id.")
-    public Classifications editClassifications(@PathVariable("id") Integer id, @RequestBody Classifications instance) throws EntityNotFoundException {
-        LOGGER.debug("Editing Classifications with id: {}", instance.getId());
-        instance.setId(id);
-        instance = classificationsService.update(instance);
-        LOGGER.debug("Classifications details with id: {}", instance);
-        return instance;
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    @ApiOperation(value = "Creates a new Classifications instance.")
-    public Classifications createClassifications(@RequestBody Classifications instance) {
-        LOGGER.debug("Create Classifications with information: {}", instance);
-        instance = classificationsService.create(instance);
-        LOGGER.debug("Created Classifications with information: {}", instance);
-        return instance;
-    }
-
     /**
 	 * This setter method should only be used by unit tests
 	 * 
@@ -107,6 +72,16 @@ public class ClassificationsController {
         this.classificationsService = service;
     }
 
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Creates a new Classifications instance.")
+    public Classifications createClassifications(@RequestBody Classifications instance) {
+        LOGGER.debug("Create Classifications with information: {}", instance);
+        instance = classificationsService.create(instance);
+        LOGGER.debug("Created Classifications with information: {}", instance);
+        return instance;
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "Returns the total count of Classifications instances.")
@@ -114,5 +89,35 @@ public class ClassificationsController {
         LOGGER.debug("counting Classificationss");
         Long count = classificationsService.countAll();
         return count;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Returns the Classifications instance associated with the given id.")
+    public Classifications getClassifications(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Getting Classifications with id: {}", id);
+        Classifications instance = classificationsService.findById(id);
+        LOGGER.debug("Classifications details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PUT)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Updates the Classifications instance associated with the given id.")
+    public Classifications editClassifications(@PathVariable(value = "id") Integer id, @RequestBody Classifications instance) throws EntityNotFoundException {
+        LOGGER.debug("Editing Classifications with id: {}", instance.getId());
+        instance.setId(id);
+        instance = classificationsService.update(instance);
+        LOGGER.debug("Classifications details with id: {}", instance);
+        return instance;
+    }
+
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Deletes the Classifications instance associated with the given id.")
+    public boolean deleteClassifications(@PathVariable(value = "id") Integer id) throws EntityNotFoundException {
+        LOGGER.debug("Deleting Classifications with id: {}", id);
+        Classifications deleted = classificationsService.delete(id);
+        return deleted != null;
     }
 }

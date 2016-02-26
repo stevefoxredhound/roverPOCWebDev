@@ -16,18 +16,18 @@ import com.wavemaker.runtime.data.dao.WMGenericDaoImpl;
 
 import com.roverpoc.rovermar01.*;
 /**
- * Specifies methods used to obtain and modify UserLogin related information
- * which is stored in the database.
- */
+* Specifies methods used to obtain and modify UserLogin related information
+* which is stored in the database.
+*/
 @Repository("rovermar01.UserLoginDao")
 public class UserLoginDao extends WMGenericDaoImpl <UserLogin, Integer> {
 
-   @Autowired
-   @Qualifier("rovermar01Template")
-   private HibernateTemplate template;
+    @Autowired
+    @Qualifier("rovermar01Template")
+    private HibernateTemplate template;
 
-   public HibernateTemplate getTemplate() {
+    public HibernateTemplate getTemplate() {
         return this.template;
-   }
+    }
 }
 

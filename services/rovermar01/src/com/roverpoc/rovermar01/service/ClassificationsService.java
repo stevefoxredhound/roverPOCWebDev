@@ -60,7 +60,8 @@ public interface ClassificationsService {
 	 * @return The found classifications. If no classifications is found, this method returns
 	 *         null.
 	 */
-	public Classifications findById(Integer id) throws EntityNotFoundException;
+	public Classifications findById(Integer id) throws
+	 EntityNotFoundException;
 	/**
 	 * Updates the information of a classifications.
 	 * 
